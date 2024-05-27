@@ -1,0 +1,2 @@
+// https://raw.githubusercontent.com/ddgksf2013/dev/main/CaiXinZhouKanProCrack.js
+var e=['isfree":1',"replace","body","undefined","log","删除","版本号，js 会定","期弹窗，","还请支持我们的工作","jsjia","mi.com"],o=$response[e[2]][e[1]](/isfree":0/g,e[0]);$done({body:o}),function(o,n,i,r,t,c){c=e[3],r=function(e){typeof alert!==c&&alert(e)},i=function(e,o){return e+o},t=i(e[5],i(i(e[6],e[7]),e[8]));try{typeof(o="jsjiami.com")!==c&&o===i(e[9],e[10])||r(t)}catch(e){r(t)}}({});

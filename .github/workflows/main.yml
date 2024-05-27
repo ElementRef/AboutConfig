@@ -1,0 +1,34 @@
+name: Deploy Some Config to Github Repository on Main Branch...
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          show-progress: true
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/Hydrogen'
+          check-latest: true
+
+      - name: Build with Node
+        run: node conf/generate.filter.mjs
+
+      - name: Deploy to Github Repository
+        run: |
+          git config --global user.email ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+          git config --global user.name ${{ github.actor }}
+          git commit -a -m '更新分流规则'
+          git pull --rebase --autostash
+          git push

@@ -1,0 +1,22 @@
+{
+  "data": [],
+  "ext": {
+    "search_city": {
+      "desc": "",
+      "more": "",
+      "title": "同城热点"
+    },
+    "search_hot": {
+      "desc": "实时热点，每分钟更新一次",
+      "more": "",
+      "title": "微博热搜榜"
+    },
+    "search_hot_simple": {
+      "desc": "",
+      "more": "更多热搜",
+      "title": "热门搜索"
+    }
+  },
+  "info": "",
+  "retcode": 0
+}
