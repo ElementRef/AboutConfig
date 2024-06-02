@@ -131,7 +131,7 @@ async function useESBuildToScriptDir(TMPFILE) {
       '--keep-names',
       '--legal-comments=none',
       '--minify',
-      '--tree-shaking=true',
+      '--tree-shaking=false',
       `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
       `--outdir=${SCRIPTPATH}`
     ]);
