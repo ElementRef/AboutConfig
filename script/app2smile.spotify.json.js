@@ -1,5 +1,2 @@
-// https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-let e = $request.url;
-e.includes('platform=iphone') &&
-  (e = e.replace(/platform=iphone/, 'platform=ipad')),
-  $done({ url: e });
+// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/app2smile.spotify.json.js
+(()=>{var o=$request.url;o.includes("platform=iphone")&&(o=o.replace(/platform=iphone/,"platform=ipad"));$done({url:o});})();

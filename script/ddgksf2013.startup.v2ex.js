@@ -1,6 +1,9 @@
-// https://raw.githubusercontent.com/ddgksf2013/Scripts/master/v2ex.js
-var n = $response.body.replace(
-  /<head>/,
-  '<head>\n    <style>\n      .sidebar_units,\n      .sidebar_compliance,\n      div[class^="wwads-"]{\n        display: none !important;\n      }\n    </style>'
-);
-$done({ body: n });
+// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.v2ex.js
+(()=>{var e=$response.body.replace(/<head>/,`<head>
+    <style>
+      .sidebar_units,
+      .sidebar_compliance,
+      div[class^="wwads-"]{
+        display: none !important;
+      }
+    </style>`);$done({body:e});})();

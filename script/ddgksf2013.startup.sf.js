@@ -1,6 +1,2 @@
-// https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js
-if (-1 != $request.url.indexOf('app/ad/queryInfoFlow')) {
-  var e = JSON.parse($response.body);
-  (e.obj = Object.values(e.obj).filter(e => 2833 == e.adverId)),
-    $done({ body: JSON.stringify(e) });
-}
+// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.sf.js
+(()=>{$request.url.indexOf("app/ad/queryInfoFlow")!=-1&&(e=JSON.parse($response.body),e.obj=Object.values(e.obj).filter(r=>r.adverId==2833),$done({body:JSON.stringify(e)}));var e;})();

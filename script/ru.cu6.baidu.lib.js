@@ -1,2 +1,2 @@
-// https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js
-let t=JSON.parse($response.body);t.data.vip.base_vip_info={uid:12345678,type:2,start_time:1622222200,end_time:4622222200,is_vip:1,remain_day:999,pro_total:5,normal_total:5},$done({body:JSON.stringify(t)});
+// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ru.cu6.baidu.lib.js
+(()=>{var t=JSON.parse($response.body);t.data.vip.base_vip_info={uid:12345678,type:2,start_time:1622222200,end_time:4622222200,is_vip:1,remain_day:999,pro_total:5,normal_total:5};$done({body:JSON.stringify(t)});})();

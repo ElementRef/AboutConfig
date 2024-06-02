@@ -1,7 +1,2 @@
-// https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js
-var e = JSON.parse($response.body);
--1 !== $request.url.indexOf('hotWords') &&
-  ((e.hotwords = {}), (e.tabs = {}), delete e.abver),
-  -1 !== $request.url.indexOf('hotSearchTerms') &&
-    ((e.topData.data = {}), (e.data = {})),
-  $done({ body: JSON.stringify(e) });
+// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.jd.js
+(()=>{var x=JSON.parse($response.body);$request.url.indexOf("hotWords")!==-1&&(x.hotwords={},x.tabs={},delete x.abver);$request.url.indexOf("hotSearchTerms")!==-1&&(x.topData.data={},x.data={});$done({body:JSON.stringify(x)});})();
