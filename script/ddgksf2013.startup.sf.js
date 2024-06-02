@@ -1,2 +1,2 @@
 // https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.sf.js
-(()=>{$request.url.indexOf("app/ad/queryInfoFlow")!=-1&&(e=JSON.parse($response.body),e.obj=Object.values(e.obj).filter(r=>r.adverId==2833),$done({body:JSON.stringify(e)}));var e;})();
+if($request.url.indexOf("app/ad/queryInfoFlow")!=-1){var ddgksf2013=JSON.parse($response.body);ddgksf2013.obj=Object.values(ddgksf2013.obj).filter(e=>e.adverId==2833),$done({body:JSON.stringify(ddgksf2013)})}
