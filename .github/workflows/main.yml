@@ -24,10 +24,7 @@ jobs:
 
       - name: Setup ESBuild
         run: |
-          corepack enable pnpm
-          corepack use pnpm@latest
-          pnpm --version
-          pnpm add esbuild@latest --global
+          npm install esbuild@latest --global
           esbuild --version
 
       - name: Build with Node
