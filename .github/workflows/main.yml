@@ -22,6 +22,11 @@ jobs:
           node-version: 'lts/Hydrogen'
           check-latest: true
 
+      - name: Setup ESBuild
+        run: |
+          npm install esbuild@latest --global
+          esbuild --version
+
       - name: Build with Node
         run: node conf/generate.filter.mjs
 
