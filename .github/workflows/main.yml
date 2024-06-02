@@ -24,16 +24,21 @@ jobs:
 
       - name: Setup ESBuild
         run: |
-          npm install esbuild@latest --global
+          corepack enable pnpm
+          corepack use pnpm@latest
+          pnpm --version
+          pnpm add esbuild@latest --global
           esbuild --version
 
       - name: Build with Node
-        run: node conf/generate.filter.mjs
+        run: |
+          node conf/generate.esbuild.mjs
+          node conf/generate.filter.mjs
 
       - name: Deploy to Github Repository
         run: |
           git config --global user.email ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
           git config --global user.name ${{ github.actor }}
-          git commit -a -m '更新分流规则'
+          git commit -a -m '更新分流重写'
           git pull --rebase --autostash
           git push

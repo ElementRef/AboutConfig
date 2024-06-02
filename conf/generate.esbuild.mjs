@@ -1,0 +1,153 @@
+import { spawn } from 'node:child_process';
+import { writeFile, mkdir, readdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const RESOURCES = {
+  '510004015.wps.office.js':
+    'https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js',
+  'app2smile.qidian.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js',
+  'app2smile.qq.news.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js',
+  'app2smile.spotify.json.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js',
+  'app2smile.spotify.proto.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js',
+  'app2smile.tieba.json.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js',
+  'app2smile.tieba.proto.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js',
+  'blackmatrix7.smzdm.js':
+    'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js',
+  'chxm1023.vsco.js':
+    'https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js',
+  'ddgksf2013.amap.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amap.js',
+  'ddgksf2013.bilibili.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js',
+  'ddgksf2013.bybutter.js':
+    'https://raw.githubusercontent.com/ddgksf2013/dev/main/BybutterProCrack.js',
+  'ddgksf2013.cai.niao.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js',
+  'ddgksf2013.caixin.js':
+    'https://raw.githubusercontent.com/ddgksf2013/dev/main/CaiXinZhouKanProCrack.js',
+  'ddgksf2013.clarity.js':
+    'https://raw.githubusercontent.com/ddgksf2013/dev/main/ClarityProCrack.js',
+  'ddgksf2013.meitu.xiuxiu.js':
+    'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
+  'ddgksf2013.red.book.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/redbook_json.js',
+  'ddgksf2013.startup.12306.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js',
+  'ddgksf2013.startup.coolapk.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js',
+  'ddgksf2013.startup.iqiyi.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js',
+  'ddgksf2013.startup.jd.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js',
+  'ddgksf2013.startup.sf.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js',
+  'ddgksf2013.startup.umetrip.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js',
+  'ddgksf2013.startup.v2ex.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/v2ex.js',
+  'ddgksf2013.weibo.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js',
+  'ddgksf2013.ximalaya.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
+  'fmz200.douyin.js':
+    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/douyin.js',
+  'gjwj666.xingtu.js':
+    'https://raw.githubusercontent.com/gjwj666/qx/main/XT.js',
+  'kop.xiao.ip.api.js':
+    'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js',
+  'kop.xiao.resource.parser.js':
+    'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js',
+  'kop.xiao.streaming.ui.check.js':
+    'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js',
+  'maasea.youtube.request.js':
+    'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js',
+  'maasea.youtube.response.js':
+    'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js',
+  'ru.cu6.baidu.lib.js':
+    'https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js',
+  'ru.cu6.emby.js':
+    'https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js',
+  'yqc007.video.fusion.js':
+    'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
+  'zheye.zhihu.js':
+    'https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js',
+  'zzpiglet.wechat.110.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js'
+};
+(async () => {
+  await Promise.all(
+    Object.entries(RESOURCES).map(
+      async ([FILENAME, SRC]) => await getResoursesToLocal({ FILENAME, SRC })
+    )
+  );
+  const PATH = fileURLToPath(import.meta.url);
+  const TMPPATH = resolve(dirname(PATH), `../tmp`);
+  const TMPFILES = await readdir(TMPPATH);
+  await Promise.all(
+    TMPFILES.map(async TMPFILE => await useESBuildToScriptDir(TMPFILE))
+  );
+})();
+async function getResoursesToLocal({ FILENAME, SRC }) {
+  try {
+    const RES = await fetch(SRC, {
+      method: 'GET',
+      cache: 'no-cache',
+      credentials: 'omit',
+      headers: {
+        'Content-Type': 'text/plain'
+      }
+    });
+    if (RES.ok) {
+      const TEXT = await RES.text();
+      const PATH = fileURLToPath(import.meta.url);
+      const TMPPATH = resolve(dirname(PATH), `../tmp`);
+      const TMPISEXIST = existsSync(TMPPATH);
+      if (!TMPISEXIST) {
+        await mkdir(TMPPATH, { recursive: true });
+      }
+      await writeFile(resolve(TMPPATH, `./${FILENAME}`), TEXT);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+async function useESBuildToScriptDir(TMPFILE) {
+  return new Promise((resolve, reject) => {
+    const PATH = fileURLToPath(import.meta.url);
+    const SCRIPTPATH = resolve(dirname(PATH), `../script`);
+    const TMPFILEPATH = resolve(dirname(PATH), `../tmp/${TMPFILE}`);
+    const ESBUILDSPAWN = spawn(`esbuild ${TMPFILEPATH}`, [
+      '--bundle',
+      `--outdir=${SCRIPTPATH}`,
+      '--platform=browser',
+      `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
+      '--format=iife',
+      '--legal-comments=none',
+      '--allow-overwrite',
+      '--drop:debugger',
+      '--drop:console',
+      '--keep-names',
+      '--minify',
+      '--tree-shaking=true',
+      '--analyze'
+    ]);
+    ESBUILDSPAWN.stdout.on('data', data => {
+      console.log(`stdout: ${data}`);
+    });
+
+    ESBUILDSPAWN.stderr.on('data', data => {
+      console.error(`stderr: ${data}`);
+    });
+
+    ESBUILDSPAWN.on('close', code => {
+      console.log(`child process exited with code ${code}`);
+    });
+  });
+}
