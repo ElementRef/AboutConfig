@@ -16,7 +16,6 @@
 - [@CINSSCORE](https://cinsscore.com/)
 - [@damengzhu](https://github.com/damengzhu/banad)
 - [@ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
-- [@DivineEngine](https://github.com/DivineEngine/Profiles)
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)
