@@ -126,15 +126,11 @@ async function useESBuildToScriptDir(TMPFILE) {
     const ESBUILDSPAWN = spawn(`esbuild`, [
       `${TMPFILEPATH}`,
       '--allow-overwrite',
-      '--analyze',
-      '--bundle',
       '--drop:console',
       '--drop:debugger',
-      '--format=iife',
       '--keep-names',
       '--legal-comments=none',
       '--minify',
-      '--platform=browser',
       '--tree-shaking=true',
       `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
       `--outdir=${SCRIPTPATH}`
