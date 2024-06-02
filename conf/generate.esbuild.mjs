@@ -119,11 +119,11 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
   }
 }
 async function useESBuildToScriptDir(TMPFILE) {
-  return new Promise((resolve, reject) => {
-    const PATH = fileURLToPath(import.meta.url);
-    const SCRIPTPATH = resolve(dirname(PATH), `../script`);
-    const TMPFILEPATH = resolve(dirname(PATH), `../tmp/${TMPFILE}`);
-    const ESBUILDSPAWN = spawn(`esbuild ${TMPFILEPATH}`, [
+  return new Promise((resolveFn, rejectFn) => {
+    const DIRNAME = dirname(fileURLToPath(import.meta.url));
+    const SCRIPTPATH = resolve(DIRNAME, `../script`);
+    const TMPFILEPATH = resolve(DIRNAME, `../tmp/${TMPFILE}`);
+    const ESBUILDSPAWN = spawn(`npx esbuild ${TMPFILEPATH}`, [
       '--bundle',
       `--outdir=${SCRIPTPATH}`,
       '--platform=browser',
@@ -138,16 +138,11 @@ async function useESBuildToScriptDir(TMPFILE) {
       '--tree-shaking=true',
       '--analyze'
     ]);
-    ESBUILDSPAWN.stdout.on('data', data => {
-      console.log(`stdout: ${data}`);
-    });
-
-    ESBUILDSPAWN.stderr.on('data', data => {
-      console.error(`stderr: ${data}`);
-    });
-
     ESBUILDSPAWN.on('close', code => {
-      console.log(`child process exited with code ${code}`);
+      resolveFn(code);
+    });
+    ESBUILDSPAWN.on('error', error => {
+      rejectFn(error);
     });
   });
 }
