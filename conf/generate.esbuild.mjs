@@ -123,20 +123,21 @@ async function useESBuildToScriptDir(TMPFILE) {
     const DIRNAME = dirname(fileURLToPath(import.meta.url));
     const SCRIPTPATH = resolve(DIRNAME, `../script`);
     const TMPFILEPATH = resolve(DIRNAME, `../tmp/${TMPFILE}`);
-    const ESBUILDSPAWN = spawn(`npx esbuild ${TMPFILEPATH}`, [
-      '--bundle',
-      `--outdir=${SCRIPTPATH}`,
-      '--platform=browser',
-      `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
-      '--format=iife',
-      '--legal-comments=none',
+    const ESBUILDSPAWN = spawn(`esbuild`, [
+      `${TMPFILEPATH}`,
       '--allow-overwrite',
-      '--drop:debugger',
+      '--analyze',
+      '--bundle',
       '--drop:console',
+      '--drop:debugger',
+      '--format=iife',
       '--keep-names',
+      '--legal-comments=none',
       '--minify',
+      '--platform=browser',
       '--tree-shaking=true',
-      '--analyze'
+      `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
+      `--outdir=${SCRIPTPATH}`
     ]);
     ESBUILDSPAWN.on('close', code => {
       resolveFn(code);
