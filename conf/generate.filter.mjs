@@ -166,7 +166,7 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // Quantumult X 似乎不支持 DOMAIN|RULE-SET
+  // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
     return `HOST-SUFFIX,${textTemp.substring(1)}`;
   } else if (textTemp.startsWith('+.')) {
@@ -196,13 +196,19 @@ function mapMixture(text) {
       return '';
     }
     return `HOST-KEYWORD,${textPure}`;
+  } else if (
+    textTemp.toUpperCase().startsWith('HOST-WILDCARD,') ||
+    textTemp.toUpperCase().startsWith('DOMAIN-WILDCARD,')
+  ) {
+    return `HOST-WILDCARD,${textPure}`;
   } else if (textTemp.toUpperCase().startsWith('IP-ASN,')) {
     return `IP-ASN,${textPure}`;
   } else if (textTemp.toUpperCase().startsWith('IP-CIDR,')) {
     return `IP-CIDR,${textPure}`;
-  } else if (textTemp.toUpperCase().startsWith('IP-CIDR6,')) {
-    return `IP6-CIDR,${textPure}`;
-  } else if (textTemp.toUpperCase().startsWith('IP6-CIDR,')) {
+  } else if (
+    textTemp.toUpperCase().startsWith('IP-CIDR6,') ||
+    textTemp.toUpperCase().startsWith('IP6-CIDR,')
+  ) {
     return `IP6-CIDR,${textPure}`;
   } else {
     return '';
