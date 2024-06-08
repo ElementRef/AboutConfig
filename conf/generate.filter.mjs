@@ -67,6 +67,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt',
       'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt',
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
+      'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
     ],
     MAPFN: mapDoHosts

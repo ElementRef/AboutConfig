@@ -24,6 +24,7 @@
 - [@Hackl0us](https://github.com/Hackl0us/GeoIP2-CN)
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
+- [@jdlingyu](https://github.com/jdlingyu/ad-wars)
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
