@@ -1,4 +1,4 @@
-## 自用 [Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/QuantumultX.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/uBlocklist.ini)
+## 自用 [Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/QuantX.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/uBlocklist.ini)
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
