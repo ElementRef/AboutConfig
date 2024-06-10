@@ -167,20 +167,23 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
+  // 规则数量优化
   if (textPure.includes('ingest.sentry')) {
-    /**
-     * 123456789.ingest.sentry
-     * asdfghjkl.ingest.sentry
-     * 保留 ingest.sentry 即可
-     */
     return `HOST-KEYWORD,ingest.sentry`;
   }
+  if (textPure.endsWith('umengcloud.com')) {
+    return `HOST-SUFFIX,umengcloud.com`;
+  }
+  if (textPure.endsWith('4puuqeh41.com')) {
+    return `HOST-SUFFIX,4puuqeh41.com`;
+  }
+  if (textPure.endsWith('musical.ly')) {
+    return `HOST-SUFFIX,musical.ly`;
+  }
+  if (textPure.endsWith('snssdk.com')) {
+    return `HOST-SUFFIX,snssdk.com`;
+  }
   if (textPure.endsWith('umeng.com')) {
-    /**
-     * 123456789.umeng.com
-     * asdfghjkl.umeng.com
-     * 保留 umeng.com 即可
-     */
     return `HOST-SUFFIX,umeng.com`;
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
