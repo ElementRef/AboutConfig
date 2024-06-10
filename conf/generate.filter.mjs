@@ -167,23 +167,25 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // 规则数量优化
   if (textPure.includes('ingest.sentry')) {
     return `HOST-KEYWORD,ingest.sentry`;
   }
-  if (textPure.endsWith('umengcloud.com')) {
+  if (textPure.endsWith('.umengcloud.com')) {
     return `HOST-SUFFIX,umengcloud.com`;
   }
-  if (textPure.endsWith('4puuqeh41.com')) {
+  if (textPure.endsWith('.4puuqeh41.com')) {
     return `HOST-SUFFIX,4puuqeh41.com`;
   }
-  if (textPure.endsWith('musical.ly')) {
+  if (textPure.endsWith('.isnssdk.com')) {
+    return `HOST-SUFFIX,isnssdk.com`;
+  }
+  if (textPure.endsWith('.musical.ly')) {
     return `HOST-SUFFIX,musical.ly`;
   }
-  if (textPure.endsWith('snssdk.com')) {
+  if (textPure.endsWith('.snssdk.com')) {
     return `HOST-SUFFIX,snssdk.com`;
   }
-  if (textPure.endsWith('umeng.com')) {
+  if (textPure.endsWith('.umeng.com')) {
     return `HOST-SUFFIX,umeng.com`;
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
