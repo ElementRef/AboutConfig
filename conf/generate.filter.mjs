@@ -164,14 +164,16 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
 }
 function mapMixture(text) {
   const textTemp = text.trim();
-  let textPure = (textTemp.split(',')[1] || '').replace(/\/\/.*/gim, '').trim();
-  if (textPure.endsWith('.ingest.sentry.io')) {
+  const textPure = (textTemp.split(',')[1] || '')
+    .replace(/\/\/.*/gim, '')
+    .trim();
+  if (textPure.endsWith('ingest.sentry.io')) {
     /**
      * 123456789.ingest.sentry.io
      * asdfghjkl.ingest.sentry.io
      * 保留 ingest.sentry.io 即可
      */
-    textPure = 'ingest.sentry.io';
+    return `HOST-SUFFIX,ingest.sentry.io`;
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
