@@ -167,13 +167,13 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  if (textPure.endsWith('ingest.sentry.io')) {
+  if (textPure.includes('ingest.sentry')) {
     /**
      * 123456789.ingest.sentry.io
      * asdfghjkl.ingest.sentry.io
      * 保留 ingest.sentry.io 即可
      */
-    return `HOST-SUFFIX,ingest.sentry.io`;
+    return `HOST-KEYWORD,ingest.sentry`;
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
