@@ -169,11 +169,19 @@ function mapMixture(text) {
     .trim();
   if (textPure.includes('ingest.sentry')) {
     /**
-     * 123456789.ingest.sentry.io
-     * asdfghjkl.ingest.sentry.io
-     * 保留 ingest.sentry.io 即可
+     * 123456789.ingest.sentry
+     * asdfghjkl.ingest.sentry
+     * 保留 ingest.sentry 即可
      */
     return `HOST-KEYWORD,ingest.sentry`;
+  }
+  if (textPure.endsWith('umeng.com')) {
+    /**
+     * 123456789.umeng.com
+     * asdfghjkl.umeng.com
+     * 保留 umeng.com 即可
+     */
+    return `HOST-SUFFIX,umeng.com`;
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
