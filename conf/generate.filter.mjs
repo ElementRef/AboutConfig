@@ -167,14 +167,41 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  if (textPure.includes('ingest.sentry')) {
+  // startsWith
+  if (textPure.startsWith('data.comunicaciones.')) {
+    return `HOST-KEYWORD,data.comunicaciones`;
+  }
+  if (textPure.startsWith('data.customermail.')) {
+    return `HOST-KEYWORD,data.customermail`;
+  }
+  if (textPure.startsWith('data.decathlon.')) {
+    return `HOST-KEYWORD,data.decathlon`;
+  }
+  if (textPure.startsWith('ywrcqa.')) {
+    return `HOST-KEYWORD,ywrcqa`;
+  }
+  // includes
+  if (textPure.includes('ingest.sentry.')) {
     return `HOST-KEYWORD,ingest.sentry`;
+  }
+  // endsWith
+  if (textPure.endsWith('.ipfs.dweb.link')) {
+    return `HOST-SUFFIX,ipfs.dweb.link`;
   }
   if (textPure.endsWith('.umengcloud.com')) {
     return `HOST-SUFFIX,umengcloud.com`;
   }
+  if (textPure.endsWith('.34gwl8v1a.com')) {
+    return `HOST-SUFFIX,34gwl8v1a.com`;
+  }
   if (textPure.endsWith('.4puuqeh41.com')) {
     return `HOST-SUFFIX,4puuqeh41.com`;
+  }
+  if (textPure.endsWith('.5clo0xmbf.com')) {
+    return `HOST-SUFFIX,5clo0xmbf.com`;
+  }
+  if (textPure.endsWith('.net.mydays.de')) {
+    return `HOST-SUFFIX,net.mydays.de`;
   }
   if (textPure.endsWith('.isnssdk.com')) {
     return `HOST-SUFFIX,isnssdk.com`;
