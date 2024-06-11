@@ -168,8 +168,11 @@ function mapMixture(text) {
     .replace(/\/\/.*/gim, '')
     .trim();
   // startsWith
-  if (textPure.startsWith('www.')) {
-    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
+  if (textPure.startsWith('a8clk.')) {
+    return 'HOST-KEYWORD,a8clk';
+  }
+  if (textPure.startsWith('a8cv.')) {
+    return 'HOST-KEYWORD,a8cv';
   }
   if (textPure.startsWith('adobeanalytics.')) {
     return 'HOST-KEYWORD,adobeanalytics';
@@ -177,8 +180,65 @@ function mapMixture(text) {
   if (textPure.startsWith('advertising.')) {
     return 'HOST-KEYWORD,advertising';
   }
+  if (textPure.startsWith('ads.')) {
+    return 'HOST-KEYWORD,ads';
+  }
+  if (textPure.startsWith('affil.')) {
+    return 'HOST-KEYWORD,affil';
+  }
+  if (textPure.startsWith('ainu.intel.')) {
+    return 'HOST-KEYWORD,ainu.intel';
+  }
   if (textPure.startsWith('analytics.')) {
     return 'HOST-KEYWORD,analytics';
+  }
+  if (textPure.startsWith('data.comunicaciones.')) {
+    return 'HOST-KEYWORD,data.comunicaciones';
+  }
+  if (textPure.startsWith('data.customermail.')) {
+    return 'HOST-KEYWORD,data.customermail';
+  }
+  if (textPure.startsWith('data.decathlon.')) {
+    return 'HOST-KEYWORD,data.decathlon';
+  }
+  if (textPure.startsWith('mobileads.')) {
+    return 'HOST-KEYWORD,mobileads';
+  }
+  if (textPure.startsWith('openads.')) {
+    return 'HOST-KEYWORD,openads';
+  }
+  if (textPure.startsWith('phpads.')) {
+    return 'HOST-KEYWORD,phpads';
+  }
+  if (textPure.startsWith('sanalytics.')) {
+    return 'HOST-KEYWORD,sanalytics';
+  }
+  if (textPure.startsWith('secureanalytics.')) {
+    return 'HOST-KEYWORD,secureanalytics';
+  }
+  if (textPure.startsWith('sslanalytics.')) {
+    return 'HOST-KEYWORD,sslanalytics';
+  }
+  if (textPure.startsWith('swebanalytics.')) {
+    return 'HOST-KEYWORD,swebanalytics';
+  }
+  if (textPure.startsWith('uads.')) {
+    return 'HOST-KEYWORD,uads';
+  }
+  if (textPure.startsWith('unityads.')) {
+    return 'HOST-KEYWORD,unityads';
+  }
+  if (textPure.startsWith('webads.')) {
+    return 'HOST-KEYWORD,webads';
+  }
+  if (textPure.startsWith('webanalytics.')) {
+    return 'HOST-KEYWORD,webanalytics';
+  }
+  if (textPure.startsWith('www.')) {
+    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
+  }
+  if (textPure.startsWith('ywrcqa.')) {
+    return 'HOST-KEYWORD,ywrcqa';
   }
   // includes
   if (textPure.includes('.theacademyforconsciousleadership.')) {
@@ -196,6 +256,9 @@ function mapMixture(text) {
   if (textPure.includes('.autoscout24.')) {
     return 'HOST-KEYWORD,autoscout24';
   }
+  if (textPure.includes('.adscience.')) {
+    return 'HOST-KEYWORD,adscience';
+  }
   if (textPure.includes('.antalis.')) {
     return 'HOST-KEYWORD,antalis';
   }
@@ -204,6 +267,9 @@ function mapMixture(text) {
   }
   if (textPure.includes('.ricoh.')) {
     return 'HOST-KEYWORD,ricoh';
+  }
+  if (textPure.includes('.exads.')) {
+    return 'HOST-KEYWORD,exads';
   }
   // endsWith
   if (textPure.endsWith('.notice.spriggy.com.au')) {
@@ -250,6 +316,9 @@ function mapMixture(text) {
   }
   if (textPure.endsWith('.skyscanner.net')) {
     return 'HOST-SUFFIX,skyscanner.net';
+  }
+  if (textPure.endsWith('.nespresso.com')) {
+    return 'HOST-SUFFIX,nespresso.com';
   }
   if (textPure.endsWith('.rsc.cdn77.org')) {
     return 'HOST-SUFFIX,rsc.cdn77.org';
