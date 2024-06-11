@@ -171,65 +171,89 @@ function mapMixture(text) {
   if (textPure.startsWith('www.')) {
     return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
   }
-  if (textPure.startsWith('data.comunicaciones.')) {
+  // includes
+  if (
+    textPure.includes('data.comunicaciones.') ||
+    textPure.includes('.data.comunicaciones')
+  ) {
     return 'HOST-KEYWORD,data.comunicaciones';
   }
-  if (textPure.startsWith('data.customermail.')) {
+  if (
+    textPure.includes('data.customermail.') ||
+    textPure.includes('.data.customermail')
+  ) {
     return 'HOST-KEYWORD,data.customermail';
   }
-  if (textPure.startsWith('data.decathlon.')) {
+  if (
+    textPure.includes('data.decathlon.') ||
+    textPure.includes('.data.decathlon')
+  ) {
     return 'HOST-KEYWORD,data.decathlon';
   }
-  if (textPure.startsWith('adobeanalytics.')) {
+  if (
+    textPure.includes('adobeanalytics.') ||
+    textPure.includes('.adobeanalytics')
+  ) {
     return 'HOST-KEYWORD,adobeanalytics';
   }
-  if (textPure.startsWith('advertising.')) {
+  if (textPure.includes('advertising.') || textPure.includes('.advertising')) {
     return 'HOST-KEYWORD,advertising';
   }
-  if (textPure.startsWith('ainu.intel.')) {
+  if (textPure.includes('ainu.intel.') || textPure.includes('.ainu.intel')) {
     return 'HOST-KEYWORD,ainu.intel';
   }
-  if (textPure.startsWith('analytics.')) {
+  if (textPure.includes('analytics.') || textPure.includes('.analytics')) {
     return 'HOST-KEYWORD,analytics';
   }
-  if (textPure.startsWith('ywrcqa.')) {
+  if (textPure.includes('ywrcqa.') || textPure.includes('.ywrcqa')) {
     return 'HOST-KEYWORD,ywrcqa';
   }
-  if (textPure.startsWith('a8clk.')) {
+  if (textPure.includes('a8clk.') || textPure.includes('.a8clk')) {
     return 'HOST-KEYWORD,a8clk';
   }
-  if (textPure.startsWith('affil.')) {
+  if (textPure.includes('affil.') || textPure.includes('.affil')) {
     return 'HOST-KEYWORD,affil';
   }
-  if (textPure.startsWith('a8cv.')) {
+  if (textPure.includes('a8cv.') || textPure.includes('.a8cv')) {
     return 'HOST-KEYWORD,a8cv';
   }
-  if (textPure.startsWith('ads.')) {
+  if (textPure.includes('ads.') || textPure.includes('.ads')) {
     return 'HOST-KEYWORD,ads';
   }
-  // includes
-  if (textPure.includes('theacademyforconsciousleadership.')) {
+  if (
+    textPure.includes('theacademyforconsciousleadership.') ||
+    textPure.includes('.theacademyforconsciousleadership')
+  ) {
     return 'HOST-KEYWORD,theacademyforconsciousleadership';
   }
-  if (textPure.includes('academyofconsciousleadership.')) {
+  if (
+    textPure.includes('academyofconsciousleadership.') ||
+    textPure.includes('.academyofconsciousleadership')
+  ) {
     return 'HOST-KEYWORD,academyofconsciousleadership';
   }
-  if (textPure.includes('ingest.sentry.')) {
+  if (
+    textPure.includes('ingest.sentry.') ||
+    textPure.includes('.ingest.sentry')
+  ) {
     return 'HOST-KEYWORD,ingest.sentry';
   }
-  if (textPure.includes('weareknitters.')) {
+  if (
+    textPure.includes('weareknitters.') ||
+    textPure.includes('.weareknitters')
+  ) {
     return 'HOST-KEYWORD,weareknitters';
   }
-  if (textPure.includes('autoscout24.')) {
+  if (textPure.includes('autoscout24.') || textPure.includes('.autoscout24')) {
     return 'HOST-KEYWORD,autoscout24';
   }
-  if (textPure.includes('antalis.')) {
+  if (textPure.includes('antalis.') || textPure.includes('.antalis')) {
     return 'HOST-KEYWORD,antalis';
   }
-  if (textPure.includes('adtech.')) {
+  if (textPure.includes('adtech.') || textPure.includes('.adtech')) {
     return 'HOST-KEYWORD,adtech';
   }
-  if (textPure.includes('ricoh.')) {
+  if (textPure.includes('ricoh.') || textPure.includes('.ricoh')) {
     return 'HOST-KEYWORD,ricoh';
   }
   // endsWith
