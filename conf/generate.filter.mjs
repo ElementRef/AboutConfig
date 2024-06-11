@@ -185,6 +185,9 @@ function mapMixture(text) {
     return `HOST-KEYWORD,ingest.sentry`;
   }
   // endsWith
+  if (textPure.endsWith('.cosmicnewspulse.com')) {
+    return `HOST-SUFFIX,cosmicnewspulse.com`;
+  }
   if (textPure.endsWith('.ipfs.dweb.link')) {
     return `HOST-SUFFIX,ipfs.dweb.link`;
   }
@@ -199,6 +202,21 @@ function mapMixture(text) {
   }
   if (textPure.endsWith('.5clo0xmbf.com')) {
     return `HOST-SUFFIX,5clo0xmbf.com`;
+  }
+  if (textPure.endsWith('.79j68qav2.com')) {
+    return `HOST-SUFFIX,79j68qav2.com`;
+  }
+  if (textPure.endsWith('.833enmhob.com')) {
+    return `HOST-SUFFIX,833enmhob.com`;
+  }
+  if (textPure.endsWith('.k3718qw08.com')) {
+    return `HOST-SUFFIX,k3718qw08.com`;
+  }
+  if (textPure.endsWith('.l5eamr17d.com')) {
+    return `HOST-SUFFIX,l5eamr17d.com`;
+  }
+  if (textPure.endsWith('.ogrt80r65.com')) {
+    return `HOST-SUFFIX,ogrt80r65.com`;
   }
   if (textPure.endsWith('.net.mydays.de')) {
     return `HOST-SUFFIX,net.mydays.de`;
