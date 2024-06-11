@@ -167,6 +167,10 @@ function mapMixture(text) {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
+  // 规则优化
+  if (textPure.startsWith('www.')) {
+    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
+  }
   // startsWith
   if (textPure.startsWith('data.comunicaciones.')) {
     return `HOST-KEYWORD,data.comunicaciones`;
@@ -187,6 +191,9 @@ function mapMixture(text) {
   // endsWith
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return `HOST-SUFFIX,cosmicnewspulse.com`;
+  }
+  if (textPure.endsWith('.ohhmyoffers.com')) {
+    return `HOST-SUFFIX,ohhmyoffers.com`;
   }
   if (textPure.endsWith('.ipfs.dweb.link')) {
     return `HOST-SUFFIX,ipfs.dweb.link`;
