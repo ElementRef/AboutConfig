@@ -406,13 +406,16 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.p2l.info')) {
     return 'HOST-SUFFIX,p2l.info';
   }
-  // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
+  // Quantumult X 似乎不支持 RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
     return `HOST-SUFFIX,${textTemp.substring(1)}`;
   } else if (textTemp.startsWith('+.')) {
     return `HOST-SUFFIX,${textTemp.substring(2)}`;
   } else if (textTemp.toUpperCase().startsWith('USER-AGENT,')) {
     return `USER-AGENT,${textPure}`;
+  } else if (textPure.includes('*')) {
+    // 必须放在 USER-AGENT 之后，其他规则判断之前
+    return `HOST-WILDCARD,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST,') ||
     textTemp.toUpperCase().startsWith('DOMAIN,')
@@ -450,6 +453,8 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('IP6-CIDR,')
   ) {
     return `IP6-CIDR,${textPure}`;
+  } else if (textTemp.toUpperCase().startsWith('PROCESS-NAME,')) {
+    return '';
   } else {
     return '';
   }
