@@ -162,8 +162,8 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
     RAW
   };
 }
-function mapMixture(text) {
-  const textTemp = text.trim();
+function mapMixture(text = '') {
+  const textTemp = text.replace(/ /gim, '');
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
@@ -234,18 +234,21 @@ function mapMixture(text) {
   if (textPure.startsWith('webanalytics.')) {
     return 'HOST-KEYWORD,webanalytics';
   }
-  if (textPure.startsWith('www.')) {
-    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
-  }
   if (textPure.startsWith('ywrcqa.')) {
     return 'HOST-KEYWORD,ywrcqa';
   }
   // includes
+  if (textTemp.includes(',www.')) {
+    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
+  }
   if (textPure.includes('.theacademyforconsciousleadership.')) {
     return 'HOST-KEYWORD,theacademyforconsciousleadership';
   }
   if (textPure.includes('.academyofconsciousleadership.')) {
     return 'HOST-KEYWORD,academyofconsciousleadership';
+  }
+  if (textPure.includes('.americanexpress.')) {
+    return 'HOST-KEYWORD,americanexpress';
   }
   if (textPure.includes('.ingest.sentry.')) {
     return 'HOST-KEYWORD,ingest.sentry';
@@ -274,6 +277,9 @@ function mapMixture(text) {
   // endsWith
   if (textPure.endsWith('.notice.spriggy.com.au')) {
     return 'HOST-SUFFIX,notice.spriggy.com.au';
+  }
+  if (textPure.endsWith('.stats.esomniture.com')) {
+    return 'HOST-SUFFIX,stats.esomniture.com';
   }
   if (textPure.endsWith('.hello.spriggy.com.au')) {
     return 'HOST-SUFFIX,hello.spriggy.com.au';
@@ -368,6 +374,12 @@ function mapMixture(text) {
   if (textPure.endsWith('.sanvello.com')) {
     return 'HOST-SUFFIX,sanvello.com';
   }
+  if (textPure.endsWith('.omniture.com')) {
+    return 'HOST-SUFFIX,omniture.com';
+  }
+  if (textPure.endsWith('.u3.ucweb.com')) {
+    return 'HOST-SUFFIX,u3.ucweb.com';
+  }
   if (textPure.endsWith('.tajawal.com')) {
     return 'HOST-SUFFIX,tajawal.com';
   }
@@ -397,6 +409,9 @@ function mapMixture(text) {
   }
   if (textPure.endsWith('.51y5.net')) {
     return 'HOST-SUFFIX,51y5.net';
+  }
+  if (textPure.endsWith('.p2l.info')) {
+    return 'HOST-SUFFIX,p2l.info';
   }
   // Quantumult X 似乎不支持 DOMAIN|RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
