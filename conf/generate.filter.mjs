@@ -167,6 +167,9 @@ function mapMixture(text = '') {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
+  if (/,[w]+\./gim.test(textTemp)) {
+    return `HOST-SUFFIX,${textPure.replace(/[w]+\./gim, '')}`;
+  }
   // startsWith
   if (textPure.startsWith('a8clk.')) {
     return 'HOST-KEYWORD,a8clk';
@@ -238,9 +241,6 @@ function mapMixture(text = '') {
     return 'HOST-KEYWORD,ywrcqa';
   }
   // includes
-  if (textTemp.includes(',www.')) {
-    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
-  }
   if (textPure.includes('.theacademyforconsciousleadership.')) {
     return 'HOST-KEYWORD,theacademyforconsciousleadership';
   }
