@@ -163,13 +163,13 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   };
 }
 function mapMixture(text = '') {
-  const textTemp = text.replace(/ /gim, '');
+  const textTemp = text.replace(/ /gim, '').toLowerCase();
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // /,[w]{+}\./gim 存在误杀，必须指定为 3
-  if (/,[w]{3}\./gim.test(textTemp)) {
-    return `HOST-SUFFIX,${textPure.replace(/[w]{3}\./gim, '')}`;
+  // /,[w]{+}\./gim 存在误杀，必须指定为 /,[w]{3}\./gim
+  if (textTemp.includes(',www.')) {
+    return `HOST-SUFFIX,${textPure.replace('www.', '')}`;
   }
   // startsWith
   if (textPure.startsWith('a8clk.')) {
