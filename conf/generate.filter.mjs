@@ -297,9 +297,10 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
-  if (textPure.endsWith('.core.windows.net')) {
-    return 'HOST-SUFFIX,core.windows.net';
-  }
+  // 会导致 Actions 日志加载失败
+  // if (textPure.endsWith('.core.windows.net')) {
+  //   return 'HOST-SUFFIX,core.windows.net';
+  // }
   if (textPure.endsWith('.ohhmyoffers.com')) {
     return 'HOST-SUFFIX,ohhmyoffers.com';
   }
