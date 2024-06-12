@@ -153,7 +153,7 @@ function mapMixture(text = '') {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // /,[w]{+}\./gim 存在误杀，必须指定为 /,[w]{3}\./gim
+  // /^,[w]{+}\./gim 存在误杀
   if (/^,[w]{3}\./gim.test(`,${textPure}`)) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
@@ -190,6 +190,12 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('data.decathlon.')) {
     return 'HOST-KEYWORD,data.decathlon';
+  }
+  if (textPure.startsWith('email.everyonesocial.')) {
+    return 'HOST-KEYWORD,email.everyonesocial';
+  }
+  if (textPure.startsWith('metrics.')) {
+    return 'HOST-KEYWORD,metrics';
   }
   if (textPure.startsWith('mobileads.')) {
     return 'HOST-KEYWORD,mobileads';
@@ -283,12 +289,11 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
-  // 会导致 Actions 日志加载失败
-  // if (textPure.endsWith('.core.windows.net')) {
-  //   return 'HOST-SUFFIX,core.windows.net';
-  // }
   if (textPure.endsWith('.ohhmyoffers.com')) {
     return 'HOST-SUFFIX,ohhmyoffers.com';
+  }
+  if (textPure.endsWith('.offermatica.com')) {
+    return 'HOST-SUFFIX,offermatica.com';
   }
   if (textPure.endsWith('.ipfs.dweb.link')) {
     return 'HOST-SUFFIX,ipfs.dweb.link';
