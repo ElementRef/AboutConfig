@@ -168,8 +168,8 @@ function mapMixture(text = '') {
     .replace(/\/\/.*/gim, '')
     .trim();
   // /,[w]{+}\./gim 存在误杀，必须指定为 /,[w]{3}\./gim
-  if (/,[w]{3}\./gim.test(textTemp)) {
-    return `HOST-SUFFIX,${textPure.replace(/[w]{3}\./gim, '')}`;
+  if (/^,[w]{3}\./gim.test(`,${textPure}`)) {
+    return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
   // startsWith
   if (textPure.startsWith('a8clk.')) {
