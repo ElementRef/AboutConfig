@@ -252,6 +252,9 @@ function mapMixture(text = '') {
   if (textPure.includes('.autoscout24.')) {
     return 'HOST-KEYWORD,autoscout24';
   }
+  if (textPure.includes('.net.jumia.')) {
+    return 'HOST-KEYWORD,net.jumia';
+  }
   if (textPure.includes('.adscience.')) {
     return 'HOST-KEYWORD,adscience';
   }
@@ -280,11 +283,17 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
   }
+  if (textPure.endsWith('.innovatedating.com')) {
+    return 'HOST-SUFFIX,innovatedating.com';
+  }
   if (textPure.endsWith('.net.iberostar.com')) {
     return 'HOST-SUFFIX,net.iberostar.com';
   }
   if (textPure.endsWith('.themoneytizer.com')) {
     return 'HOST-SUFFIX,themoneytizer.com';
+  }
+  if (textPure.endsWith('.imrworldwide.com')) {
+    return 'HOST-SUFFIX,imrworldwide.com';
   }
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
@@ -382,6 +391,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.viglink.com')) {
     return 'HOST-SUFFIX,viglink.com';
   }
+  if (textPure.endsWith('.yinzcam.com')) {
+    return 'HOST-SUFFIX,yinzcam.com';
+  }
   if (textPure.endsWith('.musical.ly')) {
     return 'HOST-SUFFIX,musical.ly';
   }
@@ -390,6 +402,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.pstatp.com')) {
     return 'HOST-SUFFIX,pstatp.com';
+  }
+  if (textPure.endsWith('.swrve.com')) {
+    return 'HOST-SUFFIX,swrve.com';
   }
   if (textPure.endsWith('.ahacdn.me')) {
     return 'HOST-SUFFIX,ahacdn.me';
