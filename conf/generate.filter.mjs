@@ -157,6 +157,16 @@ function mapMixture(text = '') {
   if (/^,[w]{3}\./gim.test(`,${textPure}`)) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
+  // 删除 HOST,10.10.34.34 之类的规则
+  if (
+    /^(\d|\.)+$/gim.test(textPure) &&
+    (!textTemp.toUpperCase().startsWith('IP-ASN,') ||
+      !textTemp.toUpperCase().startsWith('IP-CIDR,') ||
+      !textTemp.toUpperCase().startsWith('IP-CIDR6,') ||
+      !textTemp.toUpperCase().startsWith('IP6-CIDR,'))
+  ) {
+    return '';
+  }
   // HOST-KEYWORD 优先级过低，导致拦截失败，弃用
   // if (textPure.startsWith('a8clk.')) {
   //   return 'HOST-KEYWORD,a8clk';
