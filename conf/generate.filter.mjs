@@ -571,8 +571,7 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
-        }
-        if (!park[domainORip]) {
+        } else if (!park[domainORip]) {
           park[domainORip] = domainORip;
           temp[rule] = rule;
         } else {
