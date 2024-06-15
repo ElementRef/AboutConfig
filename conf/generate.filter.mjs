@@ -137,7 +137,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         const text = await res.text();
         RAW[key] = text
           .split('\n')
-          .map(MAPFN)
+          .map(str => MAPFN(str, FILENAME))
           .filter(text => text.length !== 0);
       }
     }
@@ -155,7 +155,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         RAW
       };
 }
-function mapMixture(text = '') {
+function mapMixture(text = '', FILENAME = '') {
   const textTemp = text.replace(/ /gim, '');
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
@@ -458,7 +458,10 @@ function mapMixture(text = '') {
     if (textPure === 'byteimg.com') {
       return '';
     }
-    if ([...textPure.matchAll(/\./gim)].length === 1) {
+    if (
+      FILENAME === 'element.ref.reject.mixture.ini' &&
+      [...textPure.matchAll(/\./gim)].length === 1
+    ) {
       MAINDOMAINNAMELIST.push(textPure);
     }
     return `HOST-SUFFIX,${textPure}`;
