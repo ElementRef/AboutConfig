@@ -567,7 +567,10 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
             .slice(0, 2)
             .reverse()
             .join('.');
-          if (!MAINDOMAINNAMELIST.includes(MainInDomainORip)) {
+          if (
+            !MAINDOMAINNAMELIST.includes(MainInDomainORip) &&
+            !park[domainORip]
+          ) {
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
