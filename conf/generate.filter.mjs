@@ -162,6 +162,9 @@ function mapMixture(text = '', FILENAME = '') {
     .trim();
   // /^,[w]{+}\./gim 存在误杀
   if (/^,[w]{3}\./gim.test(`,${textPure}`)) {
+    if (textPure.replace(/^[w]{3}\./gim, '') === 'fr') {
+      console.log(1111111111);
+    }
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
   // 删除 HOST,10.10.34.34 之类的规则
@@ -437,8 +440,14 @@ function mapMixture(text = '', FILENAME = '') {
   }
   // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
+    if (textTemp.substring(1) === 'fr') {
+      console.log(3333333333);
+    }
     return `HOST-SUFFIX,${textTemp.substring(1)}`;
   } else if (textTemp.startsWith('+.')) {
+    if (textTemp.substring(2)) {
+      console.log(4444444444);
+    }
     return `HOST-SUFFIX,${textTemp.substring(2)}`;
   } else if (textTemp.toUpperCase().startsWith('USER-AGENT,')) {
     return `USER-AGENT,${textPure}`;
@@ -454,6 +463,9 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
+    if (textPure === 'fr') {
+      console.log(2222222222);
+    }
     // REJECT 时会导致‘字节跳动’相关网站图片显示异常
     if (textPure === 'byteimg.com') {
       return '';
@@ -566,7 +578,10 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
           MAINREJECTDOMAINLIST &&
           [...domainORip.matchAll(/\./gim)].length > 1 &&
           FILENAME === 'element.ref.reject.mixture.ini' &&
-          (domainORule === 'HOST' || domainORule === 'HOST-SUFFIX')
+          (domainORule === 'HOST' ||
+            domainORule === 'HOST-SUFFIX' ||
+            domainORule === 'HOST-KEYWORD' ||
+            domainORule === 'HOST-WILDCARD')
         ) {
           /**
            * 有重复的【主】域名，但不一定有重复的规则
