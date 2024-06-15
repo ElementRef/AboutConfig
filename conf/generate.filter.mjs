@@ -458,12 +458,16 @@ function mapMixture(text = '', FILENAME = '') {
     if (textPure === 'byteimg.com') {
       return '';
     }
-    // 只对 element.ref.reject.mixture.ini 做优化
+    /**
+     * 只对 element.ref.reject.mixture.ini 做优化
+     * 收集规则里已有的主域名
+     */
     if (
       FILENAME === 'element.ref.reject.mixture.ini' &&
       [...textPure.matchAll(/\./gim)].length === 1
     ) {
       MAINREJECTDOMAINLIST.push(textPure);
+      return `HOST-SUFFIX,${textPure}`;
     }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
@@ -551,7 +555,11 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
     RAW[key].forEach(rule => {
       if (rule.includes(',')) {
         const [domainORule, domainORip] = rule.split(',');
-        // 只对 element.ref.reject.mixture.ini 做优化
+        /**
+         * 只对 element.ref.reject.mixture.ini 做优化
+         * 如果 domainORip 的主域名存在于收集的列表里
+         * 就剔除出去
+         */
         if (
           MAINREJECTDOMAINLIST &&
           FILENAME === 'element.ref.reject.mixture.ini' &&
