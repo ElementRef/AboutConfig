@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-const MAINDOMAINNAMELIST = [];
+const MAINREJECTDOMAINLIST = [];
 const RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
@@ -146,7 +146,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   }
   return MAPFN === mapMixture
     ? {
-        MAINDOMAINNAMELIST,
+        MAINREJECTDOMAINLIST,
         FILENAME,
         RAW
       }
@@ -458,11 +458,12 @@ function mapMixture(text = '', FILENAME = '') {
     if (textPure === 'byteimg.com') {
       return '';
     }
+    // 只对 element.ref.reject.mixture.ini 做优化
     if (
       FILENAME === 'element.ref.reject.mixture.ini' &&
       [...textPure.matchAll(/\./gim)].length === 1
     ) {
-      MAINDOMAINNAMELIST.push(textPure);
+      MAINREJECTDOMAINLIST.push(textPure);
     }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
@@ -539,7 +540,7 @@ function mapDoHosts(text) {
   }
   return `0.0.0.0 ${lastTemp}`;
 }
-function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
+function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
   const park = Object.create(null);
   const temp = Object.create(null);
   Object.keys(RAW).forEach(key => {
@@ -550,8 +551,9 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
     RAW[key].forEach(rule => {
       if (rule.includes(',')) {
         const [domainORule, domainORip] = rule.split(',');
+        // 只对 element.ref.reject.mixture.ini 做优化
         if (
-          MAINDOMAINNAMELIST &&
+          MAINREJECTDOMAINLIST &&
           FILENAME === 'element.ref.reject.mixture.ini' &&
           [...domainORip.matchAll(/\./gim)].length > 1 &&
           (domainORule === 'HOST' ||
@@ -572,7 +574,7 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
             .reverse()
             .join('.');
           if (
-            !MAINDOMAINNAMELIST.includes(MainInDomainORip) &&
+            !MAINREJECTDOMAINLIST.includes(MainInDomainORip) &&
             !park[domainORip]
           ) {
             park[domainORip] = domainORip;
