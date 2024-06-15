@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+const MAINDOMAINNAMELIST = [];
 const RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
@@ -143,10 +144,16 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   } catch (error) {
     console.error(error);
   }
-  return {
-    FILENAME,
-    RAW
-  };
+  return MAPFN === mapMixture
+    ? {
+        MAINDOMAINNAMELIST,
+        FILENAME,
+        RAW
+      }
+    : {
+        FILENAME,
+        RAW
+      };
 }
 function mapMixture(text = '') {
   const textTemp = text.replace(/ /gim, '');
@@ -451,6 +458,9 @@ function mapMixture(text = '') {
     if (textPure === 'byteimg.com') {
       return '';
     }
+    if ([...textPure.matchAll(/\./gim)].length === 1) {
+      MAINDOMAINNAMELIST.push(textPure);
+    }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-KEYWORD,') ||
@@ -526,7 +536,7 @@ function mapDoHosts(text) {
   }
   return `0.0.0.0 ${lastTemp}`;
 }
-function combineResourses({ FILENAME, RAW }) {
+function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
   const park = Object.create(null);
   const temp = Object.create(null);
   Object.keys(RAW).forEach(key => {
@@ -536,7 +546,32 @@ function combineResourses({ FILENAME, RAW }) {
     );
     RAW[key].forEach(rule => {
       if (rule.includes(',')) {
-        const [, domainORip] = rule.split(',');
+        const [domainORule, domainORip] = rule.split(',');
+        if (
+          MAINDOMAINNAMELIST &&
+          [...domainORip.matchAll(/\./gim)].length > 1 &&
+          (domainORule === 'HOST' ||
+            domainORule === 'HOST-KEYWORD' ||
+            domainORule === 'HOST-SUFFIX' ||
+            domainORule === 'HOST-WILDCARD')
+        ) {
+          /**
+           * 有重复的【主】域名，但不一定有重复的规则
+           * HOST,123.urlsec.qq.com
+           * HOST-SUFFIX,qq.com
+           * 保留 qq.com 即可
+           */
+          const MainInDomainORip = [domainORip]
+            .split('.')
+            .reverse()
+            .slice(0, 2)
+            .reverse()
+            .join('.');
+          if (!MAINDOMAINNAMELIST.includes(MainInDomainORip)) {
+            park[domainORip] = domainORip;
+            temp[rule] = rule;
+          }
+        }
         if (!park[domainORip]) {
           park[domainORip] = domainORip;
           temp[rule] = rule;
