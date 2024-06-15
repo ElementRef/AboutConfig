@@ -466,7 +466,9 @@ function mapMixture(text = '', FILENAME = '') {
       FILENAME === 'element.ref.reject.mixture.ini' &&
       [...textPure.matchAll(/\./gim)].length === 1
     ) {
-      MAINREJECTDOMAINLIST.push(textPure);
+      if (!MAINREJECTDOMAINLIST.includes(textPure)) {
+        MAINREJECTDOMAINLIST.push(textPure);
+      }
       return `HOST-SUFFIX,${textPure}`;
     }
     return `HOST-SUFFIX,${textPure}`;
