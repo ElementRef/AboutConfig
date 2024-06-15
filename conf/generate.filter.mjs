@@ -549,6 +549,7 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
         const [domainORule, domainORip] = rule.split(',');
         if (
           MAINDOMAINNAMELIST &&
+          FILENAME === 'element.ref.reject.mixture.ini' &&
           [...domainORip.matchAll(/\./gim)].length > 1 &&
           (domainORule === 'HOST' ||
             domainORule === 'HOST-KEYWORD' ||
