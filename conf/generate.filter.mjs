@@ -561,7 +561,7 @@ function combineResourses({ MAINDOMAINNAMELIST = undefined, FILENAME, RAW }) {
            * HOST-SUFFIX,qq.com
            * 保留 qq.com 即可
            */
-          const MainInDomainORip = [domainORip]
+          const MainInDomainORip = domainORip
             .split('.')
             .reverse()
             .slice(0, 2)
