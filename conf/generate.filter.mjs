@@ -554,10 +554,6 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
       `    ${key}`.padEnd(36),
       RAW[key].length.toString().padStart(12)
     );
-    if (MAINREJECTDOMAINLIST) {
-      console.log(MAINREJECTDOMAINLIST.includes('fr'));
-    }
-
     RAW[key].forEach(rule => {
       if (rule.includes(',')) {
         const [domainORule, domainORip] = rule.split(',');
