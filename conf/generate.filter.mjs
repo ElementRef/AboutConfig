@@ -564,12 +564,9 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
          */
         if (
           MAINREJECTDOMAINLIST &&
-          FILENAME === 'element.ref.reject.mixture.ini' &&
           [...domainORip.matchAll(/\./gim)].length > 1 &&
-          (domainORule === 'HOST' ||
-            domainORule === 'HOST-KEYWORD' ||
-            domainORule === 'HOST-SUFFIX' ||
-            domainORule === 'HOST-WILDCARD')
+          FILENAME === 'element.ref.reject.mixture.ini' &&
+          (domainORule === 'HOST' || domainORule === 'HOST-SUFFIX')
         ) {
           /**
            * 有重复的【主】域名，但不一定有重复的规则
