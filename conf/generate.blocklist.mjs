@@ -78,10 +78,16 @@ async function writeResourses2File({ FILENAME, RES }) {
       value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     RES.forEach(item => {
-      if (item.startsWith('*://') && !item.endsWith('/*')) {
-        // 这种规则没什么用
-      } else {
+      if (item.startsWith('*://')) {
+        if (!item.endsWith('/*')) {
+          // 这种规则没什么用
+        } else {
+          temp.value = temp.value + item + '\n';
+        }
+      } else if (item.startsWith('title/')) {
         temp.value = temp.value + item + '\n';
+      } else {
+        // 这种规则没什么用
       }
     });
     await writeFile(
