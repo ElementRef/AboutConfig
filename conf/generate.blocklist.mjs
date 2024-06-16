@@ -63,7 +63,7 @@ async function handleList(LIST) {
           RAW.push(rule.replace(/\#(\W|\w|\s)+/gim, '').trim());
         }
       });
-      resolve([...new Set(RAW)]);
+      resolve([...new Set(RAW)].sort());
     } catch (error) {
       console.error(error);
       reject(error);
@@ -78,7 +78,11 @@ async function writeResourses2File({ FILENAME, RES }) {
       value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     RES.forEach(item => {
-      temp.value = temp.value + item + '\n';
+      if (item.startsWith('*://') && !item.endsWith('/*')) {
+        // 这种规则没什么用
+      } else {
+        temp.value = temp.value + item + '\n';
+      }
     });
     await writeFile(
       resolve(dirname(scriptPath), `../filter/${FILENAME}`),
