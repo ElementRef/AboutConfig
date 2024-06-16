@@ -115,6 +115,8 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
       }
       await writeFile(resolve(TMPPATH, `./${FILENAME}`), TEXT);
       console.log(`>>> ${FILENAME}`.padEnd(36), '下载完成 <<<'.padStart(12));
+    } else {
+      console.log(`>>> ${FILENAME}`.padEnd(36), '下载失败 <<<'.padStart(12));
     }
   } catch (error) {
     console.error(error);
