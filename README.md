@@ -1,4 +1,4 @@
-## 自用 [Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/QuantX.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/uBlocklist.ini)
+## 自用 [Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/QuantX.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
@@ -15,6 +15,7 @@
 - [@chxm1023](https://github.com/chxm1023/Rewrite)
 - [@CINSSCORE](https://cinsscore.com/)
 - [@damengzhu](https://github.com/damengzhu/banad)
+- [@danny0838](https://github.com/danny0838/content-farm-terminator)
 - [@ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)

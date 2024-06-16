@@ -29,6 +29,7 @@ jobs:
 
       - name: Build with Node
         run: |
+          node conf/generate.blocklist.mjs
           node conf/generate.esbuild.mjs
           node conf/generate.filter.mjs
 
