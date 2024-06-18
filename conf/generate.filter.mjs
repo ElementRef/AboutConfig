@@ -204,6 +204,9 @@ function mapMixture(text = '', FILENAME = '') {
   // if (textPure.startsWith('analytics.')) {
   //   return 'HOST-KEYWORD,analytics';
   // }
+  // if (textPure.startsWith('att.trk.')) {
+  //   return 'HOST-KEYWORD,att.trk';
+  // }
   // if (textPure.startsWith('data.comunicaciones.')) {
   //   return 'HOST-KEYWORD,data.comunicaciones';
   // }
@@ -215,6 +218,9 @@ function mapMixture(text = '', FILENAME = '') {
   // }
   // if (textPure.startsWith('email.everyonesocial.')) {
   //   return 'HOST-KEYWORD,email.everyonesocial';
+  // }
+  // if (textPure.startsWith('images.info.')) {
+  //   return 'HOST-KEYWORD,images.info';
   // }
   // if (textPure.startsWith('metrics.')) {
   //   return 'HOST-KEYWORD,metrics';
