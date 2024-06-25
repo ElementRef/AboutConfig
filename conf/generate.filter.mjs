@@ -411,6 +411,9 @@ function mapMixture(text = '', FILENAME = '') {
   if (textPure.endsWith('.tntdrama.com')) {
     return 'HOST-SUFFIX,tntdrama.com';
   }
+  if (textPure.endsWith('.treknew.fun')) {
+    return 'HOST-SUFFIX,treknew.fun';
+  }
   if (textPure.endsWith('.umengcloud.com')) {
     return 'HOST-SUFFIX,umengcloud.com';
   }
