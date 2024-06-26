@@ -21,6 +21,7 @@
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)
 - [@gjwj666](https://github.com/gjwj666/qx)
+- [@GMOogway](https://github.com/GMOogway/shadowrocket-rules)
 - [@GreenSnow](https://greensnow.co/)
 - [@Hackl0us](https://github.com/Hackl0us/GeoIP2-CN)
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
