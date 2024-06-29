@@ -340,6 +340,9 @@ function mapMixture(text = '', FILENAME = '') {
   if (textPure.endsWith('.l5eamr17d.com')) {
     return 'HOST-SUFFIX,l5eamr17d.com';
   }
+  if (textPure.endsWith('.linodeusercontent.com')) {
+    return 'HOST-SUFFIX,linodeusercontent.com';
+  }
   if (textPure.endsWith('.musical.ly')) {
     return 'HOST-SUFFIX,musical.ly';
   }
