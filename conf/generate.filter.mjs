@@ -128,7 +128,8 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   const RAW = Object.create(null);
   try {
     for (const src of SRC) {
-      const key = src.split('/').at(-1);
+      const keyArr = src.split('/');
+      const key = `${keyArr.at(-2)}${keyArr.at(-1)}`;
       const res = await fetch(src, {
         method: 'GET',
         cache: 'no-cache',
