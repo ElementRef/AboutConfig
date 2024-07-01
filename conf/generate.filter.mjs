@@ -18,6 +18,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
       'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini'
     ],
     MAPFN: mapMixture
@@ -29,6 +30,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Instagram/Instagram.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini'
     ],
     MAPFN: mapMixture
@@ -57,6 +59,9 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
     ],
     MAPFN: mapMixture
@@ -165,13 +170,6 @@ function mapMixture(text = '', FILENAME = '') {
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // /^,[w]{+}\./gim 存在误杀
-  if (
-    /^,[w]{3}\./gim.test(`,${textPure}`) &&
-    [...textPure.matchAll(/\./gim)].length > 1
-  ) {
-    return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
-  }
   // 删除 HOST,10.10.34.34 之类的规则
   if (
     /^(\d|\.)+$/gim.test(textPure) &&
@@ -183,6 +181,17 @@ function mapMixture(text = '', FILENAME = '') {
     )
   ) {
     return '';
+  }
+  // 删除注释
+  if (textPure.includes('sukkaw.skk.moe')) {
+    return '';
+  }
+  // /^,[w]{+}\./gim 存在误杀
+  if (
+    /^,[w]{3}\./gim.test(`,${textPure}`) &&
+    [...textPure.matchAll(/\./gim)].length > 1
+  ) {
+    return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
   // HOST-KEYWORD 优先级过低，导致拦截失败，弃用
   // if (textPure.startsWith('a8clk.')) {
