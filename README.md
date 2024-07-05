@@ -42,6 +42,7 @@
 - [@SukkaW](https://github.com/SukkaW/Surge)
 - [@vvbbnn00](https://github.com/vvbbnn00/WARP-Clash-API)
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
+- [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
 
 <!--

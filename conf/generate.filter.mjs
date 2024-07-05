@@ -19,6 +19,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
       'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
+      'https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/filter/ShuntCorrection-surge.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini'
     ],
     MAPFN: mapMixture
@@ -62,6 +63,8 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
+      'https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/filter/AdAway-surge.list',
+      'https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/filter/AdBlock-surge.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
     ],
     MAPFN: mapMixture
