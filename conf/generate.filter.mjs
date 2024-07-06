@@ -507,8 +507,8 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('HOST-KEYWORD,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-KEYWORD,')
   ) {
-    // REJECT 时会导致‘火山引擎’相关网站图片显示异常
-    if (textPure === 'volc') {
+    // 会导致‘微博搜索｜火山引擎’相关网站异常
+    if (textPure === 's.weibo.com' || textPure === 'volc') {
       return '';
     }
     return `HOST-KEYWORD,${textPure}`;
