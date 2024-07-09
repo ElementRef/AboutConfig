@@ -40,6 +40,7 @@
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
 - [@SukkaW](https://github.com/SukkaW/Surge)
+- [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
 - [@vvbbnn00](https://github.com/vvbbnn00/WARP-Clash-API)
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
 - [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)

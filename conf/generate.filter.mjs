@@ -65,6 +65,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
+      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list',
       'https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/filter/AdAway-surge.list',
       'https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/filter/AdBlock-surge.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
