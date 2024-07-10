@@ -1,4 +1,4 @@
-## 自用 [Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
+## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
