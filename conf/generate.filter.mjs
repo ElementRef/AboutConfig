@@ -531,7 +531,7 @@ function mapMixture(text = '', FILENAME = '') {
   ) {
     return `IP6-CIDR,${textPure}`;
   } else if (textTemp.toUpperCase().startsWith('PROCESS-NAME,')) {
-    return '';
+    return `PROCESS-NAME,${textPure}`;
   } else {
     return '';
   }
