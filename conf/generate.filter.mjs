@@ -61,6 +61,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
       'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
+      'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list',
       'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/PornAds.list',
