@@ -1,4 +1,4 @@
-## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
+## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
@@ -29,6 +29,7 @@
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
 - [@jdlingyu](https://github.com/jdlingyu/ad-wars)
+- [@Johnshall](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
