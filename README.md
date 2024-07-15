@@ -18,6 +18,7 @@
 - [@damengzhu](https://github.com/damengzhu/banad)
 - [@danny0838](https://github.com/danny0838/content-farm-terminator)
 - [@ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
+- [@deezertidal](https://github.com/deezertidal/QuantumultX-Rewrite)
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)

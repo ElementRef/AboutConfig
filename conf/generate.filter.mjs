@@ -56,6 +56,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Hijacking.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list',
+      'https://raw.githubusercontent.com/deezertidal/QuantumultX-Rewrite/master/rule/AntiAD.list',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
