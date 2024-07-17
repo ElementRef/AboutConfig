@@ -40,12 +40,15 @@
 - [@privacy-protection-tools](https://github.com/privacy-protection-tools/anti-AD)
 - [@RuCu6](https://github.com/RuCu6/QuanX)
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
+- [@someonewhocares](https://someonewhocares.org/hosts/)
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
 - [@SukkaW](https://github.com/SukkaW/Surge)
 - [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
 - [@vvbbnn00](https://github.com/vvbbnn00/WARP-Clash-API)
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
+- [@winhelp2002](https://winhelp2002.mvps.org/)
 - [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)
+- [@yoyo](https://pgl.yoyo.org/adservers/)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
 
 <!--
