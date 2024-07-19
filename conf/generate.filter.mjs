@@ -490,6 +490,10 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('HOST,') ||
     textTemp.toUpperCase().startsWith('DOMAIN,')
   ) {
+    // REJECT 时会导致‘百度网盘’相关网站图片显示异常
+    if (textPure === 'staticsns.cdn.bcebos.com') {
+      return '';
+    }
     return `HOST,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
