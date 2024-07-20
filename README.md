@@ -34,6 +34,7 @@
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
 - [@missuo](https://github.com/missuo/ASN-China)
+- [@Moli-X](https://github.com/Moli-X/Resources)
 - [@Orz-3](https://github.com/Orz-3/mini)
 - [@paulmillr](https://github.com/paulmillr/encrypted-dns)
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
