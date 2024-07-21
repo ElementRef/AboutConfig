@@ -14,6 +14,7 @@
 - [@Cats-Team](https://github.com/Cats-Team/AdRules)
 - [@chxm1023](https://github.com/chxm1023/Rewrite)
 - [@CINSSCORE](https://cinsscore.com/)
+- [@Coldvvater](https://github.com/Coldvvater/Mononoke)
 - [@ConnersHua](https://github.com/ConnersHua/RuleGo)
 - [@damengzhu](https://github.com/damengzhu/banad)
 - [@danny0838](https://github.com/danny0838/content-farm-terminator)
