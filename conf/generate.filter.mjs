@@ -100,6 +100,7 @@ const RESOURCES = {
       'https://blocklist.greensnow.co/greensnow.txt',
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
+      'https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
@@ -149,7 +150,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   try {
     for (const src of SRC) {
       const keyArr = src.split('/');
-      const key = `${keyArr.at(-2)}/${keyArr.at(-1)}`;
+      const key = `${keyArr.at(-2)}/${keyArr.at(-1)}`.replace(/\?.+/gim, '');
       const res = await fetch(src, {
         method: 'GET',
         cache: 'no-cache',
