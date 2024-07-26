@@ -375,9 +375,6 @@ function mapMixture(text = '', FILENAME = '') {
   if (textPure.endsWith('.musical.ly')) {
     return 'HOST-SUFFIX,musical.ly';
   }
-  if (textPure.endsWith('.myqcloud.com')) {
-    return 'HOST-SUFFIX,myqcloud.com';
-  }
   if (textPure.endsWith('.nespresso.com')) {
     return 'HOST-SUFFIX,nespresso.com';
   }
