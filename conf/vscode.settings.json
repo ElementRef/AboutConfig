@@ -2,21 +2,6 @@
   "accessibility.dimUnfocused.enabled": true,
   "accessibility.dimUnfocused.opacity": 0.8,
   "accessibility.hideAccessibleView": true,
-  "accessibility.signals.clear": {
-    "announcement": "off"
-  },
-  "accessibility.signals.format": {
-    "announcement": "never"
-  },
-  "accessibility.signals.lineHasError": {
-    "announcement": "off"
-  },
-  "accessibility.signals.lineHasFoldedArea": {
-    "announcement": "off"
-  },
-  "accessibility.signals.terminalQuickFix": {
-    "sound": "auto"
-  },
   "accessibility.underlineLinks": true,
   "angular.enable-strict-mode-prompt": false,
   "angular.forceStrictTemplates": true,
@@ -76,6 +61,7 @@
   "debug.console.fontFamily": "'Iosvmata', 'Sarasa Term CL', 'Segoe UI Emoji', monospace",
   "debug.console.fontSize": 12,
   "debug.onTaskErrors": "debugAnyway",
+  "debug.showVariableTypes": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
   "diffEditor.diffAlgorithm": "advanced",
@@ -131,6 +117,7 @@
   "editor.inlayHints.padding": true,
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.fontFamily": "'Iosvmata', 'Sarasa Term CL', 'Segoe UI Emoji', monospace",
+  "editor.lightbulb.enabled": "off",
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.maxTokenizationLineLength": 99999,
@@ -323,6 +310,7 @@
   ],
   "eslint.quiet": true,
   "eslint.trace.server": "off",
+  "explorer.autoOpenDroppedFile": false,
   "explorer.autoRevealExclude": {
     "**/*.cache": true,
     "**/*.code-search": true,
@@ -550,6 +538,7 @@
   "scm.repositories.sortOrder": "path",
   "scm.showActionButton": true,
   "scm.showChangesSummary": true,
+  "scm.showHistoryGraph": true,
   "scm.showIncomingChanges": "auto",
   "scm.showOutgoingChanges": "auto",
   "scm.workingSets.default": "current",
