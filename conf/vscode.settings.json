@@ -269,6 +269,12 @@
         "settings": {
           "fontStyle": ""
         }
+      },
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
       }
     ]
   },
@@ -359,6 +365,7 @@
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.cjson": "jsonc",
+    "*.css": "tailwindcss",
     "*.ets": "typescript",
     "*.json": "jsonc",
     "*.json5": "jsonc",
@@ -367,7 +374,8 @@
     "*.opml": "html",
     "*.wxs": "javascript",
     "*.wxss": "css",
-    "*.xml": "html"
+    "*.xml": "html",
+    ".env*": "dotenv"
   },
   "files.autoGuessEncoding": true,
   "files.autoSaveWhenNoErrors": true,
@@ -626,6 +634,17 @@
     "vue-postcss",
     "vue"
   ],
+  "tailwindCSS.classAttributes": [
+    "class:list",
+    "class",
+    "className",
+    "ngClass"
+  ],
+  "tailwindCSS.emmetCompletions": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.validate": true,
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
