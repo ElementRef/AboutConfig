@@ -30,6 +30,10 @@ _cgo_gotypes.go
 .DS_Store
 .hugo_build.lock
 iOS.conf
+iOS.Loon.conf
+iOS.Quantumult.X.conf
 macOS.conf
+macOS.Loon.conf
+macOS.Quantumult.X.conf
 StorableSidebar*
 temp*
