@@ -282,6 +282,7 @@
   "editor.unicodeHighlight.includeComments": true,
   "editor.unicodeHighlight.invisibleCharacters": true,
   "editor.wordBasedSuggestions": "off",
+  "editor.wordSegmenterLocales": "zh-cn",
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.wordWrap": "off",
   "emmet.preferences": {
