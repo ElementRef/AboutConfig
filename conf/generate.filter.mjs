@@ -504,7 +504,7 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
     // REJECT 时会导致‘字节跳动’相关网站图片显示异常
-    if (textPure === 'byteimg.com') {
+    if (textPure === 'byteimg.com' || textPure === 'bytedance.com') {
       return '';
     }
     /**
