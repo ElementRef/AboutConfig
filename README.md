@@ -1,4 +1,4 @@
-## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini)
+## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini) ；建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN/blob/release/Country.mmdb) 食用
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
