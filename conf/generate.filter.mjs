@@ -56,21 +56,17 @@ const RESOURCES = {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
-      'https://raw.githubusercontent.com/deezertidal/QuantumultX-Rewrite/master/rule/AntiAD.list',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
-      'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
-      'https://raw.githubusercontent.com/Moli-X/Resources/main/Filter/ADBlack.list',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list',
       'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/PornAds.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
-      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
     ],
     MAPFN: mapMixture
