@@ -77,6 +77,7 @@ const RESOURCES = {
       'https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts',
       'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
       'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
+      'https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt',
       'https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt',
       'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt',
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
