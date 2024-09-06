@@ -74,7 +74,7 @@ const RESOURCES = {
   REJECTDOHOSTS: {
     FILENAME: 'element.ref.reject.dohosts.ini',
     SRC: [
-      'https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts',
+      'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
       'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
       'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
       'https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt',
@@ -94,7 +94,6 @@ const RESOURCES = {
       'https://blocklist.greensnow.co/greensnow.txt',
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
-      'https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
@@ -550,7 +549,9 @@ function mapPrueIPS(text) {
   if (
     (textTemp.includes(':') && !textTemp.includes('/')) ||
     textTemp.startsWith('#') ||
-    textTemp.startsWith(';')
+    textTemp.startsWith(';') ||
+    textTemp.startsWith('<') ||
+    textTemp.endsWith('>')
   ) {
     return '';
   }
