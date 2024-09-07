@@ -1,4 +1,4 @@
-## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini) ；建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 食用
+## 自用 [Code 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/vscode.settings.json)、[Host 文件](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/conf/quantumult.x.conf)、[uBlocklist 规则](https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini) ；建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
@@ -15,12 +15,12 @@
 - [@chxm1023](https://github.com/chxm1023/Rewrite)
 - [@CINSSCORE](https://cinsscore.com/)
 - [@Coldvvater](https://github.com/Coldvvater/Mononoke)
-- [@durablenapkin](https://github.com/durablenapkin/scamblocklist)
 - [@ConnersHua](https://github.com/ConnersHua/RuleGo)
 - [@damengzhu](https://github.com/damengzhu/banad)
 - [@danny0838](https://github.com/danny0838/content-farm-terminator)
 - [@ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
 - [@deezertidal](https://github.com/deezertidal/QuantumultX-Rewrite)
+- [@durablenapkin](https://github.com/durablenapkin/scamblocklist)
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)
