@@ -70,6 +70,7 @@
   "diffEditor.renderGutterMenu": false,
   "diffEditor.renderSideBySide": true,
   "diffEditor.wordWrap": "inherit",
+  "dotenv.enableAutocloaking": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingComments": "always",
   "editor.bracketPairColorization.enabled": true,
@@ -269,12 +270,6 @@
         "settings": {
           "fontStyle": ""
         }
-      },
-      {
-        "scope": "keyword.other.dotenv",
-        "settings": {
-          "foreground": "#FF000000"
-        }
       }
     ]
   },
@@ -363,6 +358,7 @@
   "explorer.openEditors.sortOrder": "editorOrder",
   "explorer.sortOrder": "type",
   "explorer.sortOrderLexicographicOptions": "default",
+  "explorer.sortOrderReverse": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.cjson": "jsonc",
@@ -546,10 +542,6 @@
   "scm.inputMinLineCount": 3,
   "scm.repositories.sortOrder": "path",
   "scm.showActionButton": true,
-  "scm.showChangesSummary": true,
-  "scm.showHistoryGraph": true,
-  "scm.showIncomingChanges": "auto",
-  "scm.showOutgoingChanges": "auto",
   "scm.workingSets.default": "current",
   "scm.workingSets.enabled": false,
   "scss.format.spaceAroundSelectorSeparator": true,
@@ -730,7 +722,7 @@
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.fontAliasing": "default",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.list.horizontalScrolling": false,
   "workbench.list.smoothScrolling": true,
   "workbench.preferredDarkColorTheme": "Rosé Pine Moon",
