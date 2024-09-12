@@ -52,12 +52,17 @@ async function handleList(LIST) {
   return new Promise((resolve, reject) => {
     try {
       const RAW = [];
+      const HOST = [];
       LIST.forEach(rule => {
-        if (rule && !rule.startsWith('#') && !rule.endsWith('.js')) {
-          RAW.push(rule.replace(/, /gim, '').replace(/ = /gim, '=').trim());
+        if (rule && !rule.startsWith('#')) {
+          if (rule.toLowerCase().startsWith('host')) {
+            HOST.push(rule.replace(/, /gim, '').replace(/ = /gim, '=').trim());
+          } else if (!rule.endsWith('.js')) {
+            RAW.push(rule.trim());
+          }
         }
       });
-      resolve([...new Set(RAW)]);
+      resolve([[...HOST], ...new Set(RAW)]);
     } catch (error) {
       console.error(error);
       reject(error);
