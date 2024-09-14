@@ -485,8 +485,11 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('HOST,') ||
     textTemp.toUpperCase().startsWith('DOMAIN,')
   ) {
-    // REJECT 时会导致‘百度网盘’相关网站图片显示异常
-    if (textPure === 'staticsns.cdn.bcebos.com') {
+    // REJECT 时会导致相关网站异常
+    if (
+      textPure === 'staticsns.cdn.bcebos.com' ||
+      textPure === 'metrics.icloud.com'
+    ) {
       return '';
     }
     return `HOST,${textPure}`;
@@ -494,11 +497,12 @@ function mapMixture(text = '', FILENAME = '') {
     textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
-    // REJECT 时会导致相关网站图片显示异常
+    // REJECT 时会导致相关网站异常
     if (
-      textPure === 'byteimg.com' ||
+      textPure === 'weworkremotely.com' ||
+      textPure === 'metrics.icloud.com' ||
       textPure === 'bytedance.com' ||
-      textPure === 'weworkremotely.com'
+      textPure === 'byteimg.com'
     ) {
       return '';
     }
