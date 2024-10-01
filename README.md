@@ -36,6 +36,7 @@
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
 - [@Loyalsoldier](https://github.com/Loyalsoldier/surge-rules)
+- [@malware-filter](https://gitlab.com/malware-filter/urlhaus-filter)
 - [@missuo](https://github.com/missuo/ASN-China)
 - [@Moli-X](https://github.com/Moli-X/Resources)
 - [@Orz-3](https://github.com/Orz-3/mini)

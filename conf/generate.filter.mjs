@@ -75,6 +75,7 @@ const RESOURCES = {
   REJECTDOHOSTS: {
     FILENAME: 'element.ref.reject.dohosts.ini',
     SRC: [
+      'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
       'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
       'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
       'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
@@ -95,6 +96,7 @@ const RESOURCES = {
       'https://blocklist.greensnow.co/greensnow.txt',
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
+      'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
@@ -203,124 +205,6 @@ function mapMixture(text = '', FILENAME = '') {
   ) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
-  // HOST-KEYWORD 优先级过低，导致拦截失败，弃用
-  // if (textPure.startsWith('a8clk.')) {
-  //   return 'HOST-KEYWORD,a8clk';
-  // }
-  // if (textPure.startsWith('a8cv.')) {
-  //   return 'HOST-KEYWORD,a8cv';
-  // }
-  // if (textPure.startsWith('adobeanalytics.')) {
-  //   return 'HOST-KEYWORD,adobeanalytics';
-  // }
-  // if (textPure.startsWith('ads.')) {
-  //   return 'HOST-KEYWORD,ads';
-  // }
-  // if (textPure.startsWith('advertising.')) {
-  //   return 'HOST-KEYWORD,advertising';
-  // }
-  // if (textPure.startsWith('affil.')) {
-  //   return 'HOST-KEYWORD,affil';
-  // }
-  // if (textPure.startsWith('ainu.intel.')) {
-  //   return 'HOST-KEYWORD,ainu.intel';
-  // }
-  // if (textPure.startsWith('analytics.')) {
-  //   return 'HOST-KEYWORD,analytics';
-  // }
-  // if (textPure.startsWith('att.trk.')) {
-  //   return 'HOST-KEYWORD,att.trk';
-  // }
-  // if (textPure.startsWith('data.comunicaciones.')) {
-  //   return 'HOST-KEYWORD,data.comunicaciones';
-  // }
-  // if (textPure.startsWith('data.customermail.')) {
-  //   return 'HOST-KEYWORD,data.customermail';
-  // }
-  // if (textPure.startsWith('data.decathlon.')) {
-  //   return 'HOST-KEYWORD,data.decathlon';
-  // }
-  // if (textPure.startsWith('email.everyonesocial.')) {
-  //   return 'HOST-KEYWORD,email.everyonesocial';
-  // }
-  // if (textPure.startsWith('images.info.')) {
-  //   return 'HOST-KEYWORD,images.info';
-  // }
-  // if (textPure.startsWith('metrics.')) {
-  //   return 'HOST-KEYWORD,metrics';
-  // }
-  // if (textPure.startsWith('mobileads.')) {
-  //   return 'HOST-KEYWORD,mobileads';
-  // }
-  // if (textPure.startsWith('openads.')) {
-  //   return 'HOST-KEYWORD,openads';
-  // }
-  // if (textPure.startsWith('phpads.')) {
-  //   return 'HOST-KEYWORD,phpads';
-  // }
-  // if (textPure.startsWith('sanalytics.')) {
-  //   return 'HOST-KEYWORD,sanalytics';
-  // }
-  // if (textPure.startsWith('secureanalytics.')) {
-  //   return 'HOST-KEYWORD,secureanalytics';
-  // }
-  // if (textPure.startsWith('sslanalytics.')) {
-  //   return 'HOST-KEYWORD,sslanalytics';
-  // }
-  // if (textPure.startsWith('swebanalytics.')) {
-  //   return 'HOST-KEYWORD,swebanalytics';
-  // }
-  // if (textPure.startsWith('uads.')) {
-  //   return 'HOST-KEYWORD,uads';
-  // }
-  // if (textPure.startsWith('unityads.')) {
-  //   return 'HOST-KEYWORD,unityads';
-  // }
-  // if (textPure.startsWith('webads.')) {
-  //   return 'HOST-KEYWORD,webads';
-  // }
-  // if (textPure.startsWith('webanalytics.')) {
-  //   return 'HOST-KEYWORD,webanalytics';
-  // }
-  // if (textPure.startsWith('ywrcqa.')) {
-  //   return 'HOST-KEYWORD,ywrcqa';
-  // }
-  // if (textPure.includes('.academyofconsciousleadership.')) {
-  //   return 'HOST-KEYWORD,academyofconsciousleadership';
-  // }
-  // if (textPure.includes('.adscience.')) {
-  //   return 'HOST-KEYWORD,adscience';
-  // }
-  // if (textPure.includes('.adtech.')) {
-  //   return 'HOST-KEYWORD,adtech';
-  // }
-  // if (textPure.includes('.americanexpress.')) {
-  //   return 'HOST-KEYWORD,americanexpress';
-  // }
-  // if (textPure.includes('.antalis.')) {
-  //   return 'HOST-KEYWORD,antalis';
-  // }
-  // if (textPure.includes('.autoscout24.')) {
-  //   return 'HOST-KEYWORD,autoscout24';
-  // }
-  // if (textPure.includes('.exads.')) {
-  //   return 'HOST-KEYWORD,exads';
-  // }
-  // if (textPure.includes('.ingest.sentry.')) {
-  //   return 'HOST-KEYWORD,ingest.sentry';
-  // }
-  // if (textPure.includes('.net.jumia.')) {
-  //   return 'HOST-KEYWORD,net.jumia';
-  // }
-  // if (textPure.includes('.ricoh.')) {
-  //   return 'HOST-KEYWORD,ricoh';
-  // }
-  // if (textPure.includes('.theacademyforconsciousleadership.')) {
-  //   return 'HOST-KEYWORD,theacademyforconsciousleadership';
-  // }
-  // if (textPure.includes('.weareknitters.')) {
-  //   return 'HOST-KEYWORD,weareknitters';
-  // }
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
