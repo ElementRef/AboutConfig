@@ -75,6 +75,7 @@ const RESOURCES = {
   REJECTDOHOSTS: {
     FILENAME: 'element.ref.reject.dohosts.ini',
     SRC: [
+      'https://hblock.molinero.dev/hosts',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
       'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
       'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
@@ -85,6 +86,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
       'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
+      'https://raw.githubusercontent.com/yous/YousList/refs/heads/master/hosts.txt',
       'https://someonewhocares.org/hosts/hosts',
       'https://winhelp2002.mvps.org/hosts.txt'
     ],

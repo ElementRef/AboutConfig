@@ -29,6 +29,7 @@
 - [@GreenSnow](https://greensnow.co/)
 - [@Hackl0us](https://github.com/Hackl0us/GeoIP2-CN)
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
+- [@hBlock](https://hblock.molinero.dev)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
 - [@jdlingyu](https://github.com/jdlingyu/ad-wars)
 - [@Johnshall](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
@@ -53,6 +54,7 @@
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
 - [@winhelp2002](https://winhelp2002.mvps.org/)
 - [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)
+- [@yous](https://github.com/yous/YousList)
 - [@yoyo](https://pgl.yoyo.org/adservers/)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
 
