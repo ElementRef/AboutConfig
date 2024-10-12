@@ -22,7 +22,7 @@ const RESOURCES = [
 async function getResourses(SRC, LIST = []) {
   try {
     console.log(
-      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(48),
+      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
       '开始下载 <<<'.padStart(12)
     );
     const RES = await fetch(SRC, {
@@ -41,12 +41,12 @@ async function getResourses(SRC, LIST = []) {
         }
       });
       console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(48),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
         '下载完成 <<<'.padStart(12)
       );
     } else {
       console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(48),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
         '下载失败 <<<'.padStart(12)
       );
     }
@@ -72,7 +72,7 @@ async function handleList(LIST) {
 }
 async function writeResourses2File({ FILENAME, RES }) {
   try {
-    console.log(`>>> ${FILENAME}`.padEnd(48), '开始写入 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(72), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
       value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
@@ -94,9 +94,9 @@ async function writeResourses2File({ FILENAME, RES }) {
       resolve(dirname(scriptPath), `../filter/${FILENAME}`),
       temp.value
     );
-    console.log(`>>> ${FILENAME}`.padEnd(48), '写入完成 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(72), '写入完成 <<<'.padStart(12));
   } catch (error) {
-    console.log(`>>> ${FILENAME}`.padEnd(48), '写入失败 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(72), '写入失败 <<<'.padStart(12));
     console.error(error);
   }
 }

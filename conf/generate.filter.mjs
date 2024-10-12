@@ -128,11 +128,11 @@ const RESOURCES = {
 };
 (async () => {
   for await (const key of Object.keys(RESOURCES)) {
-    console.log(`>>> ${key}`.padEnd(48), '开始处理 <<<'.padStart(12));
+    console.log(`>>> ${key}`.padEnd(72), '开始处理 <<<'.padStart(12));
     const RAW = await getResourses(RESOURCES[key]);
     const RES = combineResourses(RAW);
     await writeResourses2File(RES);
-    console.log(`>>> ${key}`.padEnd(48), '处理完成 <<<'.padStart(12));
+    console.log(`>>> ${key}`.padEnd(72), '处理完成 <<<'.padStart(12));
   }
 })();
 async function getResourses({ FILENAME, SRC, MAPFN }) {
@@ -337,7 +337,7 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
   const temp = Object.create(null);
   Object.keys(RAW).forEach(key => {
     console.log(
-      `    ${key}`.padEnd(48),
+      `    ${key}`.padEnd(72),
       RAW[key].length.toString().padStart(12)
     );
     RAW[key].forEach(rule => {
@@ -393,7 +393,7 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
     });
   });
   const RES = Object.keys(temp).sort();
-  console.log(`    ${FILENAME}`.padEnd(48), RES.length.toString().padStart(12));
+  console.log(`    ${FILENAME}`.padEnd(72), RES.length.toString().padStart(12));
   return {
     FILENAME,
     RES
