@@ -52,6 +52,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
+      'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/refs/heads/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
