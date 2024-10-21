@@ -176,6 +176,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
 function mapMixture(text = '', FILENAME = '') {
   const textTemp = text.replace(/ /gim, '');
   const textPure = (textTemp.split(',')[1] || '')
+    .replace(/^\.|\.$/gim, '')
     .replace(/\/\/.*/gim, '')
     .trim();
   // 删除 HOST,10.10.34.34 之类的规则
@@ -387,7 +388,7 @@ function mapMixture(text = '', FILENAME = '') {
     if (textPure === 's.weibo.com' || textPure === 'volc') {
       return '';
     }
-    return `HOST-KEYWORD,${textPure.replace(/^\.|\.$/gim, '')}`;
+    return `HOST-KEYWORD,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-WILDCARD,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-WILDCARD,')
