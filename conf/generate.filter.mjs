@@ -387,7 +387,7 @@ function mapMixture(text = '', FILENAME = '') {
     if (textPure === 's.weibo.com' || textPure === 'volc') {
       return '';
     }
-    return `HOST-KEYWORD,${textPure}`;
+    return `HOST-KEYWORD,${textPure.replace(/^\.|\.$/gim, '')}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-WILDCARD,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-WILDCARD,')
