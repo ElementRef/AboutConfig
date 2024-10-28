@@ -142,6 +142,7 @@
     "strings": "on"
   },
   "editor.renderControlCharacters": true,
+  "editor.renderFinalNewline": "dimmed",
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "editor.screenReaderAnnounceInlineSuggestion": false,
@@ -744,6 +745,11 @@
   "window.titleSeparator": " / ",
   "window.zoomLevel": 0,
   "window.zoomPerWindow": false,
+  "workbench.colorCustomizations": {
+    "editorLineNumber.activeForeground": "#666",
+    "editorLineNumber.dimmedForeground": "#111",
+    "editorLineNumber.foreground": "#222"
+  },
   "workbench.colorTheme": "Rosé Pine Dawn",
   "workbench.commandPalette.history": 5,
   "workbench.editor.closeOnFileDelete": true,
@@ -764,8 +770,8 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.list.horizontalScrolling": false,
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "Rosé Pine Moon",
-  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
+  "workbench.preferredDarkColorTheme": "Default High Contrast",
+  "workbench.preferredLightColorTheme": "Default High Contrast Light",
   "workbench.settings.applyToAllProfiles": ["*"],
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
