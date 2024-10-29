@@ -75,9 +75,9 @@ const RESOURCES = {
   'maasea.youtube.response.js':
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js',
   'ru.cu6.baidu.lib.js':
-    'https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js',
+    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidu/baiduLib.js',
   'ru.cu6.emby.js':
-    'https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js',
+    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/emby/unlock2.js',
   'yqc007.video.fusion.js':
     'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
   'zheye.zhihu.js':
