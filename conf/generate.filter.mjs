@@ -42,6 +42,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini'
     ],
     MAPFN: mapMixture
@@ -52,7 +53,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
-      'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/refs/heads/release/sr_ad_only.conf',
+      'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
@@ -80,7 +81,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
       'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
-      'https://raw.githubusercontent.com/yous/YousList/refs/heads/master/hosts.txt',
+      'https://raw.githubusercontent.com/yous/YousList/master/hosts.txt',
       'https://someonewhocares.org/hosts/hosts',
       'https://winhelp2002.mvps.org/hosts.txt'
     ],
