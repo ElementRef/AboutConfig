@@ -30,16 +30,16 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/dev/main/BybutterProCrack.js',
   'ddgksf2013.cai.niao.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js',
+  'ddgksf2013.cai.yun.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caiyun_json.js',
   'ddgksf2013.caixin.js':
     'https://raw.githubusercontent.com/ddgksf2013/dev/main/CaiXinZhouKanProCrack.js',
   'ddgksf2013.clarity.js':
     'https://raw.githubusercontent.com/ddgksf2013/dev/main/ClarityProCrack.js',
-  'ddgksf2013.meitu.xiuxiu.js':
-    'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
-  'ddgksf2013.cai.yun.js':
-    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caiyun_json.js',
   'ddgksf2013.cloud.music.js':
     'https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js',
+  'ddgksf2013.meitu.xiuxiu.js':
+    'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
   'ddgksf2013.red.book.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/redbook_json.js',
   'ddgksf2013.startup.12306.js':
@@ -60,8 +60,10 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js',
   'ddgksf2013.ximalaya.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
-  'fmz200.douyin.js':
-    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/douyin.js',
+  'fmz200.baidu.lib.js':
+    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidu/baiduLib.js',
+  'fmz200.emby.js':
+    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/emby/unlock2.js',
   'gjwj666.xingtu.js':
     'https://raw.githubusercontent.com/gjwj666/qx/main/XT.js',
   'kop.xiao.ip.api.js':
@@ -74,10 +76,6 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js',
   'maasea.youtube.response.js':
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js',
-  'ru.cu6.baidu.lib.js':
-    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidu/baiduLib.js',
-  'ru.cu6.emby.js':
-    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/emby/unlock2.js',
   'yqc007.video.fusion.js':
     'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
   'zheye.zhihu.js':
