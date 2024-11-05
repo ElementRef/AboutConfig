@@ -16,7 +16,6 @@ const RESOURCES = {
     SRC: [
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/SteamCN/SteamCN.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
       'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
@@ -62,8 +61,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Peter_Lowe_adservers.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
-      'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list',
-      'https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/PornAds.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',

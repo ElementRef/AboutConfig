@@ -44,7 +44,6 @@
 - [@paulmillr](https://github.com/paulmillr/encrypted-dns)
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
 - [@privacy-protection-tools](https://github.com/privacy-protection-tools/anti-AD)
-- [@RuCu6](https://github.com/RuCu6/QuanX)
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
 - [@someonewhocares](https://someonewhocares.org/hosts/)
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
