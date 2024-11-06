@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 async function getResourses(SRC, LIST = []) {
   try {
     console.log(
-      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
+      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
       '开始下载 <<<'.padStart(12)
     );
     const RES = await fetch(SRC, {
@@ -35,12 +35,12 @@ async function getResourses(SRC, LIST = []) {
         }
       });
       console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
         '下载完成 <<<'.padStart(12)
       );
     } else {
       console.error(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
         '下载失败 >>>'.padStart(12)
       );
     }
@@ -70,7 +70,7 @@ async function handleList(LIST) {
 }
 async function writeResourses2File({ FILENAME, COMMENT, RES }) {
   try {
-    console.log(`>>> ${FILENAME}`.padEnd(120), '开始写入 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(96), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
       value: `# ${COMMENT}\n`
@@ -86,9 +86,9 @@ async function writeResourses2File({ FILENAME, COMMENT, RES }) {
       resolve(dirname(scriptPath), `../rewrite/${FILENAME}`),
       temp.value
     );
-    console.log(`>>> ${FILENAME}`.padEnd(120), '写入完成 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(96), '写入完成 <<<'.padStart(12));
   } catch ({ message }) {
-    console.error(`>>> ${FILENAME}`.padEnd(120), '写入失败 >>>'.padStart(12));
+    console.error(`>>> ${FILENAME}`.padEnd(96), '写入失败 >>>'.padStart(12));
     throw new Error(message);
   }
 }
