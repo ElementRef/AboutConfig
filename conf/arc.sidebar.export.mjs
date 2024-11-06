@@ -150,8 +150,8 @@ async function readSiderbar() {
       resolve(dirname(scriptPath), './itemsOfSidebar.groupInfo.json'),
       JSON.stringify(park.itemsOfSidebar.groupInfo)
     );
-  } catch (error) {
-    console.error(error);
+  } catch ({ message }) {
+    throw new Error(message);
   }
 }
 function handleItems(items = [], where = '') {

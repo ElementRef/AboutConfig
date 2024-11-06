@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 async function getResourses(SRC, LIST = []) {
   try {
     console.log(
-      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
+      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
       '开始下载 <<<'.padStart(12)
     );
     const RES = await fetch(SRC, {
@@ -35,17 +35,17 @@ async function getResourses(SRC, LIST = []) {
         }
       });
       console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
         '下载完成 <<<'.padStart(12)
       );
     } else {
-      console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(72),
-        '下载失败 <<<'.padStart(12)
+      console.error(
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(120),
+        '下载失败 >>>'.padStart(12)
       );
     }
-  } catch (error) {
-    console.error(error);
+  } catch ({ message }) {
+    throw new Error(message);
   }
 }
 async function handleList(LIST) {
@@ -64,14 +64,13 @@ async function handleList(LIST) {
       });
       resolve([[...HOST], ...new Set(RAW)]);
     } catch (error) {
-      console.error(error);
       reject(error);
     }
   });
 }
 async function writeResourses2File({ FILENAME, COMMENT, RES }) {
   try {
-    console.log(`>>> ${FILENAME}`.padEnd(72), '开始写入 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(120), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
       value: `# ${COMMENT}\n`
@@ -87,9 +86,9 @@ async function writeResourses2File({ FILENAME, COMMENT, RES }) {
       resolve(dirname(scriptPath), `../rewrite/${FILENAME}`),
       temp.value
     );
-    console.log(`>>> ${FILENAME}`.padEnd(72), '写入完成 <<<'.padStart(12));
-  } catch (error) {
-    console.log(`>>> ${FILENAME}`.padEnd(72), '写入失败 <<<'.padStart(12));
-    console.error(error);
+    console.log(`>>> ${FILENAME}`.padEnd(120), '写入完成 <<<'.padStart(12));
+  } catch ({ message }) {
+    console.error(`>>> ${FILENAME}`.padEnd(120), '写入失败 >>>'.padStart(12));
+    throw new Error(message);
   }
 }

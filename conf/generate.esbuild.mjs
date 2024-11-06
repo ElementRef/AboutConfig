@@ -98,7 +98,7 @@ const RESOURCES = {
 })();
 async function getResoursesToLocal({ FILENAME, SRC }) {
   try {
-    console.log(`>>> ${FILENAME}`.padEnd(72), '开始下载 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(120), '开始下载 <<<'.padStart(12));
     const RES = await fetch(SRC, {
       method: 'GET',
       cache: 'no-cache',
@@ -116,17 +116,17 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
         await mkdir(TMPPATH, { recursive: true });
       }
       await writeFile(resolve(TMPPATH, `./${FILENAME}`), TEXT);
-      console.log(`>>> ${FILENAME}`.padEnd(72), '下载完成 <<<'.padStart(12));
+      console.log(`>>> ${FILENAME}`.padEnd(120), '下载完成 <<<'.padStart(12));
     } else {
-      console.log(`>>> ${FILENAME}`.padEnd(72), '下载失败 <<<'.padStart(12));
+      console.error(`>>> ${FILENAME}`.padEnd(120), '下载失败 >>>'.padStart(12));
     }
-  } catch (error) {
-    console.error(error);
+  } catch ({ message }) {
+    throw new Error(message);
   }
 }
 async function useESBuildToScriptDir(TMPFILE) {
   return new Promise((resolveFn, rejectFn) => {
-    console.log(`>>> ${TMPFILE}`.padEnd(72), '开始压缩 <<<'.padStart(12));
+    console.log(`>>> ${TMPFILE}`.padEnd(120), '开始压缩 <<<'.padStart(12));
     const DIRNAME = dirname(fileURLToPath(import.meta.url));
     const SCRIPTPATH = resolve(DIRNAME, `../script`);
     const TMPFILEPATH = resolve(DIRNAME, `../tmp/${TMPFILE}`);
@@ -142,11 +142,11 @@ async function useESBuildToScriptDir(TMPFILE) {
       `--outdir=${SCRIPTPATH}`
     ]);
     ESBUILDSPAWN.on('close', code => {
-      console.log(`>>> ${TMPFILE}`.padEnd(72), '压缩完成 <<<'.padStart(12));
+      console.log(`>>> ${TMPFILE}`.padEnd(120), '压缩完成 <<<'.padStart(12));
       resolveFn(code);
     });
     ESBUILDSPAWN.on('error', error => {
-      console.log(`>>> ${TMPFILE}`.padEnd(72), '压缩失败 <<<'.padStart(12));
+      console.error(`>>> ${TMPFILE}`.padEnd(120), '压缩失败 >>>'.padStart(12));
       rejectFn(error);
     });
   });
