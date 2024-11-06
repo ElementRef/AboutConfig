@@ -144,7 +144,10 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   try {
     for (const src of SRC) {
       const keyArr = src.split('/');
-      const key = `${keyArr.at(-2)}/${keyArr.at(-1)}`.replace(/\?.+/gim, '');
+      const key = `${keyArr.at(-3)}/${keyArr.at(-2)}/${keyArr.at(-1)}`.replace(
+        /\?.+/gim,
+        ''
+      );
       const res = await fetch(src, {
         method: 'GET',
         cache: 'no-cache',
@@ -159,10 +162,12 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           .split('\n')
           .map(str => MAPFN(str, FILENAME))
           .filter(text => text.length !== 0);
+      } else {
+        console.error(`    ${key}`.padEnd(72), `加载失败 !!!`.padStart(12));
       }
     }
-  } catch (error) {
-    console.error(error);
+  } catch ({ message }) {
+    throw new Error(message);
   }
   return MAPFN === mapMixture
     ? {
