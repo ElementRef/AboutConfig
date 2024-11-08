@@ -140,10 +140,9 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   try {
     for (const src of SRC) {
       const keyArr = src.split('/');
-      const key = `${keyArr.at(-3)}/${keyArr.at(-2)}/${keyArr.at(-1)}`.replace(
-        /\?.+/gim,
-        ''
-      );
+      const key = `${keyArr.at(-3)}/${keyArr.at(-2)}/${keyArr.at(-1)}`
+        .replace(/\?.+/gim, '')
+        .replace(/^\//gim, '');
       const res = await fetch(src, {
         method: 'GET',
         cache: 'no-cache',
