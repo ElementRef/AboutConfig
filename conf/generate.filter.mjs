@@ -1,8 +1,8 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-const MAINREJECTDOMAINLIST = [];
-const RESOURCES = {
+let MAINREJECTDOMAINLIST = [];
+let RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
     SRC: [
@@ -172,7 +172,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       }
     }
   } catch ({ message }) {
-    throw new Error(message);
+    console.error(message);
   }
   return MAPFN === mapMixture
     ? {
