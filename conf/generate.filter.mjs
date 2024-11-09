@@ -204,6 +204,30 @@ function mapMixture(text = '', FILENAME = '') {
   ) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
+  if (textPure.endsWith('.34gwl8v1a.com')) {
+    return 'HOST-SUFFIX,34gwl8v1a.com';
+  }
+  if (textPure.endsWith('.4puuqeh41.com')) {
+    return 'HOST-SUFFIX,4puuqeh41.com';
+  }
+  if (textPure.endsWith('.5clo0xmbf.com')) {
+    return 'HOST-SUFFIX,5clo0xmbf.com';
+  }
+  if (textPure.endsWith('.79j68qav2.com')) {
+    return 'HOST-SUFFIX,79j68qav2.com';
+  }
+  if (textPure.endsWith('.833enmhob.com')) {
+    return 'HOST-SUFFIX,833enmhob.com';
+  }
+  if (textPure.endsWith('.k3718qw08.com')) {
+    return 'HOST-SUFFIX,k3718qw08.com';
+  }
+  if (textPure.endsWith('.l5eamr17d.com')) {
+    return 'HOST-SUFFIX,l5eamr17d.com';
+  }
+  if (textPure.endsWith('.ogrt80r65.com')) {
+    return 'HOST-SUFFIX,ogrt80r65.com';
+  }
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
