@@ -219,6 +219,9 @@ function mapMixture(text = '', FILENAME = '') {
   if (textPure.endsWith('.833enmhob.com')) {
     return 'HOST-SUFFIX,833enmhob.com';
   }
+  if (textPure.endsWith('.935ft4j96.com')) {
+    return 'HOST-SUFFIX,935ft4j96.com';
+  }
   if (textPure.endsWith('.k3718qw08.com')) {
     return 'HOST-SUFFIX,k3718qw08.com';
   }
