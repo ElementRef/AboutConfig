@@ -121,6 +121,7 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
       console.error(`>>> ${FILENAME}`.padEnd(96), '下载失败 >>>'.padStart(12));
     }
   } catch ({ message }) {
+    console.error(message);
     throw new Error(message);
   }
 }

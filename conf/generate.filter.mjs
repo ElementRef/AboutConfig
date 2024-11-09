@@ -173,6 +173,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
     }
   } catch ({ message }) {
     console.error(message);
+    throw new Error(message);
   }
   return MAPFN === mapMixture
     ? {
@@ -563,6 +564,7 @@ async function writeResourses2File({ FILENAME, RES }) {
       temp.value
     );
   } catch ({ message }) {
+    console.error(message);
     throw new Error(message);
   }
 }

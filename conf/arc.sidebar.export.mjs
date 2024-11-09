@@ -151,6 +151,7 @@ async function readSiderbar() {
       JSON.stringify(park.itemsOfSidebar.groupInfo)
     );
   } catch ({ message }) {
+    console.error(message);
     throw new Error(message);
   }
 }

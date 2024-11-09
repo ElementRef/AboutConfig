@@ -51,6 +51,7 @@ async function getResourses(SRC, LIST = []) {
       );
     }
   } catch ({ message }) {
+    console.error(message);
     throw new Error(message);
   }
 }
