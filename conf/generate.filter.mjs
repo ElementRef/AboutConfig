@@ -543,7 +543,11 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
       }
     });
   });
-  const RES = Object.keys(temp).sort();
+  const RES = Object.keys(temp).sort((a, b) => {
+    const aReverse = a.split('').reverse().join('');
+    const bReverse = b.split('').reverse().join('');
+    return aReverse.localeCompare(bReverse);
+  });
   console.log(`    ${FILENAME}`.padEnd(96), RES.length.toString().padStart(12));
   return {
     FILENAME,
