@@ -157,6 +157,16 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           .split('\n')
           .map(str => MAPFN(str, FILENAME))
           .filter(text => text.length !== 0);
+        if (FILENAME === 'element.ref.reject.mixture.ini') {
+          // 向 MAINREJECTDOMAINLIST 中添加数据
+          RAW[key].forEach(item => {
+            const temp = item.split(',')[1].trim();
+            if ([...temp.matchAll(/\./gim)].length === 1) {
+              MAINREJECTDOMAINLIST.push(temp);
+            }
+          });
+          MAINREJECTDOMAINLIST = [...new Set(MAINREJECTDOMAINLIST)];
+        }
       } else {
         console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
       }
@@ -175,7 +185,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         RAW
       };
 }
-function mapMixture(text = '', FILENAME = '') {
+function mapMixture(text = '') {
   const textTemp = text.replace(/ /gim, '');
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/^\.|\.$/gim, '')
@@ -394,19 +404,6 @@ function mapMixture(text = '', FILENAME = '') {
       textPure === 'byteimg.com'
     ) {
       return '';
-    }
-    /**
-     * 只对 element.ref.reject.mixture.ini 做优化
-     * 收集规则里已有的主域名
-     */
-    if (
-      FILENAME === 'element.ref.reject.mixture.ini' &&
-      [...textPure.matchAll(/\./gim)].length === 1
-    ) {
-      if (!MAINREJECTDOMAINLIST.includes(textPure)) {
-        MAINREJECTDOMAINLIST.push(textPure);
-      }
-      return `HOST-SUFFIX,${textPure}`;
     }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
