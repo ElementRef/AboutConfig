@@ -177,7 +177,6 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
   }
   return MAPFN === mapMixture
     ? {
-        MAINREJECTDOMAINLIST,
         FILENAME,
         RAW
       }
@@ -483,7 +482,7 @@ function mapDoHosts(text) {
   }
   return `0.0.0.0 ${lastTemp}`;
 }
-function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
+function combineResourses({ FILENAME, RAW }) {
   const park = Object.create(null);
   const temp = Object.create(null);
   Object.keys(RAW).forEach(key => {
@@ -499,44 +498,42 @@ function combineResourses({ MAINREJECTDOMAINLIST = undefined, FILENAME, RAW }) {
          * 如果 domainORip 的主域名存在于收集的列表里
          * 就剔除出去
          */
-        if (
-          MAINREJECTDOMAINLIST &&
-          [...domainORip.matchAll(/\./gim)].length > 1 &&
-          FILENAME === 'element.ref.reject.mixture.ini' &&
-          (domainORule === 'HOST' ||
-            domainORule === 'HOST-SUFFIX' ||
-            domainORule === 'HOST-KEYWORD' ||
-            domainORule === 'HOST-WILDCARD')
-        ) {
-          /**
-           * 有重复的【主】域名，但不一定有重复的规则
-           * HOST,123.urlsec.qq.com
-           * HOST-SUFFIX,qq.com
-           * 保留 qq.com 即可
-           */
-          const MainInDomainORip = domainORip
-            .split('.')
-            .reverse()
-            .slice(0, 2)
-            .reverse()
-            .join('.');
+        if (FILENAME === 'element.ref.reject.mixture.ini') {
           if (
-            !MAINREJECTDOMAINLIST.includes(MainInDomainORip) &&
-            !park[domainORip]
+            (domainORule === 'HOST' ||
+              domainORule === 'HOST-SUFFIX' ||
+              domainORule === 'HOST-KEYWORD' ||
+              domainORule === 'HOST-WILDCARD') &&
+            [...domainORip.matchAll(/\./gim)].length > 1
           ) {
+            /**
+             * 有重复的【主】域名，但不一定有重复的规则
+             * HOST,123.urlsec.qq.com
+             * HOST-SUFFIX,qq.com
+             * 保留 qq.com 即可
+             */
+            const MainInDomainORip = domainORip
+              .split('.')
+              .reverse()
+              .slice(0, 2)
+              .reverse()
+              .join('.');
+            if (
+              !MAINREJECTDOMAINLIST.includes(MainInDomainORip) &&
+              !park[domainORip]
+            ) {
+              park[domainORip] = domainORip;
+              temp[rule] = rule;
+            }
+          } else if (!park[domainORip]) {
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
-        } else if (!park[domainORip]) {
-          park[domainORip] = domainORip;
-          temp[rule] = rule;
         } else {
-          /**
-           * 有重复的域名，但不一定有重复的规则
-           * HOST,safebrowsing.urlsec.qq.com
-           * HOST-SUFFIX,safebrowsing.urlsec.qq.com
-           * 保留一个即可
-           */
+          if (!park[domainORip] && !MAINREJECTDOMAINLIST.includes(domainORip)) {
+            park[domainORip] = domainORip;
+            temp[rule] = rule;
+          }
         }
       } else {
         temp[rule] = rule;
