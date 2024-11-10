@@ -3,49 +3,6 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 let MAINREJECTDOMAINLIST = [];
 let RESOURCES = {
-  APPLESMIXTURE: {
-    FILENAME: 'element.ref.apples.mixture.ini',
-    SRC: [
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini'
-    ],
-    MAPFN: mapMixture
-  },
-  DIRECTMIXTURE: {
-    FILENAME: 'element.ref.direct.mixture.ini',
-    SRC: [
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
-      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini'
-    ],
-    MAPFN: mapMixture
-  },
-  GLOBALMIXTURE: {
-    FILENAME: 'element.ref.global.mixture.ini',
-    SRC: [
-      'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxyService.list',
-      'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini'
-    ],
-    MAPFN: mapMixture
-  },
-  OPENAIMIXTURE: {
-    FILENAME: 'element.ref.openai.mixture.ini',
-    SRC: [
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Claude/Claude.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
-      'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini'
-    ],
-    MAPFN: mapMixture
-  },
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
@@ -95,6 +52,49 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
     MAPFN: mapPrueIPS
+  },
+  APPLESMIXTURE: {
+    FILENAME: 'element.ref.apples.mixture.ini',
+    SRC: [
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini'
+    ],
+    MAPFN: mapMixture
+  },
+  DIRECTMIXTURE: {
+    FILENAME: 'element.ref.direct.mixture.ini',
+    SRC: [
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
+      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini'
+    ],
+    MAPFN: mapMixture
+  },
+  GLOBALMIXTURE: {
+    FILENAME: 'element.ref.global.mixture.ini',
+    SRC: [
+      'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxyService.list',
+      'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini'
+    ],
+    MAPFN: mapMixture
+  },
+  OPENAIMIXTURE: {
+    FILENAME: 'element.ref.openai.mixture.ini',
+    SRC: [
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Claude/Claude.list',
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list',
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list',
+      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
+      'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini'
+    ],
+    MAPFN: mapMixture
   },
   STREAMMIXTURE: {
     FILENAME: 'element.ref.stream.mixture.ini',
