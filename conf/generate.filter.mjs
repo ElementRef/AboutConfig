@@ -1,7 +1,8 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-let MAINREJECTDOMAINLIST = [];
+let MAINREJECTDEEPDOMAINLIST = []; // 给 !REJECTMIXTURE 驱虫
+let MAINREJECTDOMAINLIST = []; // 给 REJECTMIXTURE 驱虫
 let RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
@@ -522,15 +523,20 @@ function combineResourses({ FILENAME, RAW }) {
               !MAINREJECTDOMAINLIST.includes(MainInDomainORip) &&
               !park[domainORip]
             ) {
+              MAINREJECTDEEPDOMAINLIST.push(domainORip);
               park[domainORip] = domainORip;
               temp[rule] = rule;
             }
           } else if (!park[domainORip]) {
+            MAINREJECTDEEPDOMAINLIST.push(domainORip);
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
         } else {
-          if (!park[domainORip] && !MAINREJECTDOMAINLIST.includes(domainORip)) {
+          if (
+            !park[domainORip] &&
+            !MAINREJECTDEEPDOMAINLIST.includes(domainORip)
+          ) {
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
