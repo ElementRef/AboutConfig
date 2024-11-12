@@ -1,8 +1,8 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-let MAINREJECTDEEPDOMAINLIST = []; // 给 !REJECTMIXTURE 驱虫
-let MAINREJECTDOMAINLIST = []; // 给 REJECTMIXTURE 驱虫
+let MAINREJECTDEEPDOMAINLIST = {}; // 给 !REJECTMIXTURE 驱虫
+let MAINREJECTDOMAINLIST = {}; // 给 REJECTMIXTURE 驱虫
 let RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
@@ -163,10 +163,9 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           RAW[key].forEach(item => {
             const temp = item.split(',')[1].trim();
             if ([...temp.matchAll(/\./gim)].length === 1) {
-              MAINREJECTDOMAINLIST.push(temp);
+              MAINREJECTDOMAINLIST[temp] = temp;
             }
           });
-          MAINREJECTDOMAINLIST = [...new Set(MAINREJECTDOMAINLIST)];
         }
       } else {
         console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
@@ -519,24 +518,18 @@ function combineResourses({ FILENAME, RAW }) {
               .slice(0, 2)
               .reverse()
               .join('.');
-            if (
-              !MAINREJECTDOMAINLIST.includes(MainInDomainORip) &&
-              !park[domainORip]
-            ) {
-              MAINREJECTDEEPDOMAINLIST.push(domainORip);
+            if (!MAINREJECTDOMAINLIST[MainInDomainORip] && !park[domainORip]) {
+              MAINREJECTDEEPDOMAINLIST[domainORip] = domainORip;
               park[domainORip] = domainORip;
               temp[rule] = rule;
             }
           } else if (!park[domainORip]) {
-            MAINREJECTDEEPDOMAINLIST.push(domainORip);
+            MAINREJECTDEEPDOMAINLIST[domainORip] = domainORip;
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
         } else {
-          if (
-            !park[domainORip] &&
-            !MAINREJECTDEEPDOMAINLIST.includes(domainORip)
-          ) {
+          if (!park[domainORip] && !MAINREJECTDEEPDOMAINLIST[domainORip]) {
             park[domainORip] = domainORip;
             temp[rule] = rule;
           }
