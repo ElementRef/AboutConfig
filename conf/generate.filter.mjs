@@ -3,11 +3,32 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 let MAINREJECTDEEPDOMAINLIST = {}; // 给 !REJECTMIXTURE 驱虫
 let MAINREJECTDOMAINLIST = {}; // 给 REJECTMIXTURE 驱虫
+let IPWHITELIST = [
+  '0.0.0.0/8',
+  '10.0.0.0/8',
+  '100.64.0.0/10',
+  '127.0.0.0/8',
+  '169.254.0.0/16',
+  '172.16.0.0/12',
+  '182.254.116.0/24',
+  '192.0.0.0/16',
+  '192.0.0.0/24',
+  '192.168.0.0/16',
+  '192.168.0.1/24',
+  '192.168.1.1/24',
+  '192.88.99.0/24',
+  '198.18.0.0/15',
+  '198.51.100.0/24',
+  '203.0.113.0/24',
+  '224.0.0.0/24',
+  '224.0.0.0/3'
+];
 let RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
+      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
       'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
@@ -49,7 +70,6 @@ let RESOURCES = {
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt',
-      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
     MAPFN: mapPrueIPS
@@ -191,17 +211,15 @@ function mapMixture(text = '') {
     .replace(/^\.|\.$/gim, '')
     .replace(/\/\/.*/gim, '')
     .trim();
-  // 删除 HOST,10.10.34.34 之类的规则
+  // 霍尔一级
   if (
-    /^(\d|\.)+$/gim.test(textPure) &&
-    !(
-      textTemp.toUpperCase().startsWith('IP-ASN,') ||
-      textTemp.toUpperCase().startsWith('IP-CIDR,') ||
-      textTemp.toUpperCase().startsWith('IP-CIDR6,') ||
-      textTemp.toUpperCase().startsWith('IP6-CIDR,')
-    )
+    /^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textPure) &&
+    !textTemp.includes(',')
   ) {
-    return '';
+    if (IPWHITELIST.includes(textPure)) {
+      return '';
+    }
+    return `IP-CIDR,${textPure}`;
   }
   // 删除注释
   if (textPure.includes('sukkaw.skk.moe')) {
