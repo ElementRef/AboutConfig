@@ -212,14 +212,11 @@ function mapMixture(text = '') {
     .replace(/\/\/.*/gim, '')
     .trim();
   // 霍尔一级
-  if (
-    /^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textPure) &&
-    !textTemp.includes(',')
-  ) {
-    if (IPWHITELIST.includes(textPure)) {
+  if (/^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textTemp)) {
+    if (IPWHITELIST.includes(textTemp)) {
       return '';
     }
-    return `IP-CIDR,${textPure}`;
+    return `IP-CIDR,${textTemp}`;
   }
   // 删除注释
   if (textPure.includes('sukkaw.skk.moe')) {
