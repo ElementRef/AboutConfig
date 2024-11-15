@@ -241,6 +241,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.ogrt80r65.com')) {
     return 'HOST-SUFFIX,ogrt80r65.com';
   }
+  if (textPure.endsWith('.51y5.net')) {
+    return 'HOST-SUFFIX,51y5.net';
+  }
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
@@ -319,6 +322,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.pstatp.com')) {
     return 'HOST-SUFFIX,pstatp.com';
   }
+  if (textPure.endsWith('.r2.dev')) {
+    return 'HOST-SUFFIX,r2.dev';
+  }
   if (textPure.endsWith('.rsc.cdn77.org')) {
     return 'HOST-SUFFIX,rsc.cdn77.org';
   }
@@ -366,9 +372,6 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.yinzcam.com')) {
     return 'HOST-SUFFIX,yinzcam.com';
-  }
-  if (textPure.endsWith('.51y5.net')) {
-    return 'HOST-SUFFIX,51y5.net';
   }
   // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME
   if (textTemp.startsWith('.')) {
