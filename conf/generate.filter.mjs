@@ -457,19 +457,6 @@ function mapDoHosts(text) {
   const textTemp = text?.trim();
   const [, last] = textTemp?.split(' ');
   const lastTemp = last?.trim() || undefined;
-  const white = [
-    '0.0.0.0',
-    'broadcasthost',
-    'ip6-allhosts',
-    'ip6-allnodes',
-    'ip6-allrouters',
-    'ip6-localhost',
-    'ip6-loopback',
-    'ip6-mcastprefix',
-    'local',
-    'localhost.localdomain',
-    'localhost'
-  ];
   if (
     (!textTemp.startsWith('0.0.0.0 ') &&
       !textTemp.startsWith('0.0.0.1 ') &&
@@ -480,7 +467,6 @@ function mapDoHosts(text) {
       !textTemp.startsWith('ff02::1') &&
       !textTemp.startsWith('ff02::2') &&
       !textTemp.startsWith('ff02::3')) ||
-    white.includes(lastTemp) ||
     lastTemp === undefined
   ) {
     return '';
