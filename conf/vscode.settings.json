@@ -681,11 +681,6 @@
   "window.titleSeparator": " / ",
   "window.zoomLevel": 0,
   "window.zoomPerWindow": false,
-  "workbench.colorCustomizations": {
-    "editorLineNumber.activeForeground": "#666",
-    "editorLineNumber.dimmedForeground": "#111",
-    "editorLineNumber.foreground": "#222"
-  },
   "workbench.colorTheme": "Rosé Pine Dawn",
   "workbench.commandPalette.history": 5,
   "workbench.editor.closeOnFileDelete": true,
