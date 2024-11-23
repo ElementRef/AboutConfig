@@ -45,6 +45,7 @@
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
 - [@privacy-protection-tools](https://github.com/privacy-protection-tools/anti-AD)
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
+- [@Sinfonietta](https://github.com/Sinfonietta/hostfiles)
 - [@someonewhocares](https://someonewhocares.org/hosts/)
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
 - [@SukkaW](https://github.com/SukkaW/Surge)
