@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/Iron'
+          node-version: 'lts/Jod'
           check-latest: true
 
       - name: Setup ESBuild
@@ -38,6 +38,7 @@ jobs:
         run: |
           git config --global user.email ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
           git config --global user.name ${{ github.actor }}
+          git status
           git add --all
           git commit -m '更新分流重写'
           git pull --rebase --autostash
