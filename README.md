@@ -7,6 +7,7 @@
 **特别感谢（排名不分先后）：**
 
 - [@Aa28413761](https://t.me/s/Aa28413761)
+- [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
 - [@app2smile](https://github.com/app2smile/rules)
 - [@badmojr](https://github.com/badmojr/1Hosts)
 - [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)

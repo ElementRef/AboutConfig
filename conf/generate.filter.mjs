@@ -14,6 +14,11 @@ let RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list',
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list',
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list',
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
@@ -76,6 +81,7 @@ let RESOURCES = {
   DIRECTMIXTURE: {
     FILENAME: 'element.ref.direct.mixture.ini',
     SRC: [
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
@@ -210,7 +216,7 @@ function mapMixture(text = '') {
     return `IP-CIDR,${textTemp}`;
   }
   // 删除注释
-  if (textPure.includes('sukkaw.skk.moe')) {
+  if (textPure.includes('sukkaw.skk.moe') || textPure.includes('acl4.ssr')) {
     return '';
   }
   // /^,[w]{+}\./gim 存在误杀
