@@ -43,3 +43,13 @@ jobs:
           git commit -m '更新分流重写'
           git pull --rebase --autostash
           git push
+      # - name: Bump Version and Push Tag
+      #   uses: anothrNick/github-tag-action@v1
+      #   env:
+      #     DEFAULT_BUMP: 'minor'
+      #     FORCE_WITHOUT_CHANGES_PRE: false
+      #     FORCE_WITHOUT_CHANGES: false
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     PRERELEASE: false
+      #     RELEASE_BRANCHES: 'main'
+      #     WITH_V: false
