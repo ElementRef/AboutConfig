@@ -1,6 +1,6 @@
 import { spawn } from 'node:child_process';
-import { writeFile, mkdir, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const RESOURCES = {
@@ -72,8 +72,6 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js',
   'kop.xiao.streaming.ui.check.js':
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js',
-  'maasea.youtube.request.js':
-    'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js',
   'maasea.youtube.response.js':
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js',
   'yqc007.video.fusion.js':
