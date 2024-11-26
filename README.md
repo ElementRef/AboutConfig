@@ -33,6 +33,7 @@
 - [@hBlock](https://hblock.molinero.dev)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
 - [@jdlingyu](https://github.com/jdlingyu/ad-wars)
+- [@jerryn70](https://github.com/jerryn70/GoodbyeAds)
 - [@Johnshall](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
