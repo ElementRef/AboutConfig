@@ -226,6 +226,10 @@ function mapMixture(text = '') {
   ) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
+  // 随机域名
+  if (textPure.endsWith('.14f9a8b353.com')) {
+    return 'HOST-SUFFIX,14f9a8b353.com';
+  }
   if (textPure.endsWith('.34gwl8v1a.com')) {
     return 'HOST-SUFFIX,34gwl8v1a.com';
   }
@@ -238,11 +242,26 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.79j68qav2.com')) {
     return 'HOST-SUFFIX,79j68qav2.com';
   }
+  if (textPure.endsWith('.81bc9fc749.com')) {
+    return 'HOST-SUFFIX,81bc9fc749.com';
+  }
   if (textPure.endsWith('.833enmhob.com')) {
     return 'HOST-SUFFIX,833enmhob.com';
   }
   if (textPure.endsWith('.935ft4j96.com')) {
     return 'HOST-SUFFIX,935ft4j96.com';
+  }
+  if (textPure.endsWith('.9bdf800214.com')) {
+    return 'HOST-SUFFIX,9bdf800214.com';
+  }
+  if (textPure.endsWith('.c0636e54f1.com')) {
+    return 'HOST-SUFFIX,c0636e54f1.com';
+  }
+  if (textPure.endsWith('.f19893fb1c.com')) {
+    return 'HOST-SUFFIX,f19893fb1c.com';
+  }
+  if (textPure.endsWith('.f89532811f.com')) {
+    return 'HOST-SUFFIX,f89532811f.com';
   }
   if (textPure.endsWith('.k3718qw08.com')) {
     return 'HOST-SUFFIX,k3718qw08.com';
@@ -253,6 +272,7 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.ogrt80r65.com')) {
     return 'HOST-SUFFIX,ogrt80r65.com';
   }
+  // 正经域名
   if (textPure.endsWith('.51y5.net')) {
     return 'HOST-SUFFIX,51y5.net';
   }
