@@ -52,6 +52,7 @@
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
 - [@SukkaW](https://github.com/SukkaW/Surge)
 - [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
+- [@VirgilClyne](https://github.com/VirgilClyne/iRingo)
 - [@vvbbnn00](https://github.com/vvbbnn00/WARP-Clash-API)
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
 - [@winhelp2002](https://winhelp2002.mvps.org/)
