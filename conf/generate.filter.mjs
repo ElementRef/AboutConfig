@@ -55,6 +55,8 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts',
       'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
+      'https://raw.githubusercontent.com/tiuxo/hosts/master/ads',
+      'https://raw.githubusercontent.com/tiuxo/hosts/master/porn',
       'https://raw.githubusercontent.com/yous/YousList/master/hosts.txt',
       'https://someonewhocares.org/hosts/zero/hosts',
       'https://winhelp2002.mvps.org/hosts.txt'
