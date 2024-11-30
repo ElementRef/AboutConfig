@@ -435,10 +435,7 @@ function mapMixture(text = '') {
     // REJECT 时会导致相关网站异常
     if (
       textPure === 'weworkremotely.com' ||
-      textPure === 'metrics.icloud.com' ||
-      textPure === 'bytedance.com' ||
-      textPure === 'xray.mail.ru' ||
-      textPure === 'byteimg.com'
+      textPure === 'metrics.icloud.com'
     ) {
       return '';
     }
