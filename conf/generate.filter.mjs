@@ -424,10 +424,7 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('DOMAIN,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (
-      textPure === 'staticsns.cdn.bcebos.com' ||
-      textPure === 'metrics.icloud.com'
-    ) {
+    if (textPure === 'staticsns.cdn.bcebos.com') {
       return '';
     }
     return `HOST,${textPure}`;
@@ -440,6 +437,7 @@ function mapMixture(text = '') {
       textPure === 'weworkremotely.com' ||
       textPure === 'metrics.icloud.com' ||
       textPure === 'bytedance.com' ||
+      textPure === 'xray.mail.ru' ||
       textPure === 'byteimg.com'
     ) {
       return '';
