@@ -8,6 +8,8 @@ const RESOURCES = [
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt',
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt',
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt',
+  'https://raw.githubusercontent.com/eallion/uBlacklist-subscription-compilation/main/uBlacklist.txt',
+  'https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt',
   'https://raw.githubusercontent.com/obgnail/chinese-internet-is-dead/master/blocklist.txt',
   'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.custom.ini'
 ];
