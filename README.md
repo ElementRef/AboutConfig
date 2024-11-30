@@ -42,6 +42,7 @@
 - [@malware-filter](https://gitlab.com/malware-filter/urlhaus-filter)
 - [@missuo](https://github.com/missuo/ASN-China)
 - [@Moli-X](https://github.com/Moli-X/Resources)
+- [@obgnail](https://github.com/obgnail/chinese-internet-is-dead)
 - [@Orz-3](https://github.com/Orz-3/mini)
 - [@paulmillr](https://github.com/paulmillr/encrypted-dns)
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
