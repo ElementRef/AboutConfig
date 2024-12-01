@@ -432,13 +432,6 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
-    // REJECT 时会导致相关网站异常
-    if (
-      textPure === 'weworkremotely.com' ||
-      textPure === 'metrics.icloud.com'
-    ) {
-      return '';
-    }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-KEYWORD,') ||
