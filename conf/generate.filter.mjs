@@ -432,12 +432,16 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
+    // REJECT 时会导致相关网站异常
+    if (textPure === 'byteimg.com') {
+      return '';
+    }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
     textTemp.toUpperCase().startsWith('HOST-KEYWORD,') ||
     textTemp.toUpperCase().startsWith('DOMAIN-KEYWORD,')
   ) {
-    // 会导致‘微博搜索｜火山引擎’相关网站异常
+    // REJECT 时会导致相关网站异常
     if (textPure === 's.weibo.com' || textPure === 'volc') {
       return '';
     }
