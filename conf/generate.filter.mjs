@@ -114,7 +114,6 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
-      'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AI%20Suite.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini'
     ],
