@@ -60,6 +60,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js',
   'ddgksf2013.ximalaya.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
+  'ddgksf2013.zhihu.js':
+    'https://gist.githubusercontent.com/ddgksf2013/d43179d848586d561dbb968dee93bae8/raw/Zhihu.Adblock.js',
   'fmz200.baidu.lib.js':
     'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidu/baiduLib.js',
   'fmz200.emby.js':
