@@ -303,6 +303,12 @@
     "wxs"
   ],
   "eslint.quiet": true,
+  "eslint.rules.customizations": [
+    {
+      "rule": "@stylistic/*",
+      "severity": "off"
+    }
+  ],
   "eslint.trace.server": "off",
   "explorer.autoOpenDroppedFile": false,
   "explorer.autoRevealExclude": {
@@ -445,7 +451,7 @@
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "git.blame.editorDecoration.enabled": true,
-  "git.blame.editorDecoration.template": "${subject} ${authorName} ${authorDateAgo}",
+  "git.blame.editorDecoration.template": "${subject}·${authorName}·${authorDateAgo}",
   "git.blame.statusBarItem.enabled": false,
   "git.confirmSync": false,
   "git.decorations.enabled": true,
