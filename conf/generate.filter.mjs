@@ -277,6 +277,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.ogrt80r65.com')) {
     return 'HOST-SUFFIX,ogrt80r65.com';
   }
+  if (textPure.endsWith('.url25fatm.com')) {
+    return 'HOST-SUFFIX,url25fatm.com';
+  }
   // 正经域名
   if (textPure.endsWith('.51y5.net')) {
     return 'HOST-SUFFIX,51y5.net';
@@ -434,7 +437,7 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (textPure === 'byteimg.com') {
+    if (textPure === 'byteimg.com' || textPure === 's.weibo.com') {
       return '';
     }
     return `HOST-SUFFIX,${textPure}`;
@@ -443,7 +446,7 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('DOMAIN-KEYWORD,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (textPure === 's.weibo.com' || textPure === 'volc') {
+    if (textPure === 'volc') {
       return '';
     }
     return `HOST-KEYWORD,${textPure}`;
