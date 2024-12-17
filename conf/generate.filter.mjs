@@ -220,7 +220,8 @@ function mapMixture(text = '') {
     textPure.includes('acl4.ssr') ||
     textTemp.startsWith('#') ||
     textTemp.startsWith(';') ||
-    textTemp.startsWith('/')
+    textTemp.startsWith('/') ||
+    textTemp === ''
   ) {
     return '';
   }
