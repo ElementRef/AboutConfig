@@ -415,18 +415,19 @@ function mapMixture(text = '') {
     return 'HOST-SUFFIX,yinzcam.com';
   }
   // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME/URL-REGEX
+  const captialTextTemp = textTemp.toUpperCase();
   if (textTemp.startsWith('.')) {
     return `HOST-SUFFIX,${textTemp.substring(1)}`;
   } else if (textTemp.startsWith('+.')) {
     return `HOST-SUFFIX,${textTemp.substring(2)}`;
-  } else if (textTemp.toUpperCase().startsWith('USER-AGENT,')) {
+  } else if (captialTextTemp.startsWith('USER-AGENT,')) {
     return `USER-AGENT,${textPure}`;
   } else if (textPure.includes('*')) {
     // 必须放在 USER-AGENT 之后，其他规则判断之前
     return `HOST-WILDCARD,${textPure}`;
   } else if (
-    textTemp.toUpperCase().startsWith('HOST,') ||
-    textTemp.toUpperCase().startsWith('DOMAIN,')
+    captialTextTemp.startsWith('HOST,') ||
+    captialTextTemp.startsWith('DOMAIN,')
   ) {
     // REJECT 时会导致相关网站异常
     if (textPure === 'staticsns.cdn.bcebos.com') {
@@ -434,8 +435,8 @@ function mapMixture(text = '') {
     }
     return `HOST,${textPure}`;
   } else if (
-    textTemp.toUpperCase().startsWith('HOST-SUFFIX,') ||
-    textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
+    captialTextTemp.startsWith('HOST-SUFFIX,') ||
+    captialTextTemp.startsWith('DOMAIN-SUFFIX,')
   ) {
     // REJECT 时会导致相关网站异常
     if (
@@ -447,8 +448,8 @@ function mapMixture(text = '') {
     }
     return `HOST-SUFFIX,${textPure}`;
   } else if (
-    textTemp.toUpperCase().startsWith('HOST-KEYWORD,') ||
-    textTemp.toUpperCase().startsWith('DOMAIN-KEYWORD,')
+    captialTextTemp.startsWith('HOST-KEYWORD,') ||
+    captialTextTemp.startsWith('DOMAIN-KEYWORD,')
   ) {
     // REJECT 时会导致相关网站异常
     if (textPure === 'volc') {
@@ -456,20 +457,20 @@ function mapMixture(text = '') {
     }
     return `HOST-KEYWORD,${textPure}`;
   } else if (
-    textTemp.toUpperCase().startsWith('HOST-WILDCARD,') ||
-    textTemp.toUpperCase().startsWith('DOMAIN-WILDCARD,')
+    captialTextTemp.startsWith('HOST-WILDCARD,') ||
+    captialTextTemp.startsWith('DOMAIN-WILDCARD,')
   ) {
     return `HOST-WILDCARD,${textPure}`;
-  } else if (textTemp.toUpperCase().startsWith('IP-ASN,')) {
+  } else if (captialTextTemp.startsWith('IP-ASN,')) {
     return `IP-ASN,${textPure}`;
-  } else if (textTemp.toUpperCase().startsWith('IP-CIDR,')) {
+  } else if (captialTextTemp.startsWith('IP-CIDR,')) {
     return `IP-CIDR,${textPure}`;
   } else if (
-    textTemp.toUpperCase().startsWith('IP-CIDR6,') ||
-    textTemp.toUpperCase().startsWith('IP6-CIDR,')
+    captialTextTemp.startsWith('IP-CIDR6,') ||
+    captialTextTemp.startsWith('IP6-CIDR,')
   ) {
     return `IP6-CIDR,${textPure}`;
-  } else if (textTemp.toUpperCase().startsWith('PROCESS-NAME,')) {
+  } else if (captialTextTemp.startsWith('PROCESS-NAME,')) {
     return `PROCESS-NAME,${textPure}`;
   } else if (/^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textTemp)) {
     // 霍尔一级
