@@ -41,6 +41,8 @@ let RESOURCES = {
   REJECTDOHOSTS: {
     FILENAME: 'element.ref.reject.dohosts.ini',
     SRC: [
+      'https://a.dove.isdumb.one/list.txt',
+      'https://blocklistproject.github.io/Lists/everything.txt',
       'https://hblock.molinero.dev/hosts',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
       'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
@@ -52,6 +54,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
       'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
+      'https://raw.githubusercontent.com/neodevpro/neodevhost/master/host',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts',
