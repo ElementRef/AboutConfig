@@ -218,6 +218,7 @@ function mapMixture(text = '') {
   if (
     textPure.includes('sukkaw.skk.moe') ||
     textPure.includes('acl4.ssr') ||
+    textTemp.includes('//') ||
     textTemp.includes('#') ||
     textTemp.includes(';')
   ) {
