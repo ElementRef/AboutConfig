@@ -215,7 +215,12 @@ function mapMixture(text = '') {
     .replace(/\/\/.*/gim, '')
     .trim();
   // 删除注释
-  if (textPure.includes('sukkaw.skk.moe') || textPure.includes('acl4.ssr')) {
+  if (
+    textPure.includes('sukkaw.skk.moe') ||
+    textPure.includes('acl4.ssr') ||
+    textPure.includes('#') ||
+    textPure.includes(';')
+  ) {
     return '';
   }
   // /^,[w]{+}\./gim 存在误杀
