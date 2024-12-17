@@ -6,6 +6,7 @@
 
 **特别感谢（排名不分先后）：**
 
+- [@8680](https://github.com/8680/GOODBYEADS)
 - [@Aa28413761](https://t.me/s/Aa28413761)
 - [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
 - [@app2smile](https://github.com/app2smile/rules)
