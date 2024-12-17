@@ -438,7 +438,11 @@ function mapMixture(text = '') {
     textTemp.toUpperCase().startsWith('DOMAIN-SUFFIX,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (textPure === 'byteimg.com' || textPure === 's.weibo.com') {
+    if (
+      textPure === 'byteimg.com' ||
+      textPure === 's.weibo.com' ||
+      textPure === 'static-s.iqiyi.com'
+    ) {
       return '';
     }
     return `HOST-SUFFIX,${textPure}`;
