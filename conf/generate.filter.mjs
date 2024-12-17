@@ -28,6 +28,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
+      'https://raw.githubusercontent.com/PBH-BTN/BTN-Collected-Rules/main/combine/all.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
