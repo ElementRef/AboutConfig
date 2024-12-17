@@ -413,7 +413,7 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.yinzcam.com')) {
     return 'HOST-SUFFIX,yinzcam.com';
   }
-  // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME
+  // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME/URL-REGEX
   if (textTemp.startsWith('.')) {
     return `HOST-SUFFIX,${textTemp.substring(1)}`;
   } else if (textTemp.startsWith('+.')) {
