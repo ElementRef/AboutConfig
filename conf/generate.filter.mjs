@@ -42,7 +42,6 @@ let RESOURCES = {
     FILENAME: 'element.ref.reject.dohosts.ini',
     SRC: [
       'https://a.dove.isdumb.one/list.txt',
-      'https://blocklistproject.github.io/Lists/everything.txt',
       'https://hblock.molinero.dev/hosts',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
       'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
