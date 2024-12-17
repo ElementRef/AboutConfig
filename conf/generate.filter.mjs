@@ -218,8 +218,8 @@ function mapMixture(text = '') {
   if (
     textPure.includes('sukkaw.skk.moe') ||
     textPure.includes('acl4.ssr') ||
-    textPure.includes('#') ||
-    textPure.includes(';')
+    textTemp.includes('#') ||
+    textTemp.includes(';')
   ) {
     return '';
   }
