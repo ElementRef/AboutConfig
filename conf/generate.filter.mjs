@@ -131,6 +131,8 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Vimeo/Vimeo.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTubeMusic/YouTubeMusic.list',
+      'https://ruleset.skk.moe/List/ip/stream.conf',
+      'https://ruleset.skk.moe/List/non_ip/stream.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.custom.ini'
     ],
     MAPFN: mapMixture
@@ -219,8 +221,8 @@ function mapMixture(text = '') {
     .trim();
   // 删除注释
   if (
-    textPure.includes('sukkaw.skk.moe') ||
     textPure.includes('acl4.ssr') ||
+    textPure.includes('skk.moe') ||
     textTemp.startsWith('#') ||
     textTemp.startsWith(';') ||
     textTemp.startsWith('/') ||
