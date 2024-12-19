@@ -472,6 +472,14 @@
   "git.untrackedChanges": "separate",
   "git.useEditorAsCommitInput": true,
   "git.useForcePushIfIncludes": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.editor.enableCodeActions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
   "headwind.removeDuplicates": true,
   "hideComments.cleanStart": false,
   "html.autoClosingTags": true,
