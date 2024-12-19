@@ -27,7 +27,7 @@
   "breadcrumbs.filePath": "on",
   "breadcrumbs.icons": false,
   "breadcrumbs.symbolPath": "off",
-  "chat.commandCenter.enabled": true,
+  "chat.commandCenter.enabled": false,
   "chat.editor.fontFamily": "default",
   "chat.editor.fontSize": 12,
   "chat.editor.fontWeight": "default",
@@ -472,14 +472,6 @@
   "git.untrackedChanges": "separate",
   "git.useEditorAsCommitInput": true,
   "git.useForcePushIfIncludes": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.editor.enableCodeActions": true,
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": false,
-    "plaintext": false,
-    "scminput": false
-  },
   "headwind.removeDuplicates": true,
   "hideComments.cleanStart": false,
   "html.autoClosingTags": true,
