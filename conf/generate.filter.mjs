@@ -467,14 +467,14 @@ function mapMixture(text = '') {
   ) {
     return `HOST-WILDCARD,${textPure}`;
   } else if (captialTextTemp.startsWith('IP-ASN,')) {
-    return `IP-ASN,${textPure}`;
+    return `IP-ASN,${textPure},no-resolve`;
   } else if (captialTextTemp.startsWith('IP-CIDR,')) {
-    return `IP-CIDR,${textPure}`;
+    return `IP-CIDR,${textPure},no-resolve`;
   } else if (
     captialTextTemp.startsWith('IP-CIDR6,') ||
     captialTextTemp.startsWith('IP6-CIDR,')
   ) {
-    return `IP6-CIDR,${textPure}`;
+    return `IP6-CIDR,${textPure},no-resolve`;
   } else if (captialTextTemp.startsWith('PROCESS-NAME,')) {
     return `PROCESS-NAME,${textPure}`;
   } else if (/^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textTemp)) {
@@ -482,7 +482,7 @@ function mapMixture(text = '') {
     if (IPWHITELIST[textTemp]) {
       return '';
     }
-    return `IP-CIDR,${textTemp}`;
+    return `IP-CIDR,${textTemp},no-resolve`;
   } else if (/\S*:+\S*\/{1}/gim.test(textTemp)) {
     /**
      * IPv6 + Mask 正则，性能比较差
@@ -491,7 +491,7 @@ function mapMixture(text = '') {
     if (IPWHITELIST[textTemp]) {
       return '';
     }
-    return `IP6-CIDR,${textTemp}`;
+    return `IP6-CIDR,${textTemp},no-resolve`;
   } else {
     return '';
   }
