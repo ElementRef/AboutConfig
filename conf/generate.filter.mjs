@@ -3,8 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 let MAINREJECTDEEPDOMAINLIST = {}; // 给 !REJECTMIXTURE 驱虫
 let MAINREJECTDOMAINLIST = {}; // 给 REJECTMIXTURE 驱虫
-let WHITELIST = {
-  '0.0.0.0': '0.0.0.0',
+let MIXTUREWHITELIST = {
   '10.0.0.0/8': '10.0.0.0/8',
   '127.0.0.0/8': '127.0.0.0/8',
   '172.16.0.0/12': '172.16.0.0/12',
@@ -12,6 +11,15 @@ let WHITELIST = {
   '224.0.0.0/24': '224.0.0.0/24',
   'byteimg.com': 'byteimg.com',
   'click.discord.com': 'click.discord.com',
+  'parallels.cn': 'parallels.cn',
+  'parallels.com': 'parallels.com',
+  's.weibo.com': 's.weibo.com',
+  'static-s.iqiyi.com': 'static-s.iqiyi.com',
+  'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com',
+  volc: 'volc'
+};
+const HOSTWHITELIST = {
+  '0.0.0.0': '0.0.0.0',
   'ip6-allhosts': 'ip6-allhosts',
   'ip6-allnodes': 'p6-allnodes',
   'ip6-allrouters': 'ip6-allrouters',
@@ -19,15 +27,9 @@ let WHITELIST = {
   'ip6-loopback': 'ip6-loopback',
   'ip6-mcastprefix': 'ip6-mcastprefix',
   'localhost.localdomain': 'localhost.localdomain',
-  'parallels.cn': 'parallels.cn',
-  'parallels.com': 'parallels.com',
-  's.weibo.com': 's.weibo.com',
-  'static-s.iqiyi.com': 'static-s.iqiyi.com',
-  'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com',
   broadcasthost: 'broadcasthost',
   local: 'local',
-  localhost: 'localhost',
-  volc: 'volc'
+  localhost: 'localhost'
 };
 let RESOURCES = {
   REJECTMIXTURE: {
@@ -454,7 +456,7 @@ function mapMixture(text = '') {
     captialTextTemp.startsWith('DOMAIN,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (WHITELIST[textPure]) {
+    if (MIXTUREWHITELIST[textPure]) {
       return '';
     }
     return `HOST,${textPure}`;
@@ -463,7 +465,7 @@ function mapMixture(text = '') {
     captialTextTemp.startsWith('DOMAIN-SUFFIX,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (WHITELIST[textPure]) {
+    if (MIXTUREWHITELIST[textPure]) {
       return '';
     }
     return `HOST-SUFFIX,${textPure}`;
@@ -472,7 +474,7 @@ function mapMixture(text = '') {
     captialTextTemp.startsWith('DOMAIN-KEYWORD,')
   ) {
     // REJECT 时会导致相关网站异常
-    if (WHITELIST[textPure]) {
+    if (MIXTUREWHITELIST[textPure]) {
       return '';
     }
     return `HOST-KEYWORD,${textPure}`;
@@ -494,7 +496,7 @@ function mapMixture(text = '') {
     return `PROCESS-NAME,${textPure}`;
   } else if (/^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textTemp)) {
     // 霍尔一级
-    if (WHITELIST[textTemp]) {
+    if (MIXTUREWHITELIST[textTemp]) {
       return '';
     }
     return `IP-CIDR,${textTemp},no-resolve`;
@@ -503,7 +505,7 @@ function mapMixture(text = '') {
      * IPv6 + Mask 正则，性能比较差
      * ^([\da-fA-F]{1,4}:){6}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^::([\da-fA-F]{1,4}:){0,4}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:):([\da-fA-F]{1,4}:){0,3}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){2}:([\da-fA-F]{1,4}:){0,2}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){3}:([\da-fA-F]{1,4}:){0,1}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){4}:((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){7}[\da-fA-F]{1,4}(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^:((:[\da-fA-F]{1,4}){1,6}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^[\da-fA-F]{1,4}:((:[\da-fA-F]{1,4}){1,5}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){2}((:[\da-fA-F]{1,4}){1,4}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){3}((:[\da-fA-F]{1,4}){1,3}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){4}((:[\da-fA-F]{1,4}){1,2}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){5}:([\da-fA-F]{1,4})?(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){6}:(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$
      */
-    if (WHITELIST[textTemp]) {
+    if (MIXTUREWHITELIST[textTemp]) {
       return '';
     }
     return `IP6-CIDR,${textTemp},no-resolve`;
@@ -539,7 +541,7 @@ function mapDoHosts(text) {
       !textTemp.startsWith('ff02::2') &&
       !textTemp.startsWith('ff02::3')) ||
     lastTemp === undefined ||
-    WHITELIST[lastTemp]
+    HOSTWHITELIST[lastTemp]
   ) {
     return '';
   }
