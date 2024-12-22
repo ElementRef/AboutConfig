@@ -39,7 +39,6 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
-      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
@@ -244,9 +243,10 @@ function mapMixture(text = '') {
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
-    textTemp.startsWith('#') ||
-    textTemp.startsWith('/') ||
     textTemp.startsWith(';') ||
+    textTemp.startsWith('[') ||
+    textTemp.startsWith('/') ||
+    textTemp.startsWith('#') ||
     textTemp === ''
   ) {
     return '';
