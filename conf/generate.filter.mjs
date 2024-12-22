@@ -41,8 +41,6 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
-      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webclient.netset',
-      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webserver.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
@@ -55,6 +53,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
       'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list',
+      'https://www.spamhaus.org/drop/drop.txt',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
     ],
     MAPFN: mapMixture
@@ -95,6 +94,7 @@ let RESOURCES = {
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt',
+      'https://www.binarydefense.com/banlist.txt',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
     ],
     MAPFN: mapPrueIPS
@@ -495,12 +495,13 @@ function mapMixture(text = '') {
     return `IP6-CIDR,${textPure},no-resolve`;
   } else if (captialTextTemp.startsWith('PROCESS-NAME,')) {
     return `PROCESS-NAME,${textPure}`;
-  } else if (/^(\d|\.)+(\/){1}(\d){1,2}$/gim.test(textTemp)) {
+  } else if (/^(\d|\.)+(\/){1}(\d){1,2}/gim.test(textTemp)) {
+    const [pureIP] = /^(\d|\.)+(\/){1}(\d){1,2}/gim.exec(textTemp);
     // 霍尔一级
-    if (MIXTUREWHITELIST[textTemp]) {
+    if (MIXTUREWHITELIST[pureIP]) {
       return '';
     }
-    return `IP-CIDR,${textTemp},no-resolve`;
+    return `IP-CIDR,${pureIP},no-resolve`;
   } else if (/\S*:+\S*\/{1}/gim.test(textTemp)) {
     /**
      * IPv6 + Mask 正则，性能比较差
