@@ -41,6 +41,8 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
+      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webclient.netset',
+      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webserver.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
