@@ -76,6 +76,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js',
   'maasea.youtube.response.js':
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js',
+  'peng.ym.sub.store.js':
+    'https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store.no-bundle.js',
   'yqc007.video.fusion.js':
     'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
   'zheye.zhihu.js':
