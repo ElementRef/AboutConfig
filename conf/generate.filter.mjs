@@ -23,6 +23,7 @@ const HOSTWHITELIST = {
   'ip6-allhosts': 'ip6-allhosts',
   'ip6-allnodes': 'p6-allnodes',
   'ip6-allrouters': 'ip6-allrouters',
+  'ip6-localhost ip6-loopback': 'ip6-localhost ip6-loopback',
   'ip6-localhost': 'ip6-localhost',
   'ip6-loopback': 'ip6-loopback',
   'ip6-mcastprefix': 'ip6-mcastprefix',
@@ -40,8 +41,8 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
-      'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list',
       'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list',
       'https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module',
       'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
@@ -52,8 +53,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
-      'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini'
+      'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list'
     ],
     MAPFN: mapMixture
   },
@@ -63,7 +63,6 @@ let RESOURCES = {
       'https://a.dove.isdumb.one/list.txt',
       'https://hblock.molinero.dev/hosts',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
-      'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts',
       'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
       'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
       'https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt',
@@ -86,23 +85,15 @@ let RESOURCES = {
     ],
     MAPFN: mapDoHosts
   },
-  REJECTPUREIPS: {
-    FILENAME: 'element.ref.reject.pureips.ini',
-    SRC: [
-      'https://blocklist.greensnow.co/greensnow.txt',
-      'https://cinsscore.com/list/ci-badguys.txt',
-      'https://lists.blocklist.de/lists/all.txt',
-      'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt',
-      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset',
-      'https://www.binarydefense.com/banlist.txt'
-    ],
-    MAPFN: mapPrueIPS
-  },
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini'
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/domainset/icloud_private_relay.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/apple_services.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_cn.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_services.conf'
     ],
     MAPFN: mapMixture
   },
@@ -113,9 +104,9 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
       'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini'
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
     MAPFN: mapMixture
   },
@@ -124,8 +115,9 @@ let RESOURCES = {
     SRC: [
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxyService.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini'
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
     ],
     MAPFN: mapMixture
   },
@@ -137,8 +129,8 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini'
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf'
     ],
     MAPFN: mapMixture
   },
@@ -150,9 +142,9 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Vimeo/Vimeo.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTubeMusic/YouTubeMusic.list',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.custom.ini',
       'https://ruleset.skk.moe/List/ip/stream.conf',
-      'https://ruleset.skk.moe/List/non_ip/stream.conf',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.custom.ini'
+      'https://ruleset.skk.moe/List/non_ip/stream.conf'
     ],
     MAPFN: mapMixture
   },
@@ -160,8 +152,8 @@ let RESOURCES = {
     FILENAME: 'element.ref.tiktok.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list',
-      'https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.tiktok.custom.ini'
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.tiktok.custom.ini',
+      'https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok.list'
     ],
     MAPFN: mapMixture
   }
@@ -513,19 +505,6 @@ function mapMixture(text = '') {
   } else {
     return '';
   }
-}
-function mapPrueIPS(text) {
-  const textTemp = text.trim();
-  if (
-    (textTemp.includes(':') && !textTemp.includes('/')) ||
-    textTemp.startsWith('#') ||
-    textTemp.startsWith(';') ||
-    textTemp.startsWith('<') ||
-    textTemp.endsWith('>')
-  ) {
-    return '';
-  }
-  return textTemp;
 }
 function mapDoHosts(text) {
   const textTemp = text?.trim();
