@@ -93,8 +93,8 @@ let RESOURCES = {
       'https://cinsscore.com/list/ci-badguys.txt',
       'https://lists.blocklist.de/lists/all.txt',
       'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt',
-      'https://www.binarydefense.com/banlist.txt',
-      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset'
+      'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset',
+      'https://www.binarydefense.com/banlist.txt'
     ],
     MAPFN: mapPrueIPS
   },
@@ -484,14 +484,14 @@ function mapMixture(text = '') {
   ) {
     return `HOST-WILDCARD,${textPure}`;
   } else if (captialTextTemp.startsWith('IP-ASN,')) {
-    return `IP-ASN,${textPure},no-resolve`;
+    return `IP-ASN,${textPure}`;
   } else if (captialTextTemp.startsWith('IP-CIDR,')) {
-    return `IP-CIDR,${textPure},no-resolve`;
+    return `IP-CIDR,${textPure}`;
   } else if (
     captialTextTemp.startsWith('IP-CIDR6,') ||
     captialTextTemp.startsWith('IP6-CIDR,')
   ) {
-    return `IP6-CIDR,${textPure},no-resolve`;
+    return `IP6-CIDR,${textPure}`;
   } else if (captialTextTemp.startsWith('PROCESS-NAME,')) {
     return `PROCESS-NAME,${textPure}`;
   } else if (/^(\d|\.)+(\/){1}(\d){1,2}/gim.test(textTemp)) {
@@ -500,7 +500,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[pureIP]) {
       return '';
     }
-    return `IP-CIDR,${pureIP},no-resolve`;
+    return `IP-CIDR,${pureIP}`;
   } else if (/\S*:+\S*\/{1}/gim.test(textTemp)) {
     /**
      * IPv6 + Mask 正则，性能比较差
@@ -509,7 +509,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[textTemp]) {
       return '';
     }
-    return `IP6-CIDR,${textTemp},no-resolve`;
+    return `IP6-CIDR,${textTemp}`;
   } else {
     return '';
   }
