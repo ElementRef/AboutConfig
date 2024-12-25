@@ -507,8 +507,7 @@ function mapMixture(text = '') {
 }
 function mapDoHosts(text) {
   const textTemp = text?.trim();
-  const [, last] = textTemp?.split(' ');
-  const lastTemp = last?.trim() || undefined;
+  const lastTemp = textTemp?.split(' ')?.at(-1).trim() || undefined;
   if (
     (!textTemp.startsWith('0.0.0.0 ') &&
       !textTemp.startsWith('0.0.0.1 ') &&
