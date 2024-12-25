@@ -90,7 +90,6 @@ let RESOURCES = {
     SRC: [
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/domainset/icloud_private_relay.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/apple_services.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_cn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_services.conf'
