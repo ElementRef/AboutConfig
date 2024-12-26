@@ -53,6 +53,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
+      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list',
       'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list'
     ],
     MAPFN: mapMixture
@@ -77,6 +78,7 @@ let RESOURCES = {
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts',
       'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
+      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt',
       'https://raw.githubusercontent.com/tiuxo/hosts/master/ads',
       'https://raw.githubusercontent.com/tiuxo/hosts/master/porn',
       'https://raw.githubusercontent.com/yous/YousList/master/hosts.txt',
