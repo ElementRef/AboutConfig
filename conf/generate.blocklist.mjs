@@ -82,17 +82,18 @@ async function writeResourses2File({ FILENAME, RES }) {
     const park = {};
     RES.forEach(item => {
       if (item.startsWith('*://')) {
-        if (!item.endsWith('/*')) {
-          const rule = item.split('#').at(0).trim();
+        const rough = item.replace('*://www.', '*://*.');
+        if (!rough.endsWith('/*')) {
+          const rule = rough.split('#').at(0).trim();
           park[rule] = rule;
         } else {
-          park[item.trim()] = item.trim();
+          park[rough.trim()] = rough.trim();
         }
       } else if (item.startsWith('title/')) {
-        // 这种规则没什么用
+        // 规则不够精准
         // park[item.trim()] = item.trim();
       } else {
-        // 这种规则没什么用
+        // 规则没什么用
       }
     });
     Object.values(park).forEach(rule => {
