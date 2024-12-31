@@ -315,14 +315,32 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.actonservice.com')) {
     return 'HOST-SUFFIX,actonservice.com';
   }
+  if (textPure.endsWith('.ad.xiaomi.com')) {
+    return 'HOST-SUFFIX,ad.xiaomi.com';
+  }
   if (textPure.endsWith('.ahacdn.me')) {
     return 'HOST-SUFFIX,ahacdn.me';
   }
   if (textPure.endsWith('.almosafer.com')) {
     return 'HOST-SUFFIX,almosafer.com';
   }
+  if (textPure.endsWith('.apps.iocnt.de')) {
+    return 'HOST-SUFFIX,apps.iocnt.de';
+  }
+  if (textPure.endsWith('.bravenet.com')) {
+    return 'HOST-SUFFIX,bravenet.com';
+  }
+  if (textPure.endsWith('.carte-gr.total.fr')) {
+    return 'HOST-SUFFIX,carte-gr.total.fr';
+  }
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
+  }
+  if (textPure.endsWith('.e.kuaishou.com')) {
+    return 'HOST-SUFFIX,e.kuaishou.com';
+  }
+  if (textPure.endsWith('.fdj.fr')) {
+    return 'HOST-SUFFIX,fdj.fr';
   }
   if (textPure.endsWith('.focalink.com')) {
     return 'HOST-SUFFIX,focalink.com';
@@ -333,8 +351,14 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.hello.spriggy.com.au')) {
     return 'HOST-SUFFIX,hello.spriggy.com.au';
   }
+  if (textPure.endsWith('.heytapmobile.com')) {
+    return 'HOST-SUFFIX,heytapmobile.com';
+  }
   if (textPure.endsWith('.hipages.com.au')) {
     return 'HOST-SUFFIX,hipages.com.au';
+  }
+  if (textPure.endsWith('.hubcloud.com.cn')) {
+    return 'HOST-SUFFIX,hubcloud.com.cn';
   }
   if (textPure.endsWith('.imrworldwide.com')) {
     return 'HOST-SUFFIX,imrworldwide.com';
