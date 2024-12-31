@@ -309,6 +309,9 @@ function mapMixture(text = '') {
     return 'HOST-SUFFIX,url25fatm.com';
   }
   // 正经域名
+  if (textPure.endsWith('.102.112.2o7.net')) {
+    return 'HOST-SUFFIX,102.112.2o7.net';
+  }
   if (textPure.endsWith('.51y5.net')) {
     return 'HOST-SUFFIX,51y5.net';
   }
@@ -335,6 +338,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
+  }
+  if (textPure.endsWith('.downloadlink.icu')) {
+    return 'HOST-SUFFIX,downloadlink.icu';
   }
   if (textPure.endsWith('.e.kuaishou.com')) {
     return 'HOST-SUFFIX,e.kuaishou.com';
@@ -368,6 +374,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.ipfs.dweb.link')) {
     return 'HOST-SUFFIX,ipfs.dweb.link';
+  }
+  if (textPure.endsWith('.ipfs.flk-ipfs.xyz')) {
+    return 'HOST-SUFFIX,ipfs.flk-ipfs.xyz';
   }
   if (textPure.endsWith('.isnssdk.com')) {
     return 'HOST-SUFFIX,isnssdk.com';
@@ -422,6 +431,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.sanvello.com')) {
     return 'HOST-SUFFIX,sanvello.com';
+  }
+  if (textPure.endsWith('.sextracker.be')) {
+    return 'HOST-SUFFIX,sextracker.be';
   }
   if (textPure.endsWith('.skyscanner.com')) {
     return 'HOST-SUFFIX,skyscanner.com';
