@@ -6,12 +6,11 @@ const RESOURCES = [
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt',
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt',
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt',
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt',
   'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt',
   'https://raw.githubusercontent.com/eallion/uBlacklist-subscription-compilation/main/uBlacklist.txt',
+  'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.custom.ini',
   'https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt',
-  'https://raw.githubusercontent.com/obgnail/chinese-internet-is-dead/master/blocklist.txt',
-  'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.custom.ini'
+  'https://raw.githubusercontent.com/obgnail/chinese-internet-is-dead/master/blocklist.txt'
 ];
 (async () => {
   const LIST = [];
@@ -80,18 +79,24 @@ async function writeResourses2File({ FILENAME, RES }) {
     const temp = {
       value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
+    const park = {};
     RES.forEach(item => {
       if (item.startsWith('*://')) {
         if (!item.endsWith('/*')) {
-          // 这种规则没什么用
+          const rule = item.split('#').at(0).trim();
+          park[rule] = rule;
         } else {
-          temp.value = temp.value + item + '\n';
+          park[item.trim()] = item.trim();
         }
       } else if (item.startsWith('title/')) {
-        temp.value = temp.value + item + '\n';
+        // 这种规则没什么用
+        // park[item.trim()] = item.trim();
       } else {
         // 这种规则没什么用
       }
+    });
+    Object.values(park).forEach(rule => {
+      temp.value = temp.value + rule + '\n';
     });
     await writeFile(
       resolve(dirname(scriptPath), `../filter/${FILENAME}`),
