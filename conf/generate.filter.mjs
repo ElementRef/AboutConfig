@@ -220,15 +220,10 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
     console.error(message);
     throw new Error(message);
   }
-  return MAPFN === mapMixture
-    ? {
-        FILENAME,
-        RAW
-      }
-    : {
-        FILENAME,
-        RAW
-      };
+  return {
+    FILENAME,
+    RAW
+  };
 }
 function mapMixture(text = '') {
   const textTemp = text.replace(/ /gim, '');
