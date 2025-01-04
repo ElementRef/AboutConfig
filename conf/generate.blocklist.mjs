@@ -1,12 +1,13 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// 目前的规则数量，会让 Google 弹出验证，无解，只能舍弃部分规则
 const RESOURCES = [
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt',
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt',
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt',
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt',
-  'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt',
+  // 'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt',
+  // 'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt',
+  // 'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt',
+  // 'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt',
+  // 'https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt',
   'https://raw.githubusercontent.com/eallion/uBlacklist-subscription-compilation/main/uBlacklist.txt',
   'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.ublock.custom.ini',
   'https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt',
