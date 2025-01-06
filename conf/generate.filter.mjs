@@ -373,9 +373,6 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.ipfs.flk-ipfs.xyz')) {
     return 'HOST-SUFFIX,ipfs.flk-ipfs.xyz';
   }
-  if (textPure.endsWith('.isnssdk.com')) {
-    return 'HOST-SUFFIX,isnssdk.com';
-  }
   if (textPure.endsWith('.linodeusercontent.com')) {
     return 'HOST-SUFFIX,linodeusercontent.com';
   }
@@ -435,9 +432,6 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.skyscanner.net')) {
     return 'HOST-SUFFIX,skyscanner.net';
-  }
-  if (textPure.endsWith('.snssdk.com')) {
-    return 'HOST-SUFFIX,snssdk.com';
   }
   if (textPure.endsWith('.stats.esomniture.com')) {
     return 'HOST-SUFFIX,stats.esomniture.com';
