@@ -4,19 +4,20 @@ import { fileURLToPath } from 'node:url';
 let MAINREJECTDEEPDOMAINLIST = {}; // 给 !REJECTMIXTURE 驱虫
 let MAINREJECTDOMAINLIST = {}; // 给 REJECTMIXTURE 驱虫
 let MIXTUREWHITELIST = {
-  '10.0.0.0/8': '10.0.0.0/8',
-  '127.0.0.0/8': '127.0.0.0/8',
-  '172.16.0.0/12': '172.16.0.0/12',
-  '192.0.0.0/16': '192.0.0.0/16',
-  '224.0.0.0/24': '224.0.0.0/24',
-  'byteimg.com': 'byteimg.com',
-  'click.discord.com': 'click.discord.com',
-  'parallels.cn': 'parallels.cn',
-  'parallels.com': 'parallels.com',
-  's.weibo.com': 's.weibo.com',
-  'static-s.iqiyi.com': 'static-s.iqiyi.com',
-  'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com',
-  volc: 'volc'
+  '10.0.0.0/8': '10.0.0.0/8', // 软件内置规则
+  '127.0.0.0/8': '127.0.0.0/8', // 软件内置规则
+  '172.16.0.0/12': '172.16.0.0/12', // 软件内置规则
+  '192.0.0.0/16': '192.0.0.0/16', // 软件内置规则
+  '224.0.0.0/24': '224.0.0.0/24', // 软件内置规则
+  'byteimg.com': 'byteimg.com', // 字节静态资源
+  'click.discord.com': 'click.discord.com', // Discord 验证码
+  'parallels.cn': 'parallels.cn', // Parallels 官网
+  'parallels.com': 'parallels.com', // Parallels 官网
+  's.weibo.com': 's.weibo.com', // 微博静态资源
+  'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
+  'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
+  'umami.is': 'umami.is', // Umani 官网
+  volc: 'volc' // 火山引擎
 };
 const HOSTWHITELIST = {
   '0.0.0.0': '0.0.0.0',
