@@ -1,8 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-let MAINREJECTDEEPDOMAINLIST = {}; // 给 !REJECTMIXTURE 驱虫
-let MAINREJECTDOMAINLIST = {}; // 给 REJECTMIXTURE 驱虫
 let MIXTUREWHITELIST = {
   '10.0.0.0/8': '10.0.0.0/8', // 软件内置规则
   '127.0.0.0/8': '127.0.0.0/8', // 软件内置规则
@@ -199,13 +197,14 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           .split('\n')
           .map(str => MAPFN(str, FILENAME))
           .filter(text => text.length !== 0);
-        if (FILENAME === 'element.ref.reject.mixture.ini') {
-          // 向 MAINREJECTDOMAINLIST 中添加数据
+        if (MAPFN !== mapDoHosts) {
           RAW[key].forEach(item => {
-            const temp = item.split(',')[1].trim();
-            if ([...temp.matchAll(/\./gim)].length === 1) {
-              MAINREJECTDOMAINLIST[temp] = temp;
+            const temp = item.split(',')[1]?.trim();
+            const { length: dotAmount } = [...temp.matchAll(/\./gim)];
+            if (!globalThis[`${FILENAME}${dotAmount}`]) {
+              globalThis[`${FILENAME}${dotAmount}`] = {};
             }
+            globalThis[`${FILENAME}${dotAmount}`][temp] = temp;
           });
         }
       } else {
@@ -481,7 +480,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[textPure]) {
       return '';
     }
-    return `HOST,${textPure}`;
+    return `HOST-SUFFIX,${textPure}`;
   } else if (
     captialTextTemp.startsWith('HOST-SUFFIX,') ||
     captialTextTemp.startsWith('DOMAIN-SUFFIX,')
@@ -557,7 +556,6 @@ function mapDoHosts(text) {
   return `0.0.0.0 ${lastTemp}`;
 }
 function combineResourses({ FILENAME, RAW }) {
-  const park = Object.create(null);
   const temp = Object.create(null);
   Object.keys(RAW).forEach(key => {
     console.log(
@@ -566,49 +564,29 @@ function combineResourses({ FILENAME, RAW }) {
     );
     RAW[key].forEach(rule => {
       if (rule.includes(',')) {
-        const [domainORule, domainORip] = rule.split(',');
-        /**
-         * 只对 element.ref.reject.mixture.ini 做优化
-         * 如果 domainORip 的主域名存在于收集的列表里
-         * 就剔除出去
-         */
+        // 工具规则
+        const [, domainORip] = rule.split(',');
+        const { length: dotAmount } = [...domainORip.matchAll(/\./gim)];
+        const lastLevelDomain = domainORip.split('.').splice(1).join('.');
         if (FILENAME === 'element.ref.reject.mixture.ini') {
-          if (
-            (domainORule === 'HOST' ||
-              domainORule === 'HOST-SUFFIX' ||
-              domainORule === 'HOST-KEYWORD' ||
-              domainORule === 'HOST-WILDCARD') &&
-            [...domainORip.matchAll(/\./gim)].length > 1
-          ) {
-            /**
-             * 有重复的【主】域名，但不一定有重复的规则
-             * HOST,123.urlsec.qq.com
-             * HOST-SUFFIX,qq.com
-             * 保留 qq.com 即可
-             */
-            const MainInDomainORip = domainORip
-              .split('.')
-              .reverse()
-              .slice(0, 2)
-              .reverse()
-              .join('.');
-            if (!MAINREJECTDOMAINLIST[MainInDomainORip] && !park[domainORip]) {
-              MAINREJECTDEEPDOMAINLIST[domainORip] = domainORip;
-              park[domainORip] = domainORip;
-              temp[rule] = rule;
-            }
-          } else if (!park[domainORip]) {
-            MAINREJECTDEEPDOMAINLIST[domainORip] = domainORip;
-            park[domainORip] = domainORip;
+          if (!globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain]) {
             temp[rule] = rule;
           }
         } else {
-          if (!park[domainORip] && !MAINREJECTDEEPDOMAINLIST[domainORip]) {
-            park[domainORip] = domainORip;
+          if (
+            !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+            !globalThis?.[`element.ref.reject.mixture.ini${dotAmount - 1}`]?.[
+              lastLevelDomain
+            ] &&
+            !globalThis?.[`element.ref.reject.mixture.ini${dotAmount}`]?.[
+              domainORip
+            ]
+          ) {
             temp[rule] = rule;
           }
         }
       } else {
+        // HOST 规则
         temp[rule] = rule;
       }
     });
