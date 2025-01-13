@@ -480,7 +480,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[textPure]) {
       return '';
     }
-    return `HOST-SUFFIX,${textPure}`;
+    return `HOST,${textPure}`;
   } else if (
     captialTextTemp.startsWith('HOST-SUFFIX,') ||
     captialTextTemp.startsWith('DOMAIN-SUFFIX,')
