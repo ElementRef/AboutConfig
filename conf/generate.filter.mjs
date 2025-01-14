@@ -200,7 +200,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         if (MAPFN !== mapDoHosts) {
           RAW[key].forEach(item => {
             const temp = item.split(',')[1]?.trim();
-            const { length: dotAmount } = [...temp.matchAll(/\./gim)];
+            const { length: dotAmount } = [...temp.matchAll(/\./gim)]; // 域名中·的个数
             if (!globalThis[`${FILENAME}${dotAmount}`]) {
               globalThis[`${FILENAME}${dotAmount}`] = {};
             }
@@ -556,42 +556,45 @@ function mapDoHosts(text) {
   return `0.0.0.0 ${lastTemp}`;
 }
 function combineResourses({ FILENAME, RAW }) {
-  const temp = Object.create(null);
+  let RAWARR = [];
+  let RAWPARK = Object.create(null);
+  let RAWRULE = Object.create(null);
+  let REJECTFILENAME = 'element.ref.reject.mixture.ini';
   Object.keys(RAW).forEach(key => {
     console.log(
       `    ${key}`.padEnd(96),
       RAW[key].length.toString().padStart(12)
     );
-    RAW[key].forEach(rule => {
-      if (rule.includes(',')) {
-        // 工具规则
-        const [, domainORip] = rule.split(',');
-        const { length: dotAmount } = [...domainORip.matchAll(/\./gim)];
-        const lastLevelDomain = domainORip.split('.').splice(1).join('.');
-        if (FILENAME === 'element.ref.reject.mixture.ini') {
-          if (!globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain]) {
-            temp[rule] = rule;
-          }
-        } else {
-          if (
-            !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
-            !globalThis?.[`element.ref.reject.mixture.ini${dotAmount - 1}`]?.[
-              lastLevelDomain
-            ] &&
-            !globalThis?.[`element.ref.reject.mixture.ini${dotAmount}`]?.[
-              domainORip
-            ]
-          ) {
-            temp[rule] = rule;
-          }
-        }
-      } else {
-        // HOST 规则
-        temp[rule] = rule;
-      }
-    });
+    RAWARR = RAWARR.concat(RAW[key]);
   });
-  const RES = Object.keys(temp).sort();
+  RAWARR.forEach(rule => {
+    if (rule.includes(',')) {
+      const [, domainORip] = rule.split(',');
+      const { length: dotAmount } = [...domainORip.matchAll(/\./gim)];
+      const lastLevelDomain = domainORip.split('.').splice(1).join('.');
+      if (
+        FILENAME === REJECTFILENAME &&
+        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !RAWPARK[domainORip]
+      ) {
+        RAWPARK[domainORip] = domainORip;
+        RAWRULE[rule] = rule;
+      }
+      if (
+        FILENAME !== REJECTFILENAME &&
+        !globalThis?.[`${REJECTFILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !globalThis?.[`${REJECTFILENAME}${dotAmount}`]?.[domainORip] &&
+        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !RAWPARK[domainORip]
+      ) {
+        RAWPARK[domainORip] = domainORip;
+        RAWRULE[rule] = rule;
+      }
+    } else {
+      RAWRULE[rule] = rule;
+    }
+  });
+  const RES = Object.keys(RAWRULE).sort();
   console.log(`    ${FILENAME}`.padEnd(96), RES.length.toString().padStart(12));
   return {
     FILENAME,
