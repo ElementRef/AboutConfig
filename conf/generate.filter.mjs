@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-let MIXTUREWHITELIST = {
+const MIXTUREWHITELIST = {
   '10.0.0.0/8': '10.0.0.0/8', // 软件内置规则
   '127.0.0.0/8': '127.0.0.0/8', // 软件内置规则
   '172.16.0.0/12': '172.16.0.0/12', // 软件内置规则
@@ -31,7 +31,7 @@ const HOSTWHITELIST = {
   local: 'local',
   localhost: 'localhost'
 };
-let RESOURCES = {
+const RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
@@ -170,6 +170,24 @@ let RESOURCES = {
     console.log(`>>> ${key}`.padEnd(96), '处理完成 <<<'.padStart(12));
   }
 })();
+async function writeResourses2File({ FILENAME, RES }) {
+  try {
+    const scriptPath = fileURLToPath(import.meta.url);
+    const temp = {
+      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
+    };
+    RES.forEach(item => {
+      temp.value = temp.value + item + '\n';
+    });
+    await writeFile(
+      resolve(dirname(scriptPath), `../filter/${FILENAME}`),
+      temp.value
+    );
+  } catch ({ message }) {
+    console.error(message);
+    throw new Error(message);
+  }
+}
 async function getResourses({ FILENAME, SRC, MAPFN }) {
   /**
    * {
@@ -222,6 +240,72 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
     FILENAME,
     RAW
   };
+}
+function combineResourses({ FILENAME, RAW }) {
+  let RAWARR = [];
+  let RAWPARK = Object.create(null);
+  let RAWRULE = Object.create(null);
+  let REJECTFILENAME = 'element.ref.reject.mixture.ini';
+  Object.keys(RAW).forEach(key => {
+    console.log(
+      `    ${key}`.padEnd(96),
+      RAW[key].length.toString().padStart(12)
+    );
+    RAWARR = RAWARR.concat(RAW[key]);
+  });
+  RAWARR.forEach(rule => {
+    if (rule.includes(',')) {
+      const [, domainORip] = rule.split(',');
+      const { length: dotAmount } = [...domainORip.matchAll(/\./gim)];
+      const lastLevelDomain = domainORip.split('.').splice(1).join('.');
+      if (
+        FILENAME === REJECTFILENAME &&
+        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !RAWPARK[domainORip]
+      ) {
+        RAWPARK[domainORip] = domainORip;
+        RAWRULE[rule] = rule;
+      }
+      if (
+        FILENAME !== REJECTFILENAME &&
+        !globalThis?.[`${REJECTFILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !globalThis?.[`${REJECTFILENAME}${dotAmount}`]?.[domainORip] &&
+        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
+        !RAWPARK[domainORip]
+      ) {
+        RAWPARK[domainORip] = domainORip;
+        RAWRULE[rule] = rule;
+      }
+    } else {
+      RAWRULE[rule] = rule;
+    }
+  });
+  const RES = Object.keys(RAWRULE).sort();
+  console.log(`    ${FILENAME}`.padEnd(96), RES.length.toString().padStart(12));
+  return {
+    FILENAME,
+    RES
+  };
+}
+function mapDoHosts(text) {
+  const textTemp = text?.trim();
+  const lastTemp = textTemp?.split(' ')?.at(-1)?.trim() || undefined;
+  if (
+    (!textTemp.startsWith('0.0.0.0 ') &&
+      !textTemp.startsWith('0.0.0.1 ') &&
+      !textTemp.startsWith('127.0.0.1 ') &&
+      !textTemp.startsWith('255.255.255.255 ') &&
+      !textTemp.startsWith('fe80::1') &&
+      !textTemp.startsWith('ff00::0') &&
+      !textTemp.startsWith('ff02::1') &&
+      !textTemp.startsWith('ff02::2') &&
+      !textTemp.startsWith('ff02::3')) ||
+    lastTemp === undefined ||
+    HOSTWHITELIST[lastTemp]
+  ) {
+    return '';
+  }
+  return `0.0.0.0 ${lastTemp}`;
 }
 function mapMixture(text = '') {
   const textTemp = text.replace(/ /gim, '');
@@ -536,89 +620,5 @@ function mapMixture(text = '') {
     return `IP6-CIDR,${textTemp}`;
   } else {
     return '';
-  }
-}
-function mapDoHosts(text) {
-  const textTemp = text?.trim();
-  const lastTemp = textTemp?.split(' ')?.at(-1)?.trim() || undefined;
-  if (
-    (!textTemp.startsWith('0.0.0.0 ') &&
-      !textTemp.startsWith('0.0.0.1 ') &&
-      !textTemp.startsWith('127.0.0.1 ') &&
-      !textTemp.startsWith('255.255.255.255 ') &&
-      !textTemp.startsWith('fe80::1') &&
-      !textTemp.startsWith('ff00::0') &&
-      !textTemp.startsWith('ff02::1') &&
-      !textTemp.startsWith('ff02::2') &&
-      !textTemp.startsWith('ff02::3')) ||
-    lastTemp === undefined ||
-    HOSTWHITELIST[lastTemp]
-  ) {
-    return '';
-  }
-  return `0.0.0.0 ${lastTemp}`;
-}
-function combineResourses({ FILENAME, RAW }) {
-  let RAWARR = [];
-  let RAWPARK = Object.create(null);
-  let RAWRULE = Object.create(null);
-  let REJECTFILENAME = 'element.ref.reject.mixture.ini';
-  Object.keys(RAW).forEach(key => {
-    console.log(
-      `    ${key}`.padEnd(96),
-      RAW[key].length.toString().padStart(12)
-    );
-    RAWARR = RAWARR.concat(RAW[key]);
-  });
-  RAWARR.forEach(rule => {
-    if (rule.includes(',')) {
-      const [, domainORip] = rule.split(',');
-      const { length: dotAmount } = [...domainORip.matchAll(/\./gim)];
-      const lastLevelDomain = domainORip.split('.').splice(1).join('.');
-      if (
-        FILENAME === REJECTFILENAME &&
-        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
-        !RAWPARK[domainORip]
-      ) {
-        RAWPARK[domainORip] = domainORip;
-        RAWRULE[rule] = rule;
-      }
-      if (
-        FILENAME !== REJECTFILENAME &&
-        !globalThis?.[`${REJECTFILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
-        !globalThis?.[`${REJECTFILENAME}${dotAmount}`]?.[domainORip] &&
-        !globalThis?.[`${FILENAME}${dotAmount - 1}`]?.[lastLevelDomain] &&
-        !RAWPARK[domainORip]
-      ) {
-        RAWPARK[domainORip] = domainORip;
-        RAWRULE[rule] = rule;
-      }
-    } else {
-      RAWRULE[rule] = rule;
-    }
-  });
-  const RES = Object.keys(RAWRULE).sort();
-  console.log(`    ${FILENAME}`.padEnd(96), RES.length.toString().padStart(12));
-  return {
-    FILENAME,
-    RES
-  };
-}
-async function writeResourses2File({ FILENAME, RES }) {
-  try {
-    const scriptPath = fileURLToPath(import.meta.url);
-    const temp = {
-      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
-    };
-    RES.forEach(item => {
-      temp.value = temp.value + item + '\n';
-    });
-    await writeFile(
-      resolve(dirname(scriptPath), `../filter/${FILENAME}`),
-      temp.value
-    );
-  } catch ({ message }) {
-    console.error(message);
-    throw new Error(message);
   }
 }
