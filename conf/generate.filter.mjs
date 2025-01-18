@@ -9,6 +9,7 @@ const MIXTUREWHITELIST = {
   '224.0.0.0/24': '224.0.0.0/24', // 软件内置规则
   'byteimg.com': 'byteimg.com', // 字节静态资源
   'click.discord.com': 'click.discord.com', // Discord 验证码
+  'juejin.cn': 'juejin.cn', // 掘金官网
   'parallels.cn': 'parallels.cn', // Parallels 官网
   'parallels.com': 'parallels.com', // Parallels 官网
   's.weibo.com': 's.weibo.com', // 微博静态资源
