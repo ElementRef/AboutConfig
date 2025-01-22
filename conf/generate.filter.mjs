@@ -498,9 +498,6 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.pstatp.com')) {
     return 'HOST-SUFFIX,pstatp.com';
   }
-  if (textPure.endsWith('.r2.dev')) {
-    return 'HOST-SUFFIX,r2.dev';
-  }
   if (textPure.endsWith('.rsc.cdn77.org')) {
     return 'HOST-SUFFIX,rsc.cdn77.org';
   }
