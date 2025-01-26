@@ -24,6 +24,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js',
   'ddgksf2013.amap.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amap.js',
+  'ddgksf2013.amdc.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js',
   'ddgksf2013.bilibili.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js',
   'ddgksf2013.bybutter.js':
