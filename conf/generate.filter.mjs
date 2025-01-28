@@ -335,6 +335,166 @@ function mapMixture(text = '') {
   ) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
+  // 正经域名
+  if (textPure.endsWith('.102.112.2o7.net')) {
+    return 'HOST-SUFFIX,102.112.2o7.net';
+  }
+  if (textPure.endsWith('.51y5.net')) {
+    return 'HOST-SUFFIX,51y5.net';
+  }
+  if (textPure.endsWith('.actonservice.com')) {
+    return 'HOST-SUFFIX,actonservice.com';
+  }
+  if (textPure.endsWith('.ad.xiaomi.com')) {
+    return 'HOST-SUFFIX,ad.xiaomi.com';
+  }
+  if (textPure.endsWith('.ahacdn.me')) {
+    return 'HOST-SUFFIX,ahacdn.me';
+  }
+  if (textPure.endsWith('.almosafer.com')) {
+    return 'HOST-SUFFIX,almosafer.com';
+  }
+  if (textPure.endsWith('.apps.iocnt.de')) {
+    return 'HOST-SUFFIX,apps.iocnt.de';
+  }
+  if (textPure.endsWith('.bravenet.com')) {
+    return 'HOST-SUFFIX,bravenet.com';
+  }
+  if (textPure.endsWith('.carte-gr.total.fr')) {
+    return 'HOST-SUFFIX,carte-gr.total.fr';
+  }
+  if (textPure.endsWith('.cosmicnewspulse.com')) {
+    return 'HOST-SUFFIX,cosmicnewspulse.com';
+  }
+  if (textPure.endsWith('.downloadlink.icu')) {
+    return 'HOST-SUFFIX,downloadlink.icu';
+  }
+  if (textPure.endsWith('.e.kuaishou.com')) {
+    return 'HOST-SUFFIX,e.kuaishou.com';
+  }
+  if (textPure.endsWith('.fdj.fr')) {
+    return 'HOST-SUFFIX,fdj.fr';
+  }
+  if (textPure.endsWith('.focalink.com')) {
+    return 'HOST-SUFFIX,focalink.com';
+  }
+  if (textPure.endsWith('.getui.com')) {
+    return 'HOST-SUFFIX,getui.com';
+  }
+  if (textPure.endsWith('.hello.spriggy.com.au')) {
+    return 'HOST-SUFFIX,hello.spriggy.com.au';
+  }
+  if (textPure.endsWith('.heytapmobile.com')) {
+    return 'HOST-SUFFIX,heytapmobile.com';
+  }
+  if (textPure.endsWith('.hipages.com.au')) {
+    return 'HOST-SUFFIX,hipages.com.au';
+  }
+  if (textPure.endsWith('.hubcloud.com.cn')) {
+    return 'HOST-SUFFIX,hubcloud.com.cn';
+  }
+  if (textPure.endsWith('.imrworldwide.com')) {
+    return 'HOST-SUFFIX,imrworldwide.com';
+  }
+  if (textPure.endsWith('.innovatedating.com')) {
+    return 'HOST-SUFFIX,innovatedating.com';
+  }
+  if (textPure.endsWith('.ipfs.dweb.link')) {
+    return 'HOST-SUFFIX,ipfs.dweb.link';
+  }
+  if (textPure.endsWith('.ipfs.flk-ipfs.xyz')) {
+    return 'HOST-SUFFIX,ipfs.flk-ipfs.xyz';
+  }
+  if (textPure.endsWith('.linodeusercontent.com')) {
+    return 'HOST-SUFFIX,linodeusercontent.com';
+  }
+  if (textPure.endsWith('.msecnd.net')) {
+    return 'HOST-SUFFIX,msecnd.net';
+  }
+  if (textPure.endsWith('.musical.ly')) {
+    return 'HOST-SUFFIX,musical.ly';
+  }
+  if (textPure.endsWith('.nespresso.com')) {
+    return 'HOST-SUFFIX,nespresso.com';
+  }
+  if (textPure.endsWith('.net.iberostar.com')) {
+    return 'HOST-SUFFIX,net.iberostar.com';
+  }
+  if (textPure.endsWith('.net.mydays.de')) {
+    return 'HOST-SUFFIX,net.mydays.de';
+  }
+  if (textPure.endsWith('.notice.spriggy.com.au')) {
+    return 'HOST-SUFFIX,notice.spriggy.com.au';
+  }
+  if (textPure.endsWith('.offermatica.com')) {
+    return 'HOST-SUFFIX,offermatica.com';
+  }
+  if (textPure.endsWith('.ohhmyoffers.com')) {
+    return 'HOST-SUFFIX,ohhmyoffers.com';
+  }
+  if (textPure.endsWith('.omniture.com')) {
+    return 'HOST-SUFFIX,omniture.com';
+  }
+  if (textPure.endsWith('.ott.cibntv.com')) {
+    return 'HOST-SUFFIX,ott.cibntv.net';
+  }
+  if (textPure.endsWith('.pandasuite.com')) {
+    return 'HOST-SUFFIX,pandasuite.com';
+  }
+  if (textPure.endsWith('.p2l.info')) {
+    return 'HOST-SUFFIX,p2l.info';
+  }
+  if (textPure.endsWith('.pstatp.com')) {
+    return 'HOST-SUFFIX,pstatp.com';
+  }
+  if (textPure.endsWith('.rsc.cdn77.org')) {
+    return 'HOST-SUFFIX,rsc.cdn77.org';
+  }
+  if (textPure.endsWith('.sanvello.com')) {
+    return 'HOST-SUFFIX,sanvello.com';
+  }
+  if (textPure.endsWith('.sextracker.be')) {
+    return 'HOST-SUFFIX,sextracker.be';
+  }
+  if (textPure.endsWith('.skyscanner.com')) {
+    return 'HOST-SUFFIX,skyscanner.com';
+  }
+  if (textPure.endsWith('.skyscanner.net')) {
+    return 'HOST-SUFFIX,skyscanner.net';
+  }
+  if (textPure.endsWith('.stats.esomniture.com')) {
+    return 'HOST-SUFFIX,stats.esomniture.com';
+  }
+  if (textPure.endsWith('.swrve.com')) {
+    return 'HOST-SUFFIX,swrve.com';
+  }
+  if (textPure.endsWith('.tajawal.com')) {
+    return 'HOST-SUFFIX,tajawal.com';
+  }
+  if (textPure.endsWith('.themoneytizer.com')) {
+    return 'HOST-SUFFIX,themoneytizer.com';
+  }
+  if (textPure.endsWith('.tntdrama.com')) {
+    return 'HOST-SUFFIX,tntdrama.com';
+  }
+  if (textPure.endsWith('.treknew.fun')) {
+    return 'HOST-SUFFIX,treknew.fun';
+  }
+  if (textPure.endsWith('.umengcloud.com')) {
+    return 'HOST-SUFFIX,umengcloud.com';
+  }
+  if (textPure.endsWith('.umeng.com')) {
+    return 'HOST-SUFFIX,umeng.com';
+  }
+  if (textPure.endsWith('.u3.ucweb.com')) {
+    return 'HOST-SUFFIX,u3.ucweb.com';
+  }
+  if (textPure.endsWith('.viglink.com')) {
+    return 'HOST-SUFFIX,viglink.com';
+  }
+  if (textPure.endsWith('.yinzcam.com')) {
+    return 'HOST-SUFFIX,yinzcam.com';
+  }
   // Quantumult X 似乎不支持 DOMAIN-SET/RULE-SET/PROCESS-NAME/URL-REGEX
   const captialTextTemp = textTemp.toUpperCase();
   if (textTemp.startsWith('.')) {
