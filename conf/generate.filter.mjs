@@ -409,6 +409,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.linodeusercontent.com')) {
     return 'HOST-SUFFIX,linodeusercontent.com';
   }
+  if (textPure.endsWith('.llnw.net')) {
+    return 'HOST-SUFFIX,llnw.net';
+  }
   if (textPure.endsWith('.msecnd.net')) {
     return 'HOST-SUFFIX,msecnd.net';
   }
@@ -417,6 +420,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.nespresso.com')) {
     return 'HOST-SUFFIX,nespresso.com';
+  }
+  if (textPure.endsWith('.net.easyjet.com')) {
+    return 'HOST-SUFFIX,net.easyjet.com';
   }
   if (textPure.endsWith('.net.iberostar.com')) {
     return 'HOST-SUFFIX,net.iberostar.com';
