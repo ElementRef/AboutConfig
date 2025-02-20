@@ -318,6 +318,7 @@ function mapMixture(text = '') {
     .trim();
   // 删除注释
   if (
+    textTemp.includes('-NO-DROP') ||
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
