@@ -36,6 +36,7 @@ const RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
+      'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockqx.conf',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini',
