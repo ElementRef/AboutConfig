@@ -70,6 +70,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt',
       'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt',
       'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
+      'https://raw.githubusercontent.com/hululu1068/AdGuard-Rule/main/rule/hosts.txt',
       'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
       'https://raw.githubusercontent.com/neodevpro/neodevhost/master/host',

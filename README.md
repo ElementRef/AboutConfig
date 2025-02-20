@@ -38,6 +38,7 @@
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
 - [@hBlock](https://hblock.molinero.dev)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
+- [@hululu1068](https://github.com/hululu1068/AdGuard-Rule)
 - [@ignaciocastro](https://github.com/ignaciocastro/a-dove-is-dumb)
 - [@jdlingyu](https://github.com/jdlingyu/ad-wars)
 - [@jerryn70](https://github.com/jerryn70/GoodbyeAds)
