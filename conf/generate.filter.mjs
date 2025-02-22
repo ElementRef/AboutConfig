@@ -323,6 +323,7 @@ function mapMixture(text = '') {
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
+    textPure.endsWith('.arpa') ||
     textTemp.startsWith(';') ||
     textTemp.startsWith('[') ||
     textTemp.startsWith('/') ||
