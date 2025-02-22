@@ -369,6 +369,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
   }
+  if (textPure.endsWith('.doubleclick.net')) {
+    return 'HOST-SUFFIX,doubleclick.net';
+  }
   if (textPure.endsWith('.downloadlink.icu')) {
     return 'HOST-SUFFIX,downloadlink.icu';
   }
