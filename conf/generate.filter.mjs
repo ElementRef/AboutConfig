@@ -15,6 +15,7 @@ const MIXTUREWHITELIST = {
   's.weibo.com': 's.weibo.com', // 微博静态资源
   'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
   'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
+  'umami.is': 'umami.is', // Umami 官网
   volc: 'volc' // 火山引擎
 };
 const HOSTWHITELIST = {
