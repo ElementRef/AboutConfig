@@ -7,8 +7,10 @@ const MIXTUREWHITELIST = {
   '172.16.0.0/12': '172.16.0.0/12', // 软件内置规则
   '192.0.0.0/16': '192.0.0.0/16', // 软件内置规则
   '224.0.0.0/24': '224.0.0.0/24', // 软件内置规则
+  'browserleaks.com': 'browserleaks.com', // DNS 泄露检测
   'byteimg.com': 'byteimg.com', // 字节静态资源
   'click.discord.com': 'click.discord.com', // Discord 验证码
+  'ipleak.net': 'ipleak.net', // DNS 泄露检测
   'juejin.cn': 'juejin.cn', // 掘金官网
   'parallels.cn': 'parallels.cn', // Parallels 官网
   'parallels.com': 'parallels.com', // Parallels 官网
