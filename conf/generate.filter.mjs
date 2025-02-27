@@ -18,6 +18,9 @@ const MIXTUREWHITELIST = {
   'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
   'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
   'umami.is': 'umami.is', // Umami 官网
+  'vcs.snssdk.com': 'vcs.snssdk.com', // 验证码相关
+  'verify.cmpassport.com': 'verify.cmpassport.com', // 验证码相关
+  'verify.snssdk.com': 'verify.snssdk.com', // 验证码相关
   volc: 'volc' // 火山引擎
 };
 const HOSTWHITELIST = {
