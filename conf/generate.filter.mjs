@@ -684,9 +684,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('adobetarget.yellohvillage.')) {
     return 'HOST-KEYWORD,adobetarget.yellohvillage';
   }
-  if (textPure.startsWith('ads-api.')) {
-    return 'HOST-KEYWORD,ads-api';
-  }
   if (textPure.startsWith('ads.tripod.')) {
     return 'HOST-KEYWORD,ads.tripod';
   }
