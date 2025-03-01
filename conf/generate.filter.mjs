@@ -599,7 +599,16 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.yinzcam.com')) {
     return 'HOST-SUFFIX,yinzcam.com';
   }
-  // 域名前缀，找最大特征，避免误杀
+  /**
+   * 域名前缀，找最大特征，避免误杀
+   * HOST-KEYWORD 优先级较低，会出现逃逸问题
+   * 所以，只能避开主流公司会使用的「规则前缀」
+   * 比如，访问 a.munters.apple.com 时
+   * HOST-SUFFIX,apple.com 存在直连策略中
+   * a.munters.apple.com 会因为 HOST-KEYWORD 优先级太低
+   * 导致 a.munters.apple.com 被匹配为直连策略，导致拦截失效
+   * 但是，似乎 Surge|Quantumult X|Clash 的策略优先级都不太一样
+   */
   if (textPure.startsWith('a.munters.')) {
     return 'HOST-KEYWORD,a.munters';
   }
@@ -654,23 +663,11 @@ function mapMixture(text = '') {
   if (textPure.startsWith('act-on-marketing.')) {
     return 'HOST-KEYWORD,act-on-marketing';
   }
-  if (textPure.startsWith('ad.api.')) {
-    return 'HOST-KEYWORD,ad.api';
-  }
-  if (textPure.startsWith('ad.groupon.')) {
-    return 'HOST-KEYWORD,ad.groupon';
-  }
   if (textPure.startsWith('ad.kissanime.')) {
     return 'HOST-KEYWORD,ad.kissanime';
   }
   if (textPure.startsWith('ad.kisscartoon.')) {
     return 'HOST-KEYWORD,ad.kisscartoon';
-  }
-  if (textPure.startsWith('adbmetrics.')) {
-    return 'HOST-KEYWORD,adbmetrics';
-  }
-  if (textPure.startsWith('adbsmetrics.')) {
-    return 'HOST-KEYWORD,adbsmetrics';
   }
   if (textPure.startsWith('adobe.autoscout24.')) {
     return 'HOST-KEYWORD,adobe.autoscout24';
@@ -690,9 +687,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('adserver.janes.')) {
     return 'HOST-KEYWORD,adserver.janes';
   }
-  if (textPure.startsWith('adservice.google.')) {
-    return 'HOST-KEYWORD,adservice.google';
-  }
   if (textPure.startsWith('adtarget.fcbarcelona.')) {
     return 'HOST-KEYWORD,adtarget.fcbarcelona';
   }
@@ -710,12 +704,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('aiq-in.')) {
     return 'HOST-KEYWORD,aiq-in';
-  }
-  if (textPure.startsWith('analytic-client.')) {
-    return 'HOST-KEYWORD,analytic-client';
-  }
-  if (textPure.startsWith('analytics-api.')) {
-    return 'HOST-KEYWORD,analytics-api';
   }
   if (textPure.startsWith('analytics.cartoonnetwork.')) {
     return 'HOST-KEYWORD,analytics.cartoonnetwork';
@@ -759,9 +747,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('answers.teradata.')) {
     return 'HOST-KEYWORD,answers.teradata';
   }
-  if (textPure.startsWith('app-analytics.')) {
-    return 'HOST-KEYWORD,app-analytics';
-  }
   if (textPure.startsWith('app-test.')) {
     return 'HOST-KEYWORD,app-test';
   }
@@ -801,12 +786,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('click.mail.')) {
     return 'HOST-KEYWORD,click.mail';
   }
-  if (textPure.startsWith('click.track.')) {
-    return 'HOST-KEYWORD,click.track';
-  }
-  if (textPure.startsWith('click.tracking.')) {
-    return 'HOST-KEYWORD,click.tracking';
-  }
   if (textPure.startsWith('cname-aa.')) {
     return 'HOST-KEYWORD,cname-aa';
   }
@@ -824,9 +803,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('collector.betway.')) {
     return 'HOST-KEYWORD,collector.betway';
-  }
-  if (textPure.startsWith('connect.care.')) {
-    return 'HOST-KEYWORD,connect.care';
   }
   if (textPure.startsWith('cookies.jll.')) {
     return 'HOST-KEYWORD,cookies.jll';
@@ -1146,9 +1122,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('data.loyality.')) {
     return 'HOST-KEYWORD,data.loyality';
   }
-  if (textPure.startsWith('data.marketing.')) {
-    return 'HOST-KEYWORD,data.marketing';
-  }
   if (textPure.startsWith('data.mistat.')) {
     return 'HOST-KEYWORD,data.mistat';
   }
@@ -1157,9 +1130,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('data.stepstone.')) {
     return 'HOST-KEYWORD,data.stepstone';
-  }
-  if (textPure.startsWith('data.testing.')) {
-    return 'HOST-KEYWORD,data.testing';
   }
   if (textPure.startsWith('data.umfrage.')) {
     return 'HOST-KEYWORD,data.umfrage';
@@ -1172,12 +1142,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('dcs.esprit.')) {
     return 'HOST-KEYWORD,dcs.esprit';
-  }
-  if (textPure.startsWith('dev-link.')) {
-    return 'HOST-KEYWORD,dev-link';
-  }
-  if (textPure.startsWith('dev-share.')) {
-    return 'HOST-KEYWORD,dev-share';
   }
   if (textPure.startsWith('dhpjhrud.aktivvinter.')) {
     return 'HOST-KEYWORD,dhpjhrud.aktivvinter';
@@ -1362,29 +1326,17 @@ function mapMixture(text = '') {
   if (textPure.startsWith('images.engage.')) {
     return 'HOST-KEYWORD,images.engage';
   }
-  if (textPure.startsWith('images.go.')) {
-    return 'HOST-KEYWORD,images.go';
-  }
   if (textPure.startsWith('images.info.')) {
     return 'HOST-KEYWORD,images.info';
   }
   if (textPure.startsWith('images.learn.')) {
     return 'HOST-KEYWORD,images.learn';
   }
-  if (textPure.startsWith('images.link.')) {
-    return 'HOST-KEYWORD,images.link';
-  }
   if (textPure.startsWith('images.mailaway.')) {
     return 'HOST-KEYWORD,images.mailaway';
   }
   if (textPure.startsWith('images.marketing.')) {
     return 'HOST-KEYWORD,images.marketing';
-  }
-  if (textPure.startsWith('images.news.')) {
-    return 'HOST-KEYWORD,images.news';
-  }
-  if (textPure.startsWith('images.response.')) {
-    return 'HOST-KEYWORD,images.response';
   }
   if (textPure.startsWith('img.foodspring.')) {
     return 'HOST-KEYWORD,img.foodspring';
@@ -1422,12 +1374,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('link-test.')) {
     return 'HOST-KEYWORD,link-test';
   }
-  if (textPure.startsWith('link.email.')) {
-    return 'HOST-KEYWORD,link.email';
-  }
-  if (textPure.startsWith('link.mail.')) {
-    return 'HOST-KEYWORD,link.mail';
-  }
   if (textPure.startsWith('links-dev.')) {
     return 'HOST-KEYWORD,links-dev';
   }
@@ -1436,9 +1382,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('links.e.')) {
     return 'HOST-KEYWORD,links.e';
-  }
-  if (textPure.startsWith('links.email.')) {
-    return 'HOST-KEYWORD,links.email';
   }
   if (textPure.startsWith('links.info.')) {
     return 'HOST-KEYWORD,links.info';
@@ -1455,9 +1398,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('load.analy.')) {
     return 'HOST-KEYWORD,load.analy';
   }
-  if (textPure.startsWith('load.analytics.')) {
-    return 'HOST-KEYWORD,load.analytics';
-  }
   if (textPure.startsWith('load.bct1.')) {
     return 'HOST-KEYWORD,load.bct1';
   }
@@ -1466,9 +1406,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('load.dt.')) {
     return 'HOST-KEYWORD,load.dt';
-  }
-  if (textPure.startsWith('load.events.')) {
-    return 'HOST-KEYWORD,load.events';
   }
   if (textPure.startsWith('load.f1.')) {
     return 'HOST-KEYWORD,load.f1';
@@ -1490,9 +1427,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('load.krcurxzl.')) {
     return 'HOST-KEYWORD,load.krcurxzl';
-  }
-  if (textPure.startsWith('load.metrics.')) {
-    return 'HOST-KEYWORD,load.metrics';
   }
   if (textPure.startsWith('load.mtgs.')) {
     return 'HOST-KEYWORD,load.mtgs';
@@ -1535,12 +1469,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('load.swm.')) {
     return 'HOST-KEYWORD,load.swm';
-  }
-  if (textPure.startsWith('load.tagging.')) {
-    return 'HOST-KEYWORD,load.tagging';
-  }
-  if (textPure.startsWith('load.tracking.')) {
-    return 'HOST-KEYWORD,load.tracking';
   }
   if (textPure.startsWith('lpbhnv.')) {
     return 'HOST-KEYWORD,lpbhnv';
@@ -1752,15 +1680,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('tealm-c.')) {
     return 'HOST-KEYWORD,tealm-c';
   }
-  if (textPure.startsWith('test-link.')) {
-    return 'HOST-KEYWORD,test-link';
-  }
-  if (textPure.startsWith('test-links.')) {
-    return 'HOST-KEYWORD,test-links';
-  }
-  if (textPure.startsWith('test.links.')) {
-    return 'HOST-KEYWORD,test.links';
-  }
   if (textPure.startsWith('tidy.intel.')) {
     return 'HOST-KEYWORD,tidy.intel';
   }
@@ -1782,12 +1701,6 @@ function mapMixture(text = '') {
   if (textPure.startsWith('tr.communication.')) {
     return 'HOST-KEYWORD,tr.communication';
   }
-  if (textPure.startsWith('tr.contact.')) {
-    return 'HOST-KEYWORD,tr.contact';
-  }
-  if (textPure.startsWith('tr.email.')) {
-    return 'HOST-KEYWORD,tr.email';
-  }
   if (textPure.startsWith('tr.emailing.')) {
     return 'HOST-KEYWORD,tr.emailing';
   }
@@ -1802,24 +1715,6 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('tr.infos.')) {
     return 'HOST-KEYWORD,tr.infos';
-  }
-  if (textPure.startsWith('tr.mail.')) {
-    return 'HOST-KEYWORD,tr.mail';
-  }
-  if (textPure.startsWith('tr.mailing.')) {
-    return 'HOST-KEYWORD,tr.mailing';
-  }
-  if (textPure.startsWith('tr.marketing.')) {
-    return 'HOST-KEYWORD,tr.marketing';
-  }
-  if (textPure.startsWith('tr.news.')) {
-    return 'HOST-KEYWORD,tr.news';
-  }
-  if (textPure.startsWith('tr.newsletter.')) {
-    return 'HOST-KEYWORD,tr.newsletter';
-  }
-  if (textPure.startsWith('tr.newsletters.')) {
-    return 'HOST-KEYWORD,tr.newsletters';
   }
   if (textPure.startsWith('tr.notification-gdpr.')) {
     return 'HOST-KEYWORD,tr.notification-gdpr';
