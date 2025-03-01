@@ -554,6 +554,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.stats.esomniture.com')) {
     return 'HOST-SUFFIX,stats.esomniture.com';
   }
+  if (textPure.endsWith('.stuff.co.nz')) {
+    return 'HOST-SUFFIX,stuff.co.nz';
+  }
   if (textPure.endsWith('.swrve.com')) {
     return 'HOST-SUFFIX,swrve.com';
   }
