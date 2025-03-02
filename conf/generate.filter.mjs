@@ -816,6 +816,36 @@ function mapMixture(text = '') {
   if (textPure.startsWith('da.hornbach.')) {
     return 'HOST-KEYWORD,da.hornbach';
   }
+  if (textPure.startsWith('data-8abe5cc617.')) {
+    return 'HOST-KEYWORD,data-8abe5cc617';
+  }
+  if (textPure.startsWith('data-99329e3cb2.')) {
+    return 'HOST-KEYWORD,data-99329e3cb2';
+  }
+  if (textPure.startsWith('data-9dc3fcd9b4.')) {
+    return 'HOST-KEYWORD,data-9dc3fcd9b4';
+  }
+  if (textPure.startsWith('data-ae99031d75.')) {
+    return 'HOST-KEYWORD,data-ae99031d75';
+  }
+  if (textPure.startsWith('data-b389eff81a.')) {
+    return 'HOST-KEYWORD,data-b389eff81a';
+  }
+  if (textPure.startsWith('data-c849cc593c.')) {
+    return 'HOST-KEYWORD,data-c849cc593c';
+  }
+  if (textPure.startsWith('data-ce326d00f8.')) {
+    return 'HOST-KEYWORD,data-ce326d00f8';
+  }
+  if (textPure.startsWith('data-ce326d00f8.')) {
+    return 'HOST-KEYWORD,data-ce326d00f8';
+  }
+  if (textPure.startsWith('data-dd659348c3.')) {
+    return 'HOST-KEYWORD,data-dd659348c3';
+  }
+  if (textPure.startsWith('data-e54efb31a3.')) {
+    return 'HOST-KEYWORD,data-e54efb31a3';
+  }
   if (textPure.startsWith('data-02011e6008.')) {
     return 'HOST-KEYWORD,data-02011e6008';
   }
