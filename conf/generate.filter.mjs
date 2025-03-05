@@ -356,6 +356,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.ad.xiaomi.com')) {
     return 'HOST-SUFFIX,ad.xiaomi.com';
   }
+  if (textPure.endsWith('.agoracalyce.net')) {
+    return 'HOST-SUFFIX,agoracalyce.net';
+  }
   if (textPure.endsWith('.agvisorpro.com')) {
     return 'HOST-SUFFIX,agvisorpro.com';
   }
@@ -388,6 +391,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.downloadlink.icu')) {
     return 'HOST-SUFFIX,downloadlink.icu';
+  }
+  if (textPure.endsWith('.duckdns.org')) {
+    return 'HOST-SUFFIX,duckdns.org';
   }
   if (textPure.endsWith('.elemis.com')) {
     return 'HOST-SUFFIX,elemis.com';
