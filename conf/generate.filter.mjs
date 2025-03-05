@@ -380,9 +380,6 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.carte-gr.total.fr')) {
     return 'HOST-SUFFIX,carte-gr.total.fr';
   }
-  if (textPure.endsWith('.com.br')) {
-    return 'HOST-SUFFIX,com.br';
-  }
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
   }
@@ -1710,6 +1707,12 @@ function mapMixture(text = '') {
   if (textPure.startsWith('smetrics.kone.')) {
     return 'HOST-KEYWORD,smetrics.kone';
   }
+  if (textPure.startsWith('smetrics.marketing.')) {
+    return 'HOST-KEYWORD,smetrics.marketing';
+  }
+  if (textPure.startsWith('smetrics.pwc.')) {
+    return 'HOST-KEYWORD,smetrics.pwc';
+  }
   if (textPure.startsWith('smetrics.schindler.')) {
     return 'HOST-KEYWORD,smetrics.schindler';
   }
@@ -1745,6 +1748,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('sstats.tiffany.')) {
     return 'HOST-KEYWORD,sstats.tiffany';
+  }
+  if (textPure.startsWith('starget.intel.')) {
+    return 'HOST-KEYWORD,starget.intel';
   }
   if (textPure.startsWith('stbg.stanbicbank.')) {
     return 'HOST-KEYWORD,stbg.stanbicbank';
