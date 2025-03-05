@@ -380,6 +380,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.carte-gr.total.fr')) {
     return 'HOST-SUFFIX,carte-gr.total.fr';
   }
+  if (textPure.endsWith('.com.br')) {
+    return 'HOST-SUFFIX,com.br';
+  }
   if (textPure.endsWith('.cosmicnewspulse.com')) {
     return 'HOST-SUFFIX,cosmicnewspulse.com';
   }
@@ -1284,6 +1287,12 @@ function mapMixture(text = '') {
   if (textPure.startsWith('engage.3m.')) {
     return 'HOST-KEYWORD,engage.3m';
   }
+  if (textPure.startsWith('etracker.louis-moto.')) {
+    return 'HOST-KEYWORD,etracker.louis-moto';
+  }
+  if (textPure.startsWith('etracker.louis.')) {
+    return 'HOST-KEYWORD,etracker.louis';
+  }
   if (textPure.startsWith('et.electronic4you.')) {
     return 'HOST-KEYWORD,et.electronic4you';
   }
@@ -1322,6 +1331,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('go.hager.')) {
     return 'HOST-KEYWORD,go.hager';
+  }
+  if (textPure.startsWith('gss.skatepro.')) {
+    return 'HOST-KEYWORD,gss.skatepro';
   }
   if (textPure.startsWith('gtm.bricoflor.')) {
     return 'HOST-KEYWORD,gtm.bricoflor';
@@ -1434,6 +1446,9 @@ function mapMixture(text = '') {
   if (textPure.startsWith('load.analy.')) {
     return 'HOST-KEYWORD,load.analy';
   }
+  if (textPure.startsWith('load.analytics.')) {
+    return 'HOST-KEYWORD,load.analytics';
+  }
   if (textPure.startsWith('load.bct1.')) {
     return 'HOST-KEYWORD,load.bct1';
   }
@@ -1442,6 +1457,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('load.dt.')) {
     return 'HOST-KEYWORD,load.dt';
+  }
+  if (textPure.startsWith('load.eua.trailerplus.')) {
+    return 'HOST-KEYWORD,load.eua.trailerplus';
   }
   if (textPure.startsWith('load.f1.')) {
     return 'HOST-KEYWORD,load.f1';
@@ -1617,6 +1635,9 @@ function mapMixture(text = '') {
   if (textPure.startsWith('rtb-eu.')) {
     return 'HOST-KEYWORD,rtb-eu';
   }
+  if (textPure.startsWith('rtb-eu-v4.')) {
+    return 'HOST-KEYWORD,rtb-eu-v4';
+  }
   if (textPure.startsWith('rtb-useast-v4.')) {
     return 'HOST-KEYWORD,rtb-useast-v4';
   }
@@ -1625,6 +1646,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('rtb-uswest.')) {
     return 'HOST-KEYWORD,rtb-uswest';
+  }
+  if (textPure.startsWith('rtb-uswest-v4.')) {
+    return 'HOST-KEYWORD,rtb-uswest-v4';
   }
   if (textPure.startsWith('rtb2-useast.')) {
     return 'HOST-KEYWORD,rtb2-useast';
@@ -1638,14 +1662,56 @@ function mapMixture(text = '') {
   if (textPure.startsWith('saa.dyson.')) {
     return 'HOST-KEYWORD,saa.dyson';
   }
+  if (textPure.startsWith('sanalytics.boomerangtv.')) {
+    return 'HOST-KEYWORD,sanalytics.boomerangtv';
+  }
+  if (textPure.startsWith('sanalytics.cartoonito.')) {
+    return 'HOST-KEYWORD,sanalytics.cartoonito';
+  }
+  if (textPure.startsWith('sanalytics.cartoonnetwork.')) {
+    return 'HOST-KEYWORD,sanalytics.cartoonnetwork';
+  }
   if (textPure.startsWith('sanl.footlocker.')) {
     return 'HOST-KEYWORD,sanl.footlocker';
   }
   if (textPure.startsWith('scookies-adobe.')) {
     return 'HOST-KEYWORD,scookies-adobe';
   }
+  if (textPure.startsWith('secureanalytics.avis.')) {
+    return 'HOST-KEYWORD,secureanalytics.avis';
+  }
+  if (textPure.startsWith('secureanalytics.budget.')) {
+    return 'HOST-KEYWORD,secureanalytics.budget';
+  }
+  if (textPure.startsWith('securecookies.dustin.')) {
+    return 'HOST-KEYWORD,securecookies.dustin';
+  }
+  if (textPure.startsWith('securecookies.dustinhome.')) {
+    return 'HOST-KEYWORD,securecookies.dustinhome';
+  }
+  if (textPure.startsWith('securecookiesdustininfo.dustin.')) {
+    return 'HOST-KEYWORD,securecookiesdustininfo.dustin';
+  }
+  if (textPure.startsWith('securecookiesdustininfo.dustinhome.')) {
+    return 'HOST-KEYWORD,securecookiesdustininfo.dustinhome';
+  }
   if (textPure.startsWith('securetags.esri.')) {
     return 'HOST-KEYWORD,securetags.esri';
+  }
+  if (textPure.startsWith('smetrics.bayer.')) {
+    return 'HOST-KEYWORD,smetrics.bayer';
+  }
+  if (textPure.startsWith('smetrics.bbva.')) {
+    return 'HOST-KEYWORD,smetrics.bbva';
+  }
+  if (textPure.startsWith('smetrics.boehringer-ingelheim.')) {
+    return 'HOST-KEYWORD,smetrics.boehringer-ingelheim';
+  }
+  if (textPure.startsWith('smetrics.kone.')) {
+    return 'HOST-KEYWORD,smetrics.kone';
+  }
+  if (textPure.startsWith('smetrics.schindler.')) {
+    return 'HOST-KEYWORD,smetrics.schindler';
   }
   if (textPure.startsWith('ss.coloreurope.')) {
     return 'HOST-KEYWORD,ss.coloreurope';
@@ -1667,6 +1733,18 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('ssl.o.')) {
     return 'HOST-KEYWORD,ssl.o';
+  }
+  if (textPure.startsWith('sst.notbranded.')) {
+    return 'HOST-KEYWORD,sst.notbranded';
+  }
+  if (textPure.startsWith('sst.onedirect.')) {
+    return 'HOST-KEYWORD,sst.onedirect';
+  }
+  if (textPure.startsWith('sstats.seat.')) {
+    return 'HOST-KEYWORD,sstats.seat';
+  }
+  if (textPure.startsWith('sstats.tiffany.')) {
+    return 'HOST-KEYWORD,sstats.tiffany';
   }
   if (textPure.startsWith('stbg.stanbicbank.')) {
     return 'HOST-KEYWORD,stbg.stanbicbank';
@@ -1697,6 +1775,15 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('tags.calvinklein.')) {
     return 'HOST-KEYWORD,tags.calvinklein';
+  }
+  if (textPure.startsWith('tracking.janssenmedicalcloud.')) {
+    return 'HOST-KEYWORD,tracking.janssenmedicalcloud';
+  }
+  if (textPure.startsWith('tracking.ssab.')) {
+    return 'HOST-KEYWORD,tracking.ssab';
+  }
+  if (textPure.startsWith('tracking.stihl.')) {
+    return 'HOST-KEYWORD,tracking.stihl';
   }
   if (textPure.startsWith('target.footlocker.')) {
     return 'HOST-KEYWORD,target.footlocker';
@@ -1763,6 +1850,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('trail.thomsonreuters.')) {
     return 'HOST-KEYWORD,trail.thomsonreuters';
+  }
+  if (textPure.startsWith('trck.info.')) {
+    return 'HOST-KEYWORD,trck.info';
   }
   if (textPure.startsWith('trkcmb.business.')) {
     return 'HOST-KEYWORD,trkcmb.business';
