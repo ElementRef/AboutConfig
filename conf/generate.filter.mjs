@@ -1623,6 +1623,9 @@ function mapMixture(text = '') {
   if (textPure.startsWith('pbox.photobox.')) {
     return 'HOST-KEYWORD,pbox.photobox';
   }
+  if (textPure.startsWith('rechenschieber.transfermarkt.')) {
+    return 'HOST-KEYWORD,rechenschieber.transfermarkt';
+  }
   if (textPure.startsWith('rtb-apac-v4.')) {
     return 'HOST-KEYWORD,rtb-apac-v4';
   }
@@ -1695,11 +1698,17 @@ function mapMixture(text = '') {
   if (textPure.startsWith('securetags.esri.')) {
     return 'HOST-KEYWORD,securetags.esri';
   }
+  if (textPure.startsWith('smetrics.alfalaval.')) {
+    return 'HOST-KEYWORD,smetrics.alfalaval';
+  }
   if (textPure.startsWith('smetrics.bayer.')) {
     return 'HOST-KEYWORD,smetrics.bayer';
   }
   if (textPure.startsWith('smetrics.bbva.')) {
     return 'HOST-KEYWORD,smetrics.bbva';
+  }
+  if (textPure.startsWith('smetrics.casino.')) {
+    return 'HOST-KEYWORD,smetrics.casino';
   }
   if (textPure.startsWith('smetrics.boehringer-ingelheim.')) {
     return 'HOST-KEYWORD,smetrics.boehringer-ingelheim';
@@ -1710,11 +1719,20 @@ function mapMixture(text = '') {
   if (textPure.startsWith('smetrics.marketing.')) {
     return 'HOST-KEYWORD,smetrics.marketing';
   }
+  if (textPure.startsWith('smetrics.msccruises.')) {
+    return 'HOST-KEYWORD,smetrics.msccruises';
+  }
   if (textPure.startsWith('smetrics.pwc.')) {
     return 'HOST-KEYWORD,smetrics.pwc';
   }
   if (textPure.startsWith('smetrics.schindler.')) {
     return 'HOST-KEYWORD,smetrics.schindler';
+  }
+  if (textPure.startsWith('smetrics.sony.')) {
+    return 'HOST-KEYWORD,smetrics.sony';
+  }
+  if (textPure.startsWith('smetrics.viega.')) {
+    return 'HOST-KEYWORD,smetrics.viega';
   }
   if (textPure.startsWith('ss.coloreurope.')) {
     return 'HOST-KEYWORD,ss.coloreurope';
@@ -1757,6 +1775,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('stbg.standardbank.')) {
     return 'HOST-KEYWORD,stbg.standardbank';
+  }
+  if (textPure.startsWith('strack.concur.')) {
+    return 'HOST-KEYWORD,strack.concur';
   }
   if (textPure.startsWith('sw88.24kitchen.')) {
     return 'HOST-KEYWORD,sw88.24kitchen';
@@ -1823,6 +1844,9 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('tq-eu.')) {
     return 'HOST-KEYWORD,tq-eu';
+  }
+  if (textPure.startsWith('tr.btobquotes.')) {
+    return 'HOST-KEYWORD,tr.btobquotes';
   }
   if (textPure.startsWith('tr.clients.')) {
     return 'HOST-KEYWORD,tr.clients';
