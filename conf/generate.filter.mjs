@@ -542,6 +542,9 @@ function mapMixture(text = '') {
   if (textPure.endsWith('.rsc.cdn77.org')) {
     return 'HOST-SUFFIX,rsc.cdn77.org';
   }
+  if (textPure.endsWith('.s.joyn.de')) {
+    return 'HOST-SUFFIX,s.joyn.de';
+  }
   if (textPure.endsWith('.sanvello.com')) {
     return 'HOST-SUFFIX,sanvello.com';
   }
@@ -595,6 +598,9 @@ function mapMixture(text = '') {
   }
   if (textPure.endsWith('.viglink.com')) {
     return 'HOST-SUFFIX,viglink.com';
+  }
+  if (textPure.endsWith('.web-marketing.ai')) {
+    return 'HOST-SUFFIX,web-marketing.ai';
   }
   if (textPure.endsWith('.weebly.com')) {
     return 'HOST-SUFFIX,weebly.com';
@@ -1602,6 +1608,9 @@ function mapMixture(text = '') {
   if (textPure.startsWith('my.weplayvolleyball.')) {
     return 'HOST-KEYWORD,my.weplayvolleyball';
   }
+  if (textPure.startsWith('net.jumia.')) {
+    return 'HOST-KEYWORD,net.jumia';
+  }
   if (textPure.startsWith('omt.dm.')) {
     return 'HOST-KEYWORD,omt.dm';
   }
@@ -1769,6 +1778,12 @@ function mapMixture(text = '') {
   }
   if (textPure.startsWith('starget.intel.')) {
     return 'HOST-KEYWORD,starget.intel';
+  }
+  if (textPure.startsWith('stats.tena.')) {
+    return 'HOST-KEYWORD,stats.tena';
+  }
+  if (textPure.startsWith('stats.tork.')) {
+    return 'HOST-KEYWORD,stats.tork';
   }
   if (textPure.startsWith('stbg.stanbicbank.')) {
     return 'HOST-KEYWORD,stbg.stanbicbank';
