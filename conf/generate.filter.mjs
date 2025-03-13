@@ -1770,6 +1770,9 @@ function mapMixture(text = '') {
   if (textPure.startsWith('sst.onedirect.')) {
     return 'HOST-KEYWORD,sst.onedirect';
   }
+  if (textPure.startsWith('sstats.fishersci.')) {
+    return 'HOST-KEYWORD,sstats.fishersci';
+  }
   if (textPure.startsWith('sstats.seat.')) {
     return 'HOST-KEYWORD,sstats.seat';
   }
