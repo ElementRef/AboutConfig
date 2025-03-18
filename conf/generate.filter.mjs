@@ -845,7 +845,7 @@ function combineResourses({ FILENAME, RAW }) {
     RES
   };
 }
-function generateRule(textPure) {
+function generateRule(textPure = '') {
   const blockList = Object.entries(MIXTUREBLOCKLIST);
   for (let index = 0; index < blockList.length; index++) {
     const [key, value] = blockList[index];
@@ -907,7 +907,7 @@ function mapMixture(text = '') {
   ) {
     return `HOST-SUFFIX,${textPure.replace(/^[w]{3}\./gim, '')}`;
   }
-  const rule = generateRule((textPure = ''));
+  const rule = generateRule(textPure);
   if (rule) {
     return rule;
   }
