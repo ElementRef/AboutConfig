@@ -508,6 +508,8 @@ const MIXTUREBLOCKLIST = {
   'target.footlocker.': 'target.footlocker',
   'target.pwc.': 'target.pwc',
   'target.sunlife.': 'target.sunlife',
+  'target.vwfs.': 'target.vwfs',
+  'tccd.douglas.': 'tccd.douglas',
   'tealm-c.': 'tealm-c',
   'tidy.intel.': 'tidy.intel',
   'tk.airfrance.': 'tk.airfrance',
