@@ -3,15 +3,21 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
   '.000nethost.com': '000nethost.com',
+  '.0937jyg.com': '0937jyg.com',
   '.102.112.2o7.net': '102.112.2o7.net',
   '.102.122.207.net': '102.122.207.net',
   '.51y5.net': '51y5.net',
+  '.52896368.com': '52896368.com',
+  '.5clo0xmbf.com': '5clo0xmbf.com',
+  '.79j68qav2.com': '79j68qav2.com',
+  '.8pv9vvi9b.com': '8pv9vvi9b.com',
   '.actonservice.com': 'actonservice.com',
   '.ad.xiaomi.com': 'ad.xiaomi.com',
   '.agoracalyce.net': 'agoracalyce.net',
   '.agvisorpro.com': 'agvisorpro.com',
   '.ahacdn.me': 'ahacdn.me',
   '.almosafer.com': 'almosafer.com',
+  '.aomg5bzv7.com': 'aomg5bzv7.com',
   '.apps.iocnt.de': 'apps.iocnt.de',
   '.atianqi.com': 'atianqi.com',
   '.bravenet.com': 'bravenet.com',
@@ -52,6 +58,7 @@ const MIXTUREBLOCKLIST = {
   '.jinghuaqitb.com': 'jinghuaqitb.com',
   '.jmooreassoc.com': 'jmooreassoc.com',
   '.kimhasa.com': 'kimhasa.com',
+  '.l5eamr17d.com': 'l5eamr17d.com',
   '.linodeusercontent.com': 'linodeusercontent.com',
   '.llnw.net': 'llnw.net',
   '.msecnd.net': 'msecnd.net',
@@ -95,6 +102,7 @@ const MIXTUREBLOCKLIST = {
   '.weebly.com': 'weebly.com',
   '.wolterskluwer.com': 'wolterskluwer.com',
   '.yinzcam.com': 'yinzcam.com',
+  '.z00yy6tg2.com': 'z00yy6tg2.com',
   /**
    * 域名前缀，找最大特征，避免误杀
    * HOST-KEYWORD 优先级较低，会出现逃逸问题
