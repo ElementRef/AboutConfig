@@ -51,6 +51,7 @@ const MIXTUREBLOCKLIST = {
   '.imrworldwide.com': 'imrworldwide.com',
   '.information.maileva.com': 'information.maileva.com',
   '.infura-ipfs.io': 'infura-ipfs.io',
+  '.innocreed.com': 'innocreed.com',
   '.innovatedating.com': 'innovatedating.com',
   '.intellitxt.com': 'intellitxt.com',
   '.ipfs.dweb.link': 'ipfs.dweb.link',
