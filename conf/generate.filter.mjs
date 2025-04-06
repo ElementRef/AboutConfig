@@ -773,8 +773,8 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
    * }
    */
   const RAW = Object.create(null);
-  try {
-    for (const src of SRC) {
+  for (const src of SRC) {
+    try {
       const keyArr = src.split('/');
       const key = `${keyArr.at(-3)}/${keyArr.at(-2)}/${keyArr.at(-1)}`
         .replace(/\?.+/gim, '')
@@ -806,10 +806,10 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       } else {
         console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
       }
+    } catch ({ message }) {
+      console.error(message);
+      throw new Error(src);
     }
-  } catch ({ message }) {
-    console.error(message);
-    throw new Error(message);
   }
   return {
     FILENAME,
