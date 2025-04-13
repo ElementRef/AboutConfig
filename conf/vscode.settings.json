@@ -726,6 +726,9 @@
   "workbench.editor.pinnedTabsOnSeparateRow": false,
   "workbench.editor.showTabs": "multiple",
   "workbench.editor.wrapTabs": true,
+  "workbench.editorAssociations": {
+    "*.plist": "default"
+  },
   "workbench.enableExperiments": false,
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "catppuccin-latte",
