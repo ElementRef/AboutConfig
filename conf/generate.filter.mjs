@@ -2,6 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
+  '.0.0.cn': '0.0.cn',
   '.000nethost.com': '000nethost.com',
   '.0937jyg.com': '0937jyg.com',
   '.102.112.2o7.net': '102.112.2o7.net',
