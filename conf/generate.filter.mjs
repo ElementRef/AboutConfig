@@ -400,7 +400,6 @@ const MIXTUREBLOCKLIST = {
   'load.dt.': 'load.dt',
   'load.eua.trailerplus.': 'load.eua.trailerplus',
   'load.f1.': 'load.f1',
-  'load.g.': 'load.g',
   'load.gegevens.': 'load.gegevens',
   'load.gspwicky.': 'load.gspwicky',
   'load.gtm.': 'load.gtm',
