@@ -517,7 +517,6 @@ const MIXTUREBLOCKLIST = {
   'sw88.shopdisney.': 'sw88.shopdisney',
   'swa.millesima.': 'swa.millesima',
   'swasc.kaufland.': 'swasc.kaufland',
-  't-s.': 't-s',
   't.antalis.': 't.antalis',
   't.dilling.': 't.dilling',
   't.locasun.': 't.locasun',
