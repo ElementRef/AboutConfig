@@ -48,13 +48,17 @@ jobs:
         uses: gacts/purge-jsdelivr-cache@v1
         with:
           url: |
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/conf/quantumult.x.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/conf/vscode.settings.json
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.apples.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.direct.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.global.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.openai.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.reject.dohosts.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.reject.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.stream.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.tiktok.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.ublock.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/app2smile.qidian.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/app2smile.tieba.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/blackmatrix7.rewrite.conf

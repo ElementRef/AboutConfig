@@ -85,7 +85,8 @@ async function writeResourses2File({ FILENAME, HOSTNAME, RULES }) {
       value: 'hostname='
     };
     const temp = {
-      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/rewrite/${FILENAME}\n`
+      value:
+        '# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf\n'
     };
     Object.keys(HOSTNAME)
       .sort()
