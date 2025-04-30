@@ -43,13 +43,67 @@ jobs:
           git commit -m '更新分流重写'
           git pull --rebase --autostash
           git push
-      # - name: Bump Version and Push Tag
-      #   uses: anothrNick/github-tag-action@v1
-      #   env:
-      #     DEFAULT_BUMP: 'minor'
-      #     FORCE_WITHOUT_CHANGES_PRE: false
-      #     FORCE_WITHOUT_CHANGES: false
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     PRERELEASE: false
-      #     RELEASE_BRANCHES: 'main'
-      #     WITH_V: false
+
+      - name: Purge jsDelivr Cache
+        uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.apples.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.direct.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.global.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.openai.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.reject.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.stream.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.tiktok.mixture.ini
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/app2smile.qidian.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/app2smile.tieba.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/blackmatrix7.rewrite.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/blackmatrix7.smzdm.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.amap.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.bilibili.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.cai.yun.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.cloud.music.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.ximalaya.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/ddgksf2013.zhihu.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/maasea.youtube.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/rewrite/zzpiglet.wechat.110.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/510004015.wps.office.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.qidian.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.qq.news.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.spotify.json.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.spotify.proto.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.tieba.json.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/app2smile.tieba.proto.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/blackmatrix7.smzdm.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/chxm1023.vsco.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.amap.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.amdc.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.bilibili.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.bybutter.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.cai.niao.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.cai.yun.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.caixin.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.clarity.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.cloud.music.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.meitu.xiuxiu.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.red.book.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.12306.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.coolapk.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.iqiyi.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.jd.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.sf.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.umetrip.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.startup.v2ex.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.weibo.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.ximalaya.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/ddgksf2013.zhihu.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/fmz200.baidu.lib.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/fmz200.emby.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/gjwj666.xingtu.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/kop.xiao.ip.api.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/kop.xiao.resource.parser.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/kop.xiao.streaming.ui.check.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/maasea.youtube.response.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/yqc007.video.fusion.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/zheye.zhihu.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/script/zzpiglet.wechat.110.js
