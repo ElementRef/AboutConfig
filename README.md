@@ -60,6 +60,7 @@
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
 - [@PBH-BTN](https://github.com/PBH-BTN/BTN-Collected-Rules)
 - [@privacy-protection-tools](https://github.com/privacy-protection-tools/anti-AD)
+- [@ripaojiedian](https://github.com/ripaojiedian/freenode)
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
 - [@Sinfonietta](https://github.com/Sinfonietta/hostfiles)
 - [@someonewhocares](https://someonewhocares.org/hosts)
