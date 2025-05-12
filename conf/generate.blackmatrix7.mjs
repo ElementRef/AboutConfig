@@ -5,8 +5,13 @@ const RESOURCES = {
   'blackmatrix7.rewrite.conf':
     'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf'
 };
-const HOSTNAME = {};
-const RULES = {};
+const HOSTNAME = {
+  '*.githubusercontent.com': '*.githubusercontent.com'
+};
+const RULES = {
+  '^https?://*.githubusercontent.com/ url request-header (\r\n)Accept-Language:.+(\r\n) request-header $1Accept-Language: en-us$2':
+    '^https?://*.githubusercontent.com/ url request-header (\r\n)Accept-Language:.+(\r\n) request-header $1Accept-Language: en-us$2'
+};
 (async () => {
   for await (const key of Object.keys(RESOURCES)) {
     await getResourses(RESOURCES[key], HOSTNAME, RULES);
@@ -41,8 +46,7 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
           pureRule?.startsWith('#') ||
           pureRule?.endsWith('.js') ||
           pureRule?.endsWith('.json') ||
-          pureRule?.includes('script-response-body') ||
-          pureRule?.includes('script-analyze-echo-response')
+          pureRule?.includes('script-')
         ) {
           // 舍弃脚本与注释
         } else if (pureRule?.toLowerCase()?.startsWith('hostname')) {
