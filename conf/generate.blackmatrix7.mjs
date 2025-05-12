@@ -9,8 +9,8 @@ const HOSTNAME = {
   '*.githubusercontent.com': '*.githubusercontent.com'
 };
 const RULES = {
-  '^https?://*.githubusercontent.com/ url request-header (\r\n)Accept-Language:.+(\r\n) request-header $1Accept-Language: en-us$2':
-    '^https?://*.githubusercontent.com/ url request-header (\r\n)Accept-Language:.+(\r\n) request-header $1Accept-Language: en-us$2'
+  '^https?://*.githubusercontent.com/ url request-header Accept-Language:.+ request-header $1Accept-Language: en-us$2':
+    '^https?://*.githubusercontent.com/ url request-header Accept-Language:.+ request-header $1Accept-Language: en-us$2'
 };
 (async () => {
   for await (const key of Object.keys(RESOURCES)) {
