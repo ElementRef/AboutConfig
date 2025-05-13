@@ -537,6 +537,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt',
       'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt',
       'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt',
+      'https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt',
       'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
       'https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt',
       'https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt',

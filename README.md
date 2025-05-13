@@ -22,6 +22,7 @@
 - [@Coldvvater](https://github.com/Coldvvater/Mononoke)
 - [@ConnersHua](https://github.com/ConnersHua/RuleGo)
 - [@crazy-max](https://github.com/crazy-max/WindowsSpyBlocker)
+- [@d3ward](https://github.com/d3ward/toolz)
 - [@damengzhu](https://github.com/damengzhu/banad)
 - [@danny0838](https://github.com/danny0838/content-farm-terminator)
 - [@ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
