@@ -33,6 +33,7 @@ async function getResourses(SRC, LIST = []) {
       cache: 'no-cache',
       credentials: 'omit',
       headers: {
+        Authorization: `Bearer ${process.env.GH_TOKEN}`,
         'Content-Type': 'text/plain'
       }
     });

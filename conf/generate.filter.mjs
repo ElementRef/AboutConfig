@@ -689,6 +689,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         cache: 'no-cache',
         credentials: 'omit',
         headers: {
+          Authorization: `Bearer ${process.env.GH_TOKEN}`,
           'Content-Type': 'text/plain'
         }
       });

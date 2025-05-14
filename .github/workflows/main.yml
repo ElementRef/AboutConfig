@@ -30,9 +30,9 @@ jobs:
       - name: Build with Node
         run: |
           node conf/generate.blackmatrix7.mjs
-          # node conf/generate.blocklist.mjs
-          # node conf/generate.esbuild.mjs
-          # node conf/generate.filter.mjs
+          node conf/generate.blocklist.mjs
+          node conf/generate.esbuild.mjs
+          node conf/generate.filter.mjs
         env:
           GH_TOKEN: ${{ github.token }}
 
