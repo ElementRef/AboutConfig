@@ -1,0 +1,47 @@
+name: Deploy Some Config to GitHub Repository...
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '00 21 * * *'
+
+jobs:
+  build-deploy:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          show-progress: true
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/Jod'
+          check-latest: true
+
+      - name: Setup ESBuild
+        run: |
+          npm install esbuild@latest --global
+          esbuild --version
+
+      - name: Build with Node
+        run: |
+          node conf/generate.blackmatrix7.mjs
+          node conf/generate.blocklist.mjs
+          node conf/generate.esbuild.mjs
+          node conf/generate.filter.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Deploy to GitHub Repository
+        run: |
+          git config --global user.email ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+          git config --global user.name ${{ github.actor }}
+          git status
+          git add --all
+          git commit -m '更新分流重写'
+          git pull --rebase --autostash
+          git push
