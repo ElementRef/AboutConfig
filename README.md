@@ -1,4 +1,4 @@
-## 自用 [Code 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/conf/vscode.settings.json)、[RejectHost 文件](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/conf/quantumult.x.conf)、[uBlocklist 规则](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@latest/filter/element.ref.ublock.mixture.ini) ；建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
+## 自用 [Code 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/vscode.settings.json)、[RejectHost 文件](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.reject.dohosts.ini)、[Quantumult X 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/quantumult.x.conf)、[uBlocklist 规则](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.ublock.mixture.ini) ；建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
 
 ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
 
