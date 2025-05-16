@@ -546,6 +546,8 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/hululu1068/AdGuard-Rule/main/rule/hosts.txt',
       'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
       'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
+      'https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/main/Fhosts',
+      'https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/main/MIhosts',
       'https://raw.githubusercontent.com/neodevpro/neodevhost/master/host',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts',
       'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts',
@@ -604,6 +606,7 @@ const RESOURCES = {
   OPENAIMIXTURE: {
     FILENAME: 'element.ref.openai.mixture.ini',
     SRC: [
+      'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Anthropic/Anthropic.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BardAI/BardAI.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Claude/Claude.list',

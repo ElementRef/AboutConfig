@@ -50,6 +50,7 @@
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@laylavish](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
+- [@LoopDns](https://github.com/LoopDns/Fuck-you-MIUI)
 - [@Loyalsoldier](https://github.com/Loyalsoldier/surge-rules)
 - [@malware-filter](https://gitlab.com/malware-filter/urlhaus-filter)
 - [@missuo](https://github.com/missuo/ASN-China)
