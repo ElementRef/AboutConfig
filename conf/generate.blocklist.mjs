@@ -30,8 +30,8 @@ async function getResourses(SRC, LIST = []) {
     );
     const RES = await fetch(SRC, {
       method: 'GET',
-      cache: 'no-cache',
-      credentials: 'omit',
+      cache: 'no-store',
+      credentials: 'include',
       headers: {
         Authorization: `Bearer ${process.env.GH_TOKEN}`,
         'Content-Type': 'text/plain'

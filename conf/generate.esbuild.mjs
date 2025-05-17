@@ -107,8 +107,8 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
     console.log(`>>> ${FILENAME}`.padEnd(96), '开始下载 <<<'.padStart(12));
     const RES = await fetch(SRC, {
       method: 'GET',
-      cache: 'no-cache',
-      credentials: 'omit',
+      cache: 'no-store',
+      credentials: 'include',
       headers: {
         Authorization: `Bearer ${process.env.GH_TOKEN}`,
         'Content-Type': 'text/plain'

@@ -689,8 +689,8 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         .replace(/^\//gim, '');
       const res = await fetch(src, {
         method: 'GET',
-        cache: 'no-cache',
-        credentials: 'omit',
+        cache: 'no-store',
+        credentials: 'include',
         headers: {
           Authorization: `Bearer ${process.env.GH_TOKEN}`,
           'Content-Type': 'text/plain'
