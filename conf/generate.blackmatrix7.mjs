@@ -28,17 +28,23 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
       `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
       '开始下载 <<<'.padStart(12)
     );
+    const headers = {
+      'Content-Type': 'text/plain',
+      'User-Agent': 'QuantumultX/843'
+    };
+    if (
+      SRC.startsWith('https://camo.githubusercontent.com') ||
+      SRC.startsWith('https://gist.githubusercontent.com') ||
+      SRC.startsWith('https://raw.githubusercontent.com') ||
+      SRC.startsWith('https://github.com')
+    ) {
+      headers.Authorization = `Bearer ${process.env.GH_TOKEN}`;
+    }
     const RES = await fetch(SRC, {
       method: 'GET',
       cache: 'no-store',
       credentials: 'include',
-      headers: {
-        Authorization: `Bearer ${process.env.GH_TOKEN}`,
-        'Content-Type': 'text/plain',
-        'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
-        // 'User-Agent': 'Surge macOS/1663'
-        // 'User-Agent': 'Surge iOS/3367'
-      }
+      headers
     });
     if (RES.ok) {
       const text = await RES.text();

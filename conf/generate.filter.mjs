@@ -687,17 +687,23 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       const key = `${keyArr.at(-3)}/${keyArr.at(-2)}/${keyArr.at(-1)}`
         .replace(/\?.+/gim, '')
         .replace(/^\//gim, '');
+      const headers = {
+        'Content-Type': 'text/plain',
+        'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
+      };
+      if (
+        src.startsWith('https://camo.githubusercontent.com') ||
+        src.startsWith('https://gist.githubusercontent.com') ||
+        src.startsWith('https://raw.githubusercontent.com') ||
+        src.startsWith('https://github.com')
+      ) {
+        headers.Authorization = `Bearer ${process.env.GH_TOKEN}`;
+      }
       const res = await fetch(src, {
         method: 'GET',
         cache: 'no-store',
         credentials: 'include',
-        headers: {
-          Authorization: `Bearer ${process.env.GH_TOKEN}`,
-          'Content-Type': 'text/plain',
-          'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
-          // 'User-Agent': 'Surge macOS/1663'
-          // 'User-Agent': 'Surge iOS/3367'
-        }
+        headers
       });
       if (res.ok) {
         const text = await res.text();
