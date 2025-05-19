@@ -693,7 +693,10 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         credentials: 'include',
         headers: {
           Authorization: `Bearer ${process.env.GH_TOKEN}`,
-          'Content-Type': 'text/plain'
+          'Content-Type': 'text/plain',
+          'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
+          // 'User-Agent': 'Surge macOS/1663'
+          // 'User-Agent': 'Surge iOS/3367'
         }
       });
       if (res.ok) {
@@ -848,6 +851,16 @@ function mapMixture(text = '') {
   } else if (textPure.includes('*')) {
     // 必须放在 USER-AGENT 之后，其他规则判断之前
     return `HOST-WILDCARD,${textPure}`;
+  } else if (
+    textPure.includes('^') ||
+    textPure.includes('$') ||
+    textPure.includes('?') ||
+    textPure.includes('[') ||
+    textPure.includes(']') ||
+    textPure.includes('!') ||
+    textPure.includes('+')
+  ) {
+    return `URL-REGEX,${textPure}`;
   } else if (
     captialTextTemp.startsWith('HOST,') ||
     captialTextTemp.startsWith('DOMAIN,')

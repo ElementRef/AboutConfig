@@ -34,7 +34,10 @@ async function getResourses(SRC, LIST = []) {
       credentials: 'include',
       headers: {
         Authorization: `Bearer ${process.env.GH_TOKEN}`,
-        'Content-Type': 'text/plain'
+        'Content-Type': 'text/plain',
+        'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
+        // 'User-Agent': 'Surge macOS/1663'
+        // 'User-Agent': 'Surge iOS/3367'
       }
     });
     if (RES.ok) {
