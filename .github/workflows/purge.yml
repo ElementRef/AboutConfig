@@ -20,7 +20,6 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.direct.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.global.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.openai.mixture.ini
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.reject.dohosts.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.reject.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.stream.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.tiktok.mixture.ini
