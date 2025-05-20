@@ -29,6 +29,7 @@ async function getResourses(SRC, LIST = []) {
       '开始下载 <<<'.padStart(12)
     );
     const headers = {
+      'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
       'User-Agent': 'Surge iOS/3367'
     };

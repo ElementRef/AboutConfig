@@ -106,6 +106,7 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
   try {
     console.log(`>>> ${FILENAME}`.padEnd(96), '开始下载 <<<'.padStart(12));
     const headers = {
+      'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
       'User-Agent': 'Surge macOS/1663'
     };

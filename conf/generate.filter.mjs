@@ -688,6 +688,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         .replace(/\?.+/gim, '')
         .replace(/^\//gim, '');
       const headers = {
+        'Accept-Language': 'en-US',
         'Content-Type': 'text/plain',
         'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
       };
