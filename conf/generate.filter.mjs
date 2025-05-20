@@ -643,9 +643,12 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         'User-Agent': 'Loon/649 CFNetwork/1492.0.1 Darwin/23.3.0'
       };
       if (
+        src.startsWith('https://patch-diff.githubusercontent.com') ||
+        src.startsWith('https://avatars.githubusercontent.com') ||
         src.startsWith('https://camo.githubusercontent.com') ||
         src.startsWith('https://gist.githubusercontent.com') ||
         src.startsWith('https://raw.githubusercontent.com') ||
+        src.startsWith('https://api.github.com') ||
         src.startsWith('https://github.com')
       ) {
         headers.Authorization = `Bearer ${process.env.GH_TOKEN}`;

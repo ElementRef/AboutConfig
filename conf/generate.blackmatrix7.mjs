@@ -34,9 +34,12 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
       'User-Agent': 'QuantumultX/843'
     };
     if (
+      SRC.startsWith('https://patch-diff.githubusercontent.com') ||
+      SRC.startsWith('https://avatars.githubusercontent.com') ||
       SRC.startsWith('https://camo.githubusercontent.com') ||
       SRC.startsWith('https://gist.githubusercontent.com') ||
       SRC.startsWith('https://raw.githubusercontent.com') ||
+      SRC.startsWith('https://api.github.com') ||
       SRC.startsWith('https://github.com')
     ) {
       headers.Authorization = `Bearer ${process.env.GH_TOKEN}`;
