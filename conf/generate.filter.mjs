@@ -489,20 +489,6 @@ const MIXTUREWHITELIST = {
   'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
   'umami.is': 'umami.is' // Umami 官网
 };
-const HOSTWHITELIST = {
-  '0.0.0.0': '0.0.0.0',
-  'ip6-allhosts': 'ip6-allhosts',
-  'ip6-allnodes': 'p6-allnodes',
-  'ip6-allrouters': 'ip6-allrouters',
-  'ip6-localhost ip6-loopback': 'ip6-localhost ip6-loopback',
-  'ip6-localhost': 'ip6-localhost',
-  'ip6-loopback': 'ip6-loopback',
-  'ip6-mcastprefix': 'ip6-mcastprefix',
-  'localhost.localdomain': 'localhost.localdomain',
-  broadcasthost: 'broadcasthost',
-  local: 'local',
-  localhost: 'localhost'
-};
 const RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
@@ -526,42 +512,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list'
     ],
     MAPFN: mapMixture
-  },
-  REJECTDOHOSTS: {
-    FILENAME: 'element.ref.reject.dohosts.ini',
-    SRC: [
-      'https://a.dove.isdumb.one/list.txt',
-      'https://hblock.molinero.dev/hosts',
-      'https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts.txt',
-      'https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/hosts.win',
-      'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt',
-      'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt',
-      'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt',
-      'https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt',
-      'https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt',
-      'https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt',
-      'https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt',
-      'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt',
-      'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
-      'https://raw.githubusercontent.com/hululu1068/AdGuard-Rule/main/rule/hosts.txt',
-      'https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts',
-      'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
-      'https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/main/Fhosts',
-      'https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/main/MIhosts',
-      'https://raw.githubusercontent.com/neodevpro/neodevhost/master/host',
-      'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts',
-      'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts',
-      'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts',
-      'https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts',
-      'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
-      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt',
-      'https://raw.githubusercontent.com/tiuxo/hosts/master/ads',
-      'https://raw.githubusercontent.com/tiuxo/hosts/master/porn',
-      'https://raw.githubusercontent.com/yous/YousList/master/hosts.txt',
-      'https://someonewhocares.org/hosts/zero/hosts',
-      'https://winhelp2002.mvps.org/hosts.txt'
-    ],
-    MAPFN: mapDoHosts
   },
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
@@ -712,16 +662,14 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           .split('\n')
           .map(str => MAPFN(str, FILENAME))
           .filter(text => text.length !== 0);
-        if (MAPFN !== mapDoHosts) {
-          RAW[key].forEach(item => {
-            const temp = item.split(',')[1]?.trim();
-            const { length: dotAmount } = [...temp.matchAll(/\./gim)]; // 域名中·的个数
-            if (!globalThis[`${FILENAME}${dotAmount}`]) {
-              globalThis[`${FILENAME}${dotAmount}`] = {};
-            }
-            globalThis[`${FILENAME}${dotAmount}`][temp] = temp;
-          });
-        }
+        RAW[key].forEach(item => {
+          const temp = item.split(',')[1]?.trim();
+          const { length: dotAmount } = [...temp.matchAll(/\./gim)]; // 域名中·的个数
+          if (!globalThis[`${FILENAME}${dotAmount}`]) {
+            globalThis[`${FILENAME}${dotAmount}`] = {};
+          }
+          globalThis[`${FILENAME}${dotAmount}`][temp] = temp;
+        });
       } else {
         console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
       }
@@ -794,26 +742,6 @@ function generateRule(textPure = '') {
     }
   }
   return '';
-}
-function mapDoHosts(text) {
-  const textTemp = text?.trim();
-  const lastTemp = textTemp?.split(' ')?.at(-1)?.trim() || undefined;
-  if (
-    (!textTemp.startsWith('0.0.0.0 ') &&
-      !textTemp.startsWith('0.0.0.1 ') &&
-      !textTemp.startsWith('127.0.0.1 ') &&
-      !textTemp.startsWith('255.255.255.255 ') &&
-      !textTemp.startsWith('fe80::1') &&
-      !textTemp.startsWith('ff00::0') &&
-      !textTemp.startsWith('ff02::1') &&
-      !textTemp.startsWith('ff02::2') &&
-      !textTemp.startsWith('ff02::3')) ||
-    lastTemp === undefined ||
-    HOSTWHITELIST[lastTemp]
-  ) {
-    return '';
-  }
-  return `0.0.0.0 ${lastTemp}`;
 }
 function mapMixture(text = '') {
   const textTemp = text.replace(/ /gim, '');
