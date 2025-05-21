@@ -105,6 +105,7 @@ const MIXTUREBLOCKLIST = {
   '.web-marketing.ai': 'web-marketing.ai',
   '.weebly.com': 'weebly.com',
   '.wolterskluwer.com': 'wolterskluwer.com',
+  '.y2sysv81v.com': 'y2sysv81v.com',
   '.yinzcam.com': 'yinzcam.com',
   '.z00yy6tg2.com': 'z00yy6tg2.com',
   /**
@@ -607,7 +608,7 @@ async function writeResourses2File({ FILENAME, RES }) {
   try {
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
-      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
+      value: `# ${new Date().toString()} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     RES.forEach(item => {
       temp.value = temp.value + item + '\n';
@@ -648,6 +649,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         src.startsWith('https://camo.githubusercontent.com') ||
         src.startsWith('https://gist.githubusercontent.com') ||
         src.startsWith('https://raw.githubusercontent.com') ||
+        src.startsWith('https://github.githubassets.com') ||
         src.startsWith('https://api.github.com') ||
         src.startsWith('https://github.com')
       ) {

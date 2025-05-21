@@ -116,6 +116,7 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
       SRC.startsWith('https://camo.githubusercontent.com') ||
       SRC.startsWith('https://gist.githubusercontent.com') ||
       SRC.startsWith('https://raw.githubusercontent.com') ||
+      SRC.startsWith('https://github.githubassets.com') ||
       SRC.startsWith('https://api.github.com') ||
       SRC.startsWith('https://github.com')
     ) {
@@ -159,7 +160,7 @@ async function useESBuildToScriptDir(TMPFILE) {
       '--legal-comments=none',
       '--minify',
       '--tree-shaking=true',
-      `--banner:js=// https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
+      `--banner:js=// ${new Date().toString()} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
       `--outdir=${SCRIPTPATH}`
     ]);
     ESBUILDSPAWN.on('close', code => {

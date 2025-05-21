@@ -39,6 +39,7 @@ async function getResourses(SRC, LIST = []) {
       SRC.startsWith('https://camo.githubusercontent.com') ||
       SRC.startsWith('https://gist.githubusercontent.com') ||
       SRC.startsWith('https://raw.githubusercontent.com') ||
+      SRC.startsWith('https://github.githubassets.com') ||
       SRC.startsWith('https://api.github.com') ||
       SRC.startsWith('https://github.com')
     ) {
@@ -92,7 +93,7 @@ async function writeResourses2File({ FILENAME, RES }) {
     console.log(`>>> ${FILENAME}`.padEnd(96), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
-      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
+      value: `# ${new Date().toString()} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     const park = {};
     RES.forEach(item => {
