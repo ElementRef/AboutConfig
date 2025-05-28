@@ -1,2 +1,2 @@
-// Tue May 27 2025 21:21:15 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.12306.js
+// Wed May 28 2025 21:20:56 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.12306.js
 var obj=JSON.parse($request.body),ddgksf2013={};obj.placementNo=="0007"?(ddgksf2013.materialsList=[{billMaterialsId:"6491",filePath:"ddgksf2013",creativeType:1}],ddgksf2013.advertParam={skipTime:1},ddgksf2013.code="00"):ddgksf2013=obj.placementNo=="G0054"?{code:"00",materialsList:[{}]}:{code:"00",message:"\u65E0\u5E7F\u544A\u8FD4\u56DE"},typeof $task<"u"?$done({body:JSON.stringify(ddgksf2013)}):$done({response:{body:JSON.stringify(ddgksf2013)}});
