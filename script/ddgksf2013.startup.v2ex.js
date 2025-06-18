@@ -1,4 +1,4 @@
-// Tue Jun 17 2025 21:22:09 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.v2ex.js
+// Wed Jun 18 2025 21:21:41 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.v2ex.js
 var body=$response.body.replace(/<head>/,`<head>
     <style>
       .sidebar_units,
