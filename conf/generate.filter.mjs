@@ -83,6 +83,7 @@ const MIXTUREBLOCKLIST = {
   '.pstatp.com': 'pstatp.com',
   '.rsc.cdn77.org': 'rsc.cdn77.org',
   '.s.joyn.de': 's.joyn.de',
+  '.safebrowsing.apple': 'safebrowsing.apple',
   '.sanvello.com': 'sanvello.com',
   '.sextracker.be': 'sextracker.be',
   '.siemensplmevents.com': 'siemensplmevents.com',
