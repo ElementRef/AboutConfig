@@ -534,11 +534,9 @@ const RESOURCES = {
     FILENAME: 'element.ref.direct.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AliPay/AliPay.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Jetbrains/Jetbrains.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
+      'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
       'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
