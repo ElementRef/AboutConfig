@@ -18,8 +18,6 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js',
   'app2smile.tieba.proto.js':
     'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js',
-  'blackmatrix7.smzdm.js':
-    'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js',
   'chavyleung.box.js':
     'https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js',
   'chxm1023.vsco.js':
