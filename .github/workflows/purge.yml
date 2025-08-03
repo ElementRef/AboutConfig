@@ -26,6 +26,8 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.ublock.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.qidian.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.tieba.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/bili.universe.adblock.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/bili.universe.enhanced.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/blackmatrix7.rewrite.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/blackmatrix7.smzdm.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.amap.conf
@@ -43,6 +45,9 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.spotify.proto.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.tieba.json.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.tieba.proto.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.adblock.request.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.adblock.response.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.enhanced.response.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/blackmatrix7.smzdm.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/chxm1023.vsco.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.amap.js
