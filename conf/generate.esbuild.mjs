@@ -18,6 +18,12 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js',
   'app2smile.tieba.proto.js':
     'https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js',
+  'bili.universe.adblock.request.js':
+    'https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.19/request.bundle.js',
+  'bili.universe.adblock.response.js':
+    'https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.19/response.bundle.js',
+  'bili.universe.enhanced.response.js':
+    'https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.10/response.bundle.js',
   'chavyleung.box.js':
     'https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js',
   'chxm1023.vsco.js':
