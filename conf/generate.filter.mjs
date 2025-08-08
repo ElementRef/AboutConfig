@@ -569,6 +569,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
+      'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf'
     ],
     MAPFN: mapMixture
