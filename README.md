@@ -30,6 +30,8 @@
 - [@DomainTools](https://github.com/DomainTools/SecuritySnacks)
 - [@durablenapkin](https://github.com/durablenapkin/scamblocklist)
 - [@eallion](https://github.com/eallion/uBlacklist-subscription-compilation)
+- [@Elysian-Realme](https://github.com/Elysian-Realme/FuGfConfig)
+- [@enriquephl](https://github.com/enriquephl/QuantumultX_config)
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)

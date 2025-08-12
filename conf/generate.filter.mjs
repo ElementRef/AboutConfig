@@ -502,6 +502,8 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Malicious.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini',
+      'https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf',
+      'https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list',
       'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list',
@@ -512,6 +514,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject-no-drop.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
       'https://raw.githubusercontent.com/uselibrary/PCDN/main/pcdn.list',
       'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list'
