@@ -487,10 +487,11 @@ const MIXTUREWHITELIST = {
   'parallels.cn': 'parallels.cn', // Parallels 官网
   'parallels.com': 'parallels.com', // Parallels 官网
   's.weibo.com': 's.weibo.com', // 微博静态资源
+  'sdkapp.uve.weibo.com': 'sdkapp.uve.weibo.com', // 微博重写处理
   'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
   'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
   'umami.is': 'umami.is', // Umami 官网
-  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn' // 微博交给重写
+  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn' // 微博重写处理
 };
 const RESOURCES = {
   REJECTMIXTURE: {
