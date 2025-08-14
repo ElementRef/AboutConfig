@@ -90,6 +90,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
   'zheye.zhihu.js':
     'https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js',
+  'zirawell.ddxq.js':
+    'https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js',
   'zzpiglet.wechat.110.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js'
 };
