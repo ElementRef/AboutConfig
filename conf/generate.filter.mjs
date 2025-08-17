@@ -772,6 +772,8 @@ function mapMixture(text = '') {
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
     textPure.endsWith('.arpa') ||
+    textTemp.startsWith('||') ||
+    textTemp.startsWith('! ') ||
     textTemp.startsWith(';') ||
     textTemp.startsWith('[') ||
     textTemp.startsWith('/') ||
