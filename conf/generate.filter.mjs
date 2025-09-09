@@ -491,7 +491,8 @@ const MIXTUREWHITELIST = {
   'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
   'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
   'umami.is': 'umami.is', // Umami 官网
-  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn' // 微博重写处理
+  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn', // 微博重写处理
+  'optimus-ads.amap.com': 'optimus-ads.amap.com' // 高德地图重写处理
 };
 const RESOURCES = {
   REJECTMIXTURE: {
