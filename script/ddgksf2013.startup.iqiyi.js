@@ -1,2 +1,2 @@
-// Sat Oct 18 2025 21:18:08 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.iqiyi.js
+// Sun Oct 19 2025 21:18:26 GMT+0000 (Coordinated Universal Time) https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.iqiyi.js
 let obj=JSON.parse($response.body);delete obj.adSlots,$done({body:JSON.stringify(obj)});
