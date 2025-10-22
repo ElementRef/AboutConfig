@@ -516,6 +516,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
+      'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/ad.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
@@ -544,7 +545,9 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
+      'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/cn.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
+      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
     MAPFN: mapMixture
@@ -558,6 +561,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Reddit/Reddit.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxy.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
+      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.US.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
     ],
