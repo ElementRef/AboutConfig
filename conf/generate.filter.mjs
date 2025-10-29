@@ -545,7 +545,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/cn.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
-      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
     MAPFN: mapMixture
@@ -559,7 +558,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Reddit/Reddit.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxy.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
-      'https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.US.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
     ],
@@ -852,12 +850,12 @@ function mapMixture(text = '') {
   } else if (captialTextTemp.startsWith('IP-ASN,')) {
     return `IP-ASN,${textPure}`;
   } else if (captialTextTemp.startsWith('IP-CIDR,')) {
-    return `IP-CIDR,${textPure},no-resolve`;
+    return `IP-CIDR,${textPure}`;
   } else if (
     captialTextTemp.startsWith('IP-CIDR6,') ||
     captialTextTemp.startsWith('IP6-CIDR,')
   ) {
-    return `IP6-CIDR,${textPure},no-resolve`;
+    return `IP6-CIDR,${textPure}`;
   } else if (captialTextTemp.startsWith('PROCESS-NAME,')) {
     return `PROCESS-NAME,${textPure}`;
   } else if (/^(\d|\.)+(\/){1}(\d){1,2}/gim.test(textTemp)) {
@@ -866,7 +864,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[pureIP]) {
       return '';
     }
-    return `IP-CIDR,${pureIP},no-resolve`;
+    return `IP-CIDR,${pureIP}`;
   } else if (
     /^([\da-fA-F]{1,4}:){6}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^::([\da-fA-F]{1,4}:){0,4}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:):([\da-fA-F]{1,4}:){0,3}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){2}:([\da-fA-F]{1,4}:){0,2}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){3}:([\da-fA-F]{1,4}:){0,1}((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){4}:((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){7}[\da-fA-F]{1,4}(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^:((:[\da-fA-F]{1,4}){1,6}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^[\da-fA-F]{1,4}:((:[\da-fA-F]{1,4}){1,5}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){2}((:[\da-fA-F]{1,4}){1,4}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){3}((:[\da-fA-F]{1,4}){1,3}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){4}((:[\da-fA-F]{1,4}){1,2}|:)(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){5}:([\da-fA-F]{1,4})?(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$|^([\da-fA-F]{1,4}:){6}:(\/([1-9]?\d|(1([0-1]\d|2[0-8]))))?$/gim.test(
       textTemp
@@ -875,7 +873,7 @@ function mapMixture(text = '') {
     if (MIXTUREWHITELIST[textTemp]) {
       return '';
     }
-    return `IP6-CIDR,${textTemp},no-resolve`;
+    return `IP6-CIDR,${textTemp}`;
   } else {
     return '';
   }
