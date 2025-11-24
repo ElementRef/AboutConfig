@@ -618,7 +618,9 @@ async function writeResourses2File({ FILENAME, RES }) {
   try {
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
-      value: `# ${new Date().toString()} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
+      value: `# ${new Date().toLocaleString('zh-CN', {
+        timeZone: 'Asia/Shanghai'
+      })} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     RES.forEach(item => {
       temp.value = temp.value + item + '\n';

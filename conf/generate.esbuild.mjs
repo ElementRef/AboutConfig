@@ -166,7 +166,9 @@ async function useESBuildToScriptDir(TMPFILE) {
       '--legal-comments=none',
       '--minify',
       '--tree-shaking=true',
-      `--banner:js=// ${new Date().toString()} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
+      `--banner:js=// ${new Date().toLocaleString('zh-CN', {
+        timeZone: 'Asia/Shanghai'
+      })} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/${TMPFILE}`,
       `--outdir=${SCRIPTPATH}`
     ]);
     ESBUILDSPAWN.on('close', code => {
