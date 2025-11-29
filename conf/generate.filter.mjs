@@ -519,6 +519,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject-no-drop.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject.conf',
+      'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list',
       'https://raw.githubusercontent.com/uselibrary/PCDN/main/pcdn.list',
       'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list'
     ],
