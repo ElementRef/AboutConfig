@@ -65,7 +65,6 @@ const MIXTUREBLOCKLIST = {
   '.llnw.net': 'llnw.net',
   '.msecnd.net': 'msecnd.net',
   '.musical.ly': 'musical.ly',
-  '.myqcloud.com': 'myqcloud.com',
   '.nespresso.com': 'nespresso.com',
   '.net.easyjet.com': 'net.easyjet.com',
   '.net.iberostar.com': 'net.iberostar.com',
