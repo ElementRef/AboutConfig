@@ -50,6 +50,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
   'ddgksf2013.red.book.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/redbook_json.js',
+  'ddgksf2013.server.info.pure.js':
+    'https://ddgksf2013.top/scripts/server-info-pure.js',
   'ddgksf2013.startup.12306.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js',
   'ddgksf2013.startup.coolapk.js':
