@@ -1,4 +1,4 @@
-// 2026/1/1 05:22:36 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.v2ex.js
+// 2026/1/2 05:23:24 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.v2ex.js
 var body=$response.body.replace(/<head>/,`<head>
     <style>
       .sidebar_units,
