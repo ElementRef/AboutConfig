@@ -69,6 +69,7 @@
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
 - [@Sinfonietta](https://github.com/Sinfonietta/hostfiles)
 - [@someonewhocares](https://someonewhocares.org/hosts)
+- [@sooyaaabo](https://github.com/sooyaaabo/LoonLab)
 - [@Spamhaus](https://www.spamhaus.org)
 - [@Steve5wutongyu6](https://github.com/Steve5wutongyu6/DNSBlock)
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
