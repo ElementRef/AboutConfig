@@ -775,6 +775,7 @@ function mapMixture(text = '') {
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
+    textPure.startsWith('"^ht') ||
     textPure.endsWith('.arpa') ||
     textTemp.startsWith('||') ||
     textTemp.startsWith('! ') ||
@@ -849,14 +850,8 @@ function mapMixture(text = '') {
     captialTextTemp.startsWith('HOST-WILDCARD,') ||
     captialTextTemp.startsWith('DOMAIN-WILDCARD,')
   ) {
-    if (textPure.includes('"') || textPure.includes("'")) {
-      return '';
-    }
     return `HOST-WILDCARD,${textPure}`;
   } else if (captialTextTemp.startsWith('URL-REGEX,')) {
-    if (textPure.includes('"') || textPure.includes("'")) {
-      return '';
-    }
     return `URL-REGEX,${textPure}`;
   } else if (captialTextTemp.startsWith('IP-ASN,')) {
     return `IP-ASN,${textPure},no-resolve`;
