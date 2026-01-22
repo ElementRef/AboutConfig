@@ -849,12 +849,12 @@ function mapMixture(text = '') {
     captialTextTemp.startsWith('HOST-WILDCARD,') ||
     captialTextTemp.startsWith('DOMAIN-WILDCARD,')
   ) {
-    if (textPure.startsWith('"')) {
+    if (textPure.includes('"') || textPure.includes("'")) {
       return '';
     }
     return `HOST-WILDCARD,${textPure}`;
   } else if (captialTextTemp.startsWith('URL-REGEX,')) {
-    if (textPure.startsWith('"')) {
+    if (textPure.includes('"') || textPure.includes("'")) {
       return '';
     }
     return `URL-REGEX,${textPure}`;
