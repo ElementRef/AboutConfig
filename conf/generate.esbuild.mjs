@@ -63,8 +63,7 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js',
   'ddgksf2013.startup.umetrip.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js',
-  'ddgksf2013.startup.v2ex.js':
-    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/v2ex.js',
+  'ddgksf2013.startup.v2ex.js': 'https://ddgksf2013.top/scripts/v2ex.ads.js',
   'ddgksf2013.weibo.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js',
   'ddgksf2013.ximalaya.js':
