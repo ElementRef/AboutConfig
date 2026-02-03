@@ -47,8 +47,7 @@ const RESOURCES = {
     'https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js',
   'ddgksf2013.meitu.xiuxiu.js':
     'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
-  'ddgksf2013.red.book.js':
-    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/redbook_json.js',
+  'ddgksf2013.red.book.js': 'https://ddgksf2013.top/scripts/redbook.ads.js',
   'ddgksf2013.server.info.pure.js':
     'https://ddgksf2013.top/scripts/server-info-pure.js',
   'ddgksf2013.startup.12306.js':
