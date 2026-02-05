@@ -1,2 +1,2 @@
-// 2026/2/5 05:37:47 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.sf.js
+// 2026/2/6 05:34:19 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.sf.js
 if($request.url.indexOf("app/ad/queryInfoFlow")!=-1){var ddgksf2013=JSON.parse($response.body);ddgksf2013.obj=Object.values(ddgksf2013.obj).filter(e=>e.adverId==2833),$done({body:JSON.stringify(ddgksf2013)})}
