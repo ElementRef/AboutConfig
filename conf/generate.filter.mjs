@@ -249,6 +249,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list',
+      'https://raw.githubusercontent.com/ddgksf2013/Filter/master/AppleIntelligence.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf'
