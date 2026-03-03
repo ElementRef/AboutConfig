@@ -2,7 +2,7 @@
 
 ### 建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
 
-### 广告拦截测试：
+### 广告拦截测试（排名不分先后）：
 
 - [Ad Block Test | OBFUSGATED](https://obfusgated.com/tools/ad-block-test)
 - [Ad Blocker Test - Check Your Adblocker Works | Turtlecute](https://adblock.turtlecute.org)
