@@ -14,11 +14,7 @@
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/en/adblock-test.html)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 
-![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
-
-<!-- ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElementRef&theme=nord_dark) -->
-
-**特别感谢（排名不分先后）：**
+#### 特别感谢（排名不分先后）：
 
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
@@ -106,4 +102,10 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ElementRef/ElementRef/output/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ElementRef/ElementRef/output/github-contribution-grid-snake.svg">
   </picture>
+ -->
+<!--
+  ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElementRef&theme=nord_dark)
+ -->
+<!--
+ ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
  -->
