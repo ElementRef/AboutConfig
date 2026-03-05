@@ -12,7 +12,12 @@
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! Adblock Test](https://blockads.fivefilters.org)
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/en/adblock-test.html)
+
+### 其他测试工具（排名不分先后）：
+
+- [Check browser fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
+- [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
 
 #### 特别感谢（排名不分先后）：
 
