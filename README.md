@@ -1,16 +1,16 @@
 ### 自用 [Code 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/vscode.settings.json)、[Quantumult X 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/quantumult.x.conf)、[uBlocklist 规则](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.ublock.mixture.ini) 
 
-### 建议搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
+### 可以按需搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
 
 ### 广告拦截测试（排名不分先后）：
 
 - [Ad Block Test | OBFUSGATED](https://obfusgated.com/tools/ad-block-test)
-- [Ad Blocker Test - Check Your Adblocker Works | Turtlecute](https://adblock.turtlecute.org)
+- [Ad Blocker Test - Check Your AdBlocker Works | Turtlecute](https://adblock.turtlecute.org)
 - [Ad Blocker Test - Toolz](https://paileactivist.github.io/toolz/adblock.html)
-- [Adblock Test: Benchmark Your Ad-blocker's Performance!](https://getblockify.com/adblock-test)
+- [AdBlock Test: Benchmark Your Ad-blocker's Performance!](https://getblockify.com/adblock-test)
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
-- [Block Ads! Adblock Test](https://blockads.fivefilters.org)
+- [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/en/adblock-test.html)
 
 ### 其他测试工具（排名不分先后）：
@@ -19,7 +19,7 @@
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
 
-#### 特别感谢（排名不分先后）：
+### 特别感谢（排名不分先后）：
 
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
