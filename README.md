@@ -11,7 +11,7 @@
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
-- [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/en/adblock-test.html)
+- [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/ch/adblock-test.html)
 
 ### 其他测试工具（排名不分先后）：
 
