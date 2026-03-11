@@ -19,7 +19,7 @@
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
 
-### 特别感谢（排名不分先后）：
+### 特别感谢名单（排名不分先后）：
 
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
