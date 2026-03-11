@@ -1,6 +1,6 @@
 ### 自用 [Code 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/vscode.settings.json)、[Quantumult X 配置](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/conf/quantumult.x.conf)、[uBlocklist 规则](https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.ublock.mixture.ini) 
 
-### 可以按需搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 食用
+### 可以按需搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 和 [EncryptedDNS](https://github.com/paulmillr/encrypted-dns) 食用
 
 ### 广告拦截测试（排名不分先后）：
 
