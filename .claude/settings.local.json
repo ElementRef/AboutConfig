@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python3:*)",
       "Bash(claude --version)",
-      "Bash(brew list)"
+      "Bash(brew list)",
+      "Bash(npx js-beautify:*)"
     ]
   }
 }
