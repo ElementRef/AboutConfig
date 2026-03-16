@@ -4,7 +4,8 @@
       "Bash(python3:*)",
       "Bash(claude --version)",
       "Bash(brew list)",
-      "Bash(npx js-beautify:*)"
+      "Bash(npx js-beautify:*)",
+      "WebSearch"
     ]
   }
 }
