@@ -23,7 +23,6 @@
 
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
-- [@Aa28413761](https://t.me/s/Aa28413761)
 - [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
 - [@app2smile](https://github.com/app2smile/rules)
 - [@badmojr](https://github.com/badmojr/1Hosts)
@@ -98,7 +97,6 @@
 - [@winhelp2002](https://winhelp2002.mvps.org)
 - [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)
 - [@yous](https://github.com/yous/YousList)
-- [@yoyo](https://pgl.yoyo.org/adservers)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
 
 <!--

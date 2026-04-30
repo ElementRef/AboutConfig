@@ -4,12 +4,14 @@ import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const RESOURCES = {
-  '510004015.wps.office.js':
-    'https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js',
+  'app2smile.baidu.map.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js',
   'app2smile.qidian.js':
     'https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js',
   'app2smile.qq.news.js':
     'https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js',
+  'app2smile.spotify.header.js':
+    'https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-qx-header.js',
   'app2smile.spotify.json.js':
     'https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js',
   'app2smile.spotify.proto.js':
@@ -26,54 +28,72 @@ const RESOURCES = {
     'https://github.com/BiliUniverse/Enhanced/releases/latest/download/response.bundle.js',
   'chavyleung.box.js':
     'https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js',
-  'chxm1023.vsco.js':
-    'https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js',
   'ddgksf2013.amap.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amap.js',
   'ddgksf2013.amdc.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js',
-  'ddgksf2013.bilibili.js': 'https://ddgksf2013.top/scripts/bilibili.ads.js',
-  'ddgksf2013.bybutter.js':
-    'https://raw.githubusercontent.com/ddgksf2013/dev/main/BybutterProCrack.js',
   'ddgksf2013.cai.niao.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js',
   'ddgksf2013.cai.yun.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caiyun_json.js',
-  'ddgksf2013.caixin.js':
-    'https://raw.githubusercontent.com/ddgksf2013/dev/main/CaiXinZhouKanProCrack.js',
-  'ddgksf2013.clarity.js':
-    'https://raw.githubusercontent.com/ddgksf2013/dev/main/ClarityProCrack.js',
   'ddgksf2013.cloud.music.js':
     'https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js',
-  'ddgksf2013.meitu.xiuxiu.js':
-    'https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js',
   'ddgksf2013.red.book.js': 'https://ddgksf2013.top/scripts/redbook.ads.js',
   'ddgksf2013.server.info.pure.js':
     'https://ddgksf2013.top/scripts/server-info-pure.js',
+  'ddgksf2013.smzdm.json.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/smzdm_json.js',
   'ddgksf2013.startup.12306.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js',
+  'ddgksf2013.startup.123pan.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js',
+  'ddgksf2013.startup.555.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555Ad.js',
+  'ddgksf2013.startup.abchina.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js',
+  'ddgksf2013.startup.ahfs.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ahfs.js',
+  'ddgksf2013.startup.baishi.tv.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/baishitv.js',
+  'ddgksf2013.startup.caixin.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caixinads.js',
   'ddgksf2013.startup.coolapk.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js',
+  'ddgksf2013.startup.dict.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js',
+  'ddgksf2013.startup.dong.qiu.di.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js',
+  'ddgksf2013.startup.fly.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/fly.js',
+  'ddgksf2013.startup.hang.lv.zong.heng.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js',
   'ddgksf2013.startup.iqiyi.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js',
+  'ddgksf2013.startup.ithome.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ithome.js',
   'ddgksf2013.startup.jd.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js',
+  'ddgksf2013.startup.jingxi.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/startup.js',
+  'ddgksf2013.startup.ping.an.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js',
+  'ddgksf2013.startup.pupu.market.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pupumarket.js',
+  'ddgksf2013.startup.qidian.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/qidian.js',
+  'ddgksf2013.startup.quark.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js',
   'ddgksf2013.startup.sf.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js',
-  'ddgksf2013.startup.umetrip.js':
-    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js',
-  'ddgksf2013.startup.v2ex.js': 'https://ddgksf2013.top/scripts/v2ex.ads.js',
+  'ddgksf2013.startup.stay.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/stay.js',
+  'ddgksf2013.startup.zhihu.js':
+    'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhihu_openads.js',
   'ddgksf2013.weibo.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js',
   'ddgksf2013.ximalaya.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
   'ddgksf2013.zhihu.js': 'https://ddgksf2013.top/scripts/zhihu.ads.js',
-  'fmz200.baidu.lib.js':
-    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidu/baiduLib.js',
-  'fmz200.emby.js':
-    'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/emby/unlock2.js',
-  'gjwj666.xingtu.js':
-    'https://raw.githubusercontent.com/gjwj666/qx/main/XT.js',
   'kop.xiao.ip.api.js':
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js',
   'kop.xiao.resource.parser.js':
@@ -84,10 +104,6 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js',
   'peng.ym.sub.store.js':
     'https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store.no-bundle.js',
-  'yqc007.video.fusion.js':
-    'https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js',
-  'zheye.zhihu.js':
-    'https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js',
   'zirawell.ddxq.js':
     'https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js',
   'zzpiglet.wechat.110.js':
@@ -145,9 +161,8 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
     } else {
       console.error(`>>> ${FILENAME}`.padEnd(96), '下载失败 >>>'.padStart(12));
     }
-  } catch ({ message }) {
-    console.error(message);
-    throw new Error(message);
+  } catch (error) {
+    throw error;
   }
 }
 async function useESBuildToScriptDir(TMPFILE) {

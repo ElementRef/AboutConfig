@@ -68,9 +68,8 @@ async function getResourses(SRC, LIST = []) {
         '下载失败 >>>'.padStart(12)
       );
     }
-  } catch ({ message }) {
-    console.error(message);
-    throw new Error(message);
+  } catch (error) {
+    throw error;
   }
 }
 async function handleList(LIST) {
@@ -122,8 +121,8 @@ async function writeResourses2File({ FILENAME, RES }) {
       temp.value
     );
     console.log(`>>> ${FILENAME}`.padEnd(96), '写入完成 <<<'.padStart(12));
-  } catch ({ message }) {
+  } catch (error) {
     console.error(`>>> ${FILENAME}`.padEnd(96), '写入失败 >>>'.padStart(12));
-    throw new Error(message);
+    throw error;
   }
 }

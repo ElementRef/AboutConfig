@@ -25,22 +25,30 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.tiktok.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/filter/element.ref.ublock.mixture.ini
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.qidian.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.qq.news.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.spotify.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/app2smile.tieba.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/bili.universe.adblock.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/bili.universe.enhanced.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/blackmatrix7.rewrite.conf
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/blackmatrix7.smzdm.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.amap.conf
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.bilibili.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.cai.niao.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.cai.yun.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.cloud.music.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.red.book.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.smzdm.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.startup.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.weibo.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.ximalaya.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.zhihu.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/maasea.youtube.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/virgil.clyne.httpdns.block.conf
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/zirawell.ddxq.conf
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/zzpiglet.wechat.110.conf
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/510004015.wps.office.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.baidu.map.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.qidian.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.qq.news.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.spotify.header.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.spotify.json.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.spotify.proto.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/app2smile.tieba.json.js
@@ -48,38 +56,43 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.adblock.request.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.adblock.response.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/bili.universe.enhanced.response.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/blackmatrix7.smzdm.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/chxm1023.vsco.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.amap.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.amdc.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.bilibili.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.bybutter.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.cai.niao.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.cai.yun.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.caixin.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.clarity.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.cloud.music.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.meitu.xiuxiu.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.red.book.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.server.info.pure.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.smzdm.json.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.12306.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.123pan.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.555.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.abchina.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.ahfs.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.baishi.tv.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.caixin.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.coolapk.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.dict.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.dong.qiu.di.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.fly.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.hang.lv.zong.heng.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.iqiyi.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.ithome.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.jd.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.jingxi.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.ping.an.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.pupu.market.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.qidian.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.quark.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.sf.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.umetrip.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.v2ex.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.stay.js
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.startup.zhihu.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.weibo.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.ximalaya.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/ddgksf2013.zhihu.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/fmz200.baidu.lib.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/fmz200.emby.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/gjwj666.xingtu.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/kop.xiao.ip.api.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/kop.xiao.resource.parser.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/kop.xiao.streaming.ui.check.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/maasea.youtube.response.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/yqc007.video.fusion.js
-            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/zheye.zhihu.js
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/zzpiglet.wechat.110.js
             https://cdn.jsdelivr.net/gh/ripaojiedian/freenode@main/sub

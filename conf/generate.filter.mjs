@@ -186,7 +186,10 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/ad.txt',
+      'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
+      'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/dns.txt',
+      'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/pcdn.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject-no-drop.conf',
@@ -230,6 +233,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Reddit/Reddit.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxy.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
+      'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/telegramcidr.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
     ],
@@ -305,9 +309,8 @@ async function writeResourses2File({ FILENAME, RES }) {
       resolve(dirname(scriptPath), `../filter/${FILENAME}`),
       temp.value
     );
-  } catch ({ message }) {
-    console.error(message);
-    throw new Error(message);
+  } catch (error) {
+    throw error;
   }
 }
 async function getResourses({ FILENAME, SRC, MAPFN }) {
@@ -366,9 +369,8 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       } else {
         console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
       }
-    } catch ({ message }) {
-      console.error(message);
-      throw new Error(src);
+    } catch (error) {
+      throw error;
     }
   }
   return {
