@@ -61,6 +61,7 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js',
   'ddgksf2013.startup.dict.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js',
+  // 文件中只包含了 JSON 数据，会被 esbuild 的 tree-shaking=true 完全优化掉
   'ddgksf2013.startup.dong.qiu.di.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js',
   'ddgksf2013.startup.fly.js':
