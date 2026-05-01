@@ -203,8 +203,8 @@ const RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
     SRC: [
-      'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-cn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/apple_services.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_cn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_services.conf'
@@ -219,6 +219,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/cn.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/microsoft-cn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
     MAPFN: mapMixture
@@ -234,6 +235,9 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxy.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/telegramcidr.txt',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apns.list',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-proxy.list',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/microsoft.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
     ],
@@ -256,6 +260,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ddgksf2013/Filter/master/AppleIntelligence.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/ai.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf'
     ],
     MAPFN: mapMixture
@@ -270,6 +275,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTubeMusic/YouTubeMusic.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.custom.ini',
+      'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-tv.list',
       'https://ruleset.skk.moe/List/ip/stream.conf',
       'https://ruleset.skk.moe/List/non_ip/stream.conf'
     ],
