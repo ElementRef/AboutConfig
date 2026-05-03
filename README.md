@@ -18,6 +18,7 @@
 - [Check browser fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
+- [广告过滤规则订阅中心](https://adguardfilters-chinese.pages.dev)
 
 ### 特别感谢名单（排名不分先后）：
 
@@ -73,6 +74,7 @@
 - [@missuo](https://github.com/missuo/ASN-China)
 - [@Moli-X](https://github.com/Moli-X/Resources)
 - [@neodevpro](https://github.com/neodevpro/neodevhost)
+- [@NobyDa](https://github.com/NobyDa/Script)
 - [@obgnail](https://github.com/obgnail/chinese-internet-is-dead)
 - [@Orz-3](https://github.com/Orz-3/mini)
 - [@paulmillr](https://github.com/paulmillr/encrypted-dns)
@@ -98,6 +100,7 @@
 - [@xiaomaoJT](https://github.com/xiaomaoJT/QxScript)
 - [@yous](https://github.com/yous/YousList)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
+- [@ZenmoFeiShi](https://github.com/ZenmoFeiShi/Qx)
 
 <!--
   <picture>
