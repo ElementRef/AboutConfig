@@ -103,6 +103,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js',
   'maasea.youtube.response.js':
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js',
+  'nobyda.google.captcha.js':
+    'https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js',
   'peng.ym.sub.store.js':
     'https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store.no-bundle.js',
   'zirawell.ddxq.js':
