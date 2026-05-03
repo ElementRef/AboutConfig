@@ -15,7 +15,7 @@
 
 ### 其他测试工具（排名不分先后）：
 
-- [Check browser fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
+- [Check Browser Fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
 - [广告过滤规则订阅中心](https://adguardfilters-chinese.pages.dev)
