@@ -50,6 +50,7 @@
 - [@FiltersHeroes](https://github.com/FiltersHeroes/KADhosts)
 - [@FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [@fmz200](https://github.com/fmz200/wool_scripts)
+- [@Former-Years](https://github.com/Former-Years/icon)
 - [@GeQ1an](https://github.com/GeQ1an/Rules)
 - [@gjwj666](https://github.com/gjwj666/qx)
 - [@GMOogway](https://github.com/GMOogway/shadowrocket-rules)
