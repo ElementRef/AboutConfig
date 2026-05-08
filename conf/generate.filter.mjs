@@ -188,8 +188,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/ad.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
-      'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/dns.txt',
-      'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/pcdn.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject-no-drop.conf',
