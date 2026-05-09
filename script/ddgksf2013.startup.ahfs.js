@@ -1,2 +1,2 @@
-// 2026/5/9 06:00:00 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.ahfs.js
+// 2026/5/10 05:50:59 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.ahfs.js
 var body=$response.body.replace(/<head>/,"<head><style>.top, .bottum, .sidebar-column, .m-menubar, .google-auto-placed, #rizhuti_v2_module_division-2, #related_posts, .post-note, .entry-share, .related-posts, #comments, #ad_position_box, .entry-copyright, .sidebar-wrapper, .home-division, #ri_home_division_widget-2, #ri_home_cmspost_widget-2, #ri_home_slider_widget-2, #ri_home_background_widget-2{display:none!important} </style>");$done({body});
