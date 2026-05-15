@@ -6,12 +6,12 @@
 
 - [Ad Block Test | OBFUSGATED](https://obfusgated.com/tools/ad-block-test)
 - [Ad Blocker Test - Check Your AdBlocker Works | Turtlecute](https://adblock.turtlecute.org)
-- [Ad Blocker Test - Toolz](https://paileactivist.github.io/toolz/adblock.html)
-- [AdBlock Test: Benchmark Your Ad-blocker's Performance!](https://getblockify.com/adblock-test)
+- [AdBlock Test: Benchmark Your Ad-Blocker's Performance!](https://getblockify.com/adblock-test)
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/ch/adblock-test.html)
+- [Test Ad Block - Toolz](https://d3ward.com/adblock)
 
 ### 其他测试工具（排名不分先后）：
 
