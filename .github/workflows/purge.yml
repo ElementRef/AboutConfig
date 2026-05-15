@@ -43,6 +43,7 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/ddgksf2013.zhihu.conf?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/maasea.youtube.conf?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/nobyda.google.captcha.conf?raw
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/sub.store.org.conf?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/virgil.clyne.httpdns.block.conf?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/zenmo.fei.shi.didi.conf?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/rewrite/zirawell.ddxq.conf?raw
@@ -97,5 +98,8 @@ jobs:
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/kop.xiao.streaming.ui.check.js?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/maasea.youtube.response.js?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/nobyda.google.captcha.js?raw
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/sub.store.org.0.js?raw
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/sub.store.org.1.js?raw
+            https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/sub.store.org.cron.sync.artifacts.js?raw
             https://cdn.jsdelivr.net/gh/ElementRef/AboutConfig@main/script/zzpiglet.wechat.110.js?raw
             https://cdn.jsdelivr.net/gh/ripaojiedian/freenode@main/sub?raw
