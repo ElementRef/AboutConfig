@@ -105,8 +105,12 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js',
   'nobyda.google.captcha.js':
     'https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js',
-  'peng.ym.sub.store.js':
-    'https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store.no-bundle.js',
+  'sub.store.org.0.js':
+    'https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js',
+  'sub.store.org.1.js':
+    'https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js',
+  'sub.store.org.cron.sync.artifacts.js':
+    'https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js',
   'zirawell.ddxq.js':
     'https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js',
   'zzpiglet.wechat.110.js':
