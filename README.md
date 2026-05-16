@@ -7,10 +7,13 @@
 - [Ad Block Test | OBFUSGATED](https://obfusgated.com/tools/ad-block-test)
 - [Ad Blocker Test - Check Your AdBlocker Works | Turtlecute](https://adblock.turtlecute.org)
 - [AdBlock Test: Benchmark Your Ad-Blocker's Performance!](https://getblockify.com/adblock-test)
+- [AdBlock Tester - Test Your Ad Blocker Effectiveness | Free Online Tool](https://adblocktesters.com)
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/ch/adblock-test.html)
+- [iBlockAds | AdBlock Test](https://www.iblockads.net/test)
+- [Super Adblock Test](https://superadblocktest.com)
 - [Test Ad Block - Toolz](https://d3ward.com/adblock)
 
 ### 其他测试工具（排名不分先后）：
@@ -18,10 +21,12 @@
 - [Check Browser Fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
+- [Test DNS Filtering - Check Your DNS Security & Safe Search](https://www.dnsfiltertest.com/test)
 
 ### 广告规则订阅（排名不分先后）：
 
 - [Blocklists – Little Snitch Mini](https://www.obdev.at/en/products/littlesnitch-mini/blocklists.html)
+- [Personalized Blocklist Generator - Take Full Control of Your Network](https://sefinek.net/blocklist-generator)
 - [广告过滤规则订阅中心](https://adguardfilters-chinese.pages.dev)
 
 ### 特别感谢名单（排名不分先后）：
