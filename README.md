@@ -8,13 +8,15 @@
 - [Ad Blocker Test - Check Your AdBlocker Works | Turtlecute](https://adblock.turtlecute.org)
 - [AdBlock Test: Benchmark Your Ad-Blocker's Performance!](https://getblockify.com/adblock-test)
 - [AdBlock Tester - Test Your Ad Blocker Effectiveness | Free Online Tool](https://adblocktesters.com)
+- [AdBlock Tester – 高级广告拦截、跟踪器与 DNS 拦截测试](https://adblocktester.pages.dev)
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
 - [Check Your AdBlock Effectiveness Мобильные прокси](https://mobileproxy.space/ch/adblock-test.html)
 - [iBlockAds | AdBlock Test](https://www.iblockads.net/test)
-- [Super Adblock Test](https://superadblocktest.com)
+- [Super AdBlock Test](https://superadblocktest.com)
 - [Test Ad Block - Toolz](https://d3ward.com/adblock)
+- [Test My AdBlocker — DNS Block Test for Ads, Malware & NSFW | Harbor Privacy](https://adblock.harborprivacy.com/adblock-test)
 
 ### 其他测试工具（排名不分先后）：
 
