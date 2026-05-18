@@ -78,6 +78,7 @@
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@laylavish](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)
+- [@lige47](https://github.com/lige47/lige_icon)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
 - [@lobehub](https://github.com/lobehub/lobe-icons)
 - [@LoopDns](https://github.com/LoopDns/Fuck-you-MIUI)
