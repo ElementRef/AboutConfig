@@ -32,6 +32,7 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amap.js',
   'ddgksf2013.amdc.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js',
+  'ddgksf2013.baidu.pan.js': 'https://ddgksf2013.top/scripts/bdpan.ads.js',
   'ddgksf2013.cai.niao.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js',
   'ddgksf2013.cai.yun.js':
@@ -95,6 +96,8 @@ const RESOURCES = {
   'ddgksf2013.ximalaya.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
   'ddgksf2013.zhihu.js': 'https://ddgksf2013.top/scripts/zhihu.ads.js',
+  'i.ringo.weather.kit.response.js':
+    'https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js',
   'kop.xiao.ip.api.js':
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js',
   'kop.xiao.resource.parser.js':
@@ -105,6 +108,8 @@ const RESOURCES = {
     'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js',
   'nobyda.google.captcha.js':
     'https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js',
+  's7ven.young.it.home.js':
+    'https://raw.githubusercontent.com/S7venYoung/QuantumultX/master/js/IThome_remove_ads_qx.js',
   'sub.store.org.0.js':
     'https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js',
   'sub.store.org.1.js':

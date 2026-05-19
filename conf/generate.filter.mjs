@@ -170,6 +170,7 @@ const RESOURCES = {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
       'https://dl.oisd.nl/oisd_small_surge.list',
+      'https://klraw.pages.dev/kelv1n1n/script/main/filter/pdd.snippet',
       'https://loon.103516.xyz/Rule/PCDN.lsr',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/BlockHTTPDNS/BlockHTTPDNS.list',
