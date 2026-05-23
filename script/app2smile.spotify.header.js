@@ -1,2 +1,2 @@
-// 2026/5/23 11:52:18 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/app2smile.spotify.header.js
+// 2026/5/24 05:57:32 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/app2smile.spotify.header.js
 let headers=$request.headers;delete headers["If-None-Match"];$done({headers});
