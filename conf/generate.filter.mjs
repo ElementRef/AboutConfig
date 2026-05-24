@@ -498,6 +498,7 @@ function mapMixture(text = '') {
     textPure.includes('!') ||
     textPure.includes('+')
   ) {
+    // 经过转换，URL-REGEX 似乎不被支持
     return '';
   } else if (
     captialTextTemp.startsWith('HOST,') ||
@@ -532,6 +533,7 @@ function mapMixture(text = '') {
   ) {
     return `HOST-WILDCARD,${textPure}`;
   } else if (captialTextTemp.startsWith('URL-REGEX,')) {
+    // 经过转换，URL-REGEX 似乎不被支持
     return '';
   } else if (captialTextTemp.startsWith('IP-ASN,')) {
     return `IP-ASN,${textPure},no-resolve`;
