@@ -245,7 +245,6 @@ const RESOURCES = {
   OPENAIMIXTURE: {
     FILENAME: 'element.ref.openai.mixture.ini',
     SRC: [
-      'https://ddgksf2013.top/filter/Ai.yaml',
       'https://loon.103516.xyz/Rule/AI.lsr',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Anthropic/Anthropic.list',
