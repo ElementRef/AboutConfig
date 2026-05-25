@@ -31,7 +31,7 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
     const headers = {
       'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
-      'User-Agent': 'QuantumultX/843'
+      'User-Agent': 'Quantumult X/1.6.0 CFNetwork/1492.0.1 Darwin/23.3.0'
     };
     if (
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||

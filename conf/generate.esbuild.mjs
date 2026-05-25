@@ -140,7 +140,7 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
     const headers = {
       'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
-      'User-Agent': 'Surge macOS/1663'
+      'User-Agent': 'Surge/3642 CFNetwork/1492.0.1 Darwin/23.3.0'
     };
     if (
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
