@@ -1,2 +1,2 @@
-// 2026/5/29 06:41:48 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.caixin.js
+// 2026/5/30 06:38:24 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.caixin.js
 var body=$response.body.replace(/sday":"[^"]*"/g,'sday":"2029-12-01 00:00:00"').replace(/eday":"[^"]*"/g,'eday":"2029-12-30 00:00:00"').replace(/intval":\d/g,'intval":0');$done({body});
