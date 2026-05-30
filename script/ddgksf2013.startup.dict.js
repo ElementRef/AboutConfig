@@ -1,2 +1,2 @@
-// 2026/5/30 06:38:24 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.dict.js
+// 2026/5/31 06:03:03 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.dict.js
 $done({body:"{}"});
