@@ -259,7 +259,8 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/ai.list',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf'
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
+      'https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list'
     ],
     MAPFN: mapMixture
   },

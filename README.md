@@ -109,6 +109,7 @@
 - [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
 - [@tiuxo](https://github.com/tiuxo/hosts)
 - [@uselibrary](https://github.com/uselibrary/PCDN)
+- [@viewer12](https://github.com/viewer12/OverseasAI.list)
 - [@VirgilClyne](https://github.com/VirgilClyne/GetSomeFries)
 - [@vvbbnn00](https://github.com/vvbbnn00/WARP-Clash-API)
 - [@wdmpa](https://github.com/wdmpa/content-farm-list)
