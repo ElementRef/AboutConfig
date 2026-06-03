@@ -27,6 +27,7 @@
 ### 其他测试工具（排名不分先后）：
 
 - [Check Browser Fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
+- [Claude AI IP 检测 - IP 纯净度 - Claude IP 风险查询 - Net.Coffee](https://ip.net.coffee/claude)
 - [Claude AI IP 检测 - IPinfo.CV - 网络工具箱](https://ipinfo.cv/claude-ai-check)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
