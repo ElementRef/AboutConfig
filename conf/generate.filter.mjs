@@ -171,7 +171,8 @@ const RESOURCES = {
     SRC: [
       'https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.escape.custom.ini'
-    ]
+    ],
+    MAPFN: mapMixture
   },
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
