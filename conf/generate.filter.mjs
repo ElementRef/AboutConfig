@@ -166,6 +166,13 @@ const MIXTUREWHITELIST = {
   'optimus-ads.amap.com': 'optimus-ads.amap.com' // 高德地图重写处理
 };
 const RESOURCES = {
+  ESCAPEMIXTURE: {
+    FILENAME: 'element.ref.escape.mixture.ini',
+    SRC: [
+      'https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.escape.custom.ini'
+    ]
+  },
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
