@@ -2,32 +2,112 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  /**
-   * 域名后缀
-   * 2026.06.18
-   * 因为开启了「规则修正」分流
-   * 只好大幅删减
-   */
+  '.0.0.cn': '0.0.cn',
+  '.000nethost.com': '000nethost.com',
+  '.0937jyg.com': '0937jyg.com',
   '.102.112.2o7.net': '102.112.2o7.net',
   '.102.122.207.net': '102.122.207.net',
+  '.51y5.net': '51y5.net',
+  '.52896368.com': '52896368.com',
+  '.5clo0xmbf.com': '5clo0xmbf.com',
+  '.79j68qav2.com': '79j68qav2.com',
+  '.8pv9vvi9b.com': '8pv9vvi9b.com',
+  '.actonservice.com': 'actonservice.com',
+  '.ad.xiaomi.com': 'ad.xiaomi.com',
+  '.agoracalyce.net': 'agoracalyce.net',
+  '.agvisorpro.com': 'agvisorpro.com',
+  '.ahacdn.me': 'ahacdn.me',
+  '.almosafer.com': 'almosafer.com',
+  '.aomg5bzv7.com': 'aomg5bzv7.com',
+  '.apps.iocnt.de': 'apps.iocnt.de',
+  '.atianqi.com': 'atianqi.com',
+  '.bravenet.com': 'bravenet.com',
+  '.carte-gr.total.fr': 'carte-gr.total.fr',
+  '.cjmadobe.com': 'cjmadobe.com',
+  '.cosmicnewspulse.com': 'cosmicnewspulse.com',
+  '.demoamericas275.adobe.com': 'demoamericas275.adobe.com',
+  '.doubleclick.net': 'doubleclick.net',
+  '.downloadlink.icu': 'downloadlink.icu',
+  '.duckdns.org': 'duckdns.org',
+  '.e.kuaishou.com': 'e.kuaishou.com',
+  '.elemis.com': 'elemis.com',
+  '.eloquademos.com': 'eloquademos.com',
   '.espmp-agfr.net': 'espmp-agfr.net',
   '.espmp-aufr.net': 'espmp-aufr.net',
   '.espmp-cufr.net': 'espmp-cufr.net',
   '.espmp-nifr.net': 'espmp-nifr.net',
   '.espmp-pofr.net': 'espmp-pofr.net',
+  '.fdj.fr': 'fdj.fr',
+  '.flourishpath.online': 'flourishpath.online',
+  '.focalink.com': 'focalink.com',
+  '.getui.com': 'getui.com',
+  '.globalsources.com': 'globalsources.com',
+  '.headlines.pw': 'headlines.pw',
+  '.hello.spriggy.com.au': 'hello.spriggy.com.au',
+  '.herokuapp.com': 'herokuapp.com',
+  '.heytapmobile.com': 'heytapmobile.com',
+  '.hipages.com.au': 'hipages.com.au',
+  '.hubcloud.com.cn': 'hubcloud.com.cn',
+  '.igexin.com': 'igexin.com',
+  '.imrworldwide.com': 'imrworldwide.com',
+  '.information.maileva.com': 'information.maileva.com',
+  '.infura-ipfs.io': 'infura-ipfs.io',
+  '.innocreed.com': 'innocreed.com',
+  '.innovatedating.com': 'innovatedating.com',
+  '.intellitxt.com': 'intellitxt.com',
+  '.ipfs.dweb.link': 'ipfs.dweb.link',
+  '.ipfs.flk-ipfs.xyz': 'ipfs.flk-ipfs.xyz',
+  '.jinghuaqitb.com': 'jinghuaqitb.com',
+  '.jmooreassoc.com': 'jmooreassoc.com',
+  '.kimhasa.com': 'kimhasa.com',
+  '.l5eamr17d.com': 'l5eamr17d.com',
+  '.linodeusercontent.com': 'linodeusercontent.com',
+  '.llnw.net': 'llnw.net',
+  '.msecnd.net': 'msecnd.net',
+  '.musical.ly': 'musical.ly',
+  '.nespresso.com': 'nespresso.com',
+  '.net.easyjet.com': 'net.easyjet.com',
+  '.net.iberostar.com': 'net.iberostar.com',
+  '.net.mydays.de': 'net.mydays.de',
+  '.notice.spriggy.com.au': 'notice.spriggy.com.au',
+  '.offermatica.com': 'offermatica.com',
+  '.ohhmyoffers.com': 'ohhmyoffers.com',
+  '.omniture.com': 'omniture.com',
+  '.onion': 'onion',
   '.ott.cibntv.com': 'ott.cibntv.com',
   '.ott.cibntv.net': 'ott.cibntv.net',
+  '.p2l.info': 'p2l.info',
+  '.pandasuite.com': 'pandasuite.com',
+  '.pop6.com': 'pop6.com',
+  '.pstatp.com': 'pstatp.com',
+  '.rsc.cdn77.org': 'rsc.cdn77.org',
+  '.s.joyn.de': 's.joyn.de',
+  '.safebrowsing.apple': 'safebrowsing.apple',
+  '.sanvello.com': 'sanvello.com',
+  '.sextracker.be': 'sextracker.be',
+  '.siemensplmevents.com': 'siemensplmevents.com',
   '.skyscanner.com': 'skyscanner.com',
   '.skyscanner.net': 'skyscanner.net',
-  '.0937jyg.com': '0937jyg.com',
-  '.52896368.com': '52896368.com',
-  '.5clo0xmbf.com': '5clo0xmbf.com',
-  '.79j68qav2.com': '79j68qav2.com',
-  '.8pv9vvi9b.com': '8pv9vvi9b.com',
-  '.aomg5bzv7.com': 'aomg5bzv7.com',
-  '.l5eamr17d.com': 'l5eamr17d.com',
+  '.snssdk.com': 'snssdk.com',
+  '.stats.esomniture.com': 'stats.esomniture.com',
+  '.stuff.co.nz': 'stuff.co.nz',
+  '.swrve.com': 'swrve.com',
+  '.tajawal.com': 'tajawal.com',
+  '.themoneytizer.com': 'themoneytizer.com',
+  '.tntdrama.com': 'tntdrama.com',
+  '.treknew.fun': 'treknew.fun',
+  '.u3.ucweb.com': 'u3.ucweb.com',
+  '.umeng.com': 'umeng.com',
+  '.umengcloud.com': 'umengcloud.com',
+  '.ut.taobao.com': 'ut.taobao.com',
+  '.videostrip.com': 'videostrip.com',
+  '.viglink.com': 'viglink.com',
+  '.web-marketing.ai': 'web-marketing.ai',
+  '.weebly.com': 'weebly.com',
+  '.wolterskluwer.com': 'wolterskluwer.com',
   '.y2sysv81v.com': 'y2sysv81v.com',
-  '.z00yy6tg2.com': 'z00yy6tg2.com'
+  '.yinzcam.com': 'yinzcam.com',
+  '.z00yy6tg2.com': 'z00yy6tg2.com',
   /**
    * 域名前缀，找最大特征，避免误杀
    * HOST-KEYWORD 优先级较低，会出现逃逸问题
@@ -37,10 +117,32 @@ const MIXTUREBLOCKLIST = {
    * a.munters.apple.com 会因为 HOST-KEYWORD 优先级太低
    * 导致 a.munters.apple.com 被匹配为直连策略，导致拦截失效
    * 但是，似乎 Surge|Quantumult X|Clash 的策略优先级都不太一样
-   * 2026.06.18
-   * 因为开启了「规则修正」分流
-   * 只好直接清空
    */
+  'dii1.bitiba.': 'dii1.bitiba',
+  'dii1.zooplus.': 'dii1.zooplus',
+  'dii2.bitiba.': 'dii2.bitiba',
+  'dii2.zoohit.': 'dii2.zoohit',
+  'dii2.zooplus.': 'dii2.zooplus',
+  'dii3.bitiba.': 'dii3.bitiba',
+  'dii3.zoohit.': 'dii3.zoohit',
+  'dii3.zooplus.': 'dii3.zooplus',
+  'dii4.bitiba.': 'dii4.bitiba',
+  'dii4.zoohit.': 'dii4.zoohit',
+  'dii4.zooplus.': 'dii4.zooplus',
+  'email-am.jll.': 'email-am.jll',
+  'email-ap.jll.': 'email-ap.jll',
+  'email-cm.jll.': 'email-cm.jll',
+  'email-em.jll.': 'email-em.jll',
+  'rtb-useast-v4.': 'rtb-useast-v4',
+  'rtb-useast.': 'rtb-useast',
+  'rtb-uswest-v4.': 'rtb-uswest-v4',
+  'rtb-uswest.': 'rtb-uswest',
+  't.antalis.': 't.antalis',
+  't.dilling.': 't.dilling',
+  't.locasun.': 't.locasun',
+  'xml-eu-v4.': 'xml-eu-v4',
+  'xml-eu.': 'xml-eu',
+  'xml-v4.': 'xml-v4'
 };
 const MIXTUREWHITELIST = {
   '10.0.0.0/8': '10.0.0.0/8', // 软件内置规则
@@ -64,14 +166,6 @@ const MIXTUREWHITELIST = {
   'optimus-ads.amap.com': 'optimus-ads.amap.com' // 高德地图重写处理
 };
 const RESOURCES = {
-  ESCAPEMIXTURE: {
-    FILENAME: 'element.ref.escape.mixture.ini',
-    SRC: [
-      'https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.escape.custom.ini'
-    ],
-    MAPFN: mapMixture
-  },
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
