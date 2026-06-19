@@ -186,6 +186,7 @@ async function useESBuildToScriptDir(TMPFILE) {
     const ESBUILDSPAWN = spawn(`esbuild`, [
       `${TMPFILEPATH}`,
       '--allow-overwrite',
+      '--charset=utf8',
       '--drop:console',
       '--drop:debugger',
       '--legal-comments=none',

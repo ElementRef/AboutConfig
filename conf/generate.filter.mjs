@@ -3,111 +3,124 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
   '.0.0.cn': '0.0.cn',
-  '.000nethost.com': '000nethost.com',
-  '.0937jyg.com': '0937jyg.com',
-  '.102.112.2o7.net': '102.112.2o7.net',
-  '.102.122.207.net': '102.122.207.net',
+  '.fdj.fr': 'fdj.fr',
+
   '.51y5.net': '51y5.net',
+  '.llnw.net': 'llnw.net',
+  '.p2l.info': 'p2l.info',
+  '.pop6.com': 'pop6.com',
+
+  '.ahacdn.me': 'ahacdn.me',
+  '.getui.com': 'getui.com',
+  '.s.joyn.de': 's.joyn.de',
+  '.swrve.com': 'swrve.com',
+  '.umeng.com': 'umeng.com',
+
+  '.elemis.com': 'elemis.com',
+  '.igexin.com': 'igexin.com',
+  '.msecnd.net': 'msecnd.net',
+  '.musical.ly': 'musical.ly',
+  '.pstatp.com': 'pstatp.com',
+  '.snssdk.com': 'snssdk.com',
+  '.weebly.com': 'weebly.com',
+
+  '.0937jyg.com': '0937jyg.com',
+  '.atianqi.com': 'atianqi.com',
+  '.duckdns.org': 'duckdns.org',
+  '.kimhasa.com': 'kimhasa.com',
+  '.stuff.co.nz': 'stuff.co.nz',
+  '.tajawal.com': 'tajawal.com',
+  '.treknew.fun': 'treknew.fun',
+  '.viglink.com': 'viglink.com',
+  '.yinzcam.com': 'yinzcam.com',
+
   '.52896368.com': '52896368.com',
+  '.bravenet.com': 'bravenet.com',
+  '.cjmadobe.com': 'cjmadobe.com',
+  '.focalink.com': 'focalink.com',
+  '.headlines.pw': 'headlines.pw',
+  '.omniture.com': 'omniture.com',
+  '.sanvello.com': 'sanvello.com',
+  '.tntdrama.com': 'tntdrama.com',
+  '.u3.ucweb.com': 'u3.ucweb.com',
+
   '.5clo0xmbf.com': '5clo0xmbf.com',
   '.79j68qav2.com': '79j68qav2.com',
   '.8pv9vvi9b.com': '8pv9vvi9b.com',
-  '.actonservice.com': 'actonservice.com',
-  '.ad.xiaomi.com': 'ad.xiaomi.com',
-  '.agoracalyce.net': 'agoracalyce.net',
-  '.agvisorpro.com': 'agvisorpro.com',
-  '.ahacdn.me': 'ahacdn.me',
-  '.almosafer.com': 'almosafer.com',
   '.aomg5bzv7.com': 'aomg5bzv7.com',
+  '.l5eamr17d.com': 'l5eamr17d.com',
+  '.y2sysv81v.com': 'y2sysv81v.com',
+  '.z00yy6tg2.com': 'z00yy6tg2.com',
+
+  '.ad.xiaomi.com': 'ad.xiaomi.com',
+  '.almosafer.com': 'almosafer.com',
   '.apps.iocnt.de': 'apps.iocnt.de',
-  '.atianqi.com': 'atianqi.com',
-  '.bravenet.com': 'bravenet.com',
-  '.carte-gr.total.fr': 'carte-gr.total.fr',
-  '.cjmadobe.com': 'cjmadobe.com',
-  '.cosmicnewspulse.com': 'cosmicnewspulse.com',
-  '.demoamericas275.adobe.com': 'demoamericas275.adobe.com',
-  '.doubleclick.net': 'doubleclick.net',
-  '.downloadlink.icu': 'downloadlink.icu',
-  '.duckdns.org': 'duckdns.org',
+  '.herokuapp.com': 'herokuapp.com',
+  '.innocreed.com': 'innocreed.com',
+  '.nespresso.com': 'nespresso.com',
+  '.net.mydays.de': 'net.mydays.de',
+  '.rsc.cdn77.org': 'rsc.cdn77.org',
+  '.sextracker.be': 'sextracker.be',
+  '.ut.taobao.com': 'ut.taobao.com',
+
+  '.000nethost.com': '000nethost.com',
+  '.agvisorpro.com': 'agvisorpro.com',
   '.e.kuaishou.com': 'e.kuaishou.com',
-  '.elemis.com': 'elemis.com',
-  '.eloquademos.com': 'eloquademos.com',
   '.espmp-agfr.net': 'espmp-agfr.net',
   '.espmp-aufr.net': 'espmp-aufr.net',
   '.espmp-cufr.net': 'espmp-cufr.net',
   '.espmp-nifr.net': 'espmp-nifr.net',
   '.espmp-pofr.net': 'espmp-pofr.net',
-  '.fdj.fr': 'fdj.fr',
-  '.flourishpath.online': 'flourishpath.online',
-  '.focalink.com': 'focalink.com',
-  '.getui.com': 'getui.com',
-  '.globalsources.com': 'globalsources.com',
-  '.headlines.pw': 'headlines.pw',
-  '.hello.spriggy.com.au': 'hello.spriggy.com.au',
-  '.herokuapp.com': 'herokuapp.com',
-  '.heytapmobile.com': 'heytapmobile.com',
   '.hipages.com.au': 'hipages.com.au',
-  '.hubcloud.com.cn': 'hubcloud.com.cn',
-  '.igexin.com': 'igexin.com',
-  '.imrworldwide.com': 'imrworldwide.com',
-  '.information.maileva.com': 'information.maileva.com',
   '.infura-ipfs.io': 'infura-ipfs.io',
-  '.innocreed.com': 'innocreed.com',
-  '.innovatedating.com': 'innovatedating.com',
   '.intellitxt.com': 'intellitxt.com',
   '.ipfs.dweb.link': 'ipfs.dweb.link',
-  '.ipfs.flk-ipfs.xyz': 'ipfs.flk-ipfs.xyz',
-  '.jinghuaqitb.com': 'jinghuaqitb.com',
-  '.jmooreassoc.com': 'jmooreassoc.com',
-  '.kimhasa.com': 'kimhasa.com',
-  '.l5eamr17d.com': 'l5eamr17d.com',
-  '.linodeusercontent.com': 'linodeusercontent.com',
-  '.llnw.net': 'llnw.net',
-  '.msecnd.net': 'msecnd.net',
-  '.musical.ly': 'musical.ly',
-  '.nespresso.com': 'nespresso.com',
-  '.net.easyjet.com': 'net.easyjet.com',
-  '.net.iberostar.com': 'net.iberostar.com',
-  '.net.mydays.de': 'net.mydays.de',
-  '.notice.spriggy.com.au': 'notice.spriggy.com.au',
-  '.offermatica.com': 'offermatica.com',
-  '.ohhmyoffers.com': 'ohhmyoffers.com',
-  '.omniture.com': 'omniture.com',
-  '.onion': 'onion',
   '.ott.cibntv.com': 'ott.cibntv.com',
   '.ott.cibntv.net': 'ott.cibntv.net',
-  '.p2l.info': 'p2l.info',
   '.pandasuite.com': 'pandasuite.com',
-  '.pop6.com': 'pop6.com',
-  '.pstatp.com': 'pstatp.com',
-  '.rsc.cdn77.org': 'rsc.cdn77.org',
-  '.s.joyn.de': 's.joyn.de',
-  '.safebrowsing.apple': 'safebrowsing.apple',
-  '.sanvello.com': 'sanvello.com',
-  '.sextracker.be': 'sextracker.be',
-  '.siemensplmevents.com': 'siemensplmevents.com',
   '.skyscanner.com': 'skyscanner.com',
   '.skyscanner.net': 'skyscanner.net',
-  '.snssdk.com': 'snssdk.com',
-  '.stats.esomniture.com': 'stats.esomniture.com',
-  '.stuff.co.nz': 'stuff.co.nz',
-  '.swrve.com': 'swrve.com',
-  '.tajawal.com': 'tajawal.com',
-  '.themoneytizer.com': 'themoneytizer.com',
-  '.tntdrama.com': 'tntdrama.com',
-  '.treknew.fun': 'treknew.fun',
-  '.u3.ucweb.com': 'u3.ucweb.com',
-  '.umeng.com': 'umeng.com',
   '.umengcloud.com': 'umengcloud.com',
-  '.ut.taobao.com': 'ut.taobao.com',
   '.videostrip.com': 'videostrip.com',
-  '.viglink.com': 'viglink.com',
+
+  '.102.112.2o7.net': '102.112.2o7.net',
+  '.102.122.207.net': '102.122.207.net',
+
+  '.agoracalyce.net': 'agoracalyce.net',
+  '.doubleclick.net': 'doubleclick.net',
+  '.eloquademos.com': 'eloquademos.com',
+  '.hubcloud.com.cn': 'hubcloud.com.cn',
+  '.jinghuaqitb.com': 'jinghuaqitb.com',
+  '.jmooreassoc.com': 'jmooreassoc.com',
+  '.net.easyjet.com': 'net.easyjet.com',
+  '.offermatica.com': 'offermatica.com',
+  '.ohhmyoffers.com': 'ohhmyoffers.com',
+
+  '.actonservice.com': 'actonservice.com',
+  '.downloadlink.icu': 'downloadlink.icu',
+  '.heytapmobile.com': 'heytapmobile.com',
+  '.imrworldwide.com': 'imrworldwide.com',
   '.web-marketing.ai': 'web-marketing.ai',
-  '.weebly.com': 'weebly.com',
+
+  '.carte-gr.total.fr': 'carte-gr.total.fr',
+  '.globalsources.com': 'globalsources.com',
+  '.ipfs.flk-ipfs.xyz': 'ipfs.flk-ipfs.xyz',
+  '.net.iberostar.com': 'net.iberostar.com',
+  '.themoneytizer.com': 'themoneytizer.com',
   '.wolterskluwer.com': 'wolterskluwer.com',
-  '.y2sysv81v.com': 'y2sysv81v.com',
-  '.yinzcam.com': 'yinzcam.com',
-  '.z00yy6tg2.com': 'z00yy6tg2.com',
+
+  '.innovatedating.com': 'innovatedating.com',
+  '.safebrowsing.apple': 'safebrowsing.apple',
+
+  '.cosmicnewspulse.com': 'cosmicnewspulse.com',
+  '.flourishpath.online': 'flourishpath.online',
+
+  '.hello.spriggy.com.au': 'hello.spriggy.com.au',
+  '.siemensplmevents.com': 'siemensplmevents.com',
+  '.stats.esomniture.com': 'stats.esomniture.com',
+
+  '.linodeusercontent.com': 'linodeusercontent.com',
+  '.notice.spriggy.com.au': 'notice.spriggy.com.au',
   /**
    * 域名前缀，找最大特征，避免误杀
    * HOST-KEYWORD 优先级较低，会出现逃逸问题
@@ -119,51 +132,58 @@ const MIXTUREBLOCKLIST = {
    * 但是，似乎 Surge|Quantumult X|Clash 的策略优先级都不太一样
    */
   'dii1.bitiba.': 'dii1.bitiba',
-  'dii1.zooplus.': 'dii1.zooplus',
   'dii2.bitiba.': 'dii2.bitiba',
-  'dii2.zoohit.': 'dii2.zoohit',
-  'dii2.zooplus.': 'dii2.zooplus',
   'dii3.bitiba.': 'dii3.bitiba',
-  'dii3.zoohit.': 'dii3.zoohit',
-  'dii3.zooplus.': 'dii3.zooplus',
   'dii4.bitiba.': 'dii4.bitiba',
+
+  'dii1.zoohit.': 'dii1.zoohit',
+  'dii2.zoohit.': 'dii2.zoohit',
+  'dii3.zoohit.': 'dii3.zoohit',
   'dii4.zoohit.': 'dii4.zoohit',
+
+  'dii1.zooplus.': 'dii1.zooplus',
+  'dii2.zooplus.': 'dii2.zooplus',
+  'dii3.zooplus.': 'dii3.zooplus',
   'dii4.zooplus.': 'dii4.zooplus',
+
   'email-am.jll.': 'email-am.jll',
   'email-ap.jll.': 'email-ap.jll',
   'email-cm.jll.': 'email-cm.jll',
   'email-em.jll.': 'email-em.jll',
+
   'rtb-useast-v4.': 'rtb-useast-v4',
-  'rtb-useast.': 'rtb-useast',
   'rtb-uswest-v4.': 'rtb-uswest-v4',
+  'rtb-useast.': 'rtb-useast',
   'rtb-uswest.': 'rtb-uswest',
+
   't.antalis.': 't.antalis',
   't.dilling.': 't.dilling',
   't.locasun.': 't.locasun',
+
   'xml-eu-v4.': 'xml-eu-v4',
   'xml-eu.': 'xml-eu',
   'xml-v4.': 'xml-v4'
 };
 const MIXTUREWHITELIST = {
-  '10.0.0.0/8': '10.0.0.0/8', // 软件内置规则
-  '127.0.0.0/8': '127.0.0.0/8', // 软件内置规则
-  '172.16.0.0/12': '172.16.0.0/12', // 软件内置规则
-  '192.0.0.0/16': '192.0.0.0/16', // 软件内置规则
-  '224.0.0.0/24': '224.0.0.0/24', // 软件内置规则
-  'browserleaks.com': 'browserleaks.com', // DNS 泄露检测
-  'byteimg.com': 'byteimg.com', // 字节静态资源
-  'click.discord.com': 'click.discord.com', // Discord 验证码
-  'ipleak.net': 'ipleak.net', // DNS 泄露检测
-  'juejin.cn': 'juejin.cn', // 掘金官网
-  'parallels.cn': 'parallels.cn', // Parallels 官网
-  'parallels.com': 'parallels.com', // Parallels 官网
-  's.weibo.com': 's.weibo.com', // 微博静态资源
-  'sdkapp.uve.weibo.com': 'sdkapp.uve.weibo.com', // 微博重写处理
-  'static-s.iqiyi.com': 'static-s.iqiyi.com', // 爱奇艺静态资源
-  'staticsns.cdn.bcebos.com': 'staticsns.cdn.bcebos.com', // 百度静态资源
-  'umami.is': 'umami.is', // Umami 官网
-  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn', // 微博重写处理
-  'optimus-ads.amap.com': 'optimus-ads.amap.com' // 高德地图重写处理
+  // 内置规则
+  '10.0.0.0/8': '10.0.0.0/8',
+  '127.0.0.0/8': '127.0.0.0/8',
+  '172.16.0.0/12': '172.16.0.0/12',
+  '192.0.0.0/16': '192.0.0.0/16',
+  '224.0.0.0/24': '224.0.0.0/24',
+  // 静态资源
+  'byteimg.com': 'byteimg.com',
+  's.weibo.com': 's.weibo.com',
+  // 重写处理
+  'optimus-ads.amap.com': 'optimus-ads.amap.com',
+  'sdkapp.uve.weibo.com': 'sdkapp.uve.weibo.com',
+  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn',
+  // 泄露检测
+  'browserleaks.com': 'browserleaks.com',
+  'ipleak.net': 'ipleak.net',
+  // 官网网站
+  'juejin.cn': 'juejin.cn',
+  'umami.is': 'umami.is'
 };
 const RESOURCES = {
   REJECTMIXTURE: {
