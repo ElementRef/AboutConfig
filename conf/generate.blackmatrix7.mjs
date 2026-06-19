@@ -25,7 +25,7 @@ const RULES = {
 async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
   try {
     console.log(
-      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
+      `>>> ${SRC.split('/').reverse()[0]}`.padEnd(92),
       '开始下载 <<<'.padStart(12)
     );
     const headers = {
@@ -82,12 +82,12 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
         }
       });
       console.log(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(92),
         '下载完成 <<<'.padStart(12)
       );
     } else {
       console.error(
-        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(96),
+        `>>> ${SRC.split('/').reverse()[0]}`.padEnd(92),
         '下载失败 >>>'.padStart(12)
       );
     }
@@ -97,7 +97,7 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
 }
 async function writeResourses2File({ FILENAME, HOSTNAME, RULES }) {
   try {
-    console.log(`>>> ${FILENAME}`.padEnd(96), '开始写入 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(92), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const hostname = {
       value: 'hostname='
@@ -123,9 +123,9 @@ async function writeResourses2File({ FILENAME, HOSTNAME, RULES }) {
       resolve(dirname(scriptPath), `../rewrite/${FILENAME}`),
       temp.value
     );
-    console.log(`>>> ${FILENAME}`.padEnd(96), '写入完成 <<<'.padStart(12));
+    console.log(`>>> ${FILENAME}`.padEnd(92), '写入完成 <<<'.padStart(12));
   } catch (error) {
-    console.error(`>>> ${FILENAME}`.padEnd(96), '写入失败 >>>'.padStart(12));
+    console.error(`>>> ${FILENAME}`.padEnd(92), '写入失败 >>>'.padStart(12));
     throw error;
   }
 }

@@ -313,11 +313,11 @@ const RESOURCES = {
 };
 (async () => {
   for await (const key of Object.keys(RESOURCES)) {
-    console.log(`>>> ${key}`.padEnd(96), '开始处理 <<<'.padStart(12));
+    console.log(`>>> ${key}`.padEnd(92), '开始处理 <<<'.padStart(12));
     const RAW = await getResourses(RESOURCES[key]);
     const RES = combineResourses(RAW);
     await writeResourses2File(RES);
-    console.log(`>>> ${key}`.padEnd(96), '处理完成 <<<'.padStart(12));
+    console.log(`>>> ${key}`.padEnd(92), '处理完成 <<<'.padStart(12));
   }
 })();
 async function writeResourses2File({ FILENAME, RES }) {
@@ -393,7 +393,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
           globalThis[`${FILENAME}${dotAmount}`][temp] = temp;
         });
       } else {
-        console.error(`    ${key}`.padEnd(96), `加载失败 >>>`.padStart(12));
+        console.error(`    ${key}`.padEnd(92), `加载失败 >>>`.padStart(12));
       }
     } catch (error) {
       throw error;
@@ -411,7 +411,7 @@ function combineResourses({ FILENAME, RAW }) {
   let REJECTFILENAME = 'element.ref.reject.mixture.ini';
   Object.keys(RAW).forEach(key => {
     console.log(
-      `    ${key}`.padEnd(96),
+      `    ${key}`.padEnd(92),
       RAW[key].length.toString().padStart(12)
     );
     RAWARR = RAWARR.concat(RAW[key]);
@@ -444,7 +444,7 @@ function combineResourses({ FILENAME, RAW }) {
     }
   });
   const RES = Object.keys(RAWRULE).sort();
-  console.log(`    ${FILENAME}`.padEnd(96), RES.length.toString().padStart(12));
+  console.log(`    ${FILENAME}`.padEnd(92), RES.length.toString().padStart(12));
   return {
     FILENAME,
     RES
