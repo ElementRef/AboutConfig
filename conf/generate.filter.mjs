@@ -473,17 +473,17 @@ function mapMixture(text = '') {
   // 删除注释
   if (
     textTemp.includes('-NO-DROP') ||
+    textTemp.includes('#') ||
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
-    textPure.startsWith('"^ht') ||
     textPure.endsWith('.arpa') ||
-    textTemp.startsWith('||') ||
-    textTemp.startsWith('! ') ||
+    textPure.startsWith('"^ht') ||
     textTemp.startsWith(';') ||
+    textTemp.startsWith('! ') ||
     textTemp.startsWith('[') ||
     textTemp.startsWith('/') ||
-    textTemp.startsWith('#') ||
+    textTemp.startsWith('||') ||
     textTemp === ''
   ) {
     return '';
