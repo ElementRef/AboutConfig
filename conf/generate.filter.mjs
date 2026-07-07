@@ -465,25 +465,25 @@ function generateRule(textPure = '') {
   return '';
 }
 function mapMixture(text = '') {
-  const textTemp = text.replace(/ /gim, '');
+  const textTemp = text.replace(/#.*/gim, '').replace(/ /gim, '').trim();
   const textPure = (textTemp.split(',')[1] || '')
     .replace(/^\.|\.$/gim, '')
     .replace(/\/\/.*/gim, '')
     .trim();
   // 删除注释
   if (
+    textPure.startsWith('"^ht') ||
+    textPure.endsWith('.arpa') ||
     textTemp.includes('-NO-DROP') ||
-    textTemp.includes('#') ||
     textTemp.includes('acl4.ssr') ||
     textTemp.includes('skk.moe') ||
     textTemp.includes('sukkaw') ||
-    textPure.endsWith('.arpa') ||
-    textPure.startsWith('"^ht') ||
-    textTemp.startsWith(';') ||
-    textTemp.startsWith('! ') ||
-    textTemp.startsWith('[') ||
-    textTemp.startsWith('/') ||
     textTemp.startsWith('||') ||
+    textTemp.startsWith('! ') ||
+    textTemp.startsWith('#') ||
+    textTemp.startsWith('/') ||
+    textTemp.startsWith('[') ||
+    textTemp.startsWith(';') ||
     textTemp === ''
   ) {
     return '';
