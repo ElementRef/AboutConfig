@@ -1,2 +1,2 @@
-// 2026/7/10 06:25:41 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.fly.js
+// 2026/7/11 06:08:13 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.fly.js
 var body=$response.body,ddgksf2013=JSON.parse(body);ddgksf2013.Variables.data.threaddetail&&(ddgksf2013.Variables.data.threaddetail.tagadv="",ddgksf2013.Variables.data.threaddetail.threadapp_ad_video=[],ddgksf2013.Variables.data.threaddetail.pingyouadv="",ddgksf2013.Variables.data.threaddetail.middleadv="",ddgksf2013.Variables.data.threaddetail.bottomadv="",ddgksf2013.Variables.data.threaddetail.appdetailadv=[]);$done({body:JSON.stringify(ddgksf2013)});
