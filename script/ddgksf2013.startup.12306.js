@@ -1,2 +1,2 @@
-// 2026/7/11 06:08:13 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.12306.js
+// 2026/7/12 05:54:07 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.12306.js
 var obj=JSON.parse($request.body),ddgksf2013={};obj.placementNo=="0007"?(ddgksf2013.materialsList=[{billMaterialsId:"6491",filePath:"ddgksf2013",creativeType:1}],ddgksf2013.advertParam={skipTime:1},ddgksf2013.code="00"):ddgksf2013=obj.placementNo=="G0054"?{code:"00",materialsList:[{}]}:{code:"00",message:"无广告返回"},typeof $task<"u"?$done({body:JSON.stringify(ddgksf2013)}):$done({response:{body:JSON.stringify(ddgksf2013)}});
