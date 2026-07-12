@@ -371,6 +371,7 @@
     "*.mobileconfig": "html",
     "*.nvue": "vue",
     "*.opml": "html",
+    "*.svg": "text/xml",
     "*.wxs": "javascript",
     "*.wxss": "css",
     "*.xml": "html",
@@ -675,7 +676,7 @@
   "turboConsoleLog.insertEnclosingFunction": false,
   "turboConsoleLog.isTurboTelemetryEnabled": false,
   "turboConsoleLog.logCorrectionNotificationEnabled": false,
-  "turboConsoleLog.logMessagePrefix": "",
+  "turboConsoleLog.logMessagePrefix": "TCL",
   "turboConsoleLog.logMessageSuffix": "",
   "turboConsoleLog.wrapLogMessage": false,
   "update.mode": "manual",
@@ -715,7 +716,8 @@
   "workbench.editor.titleScrollbarVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
-    "*.plist": "default"
+    "*.plist": "default",
+    "*.svg": "default"
   },
   "workbench.enableExperiments": false,
   "workbench.fontAliasing": "default",
