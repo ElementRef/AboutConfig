@@ -1,2 +1,2 @@
-// 2026/7/12 05:54:07 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/app2smile.spotify.json.js
+// 2026/7/13 05:55:26 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/app2smile.spotify.json.js
 let url=$request.url;url.includes("com:443")&&(url=url.replace(/com:443/,"com"));url.includes("platform=iphone")&&(url=url.replace(/platform=iphone/,"platform=ipad"));$done({url});
