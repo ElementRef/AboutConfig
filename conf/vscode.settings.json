@@ -487,7 +487,7 @@
   "git.useForcePushIfIncludes": false,
   "github.showAvatar": false,
   "headwind.removeDuplicates": true,
-  "hideComments.cleanStart": false,
+  "hideComments.cleanStart": true,
   "html.autoClosingTags": true,
   "html.format.enable": true,
   "html.format.indentHandlebars": true,
