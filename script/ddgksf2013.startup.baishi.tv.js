@@ -1,2 +1,2 @@
-// 2026/7/20 09:19:57 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.baishi.tv.js
+// 2026/7/21 06:03:01 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.baishi.tv.js
 var obj=JSON.parse($response.body);obj.dt.data=Object.values(obj.dt.data).filter(e=>e.jumpTypeString.indexOf("广告")===-1),$done({body:JSON.stringify(obj)});
