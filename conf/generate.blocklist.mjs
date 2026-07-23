@@ -31,7 +31,7 @@ async function getResourses(SRC, LIST = []) {
     const headers = {
       'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
-      'User-Agent': 'Shadowrocket/2541 CFNetwork/1492.0.1 Darwin/23.3.0'
+      'User-Agent': 'Shadowrocket/2.2.90 (iPhone17,1; iOS 26.5.2)'
     };
     if (
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||

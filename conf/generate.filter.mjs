@@ -359,7 +359,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       const headers = {
         'Accept-Language': 'en-US',
         'Content-Type': 'text/plain',
-        'User-Agent': 'Loon/965 CFNetwork/1492.0.1 Darwin/23.3.0'
+        'User-Agent': 'Loon/3.5.0 (iPhone17,1; iOS 26.5.2)'
       };
       if (
         src.startsWith('https://patch-diff.githubusercontent.com') ||
