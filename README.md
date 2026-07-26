@@ -8,7 +8,7 @@
 - [Ad Blocker Test - Check Your AdBlocker Works | Turtlecute](https://adblock.turtlecute.org)
 - [AdBlock Test: Benchmark Your Ad-Blocker's Performance!](https://getblockify.com/adblock-test)
 - [AdBlock Tester - Test Your Ad Blocker Effectiveness | Free Online Tool](https://adblocktesters.com)
-- [AdBlock Tester – 高级广告拦截、跟踪器与 DNS 拦截测试](https://adblocktester.pages.dev)
+- [AdBlock Tester - 高级广告拦截、跟踪器与 DNS 拦截测试](https://adblocktester.pages.dev)
 - [AdBlock Tester: Test Your AdBlock Extensions](https://adblock-tester.com)
 - [AdBlockBench - Test Your Ad Blocker Effectiveness](https://adblockbench.com)
 - [Block Ads! AdBlock Test](https://blockads.fivefilters.org)
@@ -20,7 +20,7 @@
 
 ### 广告规则订阅（排名不分先后）：
 
-- [Blocklists – Little Snitch Mini](https://www.obdev.at/en/products/littlesnitch-mini/blocklists.html)
+- [Blocklists - Little Snitch Mini](https://www.obdev.at/en/products/littlesnitch-mini/blocklists.html)
 - [Personalized Blocklist Generator - Take Full Control of Your Network](https://sefinek.net/blocklist-generator)
 - [广告过滤规则订阅中心](https://adguardfilters-chinese.pages.dev)
 
@@ -74,10 +74,10 @@
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
 - [@hululu1068](https://github.com/hululu1068/AdGuard-Rule)
 - [@ignaciocastro](https://github.com/ignaciocastro/a-dove-is-dumb)
+- [@ishowshu](https://github.com/ishowshu/qx)
 - [@jdlingyu](https://github.com/jdlingyu/ad-wars)
 - [@jerryn70](https://github.com/jerryn70/GoodbyeAds)
 - [@Johnshall](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
-- [@kelv1n1n](https://klraw.pages.dev/kelv1n1n/script)
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@laylavish](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)

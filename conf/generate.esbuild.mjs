@@ -98,6 +98,14 @@ const RESOURCES = {
   'ddgksf2013.zhihu.js': 'https://ddgksf2013.top/scripts/zhihu.ads.js',
   'i.ringo.weather.kit.response.js':
     'https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js',
+  'ishowshu.goofish.js':
+    'https://raw.githubusercontent.com/ishowshu/qx/main/script/goofish.js',
+  'ishowshu.pupu.js':
+    'https://raw.githubusercontent.com/ishowshu/qx/main/script/pp.js',
+  'ishowshu.shihuo.js':
+    'https://raw.githubusercontent.com/ishowshu/qx/main/script/shihuo.js',
+  'ishowshu.soul.js':
+    'https://raw.githubusercontent.com/ishowshu/qx/main/script/soul_qx.js',
   'kop.xiao.ip.api.js':
     'https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js',
   'kop.xiao.resource.parser.js':
