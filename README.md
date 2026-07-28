@@ -110,6 +110,7 @@
 - [@SukkaW](https://github.com/SukkaW/Surge)
 - [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
 - [@tiuxo](https://github.com/tiuxo/hosts)
+- [@tugepaopao](https://github.com/tugepaopao/Image-Storage)
 - [@uselibrary](https://github.com/uselibrary/PCDN)
 - [@viewer12](https://github.com/viewer12/OverseasAI.list)
 - [@VirgilClyne](https://github.com/VirgilClyne/GetSomeFries)
@@ -120,17 +121,3 @@
 - [@yous](https://github.com/yous/YousList)
 - [@yqc007](https://github.com/yqc007/QuantumultX)
 - [@ZenmoFeiShi](https://github.com/ZenmoFeiShi/Qx)
-
-<!--
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ElementRef/ElementRef/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ElementRef/ElementRef/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ElementRef/ElementRef/output/github-contribution-grid-snake.svg">
-  </picture>
- -->
-<!--
-  ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElementRef&theme=nord_dark)
- -->
-<!--
- ![](https://profile-counter.glitch.me/ElementRef-plugins/count.svg)
- -->
