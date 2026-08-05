@@ -1,2 +1,2 @@
-// 2026/8/5 09:20:30 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.hang.lv.zong.heng.js
+// 2026/8/6 06:13:58 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ddgksf2013.startup.hang.lv.zong.heng.js
 var ua=$request.headers.rpid||$request.headers.Rpid;ua.includes("10000012")||ua.includes("1000019")?$done({status:"HTTP/1.1 404 Not Found"}):$done({});
