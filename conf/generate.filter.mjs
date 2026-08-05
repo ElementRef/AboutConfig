@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
   '.cfd': 'cfd',
 
+  '.qpon': 'qpon',
   '.rest': 'rest',
 
   '.0.0.cn': '0.0.cn',
