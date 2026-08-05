@@ -2,10 +2,24 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  '.cfd': 'cfd',
+  '.ga': 'ga',
+  '.gq': 'gq',
+  '.tk': 'tk',
 
+  '.biz': 'biz',
+  '.cfd': 'cfd',
+  '.mom': 'mom',
+  '.sbs': 'sbs',
+  '.win': 'win',
+  '.xin': 'xin',
+
+  '.bond': 'bond',
+  '.buzz': 'buzz',
+  '.club': 'club',
   '.qpon': 'qpon',
   '.rest': 'rest',
+
+  '.space': 'space',
 
   '.0.0.cn': '0.0.cn',
   '.fdj.fr': 'fdj.fr',
