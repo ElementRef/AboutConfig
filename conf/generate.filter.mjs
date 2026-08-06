@@ -16,6 +16,7 @@ const MIXTUREBLOCKLIST = {
   '.bond': 'bond',
   '.buzz': 'buzz',
   '.club': 'club',
+  '.cyou': 'cyou',
   '.qpon': 'qpon',
   '.rest': 'rest',
 
