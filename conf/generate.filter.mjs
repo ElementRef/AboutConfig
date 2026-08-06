@@ -2,25 +2,45 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
+  '.cc': 'cc',
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
 
+  '.bid': 'bid',
   '.biz': 'biz',
   '.cfd': 'cfd',
+  '.icu': 'icu',
+  '.lol': 'lol',
   '.mom': 'mom',
+  '.mov': 'mov',
+  '.rip': 'rip',
   '.sbs': 'sbs',
   '.win': 'win',
   '.xin': 'xin',
+  '.zip': 'zip',
 
+  '.beer': 'beer',
   '.bond': 'bond',
   '.buzz': 'buzz',
   '.club': 'club',
   '.cyou': 'cyou',
+  '.help': 'help',
+  '.live': 'live',
+  '.mobi': 'mobi',
   '.qpon': 'qpon',
   '.rest': 'rest',
+  '.shop': 'shop',
+  '.work': 'work',
 
   '.space': 'space',
+  '.world': 'world',
+
+  '.online': 'online',
+  '.racing': 'racing',
+
+  '.monster': 'monster',
+  '.website': 'website',
 
   '.0.0.cn': '0.0.cn',
   '.fdj.fr': 'fdj.fr',
