@@ -26,7 +26,7 @@ const MIXTUREBLOCKLIST = {
   '.cyou': 'cyou',
   '.help': 'help',
   '.live': 'live',
-  '.mobi': 'mobi',
+  // '.mobi': 'mobi', 叮咚买菜会完蛋
   '.qpon': 'qpon',
   '.rest': 'rest',
   '.shop': 'shop',
