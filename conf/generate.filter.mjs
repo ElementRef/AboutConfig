@@ -2,7 +2,6 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  '.cc': 'cc',
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
