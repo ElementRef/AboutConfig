@@ -38,14 +38,15 @@ const MIXTUREBLOCKLIST = {
   '.space': 'space',
   '.world': 'world',
 
+  '.0.0.cn': '0.0.cn',
+  '.fdj.fr': 'fdj.fr',
   '.online': 'online',
   '.racing': 'racing',
 
+  '.207.net': '207.net',
+  '.2o7.net': '2o7.net',
   '.monster': 'monster',
   '.website': 'website',
-
-  '.0.0.cn': '0.0.cn',
-  '.fdj.fr': 'fdj.fr',
 
   '.51y5.net': '51y5.net',
   '.llnw.net': 'llnw.net',
@@ -125,9 +126,6 @@ const MIXTUREBLOCKLIST = {
   '.skyscanner.net': 'skyscanner.net',
   '.umengcloud.com': 'umengcloud.com',
   '.videostrip.com': 'videostrip.com',
-
-  '.102.112.2o7.net': '102.112.2o7.net',
-  '.102.122.207.net': '102.122.207.net',
 
   '.agoracalyce.net': 'agoracalyce.net',
   '.doubleclick.net': 'doubleclick.net',
