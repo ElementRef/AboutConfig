@@ -95,6 +95,7 @@ const MIXTUREBLOCKLIST = {
   '.z00yy6tg2.com': 'z00yy6tg2.com',
 
   '.ad.xiaomi.com': 'ad.xiaomi.com',
+  '.ajo.adobe.com': 'ajo.adobe.com',
   '.almosafer.com': 'almosafer.com',
   '.apps.iocnt.de': 'apps.iocnt.de',
   '.herokuapp.com': 'herokuapp.com',
