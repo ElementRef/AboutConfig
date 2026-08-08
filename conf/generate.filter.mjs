@@ -2,6 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
+  // '.cc': 'cc', 一部分静态资源托管于此
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
@@ -17,6 +18,7 @@ const MIXTUREBLOCKLIST = {
   '.sbs': 'sbs',
   '.win': 'win',
   '.xin': 'xin',
+  '.xyz': 'xyz',
   '.zip': 'zip',
 
   '.beer': 'beer',
@@ -30,6 +32,7 @@ const MIXTUREBLOCKLIST = {
   '.qpon': 'qpon',
   '.rest': 'rest',
   '.shop': 'shop',
+  '.site': 'site',
   '.work': 'work',
 
   '.space': 'space',
