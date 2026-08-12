@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  // '.cc': 'cc', 一部分静态资源托管于此
+  // '.cc': 'cc', 部分静态资源托管
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
@@ -28,7 +28,7 @@ const MIXTUREBLOCKLIST = {
   '.cyou': 'cyou',
   '.help': 'help',
   '.live': 'live',
-  // '.mobi': 'mobi', 叮咚买菜会完蛋
+  // '.mobi': 'mobi', 叮咚买菜加载失败
   '.qpon': 'qpon',
   '.rest': 'rest',
   '.shop': 'shop',
@@ -206,12 +206,6 @@ const MIXTUREBLOCKLIST = {
   'xml-v4.': 'xml-v4'
 };
 const MIXTUREWHITELIST = {
-  // 内置规则
-  '10.0.0.0/8': '10.0.0.0/8',
-  '127.0.0.0/8': '127.0.0.0/8',
-  '172.16.0.0/12': '172.16.0.0/12',
-  '192.0.0.0/16': '192.0.0.0/16',
-  '224.0.0.0/24': '224.0.0.0/24',
   // 静态资源
   'byteimg.com': 'byteimg.com',
   's.weibo.com': 's.weibo.com',
