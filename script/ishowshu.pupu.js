@@ -1,2 +1,2 @@
-// 2026/8/13 05:50:21 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ishowshu.pupu.js
+// 2026/8/14 05:50:24 https://raw.githubusercontent.com/ElementRef/AboutConfig/main/script/ishowshu.pupu.js
 let url=$request.url,body=$response.body,obj=JSON.parse(body);url.indexOf("/advertisement/v1")!=-1&&(obj.data=obj.data.filter(e=>![30,50,90,320,100,770].includes(e.region_code)),obj.data=obj.data.map(e=>(e.region_code===2&&(e.positions=e.positions.filter(i=>![890,60,2,240,2503].includes(i.component_code))),e)),body=JSON.stringify(obj),$done({body}));url.indexOf("/orders/list")!=-1&&(obj&&obj.data&&obj.data.forEach(e=>{e&&delete e.just_in_time_comment}),body=JSON.stringify(obj),$done({body}));body=JSON.stringify(obj);$done({body});
