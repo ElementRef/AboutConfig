@@ -241,7 +241,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_ad_only.conf',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/Adblock4limbo.list',
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
-      'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/ad.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
@@ -273,6 +272,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/cn.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
+      'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/private.txt',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/microsoft-cn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/lan.conf'
     ],
