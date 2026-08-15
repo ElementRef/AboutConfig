@@ -108,14 +108,14 @@ async function writeResourses2File({ FILENAME, HOSTNAME, RULES }) {
       })} https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf\n`
     };
     Object.keys(HOSTNAME)
-      .sort()
+      .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
       .forEach(v => {
         hostname.value = `${hostname.value}${v},`;
       });
     hostname.value = hostname.value.slice(0, -1);
     temp.value = temp.value + hostname.value + '\n';
     Object.keys(RULES)
-      .sort()
+      .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
       .forEach(rule => {
         temp.value = temp.value + rule + '\n';
       });

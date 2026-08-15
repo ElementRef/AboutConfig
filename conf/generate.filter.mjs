@@ -480,7 +480,9 @@ function combineResourses({ FILENAME, RAW }) {
       RAWRULE[rule] = rule;
     }
   });
-  const RES = Object.keys(RAWRULE).sort();
+  const RES = Object.keys(RAWRULE).sort((a, b) =>
+    a.toLowerCase().localeCompare(b.toLowerCase())
+  );
   console.log(`    ${FILENAME}`.padEnd(92), RES.length.toString().padStart(12));
   return {
     FILENAME,

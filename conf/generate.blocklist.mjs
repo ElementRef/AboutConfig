@@ -81,7 +81,11 @@ async function handleList(LIST) {
           RAW.push(rule.replace(/\#(\W|\w|\s)+/gim, '').trim());
         }
       });
-      resolve([...new Set(RAW)].sort());
+      resolve(
+        [...new Set(RAW)].sort((a, b) =>
+          a.toLowerCase().localeCompare(b.toLowerCase())
+        )
+      );
     } catch (error) {
       reject(error);
     }

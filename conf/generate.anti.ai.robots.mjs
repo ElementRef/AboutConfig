@@ -74,11 +74,20 @@ async function handleList(LIST) {
         const ruleValue = lowerRule.startsWith('user-agent:')
           ? rule.replace(/^user-agent:\s*/i, '').trim()
           : '';
-        if (ruleValue && ruleValue !== '*') {
+        if (
+          ruleValue &&
+          ruleValue !== '*' &&
+          !ruleValue.includes('$') &&
+          !ruleValue.includes('?')
+        ) {
           RAW.push(`User-agent: ${ruleValue}`);
         }
       });
-      resolve([...new Set(RAW)].sort());
+      resolve(
+        [...new Set(RAW)].sort((a, b) =>
+          a.toLowerCase().localeCompare(b.toLowerCase())
+        )
+      );
     } catch (error) {
       reject(error);
     }
