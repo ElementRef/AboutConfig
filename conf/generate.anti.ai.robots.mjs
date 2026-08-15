@@ -24,7 +24,7 @@ async function getResourses(SRC, LIST = []) {
     const headers = {
       'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
-      'User-Agent': 'Shadowrocket/2.2.90 (iPhone17,1; iOS 26.5.2)'
+      'User-Agent': 'mihomo/1.19.29'
     };
     if (
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
@@ -91,7 +91,7 @@ async function writeResourses2File({ FILENAME, RES }) {
     };
     const park = {};
     RES.forEach(item => {
-      park[rough.trim()] = rough.trim();
+      park[item.trim()] = item.trim();
     });
     Object.values(park).forEach(rule => {
       temp.value = temp.value + rule + '\n';
