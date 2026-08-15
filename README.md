@@ -1,4 +1,4 @@
-### 自用 [Code 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/vscode.settings.json?raw)、~~[Q••••••••••• X 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/quantumult.x.conf?raw)~~、[uBlocklist 规则](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw) 
+### 自用 [Code 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/vscode.settings.json?raw)、~~[Q••••••••••• X 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/quantumult.x.conf?raw)~~、[uBlocklist 规则](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw) 、[ai-robots.txt](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.anti.ai.robots.ini?raw)
 
 ### 推荐搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 和 [EncryptedDNS](https://github.com/paulmillr/encrypted-dns) 食用
 
@@ -39,6 +39,7 @@
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
 - [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
+- [@ai-robots-txt](https://github.com/ai-robots-txt/ai.robots.txt)
 - [@app2smile](https://github.com/app2smile/rules)
 - [@badmojr](https://github.com/badmojr/1Hosts)
 - [@BinaryDefense](https://www.binarydefense.com)
@@ -72,6 +73,7 @@
 - [@Hackl0us](https://github.com/Hackl0us/GeoIP2-CN)
 - [@hagezi](https://github.com/hagezi/dns-blocklists)
 - [@hBlock](https://hblock.molinero.dev)
+- [@honojs](https://github.com/honojs/middleware)
 - [@hoshsadiq](https://github.com/hoshsadiq/adblock-nocoin-list)
 - [@hululu1068](https://github.com/hululu1068/AdGuard-Rule)
 - [@ignaciocastro](https://github.com/ignaciocastro/a-dove-is-dumb)
@@ -110,6 +112,7 @@
 - [@StevenBlack](https://github.com/StevenBlack/hosts)
 - [@SukkaW](https://github.com/SukkaW/Surge)
 - [@TG-Twilight](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
+- [@tinaponting](https://github.com/tinaponting/ai-robots-scrapers)
 - [@tiuxo](https://github.com/tiuxo/hosts)
 - [@tugepaopao](https://github.com/tugepaopao/Image-Storage)
 - [@uselibrary](https://github.com/uselibrary/PCDN)
