@@ -70,8 +70,12 @@ async function handleList(LIST) {
     try {
       const RAW = [];
       LIST.forEach(rule => {
-        if (rule && rule.toLowerCase().startsWith('user-agent:')) {
-          RAW.push(rule.trim());
+        const lowerRule = rule ? rule.toLowerCase().trim() : '';
+        const ruleValue = lowerRule.startsWith('user-agent:')
+          ? rule.replace(/^user-agent:\s*/i, '').trim()
+          : '';
+        if (ruleValue && ruleValue !== '*') {
+          RAW.push(`User-agent: ${ruleValue}`);
         }
       });
       resolve([...new Set(RAW)].sort());
