@@ -1,6 +1,43 @@
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+const BLOCKLIST = [
+  // https://en.wikipedia.org/robots.txt
+  'User-agent: CloudflareBrowserRenderingCrawler',
+  'User-agent: DOC',
+  'User-agent: Download Ninja',
+  'User-agent: fast',
+  'User-agent: Fetch',
+  'User-agent: grub-client',
+  'User-agent: HTTrack',
+  'User-agent: IsraBot',
+  'User-agent: k2spider',
+  'User-agent: larbin',
+  'User-agent: libwww',
+  'User-agent: linko',
+  'User-agent: Mediapartners-Google*',
+  'User-agent: Microsoft.URL.Control',
+  'User-agent: MJ12bot',
+  'User-agent: MSIECrawler',
+  'User-agent: NPBot',
+  'User-agent: Offline Explorer',
+  'User-agent: Orthogaffe',
+  'User-agent: SemrushBot',
+  'User-agent: sitecheck.internetseer.com',
+  'User-agent: SiteSnagger',
+  'User-agent: Teleport',
+  'User-agent: TeleportPro',
+  'User-agent: UbiCrawler',
+  'User-agent: WebCopier',
+  'User-agent: WebReaper',
+  'User-agent: WebStripper',
+  'User-agent: WebZIP',
+  'User-agent: wget',
+  'User-agent: Xenu',
+  'User-agent: Zao',
+  'User-agent: Zealbot',
+  'User-agent: ZyBORG'
+];
 const RESOURCES = [
   'https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt',
   'https://raw.githubusercontent.com/honojs/middleware/main/packages/ua-blocker/src/generated.ts',
@@ -68,7 +105,7 @@ async function getResourses(SRC, LIST = []) {
 async function handleList(LIST) {
   return new Promise((resolve, reject) => {
     try {
-      const RAW = [];
+      const RAW = [...BLOCKLIST];
       LIST.forEach(rule => {
         const lowerRule = rule ? rule.toLowerCase().trim() : '';
         const ruleValue = lowerRule.startsWith('user-agent:')
