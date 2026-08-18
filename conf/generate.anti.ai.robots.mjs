@@ -145,7 +145,9 @@ async function writeResourses2File({ FILENAME, RES }) {
       temp.value = temp.value + rule + '\n';
     });
     temp.value =
-      temp.value + 'Content-Signal: search=no, ai-input=no, ai-train=no' + '\n';
+      temp.value +
+      'Content-Signal: use=immediate, search=no, ai-train=no, ai-input=no' +
+      '\n';
     temp.value = temp.value + 'Disallow: /' + '\n';
     await writeFile(
       resolve(dirname(scriptPath), `../filter/${FILENAME}`),
