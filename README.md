@@ -27,12 +27,13 @@
 
 ### 其他测试工具（排名不分先后）：
 
+- [A Reliable IP Address API Built By Developers For Developers](https://ipapi.is)
 - [Check Browser Fingerprinting with Pixelscan Analyze Your Digital Trail](https://pixelscan.net/fingerprint-check)
 - [Claude AI IP 检测 - IP 纯净度 - Claude IP 风险查询 - Net.Coffee](https://ip.net.coffee/claude)
 - [Claude AI IP 检测 - IPinfo.CV - 网络工具箱](https://ipinfo.cv/claude-ai-check)
+- [Content Signals](https://contentsignals.org)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
-- [ipapi.is](https://ipapi.is)
 - [Test DNS Filtering - Check Your DNS Security & Safe Search](https://www.dnsfiltertest.com/test)
 
 ### 特别感谢名单（排名不分先后）：
