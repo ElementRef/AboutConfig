@@ -103,9 +103,7 @@ async function writeResourses2File({ FILENAME, HOSTNAME, RULES }) {
       value: 'hostname='
     };
     const temp = {
-      value: `# ${new Date().toLocaleString('zh-CN', {
-        timeZone: 'Asia/Shanghai'
-      })} https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf\n`
+      value: `# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf\n`
     };
     Object.keys(HOSTNAME)
       .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))

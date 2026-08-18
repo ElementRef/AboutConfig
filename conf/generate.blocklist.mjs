@@ -96,9 +96,7 @@ async function writeResourses2File({ FILENAME, RES }) {
     console.log(`>>> ${FILENAME}`.padEnd(92), '开始写入 <<<'.padStart(12));
     const scriptPath = fileURLToPath(import.meta.url);
     const temp = {
-      value: `# ${new Date().toLocaleString('zh-CN', {
-        timeZone: 'Asia/Shanghai'
-      })} https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
+      value: `# https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/${FILENAME}\n`
     };
     const park = {};
     RES.forEach(item => {
