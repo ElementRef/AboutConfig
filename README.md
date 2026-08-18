@@ -34,6 +34,7 @@
 - [Content Signals](https://contentsignals.org)
 - [Cover Your Tracks](https://coveryourtracks.eff.org)
 - [IP Address Infomation and Risk Analysis | IPPure](https://ippure.com)
+- [Robots.txt Tester: Check Your Robots.txt File for Free](https://seranking.com/free-tools/robots-txt-tester.html)
 - [Test DNS Filtering - Check Your DNS Security & Safe Search](https://www.dnsfiltertest.com/test)
 
 ### 特别感谢名单（排名不分先后）：
