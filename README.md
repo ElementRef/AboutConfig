@@ -104,6 +104,7 @@
 - [@Paxxs](https://github.com/Paxxs/Google-Blocklist)
 - [@PBH-BTN](https://github.com/PBH-BTN/BTN-Collected-Rules)
 - [@privacy-protection-tools](https://github.com/privacy-protection-tools/anti-AD)
+- [@Repcz](https://github.com/Repcz/Tool)
 - [@ripaojiedian](https://github.com/ripaojiedian/freenode)
 - [@S7venYoung](https://github.com/S7venYoung/QuantumultX)
 - [@Semporia](https://github.com/Semporia/TikTok-Unlock)
