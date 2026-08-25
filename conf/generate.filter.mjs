@@ -441,6 +441,7 @@ const MIXTUREBLOCKLIST = {
   '.linodeusercontent.com': 'linodeusercontent.com',
   '.notice.spriggy.com.au': 'notice.spriggy.com.au',
   /**
+   * 记得关闭分流优化！！！
    * 域名前缀，找最大特征，避免误杀
    * HOST-KEYWORD 优先级较低，会出现逃逸问题
    * 所以，只能避开主流公司会使用的「规则前缀」
@@ -450,6 +451,14 @@ const MIXTUREBLOCKLIST = {
    * 导致 a.munters.apple.com 被匹配为直连策略，导致拦截失效
    * 但是，似乎 Surge|Quantumult X|Clash 的策略优先级都不太一样
    */
+  'welcome.item24.': 'welcome.item24',
+  'strack.concur.': 'strack.concur',
+  'web.sensilab.': 'web.sensilab',
+  'webanalytics.': 'webanalytics',
+  'webcontr.': 'webcontr',
+  'web.mapp.': 'web.mapp',
+  'web.news.': 'web.news',
+
   'dii1.bitiba.': 'dii1.bitiba',
   'dii2.bitiba.': 'dii2.bitiba',
   'dii3.bitiba.': 'dii3.bitiba',
@@ -484,6 +493,7 @@ const MIXTUREBLOCKLIST = {
   'xml-eu.': 'xml-eu',
   'xml-v4.': 'xml-v4',
 
+  '.onofficeom.': '.onofficeom.',
   '.www.': '.www.'
 };
 const MIXTUREWHITELIST = {
