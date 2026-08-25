@@ -391,7 +391,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/QuantumultX/rule/BanAD.list',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/reject.txt',
       'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt',
-      'https://raw.githubusercontent.com/Repcz/Tool/X/QuantumultX/Rules/Porn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/my_reject.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/reject-no-drop.conf',
