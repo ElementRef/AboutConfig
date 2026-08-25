@@ -717,7 +717,7 @@ function generateRule(textPure = '') {
   const blockList = Object.entries(MIXTUREBLOCKLIST);
   for (let index = 0; index < blockList.length; index++) {
     const [key, value] = blockList[index];
-    const matcher = key.ends('.')
+    const matcher = key.endsWith('.')
       ? String.prototype.includes
       : String.prototype.endsWith;
     const rule = key.endsWith('.') ? 'HOST-KEYWORD' : 'HOST-SUFFIX';
