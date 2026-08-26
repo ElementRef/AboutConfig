@@ -104,6 +104,7 @@ const MIXTUREBLOCKLIST = {
   '.herokuapp.com': 'herokuapp.com',
   '.innocreed.com': 'innocreed.com',
   '.nespresso.com': 'nespresso.com',
+  '.net.anwalt.de': 'net.anwalt.de',
   '.net.mydays.de': 'net.mydays.de',
   '.rsc.cdn77.org': 'rsc.cdn77.org',
   '.sextracker.be': 'sextracker.be',
@@ -242,6 +243,7 @@ const MIXTUREBLOCKLIST = {
   '.6dca8ddc4d.com': '6dca8ddc4d.com',
   '.6e64d84de7.com': '6e64d84de7.com',
   '.6ff38f6d1b.com': '6ff38f6d1b.com',
+  '.7416e71cb8.com': '7416e71cb8.com',
   '.75fcdb0acb.com': '75fcdb0acb.com',
   '.760a131226.com': '760a131226.com',
   '.7878ba0587.com': '7878ba0587.com',
@@ -258,6 +260,7 @@ const MIXTUREBLOCKLIST = {
   '.82067251a6.com': '82067251a6.com',
   '.8231e5c33a.com': '8231e5c33a.com',
   '.83c6db1e10.com': '83c6db1e10.com',
+  '.841eda195c.com': '841eda195c.com',
   '.847ab3dcab.com': '847ab3dcab.com',
   '.856d79ad49.com': '856d79ad49.com',
   '.880a6212c5.com': '880a6212c5.com',
@@ -351,6 +354,7 @@ const MIXTUREBLOCKLIST = {
   '.d79dcdbf0a.com': 'd79dcdbf0a.com',
   '.da1b05834d.com': 'da1b05834d.com',
   '.dba1bc1fdf.com': 'dba1bc1fdf.com',
+  '.dd268fdaa5.com': 'dd268fdaa5.com',
   '.dd795a9d50.com': 'dd795a9d50.com',
   '.dec0c1a14f.com': 'dec0c1a14f.com',
   '.dec1daff38.com': 'dec1daff38.com',
@@ -493,6 +497,7 @@ const MIXTUREBLOCKLIST = {
   'xml-eu.': 'xml-eu',
   'xml-v4.': 'xml-v4',
 
+  '.autoscout24.': '.autoscout24.',
   '.onofficeom.': '.onofficeom.',
   '.www.': '.www.'
 };
