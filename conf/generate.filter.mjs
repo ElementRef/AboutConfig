@@ -175,6 +175,7 @@ const MIXTUREBLOCKLIST = {
   '.3e0d59c264.com': '3e0d59c264.com',
   '.3f38ffbdb5.com': '3f38ffbdb5.com',
   '.3f56937492.com': '3f56937492.com',
+  '.415f764d57.com': '415f764d57.com',
   '.41e67cacf7.com': '41e67cacf7.com',
   '.43201617eb.com': '43201617eb.com',
   '.43a0e1ae69.com': '43a0e1ae69.com',
