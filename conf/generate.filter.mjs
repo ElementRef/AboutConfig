@@ -225,6 +225,7 @@ const MIXTUREBLOCKLIST = {
   '.634263882b.com': '634263882b.com',
   '.638e922b9c.com': '638e922b9c.com',
   '.63b3c3ecc2.com': '63b3c3ecc2.com',
+  '.64236b1b40.com': '64236b1b40.com',
   '.64980aaffd.com': '64980aaffd.com',
   '.65ae01603e.com': '65ae01603e.com',
   '.660d588959.com': '660d588959.com',
@@ -456,51 +457,63 @@ const MIXTUREBLOCKLIST = {
    * 导致 a.munters.apple.com 被匹配为直连策略，导致拦截失效
    * 但是，似乎 Surge|Quantumult X|Clash 的策略优先级都不太一样
    */
-  'welcome.item24.': 'welcome.item24',
-  'strack.concur.': 'strack.concur',
-  'web.sensilab.': 'web.sensilab',
-  'webanalytics.': 'webanalytics',
-  'webcontr.': 'webcontr',
-  'web.mapp.': 'web.mapp',
-  'web.news.': 'web.news',
+  'dii1.zooplus.': 'dii1.zooplus.',
+  'dii2.zooplus.': 'dii2.zooplus.',
+  'dii3.zooplus.': 'dii3.zooplus.',
+  'dii4.zooplus.': 'dii4.zooplus.',
+  'email-am.jll.': 'email-am.jll.',
+  'email-ap.jll.': 'email-ap.jll.',
+  'email-cm.jll.': 'email-cm.jll.',
+  'email-em.jll.': 'email-em.jll.',
 
-  'dii1.bitiba.': 'dii1.bitiba',
-  'dii2.bitiba.': 'dii2.bitiba',
-  'dii3.bitiba.': 'dii3.bitiba',
-  'dii4.bitiba.': 'dii4.bitiba',
+  'dii1.bitiba.': 'dii1.bitiba.',
+  'dii2.bitiba.': 'dii2.bitiba.',
+  'dii3.bitiba.': 'dii3.bitiba.',
+  'dii4.bitiba.': 'dii4.bitiba.',
+  'dii1.zoohit.': 'dii1.zoohit.',
+  'dii2.zoohit.': 'dii2.zoohit.',
+  'dii3.zoohit.': 'dii3.zoohit.',
+  'dii4.zoohit.': 'dii4.zoohit.',
 
-  'dii1.zoohit.': 'dii1.zoohit',
-  'dii2.zoohit.': 'dii2.zoohit',
-  'dii3.zoohit.': 'dii3.zoohit',
-  'dii4.zoohit.': 'dii4.zoohit',
+  'affiliate.': 'affiliate.',
+  't.antalis.': 't.antalis.',
+  't.dilling.': 't.dilling.',
+  't.locasun.': 't.locasun.',
 
-  'dii1.zooplus.': 'dii1.zooplus',
-  'dii2.zooplus.': 'dii2.zooplus',
-  'dii3.zooplus.': 'dii3.zooplus',
-  'dii4.zooplus.': 'dii4.zooplus',
+  'webcontr.': 'webcontr.',
+  'web.mapp.': 'web.mapp.',
+  'web.news.': 'web.news.',
 
-  'email-am.jll.': 'email-am.jll',
-  'email-ap.jll.': 'email-ap.jll',
-  'email-cm.jll.': 'email-cm.jll',
-  'email-em.jll.': 'email-em.jll',
-
-  'rtb-useast-v4.': 'rtb-useast-v4',
-  'rtb-uswest-v4.': 'rtb-uswest-v4',
-  'rtb-useast.': 'rtb-useast',
-  'rtb-uswest.': 'rtb-uswest',
-
-  'affiliate.': 'affiliate',
-  't.antalis.': 't.antalis',
-  't.dilling.': 't.dilling',
-  't.locasun.': 't.locasun',
-
-  'xml-eu-v4.': 'xml-eu-v4',
-  'xml-eu.': 'xml-eu',
-  'xml-v4.': 'xml-v4',
-
+  '.celebratevitamins.': '.celebratevitamins.',
   '.autoscout24.': '.autoscout24.',
   '.onofficeom.': '.onofficeom.',
-  '.www.': '.www.'
+  '.www.': '.www.',
+  '.xn--': '.xn--',
+
+  'welcome.item24.': 'welcome.item24.',
+  'strack.concur.': 'strack.concur.',
+  'web.sensilab.': 'web.sensilab.',
+  'webanalytics.': 'webanalytics.',
+
+  'rtb-useast-v4.': 'rtb-useast-v4.',
+  'rtb-uswest-v4.': 'rtb-uswest-v4.',
+  'rtb-apac-v4.': 'rtb-apac-v4.',
+  'rtb-useast.': 'rtb-useast.',
+  'rtb-uswest.': 'rtb-uswest.',
+  'rtb-eu-v4.': 'rtb-eu-v4.',
+  'rtb-eu.': 'rtb-eu.',
+
+  'adbsmetrics.': 'adbsmetrics.',
+  'adbmetrics.': 'adbmetrics.',
+  'analytics.': 'analytics.',
+  'ablink.': 'ablink.',
+  'adebis.': 'adebis.',
+  'a8clk.': 'a8clk.',
+  'a8cv.': 'a8cv.',
+
+  'xml-eu-v4.': 'xml-eu-v4.',
+  'xml-eu.': 'xml-eu.',
+  'xml-v4.': 'xml-v4.'
 };
 const MIXTUREWHITELIST = {
   // 静态资源
