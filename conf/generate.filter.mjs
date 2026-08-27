@@ -49,6 +49,8 @@ const MIXTUREBLOCKLIST = {
   '.website': 'website',
 
   '.51y5.net': '51y5.net',
+  '.7eer.net': '7eer.net',
+  '.en25.com': 'en25.com',
   '.llnw.net': 'llnw.net',
   '.p2l.info': 'p2l.info',
   '.pop6.com': 'pop6.com',
@@ -60,14 +62,21 @@ const MIXTUREBLOCKLIST = {
   '.umeng.com': 'umeng.com',
 
   '.98kk89.com': '98kk89.com',
+  '.act‑on.com': 'act‑on.com',
+  '.adjust.com': 'adjust.com',
+  '.appboy.com': 'appboy.com',
   '.elemis.com': 'elemis.com',
+  '.eloqua.com': 'eloqua.com',
   '.igexin.com': 'igexin.com',
   '.msecnd.net': 'msecnd.net',
   '.musical.ly': 'musical.ly',
+  '.pardot.com': 'pardot.com',
   '.pstatp.com': 'pstatp.com',
   '.snssdk.com': 'snssdk.com',
   '.weebly.com': 'weebly.com',
 
+  '.marketo.net': 'marketo.net',
+  '.mktoweb.com': 'mktoweb.com',
   '.0937jyg.com': '0937jyg.com',
   '.5054399.com': '5054399.com',
   '.atianqi.com': 'atianqi.com',
@@ -108,6 +117,7 @@ const MIXTUREBLOCKLIST = {
   '.net.mydays.de': 'net.mydays.de',
   '.rsc.cdn77.org': 'rsc.cdn77.org',
   '.sextracker.be': 'sextracker.be',
+  '.t.antalis.com': 't.antalis.com',
   '.ut.taobao.com': 'ut.taobao.com',
 
   '.012dadaa06.com': '012dadaa06.com',
@@ -337,6 +347,7 @@ const MIXTUREBLOCKLIST = {
   '.cbfb239585.com': 'cbfb239585.com',
   '.cbfb239585.com': 'cbfb239585.com',
   '.cd6b9b5aa4.com': 'cd6b9b5aa4.com',
+  '.cda84af905.com': 'cda84af905.com',
   '.cea95c1acd.com': 'cea95c1acd.com',
   '.ced8c68532.com': 'ced8c68532.com',
   '.cf20334dc1.com': 'cf20334dc1.com',
@@ -351,6 +362,7 @@ const MIXTUREBLOCKLIST = {
   '.d3c6339ed7.com': 'd3c6339ed7.com',
   '.d3d30ac9d4.com': 'd3d30ac9d4.com',
   '.d4bd4c34af.com': 'd4bd4c34af.com',
+  '.d57b6d1e63.com': 'd57b6d1e63.com',
   '.d591f0b765.com': 'd591f0b765.com',
   '.d77155313b.com': 'd77155313b.com',
   '.d79dcdbf0a.com': 'd79dcdbf0a.com',
@@ -400,6 +412,7 @@ const MIXTUREBLOCKLIST = {
   '.espmp-nifr.net': 'espmp-nifr.net',
   '.espmp-pofr.net': 'espmp-pofr.net',
   '.hipages.com.au': 'hipages.com.au',
+  '.hs‑scripts.com': 'hs‑scripts.com',
   '.infura-ipfs.io': 'infura-ipfs.io',
   '.intellitxt.com': 'intellitxt.com',
   '.ipfs.dweb.link': 'ipfs.dweb.link',
@@ -424,6 +437,7 @@ const MIXTUREBLOCKLIST = {
   '.actonservice.com': 'actonservice.com',
   '.downloadlink.icu': 'downloadlink.icu',
   '.heytapmobile.com': 'heytapmobile.com',
+  '.hs‑analytics.net': 'hs‑analytics.net',
   '.imrworldwide.com': 'imrworldwide.com',
   '.web-marketing.ai': 'web-marketing.ai',
 
@@ -513,7 +527,9 @@ const MIXTUREBLOCKLIST = {
 
   'xml-eu-v4.': 'xml-eu-v4.',
   'xml-eu.': 'xml-eu.',
-  'xml-v4.': 'xml-v4.'
+  'xml-v4.': 'xml-v4.',
+
+  '5xxvm.': '5xxvm.'
 };
 const MIXTUREWHITELIST = {
   // 静态资源
