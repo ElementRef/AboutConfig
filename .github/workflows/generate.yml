@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -33,7 +33,7 @@ jobs:
           node conf/generate.blackmatrix7.mjs
           node conf/generate.blocklist.mjs
           node conf/generate.esbuild.mjs
-          /usr/bin/time -v node conf/generate.filter.mjs
+          node conf/generate.filter.mjs
         env:
           GH_TOKEN: ${{ github.token }}
           NODE_OPTIONS: '--use-system-ca'
