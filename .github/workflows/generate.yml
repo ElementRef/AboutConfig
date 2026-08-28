@@ -29,10 +29,10 @@ jobs:
 
       - name: Build with Node
         run: |
-          /usr/bin/time -v node conf/generate.anti.ai.robots.mjs
-          /usr/bin/time -v node conf/generate.blackmatrix7.mjs
-          /usr/bin/time -v node conf/generate.blocklist.mjs
-          /usr/bin/time -v node conf/generate.esbuild.mjs
+          node conf/generate.anti.ai.robots.mjs
+          node conf/generate.blackmatrix7.mjs
+          node conf/generate.blocklist.mjs
+          node conf/generate.esbuild.mjs
           /usr/bin/time -v node conf/generate.filter.mjs
         env:
           GH_TOKEN: ${{ github.token }}
@@ -44,6 +44,12 @@ jobs:
           git config --global user.name ${{ github.actor }}
           git status
           git add --all
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git commit -m '更新分流重写'
           git pull --rebase --autostash
           git push
