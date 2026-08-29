@@ -44,15 +44,18 @@ const RESOURCES = [
   'https://raw.githubusercontent.com/tinaponting/ai-robots-scrapers/main/ROBOTS-HTACCESSTOUSE.txt'
 ];
 (async () => {
-  const LIST = [];
-  await Promise.all(RESOURCES.map(SRC => getResourses(SRC, LIST)));
-  const RES = await handleList(LIST);
+  const MAP = Object.create(null);
+  BLOCKLIST.forEach(value => {
+    MAP[value.toLowerCase().trim()] = value.trim();
+  });
+  await Promise.all(RESOURCES.map(SRC => getResourses(SRC, MAP)));
+  const RES = await handleMap(MAP);
   await writeResourses2File({
     FILENAME: 'element.ref.anti.ai.robots.ini',
     RES
   });
 })();
-async function getResourses(SRC, LIST = []) {
+async function getResourses(SRC, MAP = {}) {
   try {
     console.log(
       `>>> ${SRC.split('/').reverse()[0]}`.padEnd(92),
@@ -85,7 +88,8 @@ async function getResourses(SRC, LIST = []) {
       const text = await RES.text();
       text.split('\n').forEach(rule => {
         if (rule) {
-          LIST.push(rule.trim());
+          const key = rule.trim().toLowerCase();
+          MAP[key] = rule.trim();
         }
       });
       console.log(
@@ -102,14 +106,13 @@ async function getResourses(SRC, LIST = []) {
     throw error;
   }
 }
-async function handleList(LIST) {
+async function handleMap(MAP = {}) {
   return new Promise((resolve, reject) => {
     try {
-      const RAW = [...BLOCKLIST];
-      LIST.forEach(rule => {
-        const lowerRule = rule ? rule.toLowerCase().trim() : '';
-        const ruleValue = lowerRule.startsWith('user-agent:')
-          ? rule.replace(/^user-agent:\s*/i, '').trim()
+      const RAW = [];
+      Object.entries(MAP).forEach(([key, value]) => {
+        const ruleValue = key.startsWith('user-agent:')
+          ? value.replace(/^user-agent:\s*/i, '').trim()
           : '';
         if (
           ruleValue &&
