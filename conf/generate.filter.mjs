@@ -83,6 +83,7 @@ const MIXTUREBLOCKLIST = {
   '.kimhasa.com': 'kimhasa.com',
   '.marketo.net': 'marketo.net',
   '.mktoweb.com': 'mktoweb.com',
+  '.net.rewe.de': 'net.rewe.de',
   '.stuff.co.nz': 'stuff.co.nz',
   '.tajawal.com': 'tajawal.com',
   '.treknew.fun': 'treknew.fun',
@@ -244,6 +245,7 @@ const MIXTUREBLOCKLIST = {
   '.4c4a520279.com': '4c4a520279.com',
   '.4c8b0c080b.com': '4c8b0c080b.com',
   '.4cf2957bbe.com': '4cf2957bbe.com',
+  '.4dccfcf337.com': '4dccfcf337.com',
   '.4f1e5419a2.com': '4f1e5419a2.com',
   '.4f9fbf3477.com': '4f9fbf3477.com',
   '.502ac4420f.com': '502ac4420f.com',
@@ -469,6 +471,7 @@ const MIXTUREBLOCKLIST = {
   '.e918781f38.com': 'e918781f38.com',
   '.ea32481d6e.com': 'ea32481d6e.com',
   '.eb5882aef0.com': 'eb5882aef0.com',
+  '.eb99f6e7e0.com': 'eb99f6e7e0.com',
   '.ec26bf2191.com': 'ec26bf2191.com',
   '.eda4dc1ffe.com': 'eda4dc1ffe.com',
   '.edd41b7f68.com': 'edd41b7f68.com',
@@ -477,6 +480,7 @@ const MIXTUREBLOCKLIST = {
   '.f014b13156.com': 'f014b13156.com',
   '.f07a0277a7.com': 'f07a0277a7.com',
   '.f29c4af968.com': 'f29c4af968.com',
+  '.f32bcceea3.com': 'f32bcceea3.com',
   '.f3e1df5eea.com': 'f3e1df5eea.com',
   '.f4cd8a8bf0.com': 'f4cd8a8bf0.com',
   '.f4f0e4093e.com': 'f4f0e4093e.com',
@@ -591,7 +595,6 @@ const MIXTUREBLOCKLIST = {
   '.autoscout24.': '.autoscout24.',
   '.onofficeom.': '.onofficeom.',
   '.www.': '.www.',
-  '.xn--': '.xn--',
 
   'track.msadcenter.': 'track.msadcenter.',
   'welcome.item24.': 'welcome.item24.',
@@ -602,6 +605,7 @@ const MIXTUREBLOCKLIST = {
   'load.gtm.': 'load.gtm.',
   'load.sst.': 'load.sst.',
   'smetrics.': 'smetrics.',
+  'tracking.': 'tracking.',
 
   'rtb-useast-v4.': 'rtb-useast-v4.',
   'rtb-uswest-v4.': 'rtb-uswest-v4.',
@@ -623,7 +627,10 @@ const MIXTUREBLOCKLIST = {
   'xml-eu.': 'xml-eu.',
   'xml-v4.': 'xml-v4.',
 
-  '5xxvm.': '5xxvm.'
+  '5xxvm.': '5xxvm.',
+
+  '.xn--': '.xn--',
+  'xn--': 'xn--'
 };
 const MIXTUREWHITELIST = {
   // 静态资源
