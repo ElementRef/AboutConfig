@@ -2,7 +2,11 @@ import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  // '.cc': 'cc', 部分静态资源托管
+  /**
+   * '.cc': 'cc', 部分静态资源托管
+   * '.mobi': 'mobi', 叮咚买菜加载失败
+   * '.site': 'site', Launch OS 掉激活
+   */
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
@@ -29,11 +33,9 @@ const MIXTUREBLOCKLIST = {
   '.cyou': 'cyou',
   '.help': 'help',
   '.live': 'live',
-  // '.mobi': 'mobi', 叮咚买菜加载失败
   '.qpon': 'qpon',
   '.rest': 'rest',
   '.shop': 'shop',
-  // '.site': 'site', Launch OS 掉激活
   '.work': 'work',
 
   '.space': 'space',
@@ -598,6 +600,7 @@ const MIXTUREBLOCKLIST = {
 
   'track.msadcenter.': 'track.msadcenter.',
   'welcome.item24.': 'welcome.item24.',
+  'rechenschieber.': 'rechenschieber.',
   'strack.concur.': 'strack.concur.',
   'web.sensilab.': 'web.sensilab.',
   'webanalytics.': 'webanalytics.',
@@ -610,10 +613,15 @@ const MIXTUREBLOCKLIST = {
   'rtb-useast-v4.': 'rtb-useast-v4.',
   'rtb-uswest-v4.': 'rtb-uswest-v4.',
   'rtb-apac-v4.': 'rtb-apac-v4.',
-  'rtb-useast.': 'rtb-useast.',
+  'rtb-apac.': 'rtb-apac.',
+  'rtb2-uswest.': 'rtb2-uswest.',
+  'rtb2-useast.': 'rtb2-useast.',
   'rtb-uswest.': 'rtb-uswest.',
+  'rtb-useast.': 'rtb-useast.',
   'rtb-eu-v4.': 'rtb-eu-v4.',
   'rtb-eu.': 'rtb-eu.',
+
+  'rtk.trk.': 'rtk.trk.',
 
   'adbsmetrics.': 'adbsmetrics.',
   'adbmetrics.': 'adbmetrics.',
@@ -918,10 +926,12 @@ function generateRule(textPure = '') {
   const blockList = Object.entries(MIXTUREBLOCKLIST);
   for (let index = 0; index < blockList.length; index++) {
     const [key, value] = blockList[index];
-    const matcher = key.endsWith('.')
-      ? String.prototype.includes
-      : String.prototype.endsWith;
-    const rule = key.endsWith('.') ? 'HOST-KEYWORD' : 'HOST-SUFFIX';
+    const matcher =
+      key.endsWith('.') || key.endsWith('-')
+        ? String.prototype.includes
+        : String.prototype.endsWith;
+    const rule =
+      key.endsWith('.') || key.endsWith('-') ? 'HOST-KEYWORD' : 'HOST-SUFFIX';
     if (matcher.call(textPure, key)) {
       return `${rule},${value}`;
     }
