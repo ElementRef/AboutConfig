@@ -33,7 +33,7 @@ const MIXTUREBLOCKLIST = {
   '.qpon': 'qpon',
   '.rest': 'rest',
   '.shop': 'shop',
-  '.site': 'site',
+  // '.site': 'site', Launch OS 掉激活
   '.work': 'work',
 
   '.space': 'space',
