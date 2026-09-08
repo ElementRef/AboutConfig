@@ -593,6 +593,17 @@ const MIXTUREBLOCKLIST = {
   'web.mapp.': 'web.mapp.',
   'web.news.': 'web.news.',
 
+  'www0.': 'www0.',
+  'www1.': 'www1.',
+  'www2.': 'www2.',
+  'www3.': 'www3.',
+  'www4.': 'www4.',
+  'www5.': 'www5.',
+  'www6.': 'www6.',
+  'www7.': 'www7.',
+  'www8.': 'www8.',
+  'www9.': 'www9.',
+
   '.celebratevitamins.': '.celebratevitamins.',
   '.autoscout24.': '.autoscout24.',
   '.onofficeom.': '.onofficeom.',
@@ -637,7 +648,6 @@ const MIXTUREBLOCKLIST = {
 
   '5xxvm.': '5xxvm.',
 
-  '.xn--': '.xn--',
   'xn--': 'xn--'
 };
 const MIXTUREWHITELIST = {
