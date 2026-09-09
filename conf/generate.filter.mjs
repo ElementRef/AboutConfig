@@ -618,6 +618,7 @@ const MIXTUREBLOCKLIST = {
   '.autoscout24.': '.autoscout24.',
   '.goldfishss.': '.goldfishss.',
   '.onofficeom.': '.onofficeom.',
+  '.trk.': '.trk.',
   '.www.': '.www.',
 
   'tr.notification-gdpr.': 'tr.notification-gdpr.',
@@ -697,6 +698,7 @@ const MIXTUREBLOCKLIST = {
   'ucjmncxp.': 'ucjmncxp.',
   'webstats.': 'webstats.',
 
+  'knfssst.': 'knfssst.',
   'repdata.': 'repdata.',
   'smetric.': 'smetric.',
   'stapeio.': 'stapeio.',
@@ -709,6 +711,7 @@ const MIXTUREBLOCKLIST = {
   'trkhinv.': 'trkhinv.',
   'webstat.': 'webstat.',
 
+  'elqtrk.': 'elqtrk.',
   'reklam.': 'reklam.',
   'sstgtm.': 'sstgtm.',
   'strack.': 'strack.',
@@ -765,8 +768,6 @@ const MIXTUREBLOCKLIST = {
   'rtb-uswest.': 'rtb-uswest.',
   'rtb-eu-v4.': 'rtb-eu-v4.',
   'rtb-eu.': 'rtb-eu.',
-
-  'rtk.trk.': 'rtk.trk.',
 
   'adbsmetrics.': 'adbsmetrics.',
   'adbmetrics.': 'adbmetrics.',
