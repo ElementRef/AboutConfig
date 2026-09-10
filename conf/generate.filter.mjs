@@ -51,6 +51,8 @@ const MIXTUREBLOCKLIST = {
   '.monster': 'monster',
   '.website': 'website',
 
+  '.vpn.com': '.vpn.com',
+
   '.51y5.net': '51y5.net',
   '.7eer.net': '7eer.net',
   '.en25.com': 'en25.com',
@@ -642,18 +644,22 @@ const MIXTUREBLOCKLIST = {
   'strack.concur.': 'strack.concur.',
   'tr.newsletter.': 'tr.newsletter.',
 
+  'load.metrics.': 'load.metrics.',
   'seniorliving.': 'seniorliving.',
   'tetd.douglas.': 'tetd.douglas.',
   'tk.airfrance.': 'tk.airfrance.',
   'web.sensilab.': 'web.sensilab.',
   'webanalytics.': 'webanalytics.',
 
+  'load.server.': 'load.server.',
+  'meta-events.': 'meta-events.',
   'serverstape.': 'serverstape.',
   'syndication.': 'syndication.',
   'target.vwfs.': 'target.vwfs.',
   'tr.emailing.': 'tr.emailing.',
   'trackingssl.': 'trackingssl.',
 
+  'oascentral.': 'oascentral.',
   'securetags.': 'securetags.',
   'serverside.': 'serverside.',
   'spoluprace.': 'spoluprace.',
@@ -665,7 +671,10 @@ const MIXTUREBLOCKLIST = {
   'tr.gestion.': 'tr.gestion.',
   'tr.welcome.': 'tr.welcome.',
 
+  'load.data.': 'load.data.',
+  'load.dwga.': 'load.dwga.',
   'load.sgtm.': 'load.sgtm.',
+  'marketing.': 'marketing.',
   'plausible.': 'plausible.',
   's.tectake.': 's.tectake.',
   'sa.adidas.': 'sa.adidas.',
@@ -683,6 +692,8 @@ const MIXTUREBLOCKLIST = {
   'yerbalist.': 'yerbalist.',
 
   'boutique.': 'boutique.',
+  'load.api.': 'load.api.',
+  'load.ggl.': 'load.ggl.',
   'load.gtm.': 'load.gtm.',
   'load.sst.': 'load.sst.',
   'partneri.': 'partneri.',
@@ -699,6 +710,9 @@ const MIXTUREBLOCKLIST = {
   'webstats.': 'webstats.',
 
   'knfssst.': 'knfssst.',
+  'load.ss.': 'load.ss.',
+  'measure.': 'measure.',
+  'metrics.': 'metrics.',
   'repdata.': 'repdata.',
   'smetric.': 'smetric.',
   'stapeio.': 'stapeio.',
@@ -712,6 +726,13 @@ const MIXTUREBLOCKLIST = {
   'webstat.': 'webstat.',
 
   'elqtrk.': 'elqtrk.',
+  'load.a.': 'load.a.',
+  'load.d.': 'load.d.',
+  'load.s.': 'load.s.',
+  'load.t.': 'load.t.',
+  'logger.': 'logger.',
+  'lpbhnv.': 'lpbhnv.',
+  'metric.': 'metric.',
   'reklam.': 'reklam.',
   'sstgtm.': 'sstgtm.',
   'strack.': 'strack.',
@@ -728,6 +749,8 @@ const MIXTUREBLOCKLIST = {
   'ywrcqa.': 'ywrcqa.',
 
   '5xxvm.': '5xxvm.',
+  'links.': 'links.',
+  'neoss.': 'neoss.',
   'somni.': 'somni.',
   'ssdda.': 'ssdda.',
   'ssl.o.': 'ssl.o.',
@@ -735,6 +758,8 @@ const MIXTUREBLOCKLIST = {
   'stats.': 'stats.',
   'track.': 'track.',
 
+  'link.': 'link.',
+  'mktg.': 'mktg.',
   'rsst.': 'rsst.',
   'rtrk.': 'rtrk.',
   'sanl.': 'sanl.',
