@@ -814,18 +814,11 @@ const MIXTUREBLOCKLIST = {
   'xn--': 'xn--'
 };
 const MIXTUREWHITELIST = {
-  // 静态资源
-  'byteimg.com': 'byteimg.com',
-  's.weibo.com': 's.weibo.com',
   // 重写处理
+  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn',
   'optimus-ads.amap.com': 'optimus-ads.amap.com',
   'sdkapp.uve.weibo.com': 'sdkapp.uve.weibo.com',
-  'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn',
-  // 泄露检测
-  'browserleaks.com': 'browserleaks.com',
-  'ipleak.net': 'ipleak.net',
   // 官网网站
-  'juejin.cn': 'juejin.cn',
   'umami.is': 'umami.is'
 };
 const RESOURCES = {
