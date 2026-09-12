@@ -38,6 +38,7 @@ const MIXTUREBLOCKLIST = {
   '.shop': 'shop',
   '.work': 'work',
 
+  '.codes': 'codes',
   '.space': 'space',
   '.world': 'world',
 
@@ -51,7 +52,7 @@ const MIXTUREBLOCKLIST = {
   '.monster': 'monster',
   '.website': 'website',
 
-  '.vpn.com': '.vpn.com',
+  '.vpn.com': 'vpn.com',
 
   '.51y5.net': '51y5.net',
   '.7eer.net': '7eer.net',
@@ -631,6 +632,7 @@ const MIXTUREBLOCKLIST = {
   'tr.serviceclient.': 'tr.serviceclient.',
   'track.msadcenter.': 'track.msadcenter.',
 
+  'images.response.': 'images.response.',
   'thegreatesthits.': 'thegreatesthits.',
   'tr.recouvrement.': 'tr.recouvrement.',
 
@@ -644,6 +646,7 @@ const MIXTUREBLOCKLIST = {
   'strack.concur.': 'strack.concur.',
   'tr.newsletter.': 'tr.newsletter.',
 
+  'app.response.': 'app.response.',
   'load.metrics.': 'load.metrics.',
   'seniorliving.': 'seniorliving.',
   'tetd.douglas.': 'tetd.douglas.',
@@ -651,6 +654,9 @@ const MIXTUREBLOCKLIST = {
   'web.sensilab.': 'web.sensilab.',
   'webanalytics.': 'webanalytics.',
 
+  'advertising.': 'advertising.',
+  'images.info.': 'images.info.',
+  'information.': 'information.',
   'load.server.': 'load.server.',
   'meta-events.': 'meta-events.',
   'serverstape.': 'serverstape.',
@@ -659,6 +665,10 @@ const MIXTUREBLOCKLIST = {
   'tr.emailing.': 'tr.emailing.',
   'trackingssl.': 'trackingssl.',
 
+  'affiliates.': 'affiliates.',
+  'ainu.intel.': 'ainu.intel.',
+  'has-ticket.': 'has-ticket.',
+  'innovation.': 'innovation.',
   'oascentral.': 'oascentral.',
   'securetags.': 'securetags.',
   'serverside.': 'serverside.',
@@ -671,6 +681,11 @@ const MIXTUREBLOCKLIST = {
   'tr.gestion.': 'tr.gestion.',
   'tr.welcome.': 'tr.welcome.',
 
+  'gtmserver.': 'gtmserver.',
+  'gtmserver.': 'gtmserver.',
+  'images.go.': 'images.go.',
+  'internalt.': 'internalt.',
+  'jfdfvprfq.': 'jfdfvprfq.',
   'load.data.': 'load.data.',
   'load.dwga.': 'load.dwga.',
   'load.sgtm.': 'load.sgtm.',
@@ -691,7 +706,14 @@ const MIXTUREBLOCKLIST = {
   'web.email.': 'web.email.',
   'yerbalist.': 'yerbalist.',
 
+  'activate.': 'activate.',
+  'adserver.': 'adserver.',
+  'api.blog.': 'api.blog.',
+  'app.info.': 'app.info.',
+  'appleapp.': 'appleapp.',
   'boutique.': 'boutique.',
+  'images.e.': 'images.e.',
+  'insights.': 'insights.',
   'load.api.': 'load.api.',
   'load.ggl.': 'load.ggl.',
   'load.gtm.': 'load.gtm.',
@@ -709,6 +731,9 @@ const MIXTUREBLOCKLIST = {
   'ucjmncxp.': 'ucjmncxp.',
   'webstats.': 'webstats.',
 
+  'adserve.': 'adserve.',
+  'answers.': 'answers.',
+  'insight.': 'insight.',
   'knfssst.': 'knfssst.',
   'load.ss.': 'load.ss.',
   'measure.': 'measure.',
@@ -725,7 +750,10 @@ const MIXTUREBLOCKLIST = {
   'trkhinv.': 'trkhinv.',
   'webstat.': 'webstat.',
 
+  'app.go.': 'app.go.',
   'elqtrk.': 'elqtrk.',
+  'hiuplq.': 'hiuplq.',
+  'jdgtgb.': 'jdgtgb.',
   'load.a.': 'load.a.',
   'load.d.': 'load.d.',
   'load.s.': 'load.s.',
@@ -749,6 +777,11 @@ const MIXTUREBLOCKLIST = {
   'ywrcqa.': 'ywrcqa.',
 
   '5xxvm.': '5xxvm.',
+  'adsrv.': 'adsrv.',
+  'affil.': 'affil.',
+  'gcirm.': 'gcirm.',
+  'gtmss.': 'gtmss.',
+  'gtmss.': 'gtmss.',
   'links.': 'links.',
   'neoss.': 'neoss.',
   'somni.': 'somni.',
@@ -758,6 +791,9 @@ const MIXTUREBLOCKLIST = {
   'stats.': 'stats.',
   'track.': 'track.',
 
+  'adtd.': 'adtd.',
+  'gtms.': 'gtms.',
+  'info.': 'info.',
   'link.': 'link.',
   'mktg.': 'mktg.',
   'rsst.': 'rsst.',
@@ -779,9 +815,17 @@ const MIXTUREBLOCKLIST = {
   'wdss.': 'wdss.',
   'wttd.': 'wttd.',
 
+  'abc.': 'abc.',
+  'ggl.': 'ggl.',
+  'gss.': 'gss.',
+  'gtm.': 'gtm.',
   't-s.': 't-s.',
   'tr1.': 'tr1.',
   'w88.': 'w88.',
+
+  'a1.': 'a1.',
+  'a8.': 'a8.',
+  'aa.': 'aa.',
 
   'rtb-useast-v4.': 'rtb-useast-v4.',
   'rtb-uswest-v4.': 'rtb-uswest-v4.',
@@ -806,6 +850,7 @@ const MIXTUREBLOCKLIST = {
   'xml-eu.': 'xml-eu.',
   'xml-v4.': 'xml-v4.',
 
+  'analytics-': 'analytics-',
   'tracking-': 'tracking-',
   'tr.news-': 'tr.news-',
   'tracker-': 'tracker-',
