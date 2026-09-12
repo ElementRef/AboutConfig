@@ -816,7 +816,6 @@ const MIXTUREBLOCKLIST = {
 const MIXTUREWHITELIST = {
   // 重写处理
   'weibointl.api.weibo.cn': 'weibointl.api.weibo.cn',
-  'optimus-ads.amap.com': 'optimus-ads.amap.com',
   'sdkapp.uve.weibo.com': 'sdkapp.uve.weibo.com',
   // 官网网站
   'umami.is': 'umami.is'
