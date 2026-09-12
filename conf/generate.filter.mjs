@@ -877,7 +877,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Malicious.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.reject.customs.ini',
       'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list',
       'https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list',
@@ -901,7 +901,7 @@ const RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
     SRC: [
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.customs.ini',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-cn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/apple_services.conf',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/apple_cn.conf',
@@ -914,7 +914,7 @@ const RESOURCES = {
     SRC: [
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.direct.customs.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/cn.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/surge/private.txt',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/private.txt',
@@ -935,7 +935,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Reddit/Reddit.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitter/Twitter.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AppleProxy.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.global.customs.ini',
       'https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/telegramcidr.txt',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apns.list',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-proxy.list',
@@ -959,7 +959,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list',
       'https://raw.githubusercontent.com/ddgksf2013/Filter/master/AppleIntelligence.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.customs.ini',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/ai.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/ai.conf',
@@ -976,7 +976,7 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Vimeo/Vimeo.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTubeMusic/YouTubeMusic.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.stream.customs.ini',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-tv.list',
       'https://ruleset.skk.moe/List/ip/stream.conf',
       'https://ruleset.skk.moe/List/non_ip/stream.conf'
@@ -987,7 +987,7 @@ const RESOURCES = {
     FILENAME: 'element.ref.tiktok.mixture.ini',
     SRC: [
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list',
-      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.tiktok.custom.ini',
+      'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.tiktok.customs.ini',
       'https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok.list'
     ],
     MAPFN: mapMixture
