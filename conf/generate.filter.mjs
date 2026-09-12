@@ -14,6 +14,7 @@ const MIXTUREBLOCKLIST = {
   '.bid': 'bid',
   '.biz': 'biz',
   '.cfd': 'cfd',
+  '.fit': 'fit',
   '.icu': 'icu',
   '.lol': 'lol',
   '.mom': 'mom',
@@ -56,6 +57,7 @@ const MIXTUREBLOCKLIST = {
 
   '.51y5.net': '51y5.net',
   '.7eer.net': '7eer.net',
+  '.axf8.net': 'axf8.net',
   '.en25.com': 'en25.com',
   '.llnw.net': 'llnw.net',
   '.p2l.info': 'p2l.info',
@@ -617,12 +619,16 @@ const MIXTUREBLOCKLIST = {
   'www8.': 'www8.',
   'www9.': 'www9.',
 
+  '.academyofconsciousleadership.': '.academyofconsciousleadership.',
   '.celebratevitamins.': '.celebratevitamins.',
   '.autoscout24.': '.autoscout24.',
+  '.execute-api.': '.execute-api.',
   '.goldfishss.': '.goldfishss.',
   '.onofficeom.': '.onofficeom.',
+  '.cos.': '.cos.',
   '.trk.': '.trk.',
   '.www.': '.www.',
+  '.z0.': '.z0.',
 
   'tr.notification-gdpr.': 'tr.notification-gdpr.',
   'target.footlocker.': 'target.footlocker.',
@@ -731,6 +737,7 @@ const MIXTUREBLOCKLIST = {
   'ucjmncxp.': 'ucjmncxp.',
   'webstats.': 'webstats.',
 
+  'ads-api.': 'ads-api.',
   'adserve.': 'adserve.',
   'answers.': 'answers.',
   'insight.': 'insight.',
@@ -751,6 +758,7 @@ const MIXTUREBLOCKLIST = {
   'webstat.': 'webstat.',
 
   'app.go.': 'app.go.',
+  'data.a.': 'data.a.',
   'elqtrk.': 'elqtrk.',
   'hiuplq.': 'hiuplq.',
   'jdgtgb.': 'jdgtgb.',
