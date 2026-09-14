@@ -42,11 +42,12 @@ jobs:
         run: |
           git config --global user.email ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
           git config --global user.name ${{ github.actor }}
+          git config diff.nocase.textconv "tr '[:upper:]' '[:lower:]'"
           git status
           git add --all
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No Changes To Commit."
             exit 0
           fi
 
