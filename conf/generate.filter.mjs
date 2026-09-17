@@ -5,7 +5,7 @@ const MIXTUREBLOCKLIST = {
   /**
    * '.cc': 'cc', 部分静态资源托管
    * '.mobi': 'mobi', 叮咚买菜加载失败
-   * '.site': 'site', Launch OS 掉激活
+   * '.site': 'site', LaunchOS 激活失效
    */
   '.ga': 'ga',
   '.gq': 'gq',
