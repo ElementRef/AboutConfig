@@ -829,6 +829,9 @@ const MIXTUREBLOCKLIST = {
   'gtm.': 'gtm.',
   't-s.': 't-s.',
   'tr1.': 'tr1.',
+  'trk.': 'trk.',
+  'tss.': 'tss.',
+  'ttt.': 'ttt.',
   'w88.': 'w88.',
 
   'a1.': 'a1.',
@@ -863,7 +866,6 @@ const MIXTUREBLOCKLIST = {
   'tr.news-': 'tr.news-',
   'tracker-': 'tracker-',
   'test-': 'test-',
-  'www-': 'www-',
   'xn--': 'xn--'
 };
 const MIXTUREWHITELIST = {
