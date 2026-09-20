@@ -512,6 +512,7 @@ const MIXTUREBLOCKLIST = {
   '.fec98ad2c4.com': 'fec98ad2c4.com',
   '.fef49e81cc.com': 'fef49e81cc.com',
   '.ff35f7a0b5.com': 'ff35f7a0b5.com',
+  '.id05196219.com': 'id05196219.com',
 
   '.000nethost.com': '000nethost.com',
   '.agvisorpro.com': 'agvisorpro.com',
