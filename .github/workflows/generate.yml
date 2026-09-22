@@ -29,12 +29,12 @@ jobs:
 
       - name: Prepare Resources
         run: |
-          mkdir -p ./tmp
+          mkdir -p ./temp
           curl -A "Surge iOS/3367" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
           curl -A "Surge iOS/3367" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
           curl -A "Surge iOS/3367" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
           curl -A "Surge iOS/3367" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
-          ls -la ./tmp
+          ls -la ./temp
 
       - name: Build with Node
         run: |
