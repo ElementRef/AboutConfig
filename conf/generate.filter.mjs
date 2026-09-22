@@ -1,4 +1,4 @@
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
@@ -880,6 +880,9 @@ const RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
+      '../temp/Block_HTTPDNS.txt',
+      '../temp/BlockAdvertisers.txt',
+      '../temp/Remove_Ads_By_Kelee.txt',
       'https://loon.103516.xyz/Rule/PCDN.lsr',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/BlockHTTPDNS/BlockHTTPDNS.list',
@@ -937,6 +940,7 @@ const RESOURCES = {
   GLOBALMIXTURE: {
     FILENAME: 'element.ref.global.mixture.ini',
     SRC: [
+      '../temp/Prevent_DNS_Leaks.txt',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Adobe/Adobe.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Docker/Docker.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list',
@@ -1063,12 +1067,19 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       ) {
         headers.Authorization = `Bearer ${process.env.GH_TOKEN}`;
       }
-      const res = await fetch(src, {
-        method: 'GET',
-        cache: 'no-store',
-        credentials: 'include',
-        headers
-      });
+      let res = null;
+      if (src.startsWith('https://')) {
+        res = await fetch(src, {
+          method: 'GET',
+          cache: 'no-store',
+          credentials: 'include',
+          headers
+        });
+      } else {
+        const filePath = resolve(dirname(fileURLToPath(import.meta.url)), src);
+        const fileContent = await readFile(filePath, 'utf8');
+        res = new Response(fileContent);
+      }
       if (res.ok) {
         const text = await res.text();
         RAW[key] = text
