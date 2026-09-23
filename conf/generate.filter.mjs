@@ -741,6 +741,7 @@ const MIXTUREBLOCKLIST = {
   'ads-api.': 'ads-api.',
   'adserve.': 'adserve.',
   'answers.': 'answers.',
+  'httpdns.': 'httpdns.',
   'insight.': 'insight.',
   'knfssst.': 'knfssst.',
   'load.ss.': 'load.ss.',
