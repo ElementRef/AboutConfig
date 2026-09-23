@@ -27,6 +27,9 @@ jobs:
           npm install esbuild@latest --global
           esbuild --version
 
+      - name: Setup WARP Network
+        uses: fscarmen/warp-on-actions@v1.4
+
       - name: Prepare Resources
         run: |
           mkdir -p ./temp
@@ -35,6 +38,7 @@ jobs:
           curl -A "Surge iOS/3367" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
           curl -A "Surge iOS/3367" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
           ls -la ./temp
+          cat ./temp/Block_HTTPDNS.txt
 
       - name: Build with Node
         run: |
