@@ -90,6 +90,7 @@
 - [@lige47](https://github.com/lige47/lige_icon)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
 - [@lobehub](https://github.com/lobehub/lobe-icons)
+- [@lonecale](https://github.com/lonecale/Rules)
 - [@LoopDns](https://github.com/LoopDns/Fuck-you-MIUI)
 - [@Loyalsoldier](https://github.com/Loyalsoldier/surge-rules)
 - [@malware-filter](https://gitlab.com/malware-filter/urlhaus-filter)

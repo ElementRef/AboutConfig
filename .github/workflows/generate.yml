@@ -27,13 +27,21 @@ jobs:
           npm install esbuild@latest --global
           esbuild --version
 
+      # https://raw.githubusercontent.com/lonecale/Rules/main/.github/workflows/Build.yml
+      - name: Setup Custom TLS Flags for Curl
+        run: |
+          CIPHERS="ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256"
+          TLS13_CIPHERS="TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384"
+          CURVES="X25519:P-256:P-384"
+          echo "TLS_FLAGS=--ciphers $CIPHERS --tls13-ciphers $TLS13_CIPHERS --curves $CURVES --compressed" >> $GITHUB_ENV
+
       - name: Prepare Resources
         run: |
           mkdir -p ./temp
-          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
-          curl -v -f -L -A "Surge iOS/9527" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
-          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
-          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
+          curl -f -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
+          curl -f -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
+          curl -f -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+          curl -f -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
           ls -la ./temp
 
       - name: Build with Node
