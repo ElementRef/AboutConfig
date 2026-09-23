@@ -30,12 +30,11 @@ jobs:
       - name: Prepare Resources
         run: |
           mkdir -p ./temp
-          curl -A "Surge iOS/3367" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
-          curl -A "Surge iOS/3367" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
-          curl -A "Surge iOS/3367" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
-          curl -A "Surge iOS/3367" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
+          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
+          curl -v -f -L -A "Surge iOS/9527" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
+          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+          curl -v -f -L -A "Surge iOS/9527" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
           ls -la ./temp
-          cat ./temp/Block_HTTPDNS.txt
 
       - name: Build with Node
         run: |
