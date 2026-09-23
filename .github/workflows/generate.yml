@@ -27,9 +27,6 @@ jobs:
           npm install esbuild@latest --global
           esbuild --version
 
-      - name: Setup WARP Network
-        uses: fscarmen/warp-on-actions@v1.4
-
       - name: Prepare Resources
         run: |
           mkdir -p ./temp
