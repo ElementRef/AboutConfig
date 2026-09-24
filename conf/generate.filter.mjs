@@ -836,10 +836,6 @@ const MIXTUREBLOCKLIST = {
   'ttt.': 'ttt.',
   'w88.': 'w88.',
 
-  'a1.': 'a1.',
-  'a8.': 'a8.',
-  'aa.': 'aa.',
-
   'rtb-useast-v4.': 'rtb-useast-v4.',
   'rtb-uswest-v4.': 'rtb-uswest-v4.',
   'rtb-apac-v4.': 'rtb-apac-v4.',
