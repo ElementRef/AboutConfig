@@ -629,6 +629,9 @@ const MIXTUREBLOCKLIST = {
   '.cos.': '.cos.',
   '.trk.': '.trk.',
   '.www.': '.www.',
+  '.a1.': '.a1.',
+  '.a8.': '.a8.',
+  '.aa.': '.aa.',
   '.z0.': '.z0.',
 
   'tr.notification-gdpr.': 'tr.notification-gdpr.',
