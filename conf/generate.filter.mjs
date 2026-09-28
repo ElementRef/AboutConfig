@@ -839,6 +839,9 @@ const MIXTUREBLOCKLIST = {
   'ttt.': 'ttt.',
   'w88.': 'w88.',
 
+  'click-eu-v4.': 'click-eu-v4.',
+  'click-v4.': 'click-v4.',
+
   'rtb-useast-v4.': 'rtb-useast-v4.',
   'rtb-uswest-v4.': 'rtb-uswest-v4.',
   'rtb-apac-v4.': 'rtb-apac-v4.',
