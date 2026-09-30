@@ -691,6 +691,7 @@ const MIXTUREBLOCKLIST = {
   'tr.gestion.': 'tr.gestion.',
   'tr.welcome.': 'tr.welcome.',
 
+  'collector.': 'collector.',
   'gtmserver.': 'gtmserver.',
   'gtmserver.': 'gtmserver.',
   'images.go.': 'images.go.',
@@ -744,6 +745,7 @@ const MIXTUREBLOCKLIST = {
   'ads-api.': 'ads-api.',
   'adserve.': 'adserve.',
   'answers.': 'answers.',
+  'cookies.': 'cookies.',
   'httpdns.': 'httpdns.',
   'insight.': 'insight.',
   'knfssst.': 'knfssst.',
