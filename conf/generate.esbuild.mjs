@@ -24,6 +24,8 @@ const RESOURCES = {
     'https://github.com/BiliUniverse/ADBlock/releases/latest/download/request.bundle.js',
   'bili.universe.adblock.response.js':
     'https://github.com/BiliUniverse/ADBlock/releases/latest/download/response.bundle.js',
+  'bili.universe.enhanced.request.js':
+    'https://github.com/Biliverse/Enhanced/releases/latest/download/request.bundle.js',
   'bili.universe.enhanced.response.js':
     'https://github.com/BiliUniverse/Enhanced/releases/latest/download/response.bundle.js',
   'chavyleung.box.js':
@@ -96,6 +98,8 @@ const RESOURCES = {
   'ddgksf2013.ximalaya.js':
     'https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js',
   'ddgksf2013.zhihu.js': 'https://ddgksf2013.top/scripts/zhihu.ads.js',
+  'i.ringo.weather.kit.request.js':
+    'https://github.com/NSRingo/WeatherKit/releases/latest/download/request.bundle.js',
   'i.ringo.weather.kit.response.js':
     'https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js',
   'ishowshu.goofish.js':
@@ -151,6 +155,7 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
       'User-Agent': 'Surge/6.7.0 (MacBookPro18,3; macOS 26.5.2)'
     };
     if (
+      SRC.startsWith('https://release-assets.githubusercontent.com') ||
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
       SRC.startsWith('https://avatars.githubusercontent.com') ||
       SRC.startsWith('https://camo.githubusercontent.com') ||

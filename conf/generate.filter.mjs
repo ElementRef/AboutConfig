@@ -890,6 +890,8 @@ const RESOURCES = {
       '../temp/Remove_Ads_By_Kelee.txt',
       'https://loon.103516.xyz/Rule/PCDN.lsr',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
+      'https://raw.githubusercontent.com/app2smile/rules/master/rule/bilibili-ad-qx.list',
+      'https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad-qx.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/BlockHTTPDNS/BlockHTTPDNS.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list',
       'https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf',
@@ -1061,6 +1063,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
         'User-Agent': 'Loon/3.5.0 (iPhone17,1; iOS 26.5.2)'
       };
       if (
+        src.startsWith('https://release-assets.githubusercontent.com') ||
         src.startsWith('https://patch-diff.githubusercontent.com') ||
         src.startsWith('https://avatars.githubusercontent.com') ||
         src.startsWith('https://camo.githubusercontent.com') ||

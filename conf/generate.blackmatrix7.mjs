@@ -34,6 +34,7 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
       'User-Agent': 'Quantumult X/1.6.0 (MacBookPro18,3; macOS 26.5.2)'
     };
     if (
+      SRC.startsWith('https://release-assets.githubusercontent.com') ||
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
       SRC.startsWith('https://avatars.githubusercontent.com') ||
       SRC.startsWith('https://camo.githubusercontent.com') ||

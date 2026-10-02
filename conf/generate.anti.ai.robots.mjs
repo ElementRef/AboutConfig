@@ -67,6 +67,7 @@ async function getResourses(SRC, MAP = {}) {
       'User-Agent': 'mihomo/1.19.29'
     };
     if (
+      SRC.startsWith('https://release-assets.githubusercontent.com') ||
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
       SRC.startsWith('https://avatars.githubusercontent.com') ||
       SRC.startsWith('https://camo.githubusercontent.com') ||

@@ -34,6 +34,7 @@ async function getResourses(SRC, LIST = []) {
       'User-Agent': 'Shadowrocket/2.2.90 (iPhone17,1; iOS 26.5.2)'
     };
     if (
+      SRC.startsWith('https://release-assets.githubusercontent.com') ||
       SRC.startsWith('https://patch-diff.githubusercontent.com') ||
       SRC.startsWith('https://avatars.githubusercontent.com') ||
       SRC.startsWith('https://camo.githubusercontent.com') ||
