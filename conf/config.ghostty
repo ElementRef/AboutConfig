@@ -18,11 +18,12 @@ font-feature = liga
 font-thicken = true
 
 # Colors
-background-blur = false
+background-blur = true
 background-image-fit = none
-background-image-opacity = 0.3
+background-image-opacity = 0.1
 background-image-repeat = true
 background-opacity-cells = false
+background-opacity = 1
 theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 
 # Window
@@ -64,13 +65,18 @@ link-previews = false
 notify-on-command-finish = unfocused
 quit-after-last-window-closed = true
 
-# Macos
+# macOS
 auto-update = check
+macos-icon = custom
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
 
+# QuickTerminal
+quick-terminal-animation-duration = 0.15
+quick-terminal-autohide = true
+quick-terminal-size = 30%
+
 # Advanced
 custom-shader-animation = true
-quick-terminal-size = 30%
 shell-integration = detect
 shell-integration-features = cursor,ssh-env,ssh-terminfo
