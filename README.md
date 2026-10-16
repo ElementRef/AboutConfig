@@ -39,6 +39,7 @@
 
 ### 特别感谢名单（排名不分先后）：
 
+- [@0xhckr](https://github.com/0xhckr/ghostty-shaders)
 - [@217heidai](https://github.com/217heidai/adblockfilters)
 - [@8680](https://github.com/8680/GOODBYEADS)
 - [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
@@ -87,6 +88,7 @@
 - [@Koolson](https://github.com/Koolson/Qure)
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@laylavish](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)
+- [@lexrus](https://github.com/lexrus/lex-ghostty-shaders)
 - [@lige47](https://github.com/lige47/lige_icon)
 - [@limbopro](https://github.com/limbopro/Adblock4limbo)
 - [@lobehub](https://github.com/lobehub/lobe-icons)
