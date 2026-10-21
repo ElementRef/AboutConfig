@@ -684,7 +684,7 @@ async function getResourses({ FILENAME, SRC, MAPFN }) {
       const headers = {
         'Accept-Language': 'en-US',
         'Content-Type': 'text/plain',
-        'User-Agent': 'Loon/3.5.0 (iPhone17,1; iOS 26.5.2)'
+        'User-Agent': 'Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0'
       };
       if (
         src.startsWith('https://release-assets.githubusercontent.com') ||
