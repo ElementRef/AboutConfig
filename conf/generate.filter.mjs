@@ -395,6 +395,7 @@ const MIXTUREBLOCKLIST = {
   'load.t.': 'load.t.',
   'logger.': 'logger.',
   'lpbhnv.': 'lpbhnv.',
+  'matomo.': 'matomo.',
   'metric.': 'metric.',
   'reklam.': 'reklam.',
   'sstgtm.': 'sstgtm.',
