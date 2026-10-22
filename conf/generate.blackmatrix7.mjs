@@ -31,7 +31,7 @@ async function getResourses(SRC, HOSTNAME = {}, RULES = {}) {
     const headers = {
       'Accept-Language': 'en-US',
       'Content-Type': 'text/plain',
-      'User-Agent': 'Quantumult X/1.6.0 (MacBookPro18,3; macOS 26.5.2)'
+      'User-Agent': 'Quantumult X/1.8.0 (MacBookPro18,3; macOS 27.0.1)'
     };
     if (
       SRC.startsWith('https://release-assets.githubusercontent.com') ||
