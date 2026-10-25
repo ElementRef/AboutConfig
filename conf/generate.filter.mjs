@@ -588,7 +588,8 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-proxy.list',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/microsoft.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/telegram_asn.conf',
-      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf'
+      'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/microsoft.conf',
+      'https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/quantumult-x/dia-browser.list'
     ],
     MAPFN: mapMixture
   },
