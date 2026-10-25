@@ -1,82 +1,82 @@
 # Fonts
-font-size = 12
-font-family = "Buddy Mono"
-font-family = "JetBrains Maple Mono"
-font-family = "Segoe UI Emoji"
-font-family-bold = "Buddy Mono"
-font-family-bold = "JetBrains Maple Mono"
-font-family-bold = "Segoe UI Emoji"
-font-family-italic = "Buddy Mono"
-font-family-italic = "JetBrains Maple Mono"
-font-family-italic = "Segoe UI Emoji"
-font-family-bold-italic = "Buddy Mono"
-font-family-bold-italic = "JetBrains Maple Mono"
-font-family-bold-italic = "Segoe UI Emoji"
-font-feature = calt
-font-feature = dlig
-font-feature = liga
-font-thicken = true
+font-size                         = 12
+font-family                       = "Buddy Mono"
+font-family                       = "Segoe UI Emoji"
+font-family                       = "JetBrains Maple Mono"
+font-family-bold                  = "Buddy Mono"
+font-family-bold                  = "Segoe UI Emoji"
+font-family-bold                  = "JetBrains Maple Mono"
+font-family-italic                = "Buddy Mono"
+font-family-italic                = "Segoe UI Emoji"
+font-family-italic                = "JetBrains Maple Mono"
+font-family-bold-italic           = "Buddy Mono"
+font-family-bold-italic           = "Segoe UI Emoji"
+font-family-bold-italic           = "JetBrains Maple Mono"
+font-feature                      = calt
+font-feature                      = dlig
+font-feature                      = liga
+font-thicken                      = true
 
 # Colors
-background-blur = true
-background-image-fit = none
-background-image-opacity = 0.1
-background-image-repeat = true
-background-opacity-cells = false
-background-opacity = 1
-theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+background-blur                   = true
+background-image-fit              = none
+background-image-opacity          = 0.1
+background-image-repeat           = true
+background-opacity-cells          = false
+custom-shader-animation           = always
+theme                             = dark:Rose Pine Moon,light:Rose Pine Dawn
 
 # Window
-scrollbar = never
-tab-inherit-working-directory = false
-window-colorspace = display-p3
-window-inherit-working-directory = false
-window-padding-balance = true
-window-padding-x = 8
-window-padding-y = 8
-window-show-tab-bar = always
-window-step-resize = true
-window-subtitle = working-directory
-window-theme = system
-window-title-font-family = "Ioskeley Mono"
-working-directory = home
+scrollbar                         = never
+tab-inherit-working-directory     = false
+window-colorspace                 = display-p3
+window-inherit-working-directory  = false
+window-padding-balance            = true
+window-padding-x                  = 8
+window-padding-y                  = 8
+window-show-tab-bar               = always
+window-step-resize                = true
+window-subtitle                   = working-directory
+window-theme                      = system
+window-title-font-family          = "Ioskeley Mono"
+working-directory                 = home
 
 # Cursor
-adjust-cursor-height = -15%
-adjust-cursor-thickness = 15%
-cursor-click-to-move = true
-cursor-style-blink = true
-cursor-style = bar
+adjust-cursor-height              = -15%
+adjust-cursor-thickness           = 15%
+cursor-click-to-move              = true
+cursor-style-blink                = true
+cursor-style                      = bar
 
 # Mouse
-mouse-hide-while-typing = true
+mouse-hide-while-typing           = true
 
 # Clipboard
-clipboard-read = allow
-clipboard-write = allow
-copy-on-select = false
+clipboard-read                    = allow
+clipboard-write                   = allow
+copy-on-select                    = false
 
 # Keybind
-keybind = global:cmd+shift+a=reload_config
+keybind                           = global:cmd+shift+a=reload_config
 
 # Application
-app-notifications = clipboard-copy
-link-previews = false
-notify-on-command-finish = unfocused
-quit-after-last-window-closed = true
+app-notifications                 = clipboard-copy
+link-previews                     = false
+notify-on-command-finish          = unfocused
+quit-after-last-window-closed     = true
 
 # macOS
-auto-update = check
-macos-icon = custom
-macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = transparent
+auto-update                       = check
+macos-icon                        = custom
+macos-titlebar-proxy-icon         = hidden
+macos-titlebar-style              = transparent
 
 # QuickTerminal
 quick-terminal-animation-duration = 0.15
-quick-terminal-autohide = true
-quick-terminal-size = 30%
+quick-terminal-autohide           = true
+quick-terminal-size               = 30%
 
 # Advanced
-custom-shader-animation = true
-shell-integration = detect
-shell-integration-features = cursor,ssh-env,ssh-terminfo
+custom-shader-animation           = true
+shell-integration                 = detect
+shell-integration-features        = cursor,ssh-env,ssh-terminfo
