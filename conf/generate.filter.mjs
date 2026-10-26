@@ -430,6 +430,7 @@ const MIXTUREBLOCKLIST = {
   'stats.': 'stats.',
   'track.': 'track.',
 
+  '123p.': '123p.',
   'adtd.': 'adtd.',
   'dwga.': 'dwga.',
   'gtms.': 'gtms.',
