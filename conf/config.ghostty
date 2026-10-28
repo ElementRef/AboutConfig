@@ -54,10 +54,11 @@ mouse-hide-while-typing           = true
 # Clipboard
 clipboard-read                    = allow
 clipboard-write                   = allow
-copy-on-select                    = false
+copy-on-select                    = none
 
 # Keybind
 keybind                           = global:cmd+shift+a=reload_config
+keybind                           = global:shift+cmd+n=new_tab
 
 # Application
 app-notifications                 = clipboard-copy
@@ -69,7 +70,7 @@ quit-after-last-window-closed     = true
 auto-update                       = check
 macos-icon                        = custom
 macos-titlebar-proxy-icon         = hidden
-macos-titlebar-style              = transparent
+macos-titlebar-style              = tabs
 
 # QuickTerminal
 quick-terminal-animation-duration = 0.15
