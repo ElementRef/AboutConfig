@@ -511,9 +511,6 @@ const RESOURCES = {
   REJECTMIXTURE: {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
-      '../temp/Block_HTTPDNS.txt',
-      '../temp/BlockAdvertisers.txt',
-      '../temp/Remove_Ads_By_Kelee.txt',
       'https://loon.103516.xyz/Rule/PCDN.lsr',
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/app2smile/rules/master/rule/bilibili-ad-qx.list',
@@ -573,7 +570,6 @@ const RESOURCES = {
   GLOBALMIXTURE: {
     FILENAME: 'element.ref.global.mixture.ini',
     SRC: [
-      '../temp/Prevent_DNS_Leaks.txt',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Adobe/Adobe.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Docker/Docker.list',
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list',
