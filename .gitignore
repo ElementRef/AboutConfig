@@ -21,6 +21,7 @@ dist/
 exampleSite/
 node_modules/
 public/
+resources/
 temp/
 tmp/
 _cgo_defun.c
