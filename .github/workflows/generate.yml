@@ -37,12 +37,12 @@ jobs:
 
       - name: Prepare Resources
         run: |
-          mkdir -p ./temp
-          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Block_HTTPDNS.txt https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx || echo "Skipped: Block_HTTPDNS.lpx"
-          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/BlockAdvertisers.txt https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx || echo "Skipped: BlockAdvertisers.lpx"
-          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Prevent_DNS_Leaks.txt https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx || echo "Skipped: Prevent_DNS_Leaks.lpx"
-          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./temp/Remove_Ads_By_Kelee.txt https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx || echo "Skipped: Remove_Ads_By_Kelee.lpx"
-          ls -la ./temp
+          mkdir -p ./resources
+          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Block_HTTPDNS.lpx https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx || echo "Skipped: Block_HTTPDNS.lpx"
+          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/BlockAdvertisers.lpx https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx || echo "Skipped: BlockAdvertisers.lpx"
+          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Prevent_DNS_Leaks.lpx https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx || echo "Skipped: Prevent_DNS_Leaks.lpx"
+          curl -f -sS -L -A "Surge iOS/9527" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Remove_Ads_By_Kelee.lpx https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx || echo "Skipped: Remove_Ads_By_Kelee.lpx"
+          ls -la ./resources
 
       - name: Build with Node
         run: |
