@@ -748,10 +748,12 @@ function combineResourses({ FILENAME, RAW }) {
   let RAWRULE = Object.create(null);
   let REJECTFILENAME = 'element.ref.reject.mixture.ini';
   Object.keys(RAW).forEach(key => {
-    console.log(
-      `    ${key}`.padEnd(92),
-      RAW[key].length.toString().padStart(12)
-    );
+    if (!key.includes(`${process.env.GIST_ID}`)) {
+      console.log(
+        `    ${key}`.padEnd(92),
+        RAW[key].length.toString().padStart(12)
+      );
+    }
     RAWARR = RAWARR.concat(RAW[key]);
   });
   RAWARR.forEach(rule => {
