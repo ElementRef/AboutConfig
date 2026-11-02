@@ -512,6 +512,10 @@ const RESOURCES = {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
       'https://loon.103516.xyz/Rule/PCDN.lsr',
+      `https://gist.githubusercontent.com/ElementRef/${process.env.GIST_ID}/raw/Block_HTTPDNS.lpx`,
+      `https://gist.githubusercontent.com/ElementRef/${process.env.GIST_ID}/raw/BlockAdvertisers.lpx`,
+      `https://gist.githubusercontent.com/ElementRef/${process.env.GIST_ID}/raw/Prevent_DNS_Leaks.lpx`,
+      `https://gist.githubusercontent.com/ElementRef/${process.env.GIST_ID}/raw/Remove_Ads_By_Kelee.lpx`,
       'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list',
       'https://raw.githubusercontent.com/app2smile/rules/master/rule/bilibili-ad-qx.list',
       'https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad-qx.list',

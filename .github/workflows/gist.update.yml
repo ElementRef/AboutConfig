@@ -3,8 +3,8 @@ name: Deploy Some Config to GitHub Gists...
 on:
   workflow_dispatch:
 
-  # schedule:
-  #   - cron: '00 00 * * *'
+  schedule:
+    - cron: '00 00 * * *'
 
 jobs:
   build-deploy:

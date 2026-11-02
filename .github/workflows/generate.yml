@@ -35,8 +35,9 @@ jobs:
           node conf/generate.esbuild.mjs
           node conf/generate.filter.mjs
         env:
-          GH_TOKEN: ${{ github.token }}
           NODE_OPTIONS: '--use-system-ca'
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GH_TOKEN: ${{ github.token }}
 
       - name: Deploy to GitHub Repository
         run: |
