@@ -313,6 +313,7 @@ const MIXTUREBLOCKLIST = {
   'tr.gestion.': 'tr.gestion.',
   'tr.welcome.': 'tr.welcome.',
 
+  'campaigns.': 'campaigns.',
   'collector.': 'collector.',
   'gtmserver.': 'gtmserver.',
   'gtmserver.': 'gtmserver.',
