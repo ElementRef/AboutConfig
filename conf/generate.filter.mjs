@@ -2,9 +2,11 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const MIXTUREBLOCKLIST = {
-  // '.cc': 'cc',      部分静态资源托管
-  // '.mobi': 'mobi',  叮咚买菜加载失败
-  // '.site': 'site', LaunchOS 激活失效
+  // '.cc': 'cc',         部分静态资源托管
+  // '.xyz': 'xyz',     个人站点，误杀严重
+  // '.mobi': 'mobi',     叮咚买菜加载失败
+  // '.site': 'site',    LaunchOS 激活失效
+  // '.space': 'space', 工具网站，误杀严重
   '.ga': 'ga',
   '.gq': 'gq',
   '.tk': 'tk',
@@ -22,7 +24,6 @@ const MIXTUREBLOCKLIST = {
   '.sbs': 'sbs',
   '.win': 'win',
   '.xin': 'xin',
-  '.xyz': 'xyz',
   '.zip': 'zip',
 
   '.beer': 'beer',
@@ -38,7 +39,6 @@ const MIXTUREBLOCKLIST = {
   '.work': 'work',
 
   '.codes': 'codes',
-  '.space': 'space',
   '.world': 'world',
 
   '.0.0.cn': '0.0.cn',
@@ -342,6 +342,7 @@ const MIXTUREBLOCKLIST = {
   'appleapp.': 'appleapp.',
   'boutique.': 'boutique.',
   'chvfszwf.': 'chvfszwf.',
+  'dhpjhrud.': 'dhpjhrud.',
   'images.e.': 'images.e.',
   'insights.': 'insights.',
   'load.api.': 'load.api.',
