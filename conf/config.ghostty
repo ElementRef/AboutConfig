@@ -1,15 +1,15 @@
 # Fonts
 font-size                         = 12
-font-family                       = "Buddy Mono"
+font-family                       = "Obel Mono"
 font-family                       = "Segoe UI Emoji"
 font-family                       = "JetBrains Maple Mono"
-font-family-bold                  = "Buddy Mono"
+font-family-bold                  = "Obel Mono"
 font-family-bold                  = "Segoe UI Emoji"
 font-family-bold                  = "JetBrains Maple Mono"
-font-family-italic                = "Buddy Mono"
+font-family-italic                = "Obel Mono"
 font-family-italic                = "Segoe UI Emoji"
 font-family-italic                = "JetBrains Maple Mono"
-font-family-bold-italic           = "Buddy Mono"
+font-family-bold-italic           = "Obel Mono"
 font-family-bold-italic           = "Segoe UI Emoji"
 font-family-bold-italic           = "JetBrains Maple Mono"
 font-feature                      = calt
@@ -57,8 +57,8 @@ clipboard-write                   = allow
 copy-on-select                    = none
 
 # Keybind
-keybind                           = global:cmd+shift+a=reload_config
-keybind                           = global:shift+cmd+n=new_tab
+keybind                           = global:shift+cmd+r=reload_config
+keybind                           = global:cmd+shift+a=new_tab
 
 # Application
 app-notifications                 = clipboard-copy
