@@ -1,4 +1,17 @@
-### 自用 [Code 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/vscode.settings.json?raw)、[Ghostty 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/config.ghostty?raw)、~~[Q••••••••••• X 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/quantumult.x.conf?raw)~~、[uBlocklist 规则](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw)、[ai-robots.txt](https://github-public-raw.spicicomic.workers.dev/robots.txt?raw)
+### 自用配置
+
+- [Quantumult 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/quantumult.x.conf?raw)
+- [Ghostty 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/config.ghostty?raw)
+- [Code 配置](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/conf/vscode.settings.json?raw)
+
+### 自用规则
+
+- [Combined_Privacy_BlockLists.conf](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Combined_Privacy_BlockLists.conf?raw)
+- [FireHOL_Level_One.conf](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/FireHOL_Level_One.conf?raw)
+- [Spamhaus_Drop_V6.txt](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Spamhaus_Drop_V6.txt?raw)
+- [Spamhaus_Drop_V4.txt](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Spamhaus_Drop_V4.txt?raw)
+- [uBlocklist.ini](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw)
+- [ai-robots.txt](https://github-public-raw.spicicomic.workers.dev/robots.txt?raw)
 
 ### 推荐搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 和 [EncryptedDNS](https://github.com/paulmillr/encrypted-dns) 食用
 
@@ -50,6 +63,7 @@
 - [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)
 - [@BlockList](https://www.blocklist.de/en/index.html)
 - [@blocklistproject](https://github.com/blocklistproject/Lists)
+- [@bongochong](https://github.com/bongochong/CombinedPrivacyBlockLists)
 - [@Cats-Team](https://github.com/Cats-Team/AdRules)
 - [@chxm1023](https://github.com/chxm1023/Rewrite)
 - [@CINSSCORE](https://cinsscore.com)
