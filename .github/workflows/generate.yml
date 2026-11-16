@@ -36,8 +36,9 @@ jobs:
           node conf/generate.filter.mjs
         env:
           NODE_OPTIONS: '--use-system-ca'
-          GIST_ID: ${{ secrets.GIST_ID }}
           GH_TOKEN: ${{ github.token }}
+          GH_KELEE_GIST_ID: ${{ secrets.GH_KELEE_GIST_ID }}
+          GH_SPAMHAUS_GIST_ID: ${{ secrets.GH_SPAMHAUS_GIST_ID }}
 
       - name: Deploy to GitHub Repository
         run: |

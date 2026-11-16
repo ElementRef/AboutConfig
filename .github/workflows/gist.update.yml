@@ -24,7 +24,7 @@ jobs:
           CURVES="X25519:P-256:P-384"
           echo "TLS_FLAGS=--ciphers $CIPHERS --tls13-ciphers $TLS13_CIPHERS --curves $CURVES --compressed" >> $GITHUB_ENV
 
-      - name: Prepare Resources
+      - name: Prepare Kelee Resources
         run: |
           mkdir -p ./resources
           curl -f -sS -L -A "Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Block_HTTPDNS.lpx https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx || echo "Skipped: Block_HTTPDNS.lpx"
@@ -33,10 +33,19 @@ jobs:
           curl -f -sS -L -A "Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Remove_Ads_By_Kelee.lpx https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx || echo "Skipped: Remove_Ads_By_Kelee.lpx"
           ls -la ./resources
 
-      - name: Update to GitHub Gists
+      - name: Prepare Spamhaus Resources
+        run: |
+          mkdir -p ./resources
+          curl -f -sS -L -A "Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Spamhaus_Drop_V4.json https://www.spamhaus.org/drop/drop_v4.json || echo "Skipped: Spamhaus_Drop_V4.json"
+          curl -f -sS -L -A "Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Spamhaus_Drop_V6.json https://www.spamhaus.org/drop/drop_v6.json || echo "Skipped: Spamhaus_Drop_V6.json"
+          jq -r 'select(.type == null) | "IP-CIDR,\(.cidr)"' ./resources/Spamhaus_Drop_V4.json >> ./resources/Spamhaus_Drop_V4.txt
+          jq -r 'select(.type == null) | "IP6-CIDR,\(.cidr)"' ./resources/Spamhaus_Drop_V6.json >> ./resources/Spamhaus_Drop_V6.txt
+          ls -la ./resources
+
+      - name: Update to Kelee GitHub Gists
         env:
           GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
-          GIST_ID: ${{ secrets.GIST_ID }}
+          GH_KELEE_GIST_ID: ${{ secrets.GH_KELEE_GIST_ID }}
         run: |
           set -euo pipefail
 
@@ -56,11 +65,39 @@ jobs:
 
           curl --fail-with-body --silent --show-error \
             -X PATCH \
-            "https://api.github.com/gists/${GIST_ID}" \
+            "https://api.github.com/gists/${GH_KELEE_GIST_ID}" \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2026-03-10" \
             -H "Content-Type: application/json" \
             -d "$payload"
 
-          echo "资源更新成功"
+          echo "Kelee 资源更新成功"
+
+      - name: Update to Spamhaus GitHub Gists
+        env:
+          GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
+          GH_SPAMHAUS_GIST_ID: ${{ secrets.GH_SPAMHAUS_GIST_ID }}
+        run: |
+          set -euo pipefail
+
+          payload=$(jq -n \
+            --rawfile a ./resources/Spamhaus_Drop_V4.txt \
+            --rawfile b ./resources/Spamhaus_Drop_V6.txt \
+            '{
+              files: {
+                "Spamhaus_Drop_V4.txt": {content: $a},
+                "Spamhaus_Drop_V6.txt": {content: $b},
+              }
+            }')
+
+          curl --fail-with-body --silent --show-error \
+            -X PATCH \
+            "https://api.github.com/gists/${GH_SPAMHAUS_GIST_ID}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2026-03-10" \
+            -H "Content-Type: application/json" \
+            -d "$payload"
+
+          echo "Spamhaus 资源更新成功"
