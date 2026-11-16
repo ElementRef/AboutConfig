@@ -44,6 +44,7 @@ jobs:
           curl -f -sS -L -A "Loon/991 CFNetwork/3896.100.1.1.1 Darwin/27.0.0" $TLS_FLAGS -H "Accept-Language: en-us" -o ./resources/Remove_Ads_By_Kelee.lpx https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx || echo "Skipped: Remove_Ads_By_Kelee.lpx"
           ls -la ./resources
 
+      # https://www.spamhaus.org/faqs/do-not-route-or-peer-drop/#how-do-i-convert-the-json-drop-files-to-txt
       - name: Prepare Spamhaus Resources
         run: |
           mkdir -p ./resources
