@@ -787,6 +787,7 @@ function combineResourses({ FILENAME, RAW }) {
   let REJECTFILENAME = 'element.ref.reject.mixture.ini';
   Object.keys(RAW).forEach(key => {
     if (
+      key.includes(`${process.env.GH_FIREHOL_GIST_ID}`) ||
       key.includes(`${process.env.GH_KELEE_GIST_ID}`) ||
       key.includes(`${process.env.GH_SPAMHAUS_GIST_ID}`)
     ) {

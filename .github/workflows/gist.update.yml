@@ -24,6 +24,13 @@ jobs:
           CURVES="X25519:P-256:P-384"
           echo "TLS_FLAGS=--ciphers $CIPHERS --tls13-ciphers $TLS13_CIPHERS --curves $CURVES --compressed" >> $GITHUB_ENV
 
+      - name: Prepare FireHOL Resources
+        run: |
+          mkdir -p ./resources
+          curl -fsSL 'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset' \
+          | awk '!/^#/ && NF { print "IP-CIDR," $1 }' \
+          > ./resources/FireHOL_Level_One.conf
+
       - name: Prepare Kelee Resources
         run: |
           mkdir -p ./resources
@@ -41,6 +48,32 @@ jobs:
           jq -r 'select(.type == null) | "IP-CIDR,\(.cidr)"' ./resources/Spamhaus_Drop_V4.json >> ./resources/Spamhaus_Drop_V4.txt
           jq -r 'select(.type == null) | "IP6-CIDR,\(.cidr)"' ./resources/Spamhaus_Drop_V6.json >> ./resources/Spamhaus_Drop_V6.txt
           ls -la ./resources
+
+      - name: Update to FireHOL GitHub Gists
+        env:
+          GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
+          GH_FIREHOL_GIST_ID: ${{ secrets.GH_FIREHOL_GIST_ID }}
+        run: |
+          set -euo pipefail
+
+          payload=$(jq -n \
+            --rawfile a ./resources/FireHOL_Level_One.conf \
+            '{
+              files: {
+                "FireHOL_Level_One.conf": {content: $a},
+              }
+            }')
+
+          curl --fail-with-body --silent --show-error \
+            -X PATCH \
+            "https://api.github.com/gists/${GH_FIREHOL_GIST_ID}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2026-03-10" \
+            -H "Content-Type: application/json" \
+            -d "$payload"
+
+          echo "FireHOL 资源更新成功"
 
       - name: Update to Kelee GitHub Gists
         env:

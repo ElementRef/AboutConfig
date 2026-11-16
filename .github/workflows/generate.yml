@@ -37,6 +37,7 @@ jobs:
         env:
           NODE_OPTIONS: '--use-system-ca'
           GH_TOKEN: ${{ github.token }}
+          GH_FIREHOL_GIST_ID: ${{ secrets.GH_FIREHOL_GIST_ID }}
           GH_KELEE_GIST_ID: ${{ secrets.GH_KELEE_GIST_ID }}
           GH_SPAMHAUS_GIST_ID: ${{ secrets.GH_SPAMHAUS_GIST_ID }}
 
