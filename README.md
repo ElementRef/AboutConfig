@@ -13,7 +13,11 @@
 - [uBlocklist.ini](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw)
 - [ai-robots.txt](https://github-public-raw.spicicomic.workers.dev/robots.txt?raw)
 
-### 推荐搭配 [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 或 [GeoIP](https://github.com/Loyalsoldier/geoip) 和 [EncryptedDNS](https://github.com/paulmillr/encrypted-dns) 食用
+### 推荐搭配
+
+- [EncryptedDNS](https://github.com/paulmillr/encrypted-dns)
+- [GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN)
+- [GeoIP](https://github.com/Loyalsoldier/geoip)
 
 ### 广告拦截测试（排名不分先后）：
 
