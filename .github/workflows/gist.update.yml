@@ -60,7 +60,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          payload=$(jq -n \
+          jq -n \
             --rawfile a ./resources/Combined_Privacy_BlockLists.conf \
             --rawfile b ./resources/FireHOL_Level_One.conf \
             '{
@@ -68,8 +68,7 @@ jobs:
                 "Combined_Privacy_BlockLists.conf": {content: $a},
                 "FireHOL_Level_One.conf": {content: $b}
               }
-            }')
-
+            }' |
           curl --fail-with-body --silent --show-error \
             -X PATCH \
             "https://api.github.com/gists/${GH_FIREHOL_GIST_ID}" \
@@ -77,7 +76,7 @@ jobs:
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2026-03-10" \
             -H "Content-Type: application/json" \
-            -d "$payload"
+            --data-binary @-
 
           echo "FireHOL 资源更新成功"
 
@@ -88,7 +87,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          payload=$(jq -n \
+          jq -n \
             --rawfile a ./resources/Block_HTTPDNS.lpx \
             --rawfile b ./resources/BlockAdvertisers.lpx \
             --rawfile c ./resources/Prevent_DNS_Leaks.lpx \
@@ -100,8 +99,7 @@ jobs:
                 "Prevent_DNS_Leaks.lpx": {content: $c},
                 "Remove_Ads_By_Kelee.lpx": {content: $d}
               }
-            }')
-
+            }' |
           curl --fail-with-body --silent --show-error \
             -X PATCH \
             "https://api.github.com/gists/${GH_KELEE_GIST_ID}" \
@@ -109,7 +107,7 @@ jobs:
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2026-03-10" \
             -H "Content-Type: application/json" \
-            -d "$payload"
+            --data-binary @-
 
           echo "Kelee 资源更新成功"
 
@@ -120,7 +118,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          payload=$(jq -n \
+          jq -n \
             --rawfile a ./resources/Spamhaus_Drop_V4.txt \
             --rawfile b ./resources/Spamhaus_Drop_V6.txt \
             '{
@@ -128,8 +126,7 @@ jobs:
                 "Spamhaus_Drop_V4.txt": {content: $a},
                 "Spamhaus_Drop_V6.txt": {content: $b}
               }
-            }')
-
+            }' |
           curl --fail-with-body --silent --show-error \
             -X PATCH \
             "https://api.github.com/gists/${GH_SPAMHAUS_GIST_ID}" \
@@ -137,6 +134,6 @@ jobs:
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2026-03-10" \
             -H "Content-Type: application/json" \
-            -d "$payload"
+            --data-binary @-
 
           echo "Spamhaus 资源更新成功"
