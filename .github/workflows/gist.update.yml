@@ -27,9 +27,13 @@ jobs:
       - name: Prepare FireHOL Resources
         run: |
           mkdir -p ./resources
+          curl -fsSL 'https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/combined-final.cidr' \
+          | awk '!/^#/ && NF { print "IP-CIDR," $1 }' \
+          > ./resources/Combined_Privacy_BlockLists.conf
           curl -fsSL 'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset' \
           | awk '!/^#/ && NF { print "IP-CIDR," $1 }' \
           > ./resources/FireHOL_Level_One.conf
+          ls -la ./resources
 
       - name: Prepare Kelee Resources
         run: |
@@ -57,10 +61,12 @@ jobs:
           set -euo pipefail
 
           payload=$(jq -n \
-            --rawfile a ./resources/FireHOL_Level_One.conf \
+            --rawfile a ./resources/Combined_Privacy_BlockLists.conf \
+            --rawfile b ./resources/FireHOL_Level_One.conf \
             '{
               files: {
-                "FireHOL_Level_One.conf": {content: $a},
+                "Combined_Privacy_BlockLists.conf": {content: $a},
+                "FireHOL_Level_One.conf": {content: $b}
               }
             }')
 
@@ -120,7 +126,7 @@ jobs:
             '{
               files: {
                 "Spamhaus_Drop_V4.txt": {content: $a},
-                "Spamhaus_Drop_V6.txt": {content: $b},
+                "Spamhaus_Drop_V6.txt": {content: $b}
               }
             }')
 
