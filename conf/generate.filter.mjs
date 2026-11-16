@@ -786,7 +786,12 @@ function combineResourses({ FILENAME, RAW }) {
   let RAWRULE = Object.create(null);
   let REJECTFILENAME = 'element.ref.reject.mixture.ini';
   Object.keys(RAW).forEach(key => {
-    if (!key.includes(`${process.env.GH_KELEE_GIST_ID}`)) {
+    if (
+      key.includes(`${process.env.GH_KELEE_GIST_ID}`) ||
+      key.includes(`${process.env.GH_SPAMHAUS_GIST_ID}`)
+    ) {
+      // 自己的 Gist 规则，不打印
+    } else {
       console.log(
         `    ${key}`.padEnd(92),
         RAW[key].length.toString().padStart(12)
