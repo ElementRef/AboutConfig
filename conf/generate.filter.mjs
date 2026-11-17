@@ -585,6 +585,7 @@ const RESOURCES = {
   APPLESMIXTURE: {
     FILENAME: 'element.ref.apples.mixture.ini',
     SRC: [
+      'https://raw.githubusercontent.com/ddgksf2013/Filter/master/AppleIntelligence.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.apples.customs.ini',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/apple-cn.list',
       'https://raw.githubusercontent.com/SukkaW/Surge/master/Source/ip/apple_services.conf',
@@ -645,7 +646,6 @@ const RESOURCES = {
       'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list',
       'https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list',
       'https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list',
-      'https://raw.githubusercontent.com/ddgksf2013/Filter/master/AppleIntelligence.list',
       'https://raw.githubusercontent.com/ElementRef/AboutConfig/main/filter/element.ref.openai.customs.ini',
       'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list',
       'https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/quantumultx/ai.list',
