@@ -33,6 +33,14 @@ jobs:
           curl -fsSL 'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset' \
           | awk '!/^#/ && NF { print "IP-CIDR," $1 }' \
           > ./resources/FireHOL_Level_One.conf
+          curl -fsSL 'https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webclient.netset' \
+          | awk '
+            /^[[:space:]]*#/ || /^[[:space:]]*$/ { next }
+            {
+              if ($1 !~ /\//) $1 = $1 "/32"
+              print "IP-CIDR," $1
+            }
+          ' > ./resources/FireHOL_WebClient.conf
           ls -la ./resources
 
       - name: Prepare Kelee Resources
@@ -64,10 +72,12 @@ jobs:
           jq -n \
             --rawfile a ./resources/Combined_Privacy_BlockLists.conf \
             --rawfile b ./resources/FireHOL_Level_One.conf \
+            --rawfile c ./resources/FireHOL_WebClient.conf \
             '{
               files: {
                 "Combined_Privacy_BlockLists.conf": {content: $a},
-                "FireHOL_Level_One.conf": {content: $b}
+                "FireHOL_Level_One.conf": {content: $b},
+                "FireHOL_WebClient.conf": {content: $c}
               }
             }' |
           curl --fail-with-body --silent --show-error \
