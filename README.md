@@ -8,6 +8,7 @@
 
 - [Combined_Privacy_BlockLists.conf](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Combined_Privacy_BlockLists.conf?raw)
 - [FireHOL_Level_One.conf](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/FireHOL_Level_One.conf?raw)
+- [FireHOL_WebClient.conf](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/FireHOL_WebClient.conf?raw)
 - [Spamhaus_Drop_V6.txt](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Spamhaus_Drop_V6.txt?raw)
 - [Spamhaus_Drop_V4.txt](https://github-public-raw.spicicomic.workers.dev/ElementRef/GIST/Spamhaus_Drop_V4.txt?raw)
 - [uBlocklist.ini](https://github-public-raw.spicicomic.workers.dev/ElementRef/AboutConfig/main/filter/element.ref.ublock.mixture.ini?raw)

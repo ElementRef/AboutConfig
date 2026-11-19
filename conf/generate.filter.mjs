@@ -547,6 +547,7 @@ const RESOURCES = {
     FILENAME: 'element.ref.reject.mixture.ini',
     SRC: [
       'https://loon.103516.xyz/Rule/PCDN.lsr',
+      `https://gist.githubusercontent.com/ElementRef/${process.env.GH_FIREHOL_GIST_ID}/raw/FireHOL_WebClient.conf`,
       `https://gist.githubusercontent.com/ElementRef/${process.env.GH_KELEE_GIST_ID}/raw/Block_HTTPDNS.lpx`,
       `https://gist.githubusercontent.com/ElementRef/${process.env.GH_KELEE_GIST_ID}/raw/BlockAdvertisers.lpx`,
       `https://gist.githubusercontent.com/ElementRef/${process.env.GH_KELEE_GIST_ID}/raw/Remove_Ads_By_Kelee.lpx`,
