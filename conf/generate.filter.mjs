@@ -38,6 +38,7 @@ const MIXTUREBLOCKLIST = {
   '.shop': 'shop',
   '.work': 'work',
 
+  '.click': 'click',
   '.codes': 'codes',
   '.world': 'world',
 
@@ -200,11 +201,15 @@ const MIXTUREBLOCKLIST = {
    */
   '.academyofconsciousleadership.': '.academyofconsciousleadership.',
   '.celebratevitamins.': '.celebratevitamins.',
+  '.doubleverify.': '.doubleverify.',
   '.pitpackaging.': '.pitpackaging.',
   '.autoscout24.': '.autoscout24.',
+  '.doubleclick.': '.doubleclick.',
+  '.drankdozijn.': '.drankdozijn.',
   '.execute-api.': '.execute-api.',
   '.goldfishss.': '.goldfishss.',
   '.onofficeom.': '.onofficeom.',
+  '.espclicks.': '.espclicks.',
   '.antalis.': '.antalis.',
   '.engage.': '.engage.',
   '.ads.': '.ads.',
