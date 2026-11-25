@@ -37,3 +37,6 @@ macOS.Loon.conf
 macOS.Quantumult.X.conf
 StorableSidebar*
 temp*
+package-lock.json
+package.json
+package*
