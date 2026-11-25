@@ -24,8 +24,7 @@ jobs:
 
       - name: Setup AutoCorrect
         run: |
-          npm install autocorrect-node@latest --global
-          autocorrect --version
+          npm install -D autocorrect-node
 
       - name: Setup ESBuild
         run: |
