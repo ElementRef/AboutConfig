@@ -1,3 +1,4 @@
+import autocorrect from 'autocorrect-node';
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { mkdir, readdir, writeFile } from 'node:fs/promises';
@@ -175,13 +176,14 @@ async function getResoursesToLocal({ FILENAME, SRC }) {
     });
     if (RES.ok) {
       const TEXT = await RES.text();
+      const AUTOCORRECT = autocorrect.formatFor(TEXT, 'js');
       const PATH = fileURLToPath(import.meta.url);
       const TMPPATH = resolve(dirname(PATH), `../tmp`);
       const TMPISEXIST = existsSync(TMPPATH);
       if (!TMPISEXIST) {
         await mkdir(TMPPATH, { recursive: true });
       }
-      await writeFile(resolve(TMPPATH, `./${FILENAME}`), TEXT);
+      await writeFile(resolve(TMPPATH, `./${FILENAME}`), AUTOCORRECT);
       console.log(`>>> ${FILENAME}`.padEnd(92), '下载完成 <<<'.padStart(12));
     } else {
       console.error(`>>> ${FILENAME}`.padEnd(92), '下载失败 >>>'.padStart(12));

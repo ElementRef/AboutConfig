@@ -22,6 +22,11 @@ jobs:
           node-version: 'lts/Krypton'
           check-latest: true
 
+      - name: Setup AutoCorrect
+        run: |
+          npm install autocorrect-node@latest --global
+          autocorrect --version
+
       - name: Setup ESBuild
         run: |
           npm install esbuild@latest --global
