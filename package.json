@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "autocorrect-node": "^2.14.0"
+  }
+}
