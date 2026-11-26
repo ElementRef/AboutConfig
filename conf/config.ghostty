@@ -1,20 +1,21 @@
 # Fonts
 font-size                         = 12
 font-family                       = "Obel Mono"
+font-family                       = "Moxu Mono"
 font-family                       = "Segoe UI Emoji"
-font-family                       = "JetBrains Maple Mono"
 font-family-bold                  = "Obel Mono"
+font-family-bold                  = "Moxu Mono"
 font-family-bold                  = "Segoe UI Emoji"
-font-family-bold                  = "JetBrains Maple Mono"
 font-family-italic                = "Obel Mono"
+font-family-italic                = "Moxu Mono"
 font-family-italic                = "Segoe UI Emoji"
-font-family-italic                = "JetBrains Maple Mono"
 font-family-bold-italic           = "Obel Mono"
+font-family-bold-italic           = "Moxu Mono"
 font-family-bold-italic           = "Segoe UI Emoji"
-font-family-bold-italic           = "JetBrains Maple Mono"
 font-feature                      = calt
 font-feature                      = dlig
 font-feature                      = liga
+font-feature                      = ss01
 font-thicken                      = true
 
 # Colors
@@ -38,7 +39,7 @@ window-show-tab-bar               = always
 window-step-resize                = true
 window-subtitle                   = working-directory
 window-theme                      = system
-window-title-font-family          = "Ioskeley Mono"
+window-title-font-family          = "Nerdwand Mono"
 working-directory                 = home
 
 # Cursor
